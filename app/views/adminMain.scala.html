@@ -1,0 +1,37 @@
+@(title: String)(content: Html)
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin Dashboard - @title</title>
+            <!-- Bootstrap core CSS -->
+        <link href="@routes.Assets.at("bootstrap/css/bootstrap.css")" rel="stylesheet">
+            <!-- Custom styles for this template -->
+        <link href="@routes.Assets.at("dashboard.css")" rel="stylesheet">
+            <!--[if lt IE 9]>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+              <![endif]-->
+        <script src="@routes.Assets.at("assets/js/jquery.min.js")"></script>
+        <script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="@routes.Assets.at("assets/js/ie10-viewport-bug-workaround.js")"></script>
+    </head>
+    <body id="dim_wrapper" style="width:100%; height:100%; background: rgb(245, 245, 245); z-index:10">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="@routes.AdminCRUD.index()">Admin Dashboard</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+        @content
+        </div>
+
+    </body>
+</html>
+

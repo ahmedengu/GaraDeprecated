@@ -1,0 +1,118 @@
+@(title: String,description: String,keywords: String)
+
+@memberArea(title,description,keywords) {
+    <section id="content-3-22" class="content-block-nopad content-3-22">
+        <div class="overlay overlay-green">
+            <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
+                <h1 class="pad90" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="flash">Want to make some money</h1>
+                <h2>Become a driver</h2>
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <a href="@routes.Application.BecomeDriverGet()" class="btn btn-block btn-outline btn-outline-lg outline-light">Strart Here</a>
+                </div>
+            </div>
+                <!-- /.container -->
+        </div>
+    </section>
+    <section id="content-3-8" class="content-block content-3-7">
+        <div class="container">
+            <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
+                <div class="underlined-title">
+                    <h1>Choose your destination</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
+    <section id="content-3-7" class="content-block content-3-7">
+        <div class="container">
+            <div class="col-sm-12">
+                <div class="underlined-title">
+                    <h1 data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">Get your Ride</h1>
+                    <hr>
+                    <button type="button" class="btn white bg-marina bg-transparent-hover black-hover btn-block" data-animation-1 data-animation-trigger-1="click" data-animation-type-1="shake" data-target="#modal1" data-toggle="modal">Click me Now!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Drivers</h4>
+                </div>
+                <div class="modal-body">
+                    <section class="content-block">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
+                                    <div class="caption">
+                                        <h3>Ahmed</h3>
+
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
+                                    <div class="caption">
+                                        <h3>Mohamed</h3>
+
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
+                                    <div class="caption">
+                                        <h3>Hesham</h3>
+
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
+                                    <div class="caption">
+                                        <h3>Ahmed</h3>
+
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
+                                    <div class="caption">
+                                        <h3>Mohamed</h3>
+
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
+                                    <div class="caption">
+                                        <h3>Hesham</h3>
+
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <!-- /.container -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

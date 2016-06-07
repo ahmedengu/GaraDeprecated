@@ -1,0 +1,159 @@
+@(title: String, tableNames: List[String], tableData: List[String])
+
+@adminMain(title) {
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script>
+
+            function tableRefresh() {
+                $("#dim_wrapper").animate({
+                    'opacity':0.3
+                });
+
+                x = "/api/v1/@title";
+                $.getJSON(x, function (json) {
+                    $("table tbody").empty();
+                    var tr;
+                    for (var i = 0; i < json.length; i++) {
+                        tr = $('<tr/>');
+                        tmp = "";
+                        @for(tData <- tableData) {
+                        tr.append("<td>" + json[i].@tData.toLowerCase + "</td>");
+                        tmp += json[i].@tData.toLowerCase + ",";
+                        }
+
+                        tmp = tmp.substring(0, tmp.length - 1);
+                        tr.append('<td>  <button type="button" class="btn btn-default" data-target="#modalnew" data-toggle="modal" onclick="editOnclic(\'' + tmp + '\')">edit</button> </td>');
+
+                        var theid = json[i].@tableData.get(0).toLowerCase();
+                        tr.append('<td> <button type="button" class="btn btn-default" onclick="deleteOnclic(' + theid + ')">delete</button> </td>');
+
+                        $('table').append(tr);
+                    }
+
+                });
+
+
+                $("#dim_wrapper").animate({
+                    'opacity':1.0
+            });
+            }
+
+            tableRefresh();
+
+
+            $('#theform').ajaxForm({
+                beforeSubmit : function(){
+                    $("#dim_wrapper").animate({
+                        'opacity':0.3
+                    });
+                },
+                success : function(){
+                    tableRefresh();
+                    $('#modalnew').modal('hide');
+
+                }
+            });
+
+
+            function deleteOnclic(id) {
+                $.ajax({
+                    url: '/api/v1/@title/' + id,
+                    type: 'DELETE',
+                    beforeSend : function(){
+                        $("#dim_wrapper").animate({
+                            'opacity':0.3
+                        });
+                    },
+                    success : function(){
+                        tableRefresh();
+                    }
+                });
+            }
+
+            function editOnclic(id) {
+//                alert(id);
+                var arr = (id + '').split(',');
+                document.getElementById('modaltitle').innerHTML = "update @title #" + arr[0];
+                document.getElementById('theform').action = "/api/v1/@title/" + arr[0];
+                all = document.getElementsByClassName('form-control');
+                for (i = 0; i < all.length; i++) {
+                    all[i].value = arr[i + 1];
+                }
+            }
+
+            function newOnclic() {
+                document.getElementById('modaltitle').innerHTML = "new @title";
+                document.getElementById('theform').action = "/api/v1/@title";
+                all = document.getElementsByClassName('form-control');
+                for (i = 0; i < all.length; i++) {
+                    all[i].value = "";
+                }
+            }
+    </script>
+
+
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+            @for(tableName <- tableNames) {
+                <li>
+                    <a href="/admin/@tableName">@tableName</a>
+                </li>
+            }
+            </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="modal fade pg-show-modal" id="modalnew" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="modaltitle">new</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" method="post" id="theform" action="/api/v1/@title" >
+                                @for(tData <- tableData.subList(1, tableData.size())) {
+                                    <div class="form-group">
+                                        <label class="control-label" for="exampleInput@tData">@tData</label>
+                                        <input type="text" class="form-control" id="exampleInput@tData" placeholder="Enter @tData" name="@tData">
+                                    </div>
+                                }
+
+
+                                <button type="submit" class="btn">Submit</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                            </form>
+                            <p><br></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="sub-header">@title
+                - <button type="button" class="btn btn-default" data-target="#modalnew" data-toggle="modal" onclick="newOnclic()">
+                    New</button>
+            </h2>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            @for(tData <- tableData) {
+                                <th>@tData</th>
+                            }
+                            <th>edit</th>
+                            <th>delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+}

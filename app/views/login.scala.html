@@ -1,0 +1,56 @@
+@(title: String,description: String,keywords: String,myForm: Form[models.garaDB.tables.pojos.Member])
+
+
+@onePageForms(title,description,keywords) {
+
+
+        <div class="container verticalAllign" >
+        <div class="row">
+            <div class="col-md-5">
+                <a href="/"><h1 class="white">Gara</h1></a>
+                <p class="white">Don't have an account?</p>
+                <div class="form-group">
+                    <a class="btn btn-primary btn-block" href="/register">Register Now!</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                @if(myForm.hasErrors) {
+
+                    @if(myForm.errors.size() > 0) {
+                        <div class="alert alert-danger">
+                            <strong>errors:</strong>
+                            @for((key, value) <- myForm.errors) {
+                                <p>
+                                @for(err <- value) {
+                                    @err.message().toString()
+                                }
+                                </p>
+                            }
+                        </div>
+
+                    }
+                }
+
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <input type="text" name="username" placeholder="Username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" class="form-control">
+                    </div>
+                    <input type="submit" value="login" class="btn btn-primary btn-block">
+                </form>
+            </div>
+                <!-- /.col -->
+                <!-- /.col -->
+        </div>
+            <!-- /.row -->
+    </div>
+
+    <script >
+            document.getElementById("thebody").style.height="100%";
+            document.getElementById("promo-1").style.height="90%";
+            document.getElementById("thefooter").style.height="10%";
+
+    </script>
+}

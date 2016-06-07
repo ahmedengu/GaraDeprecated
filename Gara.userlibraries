@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="SBT: aopalliance:aopalliance:1.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar" />
+  </library>
+  <library name="SBT: cglib:cglib-nodep:2.1_3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/cglib/cglib-nodep/jars/cglib-nodep-2.1_3.jar" />
+  </library>
+  <library name="SBT: ch.qos.logback:logback-classic:1.1.4:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.4.jar" />
+  </library>
+  <library name="SBT: ch.qos.logback:logback-core:1.1.4:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.4.jar" />
+  </library>
+  <library name="SBT: com.fasterxml:classmate:1.1.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar" />
+  </library>
+  <library name="SBT: com.fasterxml.jackson.core:jackson-annotations:2.7.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.1.jar" />
+  </library>
+  <library name="SBT: com.fasterxml.jackson.core:jackson-core:2.7.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.1.jar" />
+  </library>
+  <library name="SBT: com.fasterxml.jackson.core:jackson-databind:2.7.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.1.jar" />
+  </library>
+  <library name="SBT: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.7.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.1.jar" />
+  </library>
+  <library name="SBT: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.7.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.1.jar" />
+  </library>
+  <library name="SBT: com.fasterxml.uuid:java-uuid-generator:3.1.3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.fasterxml.uuid/java-uuid-generator/bundles/java-uuid-generator-3.1.3.jar" />
+  </library>
+  <library name="SBT: com.google.code.findbugs:jsr305:3.0.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar" />
+  </library>
+  <library name="SBT: com.google.code.gson:gson:2.3.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.google.code.gson/gson/jars/gson-2.3.1.jar" />
+  </library>
+  <library name="SBT: com.google.guava:guava:19.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.google.guava/guava/bundles/guava-19.0.jar" />
+  </library>
+  <library name="SBT: com.google.inject.extensions:guice-assistedinject:4.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-4.0.jar" />
+  </library>
+  <library name="SBT: com.google.inject:guice:4.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.google.inject/guice/jars/guice-4.0.jar" />
+  </library>
+  <library name="SBT: com.googlecode.usc:jdbcdslog:1.0.6.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.googlecode.usc/jdbcdslog/jars/jdbcdslog-1.0.6.2.jar" />
+  </library>
+  <library name="SBT: com.h2database:h2:1.4.191:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.h2database/h2/jars/h2-1.4.191.jar" />
+  </library>
+  <library name="SBT: com.jolbox:bonecp:0.8.0.RELEASE:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar" />
+  </library>
+  <library name="SBT: com.novocode:junit-interface:0.11:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.novocode/junit-interface/jars/junit-interface-0.11.jar" />
+  </library>
+  <library name="SBT: com.typesafe.akka:akka-actor_2.11:2.4.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.akka:akka-slf4j_2.11:2.4.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.akka:akka-stream_2.11:2.4.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe:config:1.3.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar" />
+  </library>
+  <library name="SBT: com.typesafe.netty:netty-reactive-streams:1.0.5:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar" />
+  </library>
+  <library name="SBT: com.typesafe.netty:netty-reactive-streams-http:1.0.5:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:build-link:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-cache_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-datacommons_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-exceptions:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-functional_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-iteratees_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-java_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-java-ws_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-jdbc_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-jdbc-api_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-json_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-logback_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-netty-server_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-netty-utils:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-server_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-streams_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-test_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-test_2.11/jars/play-test_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:play-ws_2.11:2.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.2.jar" />
+  </library>
+  <library name="SBT: com.typesafe.play:twirl-api_2.11:1.1.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar" />
+  </library>
+  <library name="SBT: com.typesafe:ssl-config-akka_2.11:0.1.3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe/ssl-config-akka_2.11/bundles/ssl-config-akka_2.11-0.1.3.jar" />
+  </library>
+  <library name="SBT: com.typesafe:ssl-config-core_2.11:0.1.3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.typesafe/ssl-config-core_2.11/bundles/ssl-config-core_2.11-0.1.3.jar" />
+  </library>
+  <library name="SBT: com.zaxxer:HikariCP:2.4.3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.4.3.jar" />
+  </library>
+  <library name="SBT: commons-codec:commons-codec:1.10:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar" />
+  </library>
+  <library name="SBT: commons-io:commons-io:2.4:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.4.jar" />
+  </library>
+  <library name="SBT: commons-logging:commons-logging:1.1.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar" />
+  </library>
+  <library name="SBT: commons-logging:commons-logging:1.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar" />
+  </library>
+  <library name="SBT: io.netty:netty:3.5.2.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty/bundles/netty-3.5.2.Final.jar" />
+  </library>
+  <library name="SBT: io.netty:netty-buffer:4.0.36.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty-buffer/jars/netty-buffer-4.0.36.Final.jar" />
+  </library>
+  <library name="SBT: io.netty:netty-codec:4.0.36.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty-codec/jars/netty-codec-4.0.36.Final.jar" />
+  </library>
+  <library name="SBT: io.netty:netty-codec-http:4.0.36.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.36.Final.jar" />
+  </library>
+  <library name="SBT: io.netty:netty-common:4.0.36.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty-common/jars/netty-common-4.0.36.Final.jar" />
+  </library>
+  <library name="SBT: io.netty:netty-handler:4.0.36.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty-handler/jars/netty-handler-4.0.36.Final.jar" />
+  </library>
+  <library name="SBT: io.netty:netty-transport:4.0.36.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty-transport/jars/netty-transport-4.0.36.Final.jar" />
+  </library>
+  <library name="SBT: io.netty:netty-transport-native-epoll:4.0.36.Final:linux-x86_64:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.36.Final-linux-x86_64.jar" />
+  </library>
+  <library name="SBT: javax.el:javax.el-api:3.0.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/javax.el/javax.el-api/jars/javax.el-api-3.0.0.jar" />
+  </library>
+  <library name="SBT: javax.inject:javax.inject:1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar" />
+  </library>
+  <library name="SBT: javax.persistence:persistence-api:1.0.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/javax.persistence/persistence-api/jars/persistence-api-1.0.2.jar" />
+  </library>
+  <library name="SBT: javax.transaction:jta:1.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar" />
+  </library>
+  <library name="SBT: javax.validation:validation-api:1.1.0.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar" />
+  </library>
+  <library name="SBT: joda-time:joda-time:2.9.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.2.jar" />
+  </library>
+  <library name="SBT: junit:junit:4.12:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/junit/junit/jars/junit-4.12.jar" />
+  </library>
+  <library name="SBT: log4j:log4j:1.2.13:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/log4j/log4j/jars/log4j-1.2.13.jar" />
+  </library>
+  <library name="SBT: mysql:mysql-connector-java:5.1.31:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.31.jar" />
+  </library>
+  <library name="SBT: net.java.dev.jna:jna:4.1.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.java.dev.jna/jna/jars/jna-4.1.0.jar" />
+  </library>
+  <library name="SBT: net.java.dev.jna:jna-platform:4.1.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.java.dev.jna/jna-platform/jars/jna-platform-4.1.0.jar" />
+  </library>
+  <library name="SBT: net.jodah:typetools:0.4.4:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.jodah/typetools/bundles/typetools-0.4.4.jar" />
+  </library>
+  <library name="SBT: net.sf.ehcache:ehcache-core:2.6.11:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.11.jar" />
+  </library>
+  <library name="SBT: net.sourceforge.cssparser:cssparser:0.9.18:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.sourceforge.cssparser/cssparser/jars/cssparser-0.9.18.jar" />
+  </library>
+  <library name="SBT: net.sourceforge.htmlunit:htmlunit:2.20:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.sourceforge.htmlunit/htmlunit/jars/htmlunit-2.20.jar" />
+  </library>
+  <library name="SBT: net.sourceforge.htmlunit:htmlunit-core-js:2.17:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.sourceforge.htmlunit/htmlunit-core-js/jars/htmlunit-core-js-2.17.jar" />
+  </library>
+  <library name="SBT: net.sourceforge.nekohtml:nekohtml:1.9.22:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/net.sourceforge.nekohtml/nekohtml/jars/nekohtml-1.9.22.jar" />
+  </library>
+  <library name="SBT: oauth.signpost:signpost-commonshttp4:1.2.1.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar" />
+  </library>
+  <library name="SBT: oauth.signpost:signpost-core:1.2.1.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar" />
+  </library>
+  <library name="SBT: org.apache.commons:commons-exec:1.3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.apache.commons/commons-exec/jars/commons-exec-1.3.jar" />
+  </library>
+  <library name="SBT: org.apache.commons:commons-lang3:3.4:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.4.jar" />
+  </library>
+  <library name="SBT: org.apache.httpcomponents:httpclient:4.0.1:jar" />
+  <library name="SBT: org.apache.httpcomponents:httpclient:4.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.5.2.jar" />
+  </library>
+  <library name="SBT: org.apache.httpcomponents:httpcore:4.0.1:jar" />
+  <library name="SBT: org.apache.httpcomponents:httpcore:4.4.4:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.4.4.jar" />
+  </library>
+  <library name="SBT: org.apache.httpcomponents:httpmime:4.5.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.apache.httpcomponents/httpmime/jars/httpmime-4.5.2.jar" />
+  </library>
+  <library name="SBT: org.apache.tomcat:tomcat-servlet-api:8.0.32:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.32.jar" />
+  </library>
+  <library name="SBT: org.asynchttpclient:async-http-client:2.0.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0.jar" />
+  </library>
+  <library name="SBT: org.asynchttpclient:netty-codec-dns:2.0.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0.jar" />
+  </library>
+  <library name="SBT: org.asynchttpclient:netty-resolver:2.0.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0.jar" />
+  </library>
+  <library name="SBT: org.asynchttpclient:netty-resolver-dns:2.0.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0.jar" />
+  </library>
+  <library name="SBT: org.eclipse.jetty:jetty-io:9.2.15.v20160210:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-9.2.15.v20160210.jar" />
+  </library>
+  <library name="SBT: org.eclipse.jetty:jetty-util:9.2.15.v20160210:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-9.2.15.v20160210.jar" />
+  </library>
+  <library name="SBT: org.eclipse.jetty.websocket:websocket-api:9.2.15.v20160210:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.eclipse.jetty.websocket/websocket-api/jars/websocket-api-9.2.15.v20160210.jar" />
+  </library>
+  <library name="SBT: org.eclipse.jetty.websocket:websocket-client:9.2.15.v20160210:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.eclipse.jetty.websocket/websocket-client/jars/websocket-client-9.2.15.v20160210.jar" />
+  </library>
+  <library name="SBT: org.eclipse.jetty.websocket:websocket-common:9.2.15.v20160210:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.eclipse.jetty.websocket/websocket-common/jars/websocket-common-9.2.15.v20160210.jar" />
+  </library>
+  <library name="SBT: org.fluentlenium:fluentlenium-core:0.10.9:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.fluentlenium/fluentlenium-core/jars/fluentlenium-core-0.10.9.jar" />
+  </library>
+  <library name="SBT: org.hamcrest:hamcrest-core:1.3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar" />
+  </library>
+  <library name="SBT: org.hibernate:hibernate-validator:5.2.4.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.4.Final.jar" />
+  </library>
+  <library name="SBT: org.javassist:javassist:3.20.0-GA:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.20.0-GA.jar" />
+  </library>
+  <library name="SBT: org.jboss.logging:jboss-logging:3.2.1.Final:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.1.Final.jar" />
+  </library>
+  <library name="SBT: org.joda:joda-convert:1.8.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.1.jar" />
+  </library>
+  <library name="SBT: org.jooq:jooq:3.8.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.jooq/jooq/jars/jooq-3.8.0.jar" />
+  </library>
+  <library name="SBT: org.jooq:jooq-codegen:3.8.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.jooq/jooq-codegen/jars/jooq-codegen-3.8.0.jar" />
+  </library>
+  <library name="SBT: org.jooq:jooq-meta:3.8.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.jooq/jooq-meta/jars/jooq-meta-3.8.0.jar" />
+  </library>
+  <library name="SBT: org.jooq:jooq-scala:3.8.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.jooq/jooq-scala/jars/jooq-scala-3.8.0.jar" />
+  </library>
+  <library name="SBT: org.reactivestreams:reactive-streams:1.0.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar" />
+  </library>
+  <library name="SBT: org.reflections:reflections:0.9.10:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar" />
+  </library>
+  <library name="SBT: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar" />
+  </library>
+  <library name="SBT: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar" />
+  </library>
+  <library name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar" />
+  </library>
+  <library name="SBT: org.scala-lang:scala-library:2.11.7:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar" />
+  </library>
+  <library name="SBT: org.scala-lang:scala-reflect:2.11.7:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar" />
+  </library>
+  <library name="SBT: org.scala-sbt:test-interface:1.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar" />
+  </library>
+  <library name="SBT: org.scala-stm:scala-stm_2.11:0.7:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-api:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-api/jars/selenium-api-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-chrome-driver:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-chrome-driver/jars/selenium-chrome-driver-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-edge-driver:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-edge-driver/jars/selenium-edge-driver-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-firefox-driver:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-firefox-driver/jars/selenium-firefox-driver-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-htmlunit-driver:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-htmlunit-driver/jars/selenium-htmlunit-driver-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-ie-driver:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-ie-driver/jars/selenium-ie-driver-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-java:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-java/jars/selenium-java-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-leg-rc:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-leg-rc/jars/selenium-leg-rc-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-remote-driver:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-remote-driver/jars/selenium-remote-driver-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-safari-driver:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-safari-driver/jars/selenium-safari-driver-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.seleniumhq.selenium:selenium-support:2.48.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.seleniumhq.selenium/selenium-support/jars/selenium-support-2.48.2.jar" />
+  </library>
+  <library name="SBT: org.slf4j:jcl-over-slf4j:1.7.16:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.16.jar" />
+  </library>
+  <library name="SBT: org.slf4j:jul-to-slf4j:1.7.16:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.16.jar" />
+  </library>
+  <library name="SBT: org.slf4j:slf4j-api:1.7.21:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.21.jar" />
+  </library>
+  <library name="SBT: org.springframework:spring-beans:4.2.4.RELEASE:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.2.4.RELEASE.jar" />
+  </library>
+  <library name="SBT: org.springframework:spring-context:4.2.4.RELEASE:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.2.4.RELEASE.jar" />
+  </library>
+  <library name="SBT: org.springframework:spring-core:4.2.4.RELEASE:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.2.4.RELEASE.jar" />
+  </library>
+  <library name="SBT: org.w3c.css:sac:1.3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.w3c.css/sac/jars/sac-1.3.jar" />
+  </library>
+  <library name="SBT: org.webbitserver:webbit:0.4.14:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.webbitserver/webbit/jars/webbit-0.4.14.jar" />
+  </library>
+  <library name="SBT: org.webjars:bootstrap:3.2.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.webjars/bootstrap/jars/bootstrap-3.2.0.jar" />
+  </library>
+  <library name="SBT: org.webjars:explorercanvas:r3:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.webjars/explorercanvas/jars/explorercanvas-r3.jar" />
+  </library>
+  <library name="SBT: org.webjars:flot:0.8.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.webjars/flot/jars/flot-0.8.0.jar" />
+  </library>
+  <library name="SBT: org.webjars:jquery:1.11.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.webjars/jquery/jars/jquery-1.11.1.jar" />
+  </library>
+  <library name="SBT: org.webjars:jquery-colorhelpers:1.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.webjars/jquery-colorhelpers/jars/jquery-colorhelpers-1.1.jar" />
+  </library>
+  <library name="SBT: org.yaml:snakeyaml:1.16:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar" />
+  </library>
+  <library name="SBT: tyrex:tyrex:1.0.1:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar" />
+  </library>
+  <library name="SBT: xalan:serializer:2.7.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/xalan/serializer/jars/serializer-2.7.2.jar" />
+  </library>
+  <library name="SBT: xalan:xalan:2.7.2:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/xalan/xalan/jars/xalan-2.7.2.jar" />
+  </library>
+  <library name="SBT: xerces:xercesImpl:2.11.0:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar" />
+  </library>
+  <library name="SBT: xml-apis:xml-apis:1.4.01:jar">
+    <archive path="C:/Users/ahmedengu/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar" />
+  </library>
+  <library name="actionmailer (v3.2.13, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/actionmailer-3.2.13/lib" />
+  </library>
+  <library name="actionmailer (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/actionmailer-4.2.5.1/lib" />
+  </library>
+  <library name="actionpack (v3.2.13, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/actionpack-3.2.13/lib" />
+  </library>
+  <library name="actionpack (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5.1/lib" />
+  </library>
+  <library name="actionview (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/actionview-4.2.5.1/lib" />
+  </library>
+  <library name="activejob (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activejob-4.2.5.1/lib" />
+  </library>
+  <library name="activemodel (v3.2.13, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activemodel-3.2.13/lib" />
+  </library>
+  <library name="activemodel (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activemodel-4.2.5.1/lib" />
+  </library>
+  <library name="activerecord (v3.2.13, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activerecord-3.2.13/lib" />
+  </library>
+  <library name="activerecord (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activerecord-4.2.5.1/lib" />
+  </library>
+  <library name="activeresource (v3.2.13, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activeresource-3.2.13/lib" />
+  </library>
+  <library name="activesupport (v3.2.13, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activesupport-3.2.13/lib" />
+  </library>
+  <library name="activesupport (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/activesupport-4.2.5.1/lib" />
+  </library>
+  <library name="addressable (v2.3.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/addressable-2.3.4/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/addressable-2.3.4/data" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/addressable-2.3.4/tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/addressable-2.3.4/website" />
+  </library>
+  <library name="arel (v3.0.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/arel-3.0.2/lib" />
+  </library>
+  <library name="arel (v6.0.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/arel-6.0.3/lib" />
+  </library>
+  <library name="aws-sdk (v2.1.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/aws-sdk-2.1.1/lib" />
+  </library>
+  <library name="aws-sdk-core (v2.1.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.1/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/aws-sdk-core-2.1.1/apis" />
+  </library>
+  <library name="aws-sdk-resources (v2.1.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/aws-sdk-resources-2.1.1/lib" />
+  </library>
+  <library name="bcrypt-ruby (v3.0.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/config/rubystubs/ruby18/bcrypt-ruby/3.0.1" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bcrypt-ruby-3.0.1-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bcrypt-ruby-3.0.1-x86-mingw32/lib" />
+  </library>
+  <library name="better_errors (v0.8.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/better_errors-0.8.0/lib" />
+  </library>
+  <library name="binding_of_caller (v0.7.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/binding_of_caller-0.7.2/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/binding_of_caller-0.7.2/lib" />
+  </library>
+  <library name="bootstrap-sass (v2.3.1.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bootstrap-sass-2.3.1.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bootstrap-sass-2.3.1.0/vendor" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bootstrap-sass-2.3.1.0/templates" />
+  </library>
+  <library name="builder (v3.0.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/builder-3.0.4/lib" />
+  </library>
+  <library name="builder (v3.2.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/builder-3.2.2/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/builder-3.2.2/rakelib" />
+  </library>
+  <library name="bundler (v1.10.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bundler-1.10.4/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bundler-1.10.4/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bundler-1.10.4/man" />
+  </library>
+  <library name="bundler (v1.9.6, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bundler-1.9.6/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bundler-1.9.6/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/bundler-1.9.6/man" />
+  </library>
+  <library name="cancan (v1.6.10, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cancan-1.6.10/lib" />
+  </library>
+  <library name="capybara (v2.1.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/capybara-2.1.0/lib" />
+  </library>
+  <library name="childprocess (v0.3.9, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/childprocess-0.3.9/lib" />
+  </library>
+  <library name="coderay (v1.0.9, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/coderay-1.0.9/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/coderay-1.0.9/lib" />
+  </library>
+  <library name="coffee-rails (v3.2.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/coffee-rails-3.2.2/lib" />
+  </library>
+  <library name="coffee-rails (v4.1.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/coffee-rails-4.1.0/gemfiles" />
+  </library>
+  <library name="coffee-script (v2.2.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/coffee-script-2.2.0/lib" />
+  </library>
+  <library name="coffee-script-source (v1.6.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/coffee-script-source-1.6.2/lib" />
+  </library>
+  <library name="columnize (v0.9.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/columnize-0.9.0/lib" />
+  </library>
+  <library name="crack (v0.3.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/crack-0.3.1/lib" />
+  </library>
+  <library name="cucumber (v1.3.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-1.3.2/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-1.3.2/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-1.3.2/features" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-1.3.2/fixtures" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-1.3.2/gem_tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-1.3.2/legacy_features" />
+  </library>
+  <library name="cucumber-rails (v1.3.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-rails-1.3.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-rails-1.3.1/config" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-rails-1.3.1/features" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-rails-1.3.1/gemfiles" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/cucumber-rails-1.3.1/dev_tasks" />
+  </library>
+  <library name="daemons (v1.1.8, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/daemons-1.1.8/lib" />
+  </library>
+  <library name="database_cleaner (v1.0.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/database_cleaner-1.0.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/database_cleaner-1.0.1/features" />
+  </library>
+  <library name="debug_inspector (v0.0.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/config/rubystubs/ruby18/debug_inspector/0.0.2" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/debug_inspector-0.0.2/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/debug_inspector-0.0.2/lib" />
+  </library>
+  <library name="debugger-linecache (v1.2.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/debugger-linecache-1.2.0/lib" />
+  </library>
+  <library name="devise (v2.2.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/devise-2.2.4/app" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/devise-2.2.4/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/devise-2.2.4/config" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/devise-2.2.4/gemfiles" />
+  </library>
+  <library name="diff-lcs (v1.1.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/diff-lcs-1.1.3/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/diff-lcs-1.1.3/lib" />
+  </library>
+  <library name="diff-lcs (v1.2.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/diff-lcs-1.2.4/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/diff-lcs-1.2.4/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/diff-lcs-1.2.4/autotest" />
+  </library>
+  <library name="email_spec (v1.4.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/email_spec-1.4.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/email_spec-1.4.0/rails_generators" />
+  </library>
+  <library name="erubis (v2.7.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/erubis-2.7.0/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/erubis-2.7.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/erubis-2.7.0/contrib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/erubis-2.7.0/doc-api" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/erubis-2.7.0/benchmark" />
+  </library>
+  <library name="eventmachine (v1.0.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/eventmachine-1.0.3-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/eventmachine-1.0.3-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/eventmachine-1.0.3-x86-mingw32/java" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/eventmachine-1.0.3-x86-mingw32/tests" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/eventmachine-1.0.3-x86-mingw32/rakelib" />
+  </library>
+  <library name="execjs (v1.4.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/execjs-1.4.0/lib" />
+  </library>
+  <library name="factory_girl (v4.2.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/factory_girl-4.2.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/factory_girl-4.2.0/features" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/factory_girl-4.2.0/gemfiles" />
+  </library>
+  <library name="factory_girl_rails (v4.2.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/factory_girl_rails-4.2.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/factory_girl_rails-4.2.1/features" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/factory_girl_rails-4.2.1/gemfiles" />
+  </library>
+  <library name="ffi (v1.8.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/config/rubystubs/ruby18/ffi/1.8.1" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/ffi-1.8.1-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/ffi-1.8.1-x86-mingw32/gen" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/ffi-1.8.1-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/ffi-1.8.1-x86-mingw32/libtest" />
+  </library>
+  <library name="figaro (v0.6.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/figaro-0.6.4/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/figaro-0.6.4/features" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/figaro-0.6.4/gemfiles" />
+  </library>
+  <library name="gherkin (v2.12.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/gherkin-2.12.0-x86-mingw32/js" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/gherkin-2.12.0-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/gherkin-2.12.0-x86-mingw32/ragel" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/gherkin-2.12.0-x86-mingw32/tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/gherkin-2.12.0-x86-mingw32/features" />
+  </library>
+  <library name="gibbon (v0.4.6, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/gibbon-0.4.6/lib" />
+  </library>
+  <library name="globalid (v0.3.6, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/globalid-0.3.6/lib" />
+  </library>
+  <library name="hike (v1.2.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/hike-1.2.2/lib" />
+  </library>
+  <library name="hike (v1.2.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/hike-1.2.3/lib" />
+  </library>
+  <library name="hoe (v3.0.6, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/hoe-3.0.6/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/hoe-3.0.6/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/hoe-3.0.6/template" />
+  </library>
+  <library name="httparty (v0.11.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.11.0/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.11.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.11.0/website" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.11.0/features" />
+  </library>
+  <library name="httparty (v0.8.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.8.3/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.8.3/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.8.3/website" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/httparty-0.8.3/features" />
+  </library>
+  <library name="i18n (v0.6.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/i18n-0.6.1/ci" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/i18n-0.6.1/lib" />
+  </library>
+  <library name="i18n (v0.7.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/i18n-0.7.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/i18n-0.7.0/gemfiles" />
+  </library>
+  <library name="jbuilder (v2.0.7, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/jbuilder-2.0.7/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/jbuilder-2.0.7/gemfiles" />
+  </library>
+  <library name="jmespath (v1.0.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/jmespath-1.0.2/lib" />
+  </library>
+  <library name="journey (v1.0.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/journey-1.0.4/lib" />
+  </library>
+  <library name="jquery-rails (v2.2.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/jquery-rails-2.2.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/jquery-rails-2.2.1/vendor" />
+  </library>
+  <library name="jquery-rails (v3.0.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/jquery-rails-3.0.4/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/jquery-rails-3.0.4/vendor" />
+  </library>
+  <library name="json (v1.8.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/config/rubystubs/ruby18/json/1.8.0" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.0/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.0/data" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.0/java" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.0/tests" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.0/tools" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.0/diagrams" />
+  </library>
+  <library name="json (v1.8.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.3/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.3/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.3/data" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.3/java" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.3/tests" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.3/tools" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/json-1.8.3/diagrams" />
+  </library>
+  <library name="launchy (v2.3.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/launchy-2.3.0/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/launchy-2.3.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/launchy-2.3.0/tasks" />
+  </library>
+  <library name="loofah (v2.0.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/loofah-2.0.3/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/loofah-2.0.3/benchmark" />
+  </library>
+  <library name="mail (v2.5.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mail-2.5.4/lib" />
+  </library>
+  <library name="mail (v2.6.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mail-2.6.3/lib" />
+  </library>
+  <library name="mime-types (v1.23, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mime-types-1.23/lib" />
+  </library>
+  <library name="mime-types (v2.6.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mime-types-2.6.2/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mime-types-2.6.2/data" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mime-types-2.6.2/support" />
+  </library>
+  <library name="mini_magick (v3.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mini_magick-3.4/lib" />
+  </library>
+  <library name="mini_portile (v0.6.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mini_portile-0.6.2/lib" />
+  </library>
+  <library name="minitest (v5.8.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/minitest-5.8.1/lib" />
+  </library>
+  <library name="multi_json (v1.3.6, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/multi_json-1.3.6/lib" />
+  </library>
+  <library name="multi_json (v1.7.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/multi_json-1.7.3/lib" />
+  </library>
+  <library name="multi_xml (v0.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/multi_xml-0.5.1/lib" />
+  </library>
+  <library name="multi_xml (v0.5.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/multi_xml-0.5.3/lib" />
+  </library>
+  <library name="mysql2 (v0.2.18, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.2.18/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.2.18/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.2.18/tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.2.18/benchmark" />
+  </library>
+  <library name="mysql2 (v0.4.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.4.2-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.4.2-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.4.2-x86-mingw32/vendor" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/mysql2-0.4.2-x86-mingw32/support" />
+  </library>
+  <library name="nokogiri (v1.5.9, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/config/rubystubs/ruby18/nokogiri/1.5.9" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.5.9-x86-mingw32/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.5.9-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.5.9-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.5.9-x86-mingw32/tasks" />
+  </library>
+  <library name="nokogiri (v1.6.6.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.6.6.2-x86-mingw32/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.6.6.2-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.6.6.2-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.6.6.2-x86-mingw32/tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/nokogiri-1.6.6.2-x86-mingw32/suppressions" />
+  </library>
+  <library name="orm_adapter (v0.4.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/orm_adapter-0.4.0/lib" />
+  </library>
+  <library name="pg (v0.18.0.pre20141117110243, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/pg-0.18.0.pre20141117110243-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/pg-0.18.0.pre20141117110243-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/pg-0.18.0.pre20141117110243-x86-mingw32/sample" />
+  </library>
+  <library name="polyglot (v0.3.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/polyglot-0.3.3/lib" />
+  </library>
+  <library name="Python 2.7.11 (C:\Bitnami\rubystack-2.1.9-1\python\python.exe) interpreter library">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/python/DLLs" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/python/Lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/python/Lib/lib-tk" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/python" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/python/Lib/site-packages" />
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/system/python_stubs/-570362370" />
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/config/plugins/python/helpers/python-skeletons" />
+  </library>
+  <library name="quiet_assets (v1.0.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/quiet_assets-1.0.2/lib" />
+  </library>
+  <library name="rack (v1.4.5, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.4.5/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.4.5/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.4.5/contrib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.4.5/example" />
+  </library>
+  <library name="rack (v1.6.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.6.4/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.6.4/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.6.4/contrib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-1.6.4/example" />
+  </library>
+  <library name="rack-cache (v1.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-cache-1.2/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-cache-1.2/example" />
+  </library>
+  <library name="rack-ssl (v1.3.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-ssl-1.3.3/lib" />
+  </library>
+  <library name="rack-test (v0.6.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-test-0.6.2/lib" />
+  </library>
+  <library name="rack-test (v0.6.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rack-test-0.6.3/lib" />
+  </library>
+  <library name="rails (v3.2.13, ruby-2.1.8-p440) [gem]" />
+  <library name="rails (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rails-4.2.5.1/guides" />
+  </library>
+  <library name="rails-deprecated_sanitizer (v1.0.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rails-deprecated_sanitizer-1.0.3/lib" />
+  </library>
+  <library name="rails-dom-testing (v1.0.7, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rails-dom-testing-1.0.7/lib" />
+  </library>
+  <library name="rails-html-sanitizer (v1.0.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rails-html-sanitizer-1.0.2/lib" />
+  </library>
+  <library name="railties (v3.2.13, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/railties-3.2.13/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/railties-3.2.13/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/railties-3.2.13/guides" />
+  </library>
+  <library name="railties (v4.2.5.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/railties-4.2.5.1/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/railties-4.2.5.1/lib" />
+  </library>
+  <library name="rake (v10.0.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-10.0.4/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-10.0.4/lib" />
+  </library>
+  <library name="rake (v10.4.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-10.4.2/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-10.4.2/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-10.4.2/rakelib" />
+  </library>
+  <library name="rake-compiler (v0.8.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-compiler-0.8.1/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-compiler-0.8.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-compiler-0.8.1/tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rake-compiler-0.8.1/features" />
+  </library>
+  <library name="rdoc (v3.12.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rdoc-3.12.2/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rdoc-3.12.2/lib" />
+  </library>
+  <library name="rmagick (v2.15.4, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rmagick-2.15.4-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rmagick-2.15.4-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rmagick-2.15.4-x86-mingw32/deprecated" />
+  </library>
+  <library name="rolify (v3.2.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rolify-3.2.0/lib" />
+  </library>
+  <library name="rspec (v2.11.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-2.11.0/lib" />
+  </library>
+  <library name="rspec-core (v2.11.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-core-2.11.1/exe" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-core-2.11.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-core-2.11.1/features" />
+  </library>
+  <library name="rspec-core (v2.13.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-core-2.13.1/exe" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-core-2.13.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-core-2.13.1/features" />
+  </library>
+  <library name="rspec-expectations (v2.11.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-expectations-2.11.2/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-expectations-2.11.2/features" />
+  </library>
+  <library name="rspec-expectations (v2.13.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-expectations-2.13.0/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-expectations-2.13.0/features" />
+  </library>
+  <library name="rspec-mocks (v2.11.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-mocks-2.11.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-mocks-2.11.1/features" />
+  </library>
+  <library name="rspec-mocks (v2.13.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-mocks-2.13.1/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-mocks-2.13.1/features" />
+  </library>
+  <library name="rspec-rails (v2.13.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rspec-rails-2.13.2/lib" />
+  </library>
+  <library name="rubyzip (v0.9.9, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rubyzip-0.9.9/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rubyzip-0.9.9/samples" />
+  </library>
+  <library name="rvm (v1.11.3.5, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/rvm-1.11.3.5/lib" />
+  </library>
+  <library name="sass (v3.2.9, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.2.9/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.2.9/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.2.9/extra" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.2.9/rails" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.2.9/vendor" />
+  </library>
+  <library name="sass (v3.4.14, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.4.14/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.4.14/extra" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.4.14/rails" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-3.4.14/vendor" />
+  </library>
+  <library name="sass-rails (v3.2.6, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-rails-3.2.6/lib" />
+  </library>
+  <library name="sass-rails (v5.0.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sass-rails-5.0.3/lib" />
+  </library>
+  <library name="scala-sdk-2.11.8">
+    <archive path="C:/Program Files (x86)/scala/lib/scala-actors-2.11.0.jar" />
+    <archive path="C:/Program Files (x86)/scala/lib/scala-actors-migration_2.11-1.1.0.jar" />
+    <archive path="C:/Program Files (x86)/scala/lib/scala-library.jar" />
+    <archive path="C:/Program Files (x86)/scala/lib/scala-parser-combinators_2.11-1.0.4.jar" />
+    <archive path="C:/Program Files (x86)/scala/lib/scala-reflect.jar" />
+    <archive path="C:/Program Files (x86)/scala/lib/scala-swing_2.11-1.0.2.jar" />
+    <archive path="C:/Program Files (x86)/scala/lib/scala-xml_2.11-1.0.4.jar" />
+  </library>
+  <library name="sdoc (v0.4.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sdoc-0.4.0/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sdoc-0.4.0/lib" />
+  </library>
+  <library name="selenium-webdriver (v2.32.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/selenium-webdriver-2.32.1/lib" />
+  </library>
+  <library name="simple_form (v2.1.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/simple_form-2.1.0/lib" />
+  </library>
+  <library name="slop (v3.6.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/slop-3.6.0/lib" />
+  </library>
+  <library name="spring (v1.2.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/spring-1.2.0/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/spring-1.2.0/lib" />
+  </library>
+  <library name="sprockets (v2.2.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sprockets-2.2.1/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sprockets-2.2.1/lib" />
+  </library>
+  <library name="sprockets (v2.2.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sprockets-2.2.2/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sprockets-2.2.2/lib" />
+  </library>
+  <library name="sprockets (v3.4.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sprockets-3.4.0/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sprockets-3.4.0/lib" />
+  </library>
+  <library name="sprockets-rails (v2.3.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sprockets-rails-2.3.3/lib" />
+  </library>
+  <library name="sqlite3 (v1.3.10, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.10-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.10-x86-mingw32/faq" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.10-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.10-x86-mingw32/tasks" />
+  </library>
+  <library name="sqlite3 (v1.3.7, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Users/ahmedengu/.IntelliJIdea2016.1/config/rubystubs/ruby18/sqlite3/1.3.7" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.7-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.7-x86-mingw32/faq" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.7-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-1.3.7-x86-mingw32/tasks" />
+  </library>
+  <library name="sqlite3-ruby (v1.3.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-ruby-1.3.2-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-ruby-1.3.2-x86-mingw32/faq" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-ruby-1.3.2-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/sqlite3-ruby-1.3.2-x86-mingw32/tasks" />
+  </library>
+  <library name="subexec (v0.2.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/subexec-0.2.2/lib" />
+  </library>
+  <library name="test-unit (v2.1.8.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/dl" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/io" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/tk" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/cgi" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/drb" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/irb" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/net" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/rss" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/uri" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/date" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/json" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/racc" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/rake" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/rdoc" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/yaml" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/psych" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/rexml" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/rinda" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/shell" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/win32" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/digest" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/fiddle" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/matrix" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/ripper" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/xmlrpc" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/openssl" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/webrick" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/minitest" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/optparse" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/rbconfig" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/rubygems" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/tkextlib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/win32ole" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/bigdecimal" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/2.1.0/i386-mingw32" />
+  </library>
+  <library name="thin (v1.6.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thin-1.6.1-x86-mingw32/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thin-1.6.1-x86-mingw32/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thin-1.6.1-x86-mingw32/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thin-1.6.1-x86-mingw32/example" />
+  </library>
+  <library name="thor (v0.18.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thor-0.18.1/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thor-0.18.1/lib" />
+  </library>
+  <library name="thor (v0.19.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thor-0.19.1/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib" />
+  </library>
+  <library name="thread_safe (v0.3.5, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thread_safe-0.3.5/ext" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thread_safe-0.3.5/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thread_safe-0.3.5/tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/thread_safe-0.3.5/yard-template" />
+  </library>
+  <library name="tilt (v1.4.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/tilt-1.4.1/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/tilt-1.4.1/lib" />
+  </library>
+  <library name="treetop (v1.4.12, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/treetop-1.4.12/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/treetop-1.4.12/lib" />
+  </library>
+  <library name="treetop (v1.4.14, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/treetop-1.4.14/bin" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/treetop-1.4.14/lib" />
+  </library>
+  <library name="turbolinks (v1.2.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/turbolinks-1.2.0/lib" />
+  </library>
+  <library name="tzinfo (v0.3.37, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/tzinfo-0.3.37/lib" />
+  </library>
+  <library name="tzinfo (v1.2.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/tzinfo-1.2.2/lib" />
+  </library>
+  <library name="tzinfo-data (v1.2014.2, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/tzinfo-data-1.2014.2/lib" />
+  </library>
+  <library name="uglifier (v2.1.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/uglifier-2.1.1/lib" />
+  </library>
+  <library name="uuidtools (v2.1.3, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/uuidtools-2.1.3/lib" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/uuidtools-2.1.3/tasks" />
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/uuidtools-2.1.3/website" />
+  </library>
+  <library name="warden (v1.2.1, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/warden-1.2.1/lib" />
+  </library>
+  <library name="web-console (v2.0.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib" />
+  </library>
+  <library name="websocket (v1.0.7, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/websocket-1.0.7/lib" />
+  </library>
+  <library name="xpath (v2.0.0, ruby-2.1.8-p440) [gem]">
+    <archive path="C:/Bitnami/rubystack-2.1.9-1/ruby/lib/ruby/gems/2.1.0/gems/xpath-2.0.0/lib" />
+  </library>
+</eclipse-userlibraries>
+

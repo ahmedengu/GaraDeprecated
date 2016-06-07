@@ -1,0 +1,1083 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>Car - apdihp.tables.pojos.Car</title>
+          <meta name="description" content="Car - apdihp.tables.pojos.Car" />
+          <meta name="keywords" content="Car apdihp.tables.pojos.Car" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'apdihp.tables.pojos.Car';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="apdihp">apdihp</a>.<a href="../package.html" class="extype" name="apdihp.tables">tables</a>.<a href="package.html" class="extype" name="apdihp.tables.pojos">pojos</a></p>
+        <h1>Car</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="apdihp.tables.pojos">package pojos</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Car</span><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="apdihp.tables.pojos.Car"><span>Car</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="apdihp.tables.pojos.Car#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(id:Integer,driverid:Integer,platenumber:String,platepic:String,carmodelid:Integer,frontpic:String,backpic:String,sidepic:String,insidepic:String,licensenumber:String,licensepic:String,licenseexpiredate:java.sql.Date,distlongitude:Double,distlatitude:Double,availableseats:Integer,state:Boolean):apdihp.tables.pojos.Car"></a>
+      <a id="&lt;init&gt;:Car"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Car</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="driverid">driverid: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="platenumber">platenumber: <span class="extype" name="java.lang.String">String</span></span>, <span name="platepic">platepic: <span class="extype" name="java.lang.String">String</span></span>, <span name="carmodelid">carmodelid: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="frontpic">frontpic: <span class="extype" name="java.lang.String">String</span></span>, <span name="backpic">backpic: <span class="extype" name="java.lang.String">String</span></span>, <span name="sidepic">sidepic: <span class="extype" name="java.lang.String">String</span></span>, <span name="insidepic">insidepic: <span class="extype" name="java.lang.String">String</span></span>, <span name="licensenumber">licensenumber: <span class="extype" name="java.lang.String">String</span></span>, <span name="licensepic">licensepic: <span class="extype" name="java.lang.String">String</span></span>, <span name="licenseexpiredate">licenseexpiredate: <span class="extype" name="java.sql.Date">Date</span></span>, <span name="distlongitude">distlongitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="distlatitude">distlatitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="availableseats">availableseats: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="state">state: <span class="extype" name="java.lang.Boolean">Boolean</span></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@&lt;init&gt;(id:Integer,driverid:Integer,platenumber:String,platepic:String,carmodelid:Integer,frontpic:String,backpic:String,sidepic:String,insidepic:String,licensenumber:String,licensepic:String,licenseexpiredate:java.sql.Date,distlongitude:Double,distlatitude:Double,availableseats:Integer,state:Boolean):apdihp.tables.pojos.Car" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(value:apdihp.tables.pojos.Car):apdihp.tables.pojos.Car"></a>
+      <a id="&lt;init&gt;:Car"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Car</span><span class="params">(<span name="value">value: <a href="" class="extype" name="apdihp.tables.pojos.Car">Car</a></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@&lt;init&gt;(value:apdihp.tables.pojos.Car):apdihp.tables.pojos.Car" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():apdihp.tables.pojos.Car"></a>
+      <a id="&lt;init&gt;:Car"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Car</span><span class="params">()</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@&lt;init&gt;():apdihp.tables.pojos.Car" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@##():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@clone():Object" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="apdihp.tables.pojos.Car#getAvailableseats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getAvailableseats():Integer"></a>
+      <a id="getAvailableseats():Integer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAvailableseats</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getAvailableseats():Integer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getBackpic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getBackpic():String"></a>
+      <a id="getBackpic():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBackpic</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getBackpic():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getCarmodelid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getCarmodelid():Integer"></a>
+      <a id="getCarmodelid():Integer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCarmodelid</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getCarmodelid():Integer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="apdihp.tables.pojos.Car#getDistlatitude" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getDistlatitude():Double"></a>
+      <a id="getDistlatitude():Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDistlatitude</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getDistlatitude():Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getDistlongitude" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getDistlongitude():Double"></a>
+      <a id="getDistlongitude():Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDistlongitude</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getDistlongitude():Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getDriverid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getDriverid():Integer"></a>
+      <a id="getDriverid():Integer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDriverid</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getDriverid():Integer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getFrontpic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getFrontpic():String"></a>
+      <a id="getFrontpic():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFrontpic</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getFrontpic():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getId():Integer"></a>
+      <a id="getId():Integer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getId():Integer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getInsidepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getInsidepic():String"></a>
+      <a id="getInsidepic():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInsidepic</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getInsidepic():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getLicenseexpiredate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getLicenseexpiredate():java.sql.Date"></a>
+      <a id="getLicenseexpiredate():Date"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLicenseexpiredate</span><span class="params">()</span><span class="result">: <span class="extype" name="java.sql.Date">Date</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getLicenseexpiredate():java.sql.Date" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getLicensenumber" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getLicensenumber():String"></a>
+      <a id="getLicensenumber():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLicensenumber</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getLicensenumber():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getLicensepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getLicensepic():String"></a>
+      <a id="getLicensepic():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLicensepic</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getLicensepic():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getPlatenumber" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getPlatenumber():String"></a>
+      <a id="getPlatenumber():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPlatenumber</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getPlatenumber():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getPlatepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getPlatepic():String"></a>
+      <a id="getPlatepic():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPlatepic</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getPlatepic():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getSidepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getSidepic():String"></a>
+      <a id="getSidepic():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSidepic</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getSidepic():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#getState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getState():Boolean"></a>
+      <a id="getState():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getState</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@getState():Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="apdihp.tables.pojos.Car#setAvailableseats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setAvailableseats(availableseats:Integer):Unit"></a>
+      <a id="setAvailableseats(Integer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setAvailableseats</span><span class="params">(<span name="availableseats">availableseats: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setAvailableseats(availableseats:Integer):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setBackpic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setBackpic(backpic:String):Unit"></a>
+      <a id="setBackpic(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setBackpic</span><span class="params">(<span name="backpic">backpic: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setBackpic(backpic:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setCarmodelid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setCarmodelid(carmodelid:Integer):Unit"></a>
+      <a id="setCarmodelid(Integer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setCarmodelid</span><span class="params">(<span name="carmodelid">carmodelid: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setCarmodelid(carmodelid:Integer):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setDistlatitude" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setDistlatitude(distlatitude:Double):Unit"></a>
+      <a id="setDistlatitude(Double):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDistlatitude</span><span class="params">(<span name="distlatitude">distlatitude: <span class="extype" name="java.lang.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setDistlatitude(distlatitude:Double):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setDistlongitude" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setDistlongitude(distlongitude:Double):Unit"></a>
+      <a id="setDistlongitude(Double):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDistlongitude</span><span class="params">(<span name="distlongitude">distlongitude: <span class="extype" name="java.lang.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setDistlongitude(distlongitude:Double):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setDriverid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setDriverid(driverid:Integer):Unit"></a>
+      <a id="setDriverid(Integer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDriverid</span><span class="params">(<span name="driverid">driverid: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setDriverid(driverid:Integer):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setFrontpic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setFrontpic(frontpic:String):Unit"></a>
+      <a id="setFrontpic(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setFrontpic</span><span class="params">(<span name="frontpic">frontpic: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setFrontpic(frontpic:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setId(id:Integer):Unit"></a>
+      <a id="setId(Integer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setId</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setId(id:Integer):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setInsidepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setInsidepic(insidepic:String):Unit"></a>
+      <a id="setInsidepic(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setInsidepic</span><span class="params">(<span name="insidepic">insidepic: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setInsidepic(insidepic:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setLicenseexpiredate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setLicenseexpiredate(licenseexpiredate:java.sql.Date):Unit"></a>
+      <a id="setLicenseexpiredate(Date):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setLicenseexpiredate</span><span class="params">(<span name="licenseexpiredate">licenseexpiredate: <span class="extype" name="java.sql.Date">Date</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setLicenseexpiredate(licenseexpiredate:java.sql.Date):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setLicensenumber" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setLicensenumber(licensenumber:String):Unit"></a>
+      <a id="setLicensenumber(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setLicensenumber</span><span class="params">(<span name="licensenumber">licensenumber: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setLicensenumber(licensenumber:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setLicensepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setLicensepic(licensepic:String):Unit"></a>
+      <a id="setLicensepic(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setLicensepic</span><span class="params">(<span name="licensepic">licensepic: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setLicensepic(licensepic:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setPlatenumber" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPlatenumber(platenumber:String):Unit"></a>
+      <a id="setPlatenumber(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPlatenumber</span><span class="params">(<span name="platenumber">platenumber: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setPlatenumber(platenumber:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setPlatepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPlatepic(platepic:String):Unit"></a>
+      <a id="setPlatepic(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPlatepic</span><span class="params">(<span name="platepic">platepic: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setPlatepic(platepic:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setSidepic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setSidepic(sidepic:String):Unit"></a>
+      <a id="setSidepic(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setSidepic</span><span class="params">(<span name="sidepic">sidepic: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setSidepic(sidepic:String):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Car#setState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setState(state:Boolean):Unit"></a>
+      <a id="setState(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setState</span><span class="params">(<span name="state">state: <span class="extype" name="java.lang.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@setState(state:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="apdihp.tables.pojos.Car#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="apdihp.tables.pojos.Car">Car</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Car@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

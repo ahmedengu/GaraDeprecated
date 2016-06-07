@@ -1,0 +1,40 @@
+
+
+/* Put your custom styles here */
+
+.loginButton
+{
+    border: solid 2px white;
+    border-radius: 5px;
+}
+
+.hcontainermid
+{
+}
+
+.maxiframe
+{
+}
+
+.customloginbody
+{
+    height: 100%;
+}
+
+.promologin
+{
+    height: 90%;
+}
+
+.loginfooter
+{
+    height: 10%;
+}
+
+.verticalAllign
+{
+    vertical-align: middle;
+    display: block;
+    padding-top: 100px;
+}
+

@@ -1,0 +1,89 @@
+@(title: String,description: String,keywords: String,myForm: Form[models.garaDB.tables.pojos.Member])
+
+
+@onePageForms(title,description,keywords) {
+
+
+    <div class="container verticalAllign">
+
+        @if(myForm.hasErrors) {
+
+                @if(myForm.errors.size() > 0) {
+                    <div class="alert alert-danger">
+                        <strong>errors:</strong>
+                    @for((key, value) <- myForm.errors) {
+                        <p>
+                        @for(err <- value) {
+                            @err.message().toString()
+                        }
+                        </p>
+                    }
+                    </div>
+
+                }
+        }
+
+        <div class="row">
+            <div class="col-md-5">
+                <a href="/"><h1 class="white">Gara</h1></a>
+                <p class="white">Already a member?</p>
+                <div class="form-group">
+                    <a class="btn btn-primary btn-block" href="/login">Login!</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+
+
+
+                <form enctype="multipart/form-data" action="/register" method="post">
+                    <div class="form-group">
+                        <input type="text"  placeholder="Name" id="thename" name="name" class="form-control" value="@myForm("name").value">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Username" id="theusername" name="username" class="form-control" value="@myForm("username").value">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Student email address" id="thestudentEmail" name="studentemail" class="form-control" value="@myForm("studentemail").value">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" name="password" class="form-control" value="@myForm("password").value">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="phonenumber" placeholder="Phone number" value="@myForm("phonenumber").value">
+                    </div>
+
+                    <input type="submit" value="Register Now!" class="btn btn-primary btn-block">
+                </form>
+            </div>
+                <!-- /.col -->
+                <!-- /.col -->
+        </div>
+            <!-- /.row -->
+    </div>
+
+    <script>
+
+            function thefuc() {
+                function getParameterByName(name, url) {
+                    if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                            results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+                }
+if(getParameterByName("name").length>0)
+                document.getElementById("thename").value =getParameterByName("name");
+                if(getParameterByName("studentEmail").length>0)
+
+                    document.getElementById("thestudentEmail").value =getParameterByName("studentEmail");
+                if(getParameterByName("username").length>0)
+
+                    document.getElementById("theusername").value =getParameterByName("username");
+
+            }
+
+            thefuc();
+    </script>
+}

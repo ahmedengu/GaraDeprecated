@@ -1,0 +1,324 @@
+package models;
+
+import models.garaDB.Tables;
+import models.garaDB.tables.pojos.*;
+import models.garaDB.tables.records.*;
+import org.jooq.*;
+import org.jooq.impl.DSL;
+import play.data.Form;
+
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import static play.mvc.Controller.request;
+
+public class RESTHelper {
+    public Accesstoken login(String username,String password) throws SQLException {
+        Member member= null;
+        try {
+            member = getDslContext().selectFrom(Tables.MEMBER).where(Tables.MEMBER.USERNAME.equal(username)).and(Tables.MEMBER.PASSWORD.equal(password)).fetchOne().into(Member.class);
+        } catch (Exception e) {
+            return null;
+        }
+        if(member==null) return null;
+        String axtok= UUID.randomUUID().toString().replace("-","");
+
+        AccesstokenRecord accesstoken=  getDslContext().newRecord(Tables.ACCESSTOKEN);
+        accesstoken.setIp(request().remoteAddress());
+        accesstoken.setBrowser( request().headers().get("User-Agent").toString() );
+
+        accesstoken.setValue(axtok );
+        accesstoken.setLastused(new Timestamp((new Date()).getTime()));
+
+        accesstoken.setMemberid(member.getId());
+        accesstoken.store();
+
+        return accesstoken.into(Accesstoken.class);
+
+    }
+
+    public List getAll(String tableName) throws SQLException {
+            Table table = getTableByName(tableName);
+            Class tableClass = getClassByName(tableName);
+        Field[] selectFields = getSelectFieldsByName(tableName);
+            return getAll(table,selectFields, tableClass);
+    }
+    public List getAll(String tableName,int i) throws SQLException {
+       if(i==0){
+           Table table = getTableByName(tableName);
+           Class tableClass = getClassByName(tableName);
+           Field[] selectFields = getSelectFieldsByName(tableName);
+           return getAll(table,selectFields, tableClass);
+       }else{
+           Table table = getTableByName(tableName);
+           Field[] selectFields = getSelectFieldsByName(tableName);
+           return getAll(table,selectFields);
+       }
+    }
+
+    public List getAll(Table table,Field[] selectFields, Class tableClass) throws SQLException {
+        return getDslContext().select(selectFields).from(table).fetch().into(tableClass);
+    }
+    public List getAll(Table table,Field[] selectFields) throws SQLException {
+        return getDslContext().select(selectFields).from(table).fetch();
+    }
+
+    public List getByID(String tableName, String id) throws SQLException {
+        Table table = getTableByName(tableName);
+        Class tableClass = getClassByName(tableName);
+        UpdatableRecord record = getRecordByName(tableName);
+        Field[] selectFields = getSelectFieldsByName(tableName);
+
+        return getByID(table,selectFields, tableClass, record, id);
+    }
+
+    public List getByID(Table table,Field[] selectFields, Class tableClass, UpdatableRecord record, String id) throws SQLException {
+        return getDslContext().select(selectFields).from(table).where("id = ?", id).fetch().into(tableClass);
+    }
+
+    public List getWhere(String tableName, String where, String id) throws SQLException {
+        Table table = getTableByName(tableName);
+        Class tableClass = getClassByName(tableName);
+        UpdatableRecord record = getRecordByName(tableName);
+        Field[] selectFields = getSelectFieldsByName(tableName);
+
+        return getWhere(table,selectFields, tableClass, record,where, id);
+    }
+
+    public List getWhere(Table table,Field[] selectFields, Class tableClass, UpdatableRecord record, String where, String id) throws SQLException {
+        return getDslContext().select(selectFields).from(table).where(table.field(where).equal(id)).fetch().into(tableClass);
+    }
+
+    public List deleteByID(String tableName, String id) throws SQLException {
+        Table table = getTableByName(tableName);
+        Class tableClass = getClassByName(tableName);
+        UpdatableRecord record = getRecordByName(tableName);
+        Field[] selectFields = getSelectFieldsByName(tableName);
+
+        return deleteByID(table, selectFields,tableClass, record, id);
+    }
+
+    public List deleteByID(Table table,Field[] selectFields, Class tableClass, UpdatableRecord record, String id) throws SQLException {
+        List list = new ArrayList<>();
+        int deletedRecord = getDslContext().delete(table).where("id = ?", id).execute();
+        list.add(deletedRecord);
+        return list;
+    }
+
+    public List create(String tableName, Object form) throws SQLException {
+        Table table = getTableByName(tableName);
+        Class tableClass = getClassByName(tableName);
+        Field[] selectFields = getSelectFieldsByName(tableName);
+
+
+        return create(table,selectFields, tableClass, form);
+    }
+
+    public List create(Table table,Field[] selectFields, Class tableClass, Object form) throws SQLException {
+        UpdatableRecord record = (UpdatableRecord) getDslContext().newRecord(table);
+//        Form<Member> memberForm = (Form<Member>) form;
+//        Member member = memberForm.get();
+        record.from(((Form) form).get());
+        record.set(table.field("ID"),null);
+        record.store();
+
+        List list = new ArrayList<>();
+        list.add(record.into(tableClass));
+        return list;
+    }
+
+    public List updateByID(String tableName, Object form,String id) throws SQLException {
+        Table table = getTableByName(tableName);
+        Class tableClass = getClassByName(tableName);
+        Field[] selectFields = getSelectFieldsByName(tableName);
+
+        return updateByID(table,selectFields ,tableClass, form,id);
+    }
+
+    public List updateByID(Table table,Field[] selectFields, Class tableClass, Object form,String id) throws SQLException {
+        UpdatableRecord record = (UpdatableRecord) getDslContext().newRecord(table);
+        record.from(((Form) form).get());
+        record.set(table.field("ID"),id);
+        record.update();
+
+        List list = new ArrayList<>();
+        list.add(record.into(tableClass));
+        return list;
+    }
+
+    private DSLContext getDslContext() {
+        return DSL.using(new PlayConnectionProvider().acquire(), SQLDialect.MYSQL);
+    }
+
+    public static Table getTableByName(String table) {
+        switch (table.toUpperCase()) {
+            case "ACCESSTOKEN":
+                return Tables.ACCESSTOKEN;
+            case "CAR":
+                return Tables.CAR;
+            case "CARMANUFACTURE":
+                return Tables.CARMANUFACTURE;
+            case "CARMODEL":
+                return Tables.CARMODEL;
+            case "CITY":
+                return Tables.CITY;
+            case "COLLEGE":
+                return Tables.COLLEGE;
+            case "COUNTRY":
+                return Tables.COUNTRY;
+            case "DRIVER":
+                return Tables.DRIVER;
+            case "MEMBER":
+                return Tables.MEMBER;
+            case "MEMBERCARD":
+                return Tables.MEMBERCARD;
+            case "MEMBERGROUP":
+                return Tables.MEMBERGROUP;
+            case "MEMBERSAVEDADDRESS":
+                return Tables.MEMBERSAVEDADDRESS;
+            case "REVIEW":
+                return Tables.REVIEW;
+            case "RIDE":
+                return Tables.RIDE;
+            case "SITECONTENT":
+                return Tables.SITECONTENT;
+            case "SITECONTENTGROUP":
+                return Tables.SITECONTENTGROUP;
+            case "SITEOPTION":
+                return Tables.SITEOPTION;
+            case "UNIVERSITY":
+                return Tables.UNIVERSITY;
+        }
+        return null;
+    }
+
+    public static Class getClassByName(String table) {
+        switch (table.toUpperCase()) {
+            case "ACCESSTOKEN":
+                return Accesstoken.class;
+            case "CAR":
+                return Car.class;
+            case "CARMANUFACTURE":
+                return Carmanufacture.class;
+            case "CARMODEL":
+                return Carmodel.class;
+            case "CITY":
+                return City.class;
+            case "COLLEGE":
+                return College.class;
+            case "COUNTRY":
+                return Country.class;
+            case "DRIVER":
+                return Driver.class;
+            case "MEMBER":
+                return Member.class;
+            case "MEMBERCARD":
+                return Membercard.class;
+            case "MEMBERGROUP":
+                return Membergroup.class;
+            case "MEMBERSAVEDADDRESS":
+                return Membersavedaddress.class;
+            case "REVIEW":
+                return Review.class;
+            case "RIDE":
+                return Ride.class;
+            case "SITECONTENT":
+                return Sitecontent.class;
+            case "SITECONTENTGROUP":
+                return Sitecontentgroup.class;
+            case "SITEOPTION":
+                return Siteoption.class;
+            case "UNIVERSITY":
+                return University.class;
+        }
+        return null;
+    }
+    public static Field[] getSelectFieldsByName(String table) {
+        switch (table.toUpperCase()) {
+            case "ACCESSTOKEN":
+                return Tables.ACCESSTOKEN.fields();
+            case "CAR":
+                return Tables.CAR.fields();
+            case "CARMANUFACTURE":
+                return Tables.CARMANUFACTURE.fields();
+            case "CARMODEL":
+                return Tables.CARMODEL.fields();
+            case "CITY":
+                return Tables.CITY.fields();
+            case "COLLEGE":
+                return Tables.COLLEGE.fields();
+            case "COUNTRY":
+                return Tables.COUNTRY.fields();
+            case "DRIVER":
+                return Tables.DRIVER.fields();
+            case "MEMBER":
+                return new Field<?>[]{Tables.MEMBER.ID,Tables.MEMBER.NAME,Tables.MEMBER.STUDENTEMAIL};
+            case "MEMBERCARD":
+                return Tables.MEMBERCARD.fields();
+            case "MEMBERGROUP":
+                return Tables.MEMBERGROUP.fields();
+            case "MEMBERSAVEDADDRESS":
+                return Tables.MEMBERSAVEDADDRESS.fields();
+            case "REVIEW":
+                return Tables.REVIEW.fields();
+            case "RIDE":
+                return Tables.RIDE.fields();
+            case "SITECONTENT":
+                return Tables.SITECONTENT.fields();
+            case "SITECONTENTGROUP":
+                return Tables.SITECONTENTGROUP.fields();
+            case "SITEOPTION":
+                return Tables.SITEOPTION.fields();
+            case "UNIVERSITY":
+                return Tables.UNIVERSITY.fields();
+        }
+        return null;
+    }
+    public static UpdatableRecord getRecordByName(String table) {
+        switch (table.toUpperCase()) {
+            case "ACCESSTOKEN":
+                return new AccesstokenRecord();
+            case "CAR":
+                return new CarRecord();
+            case "CARMANUFACTURE":
+                return new CarmanufactureRecord();
+            case "CARMODEL":
+                return new CarmodelRecord();
+            case "CITY":
+                return new CityRecord();
+            case "COLLEGE":
+                return new CollegeRecord();
+            case "COUNTRY":
+                return new CountryRecord();
+            case "DRIVER":
+                return new DriverRecord();
+            case "MEMBER":
+                return new MemberRecord();
+            case "MEMBERCARD":
+                return new MembercardRecord();
+            case "MEMBERGROUP":
+                return new MembergroupRecord();
+            case "MEMBERSAVEDADDRESS":
+                return new MembersavedaddressRecord();
+            case "REVIEW":
+                return new ReviewRecord();
+            case "RIDE":
+                return new RideRecord();
+            case "SITECONTENT":
+                return new SitecontentRecord();
+            case "SITECONTENTGROUP":
+                return new SitecontentgroupRecord();
+            case "SITEOPTION":
+                return new SiteoptionRecord();
+            case "UNIVERSITY":
+                return new UniversityRecord();
+        }
+        return null;
+    }
+
+
+}

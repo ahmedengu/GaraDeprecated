@@ -1,0 +1,57 @@
+@(title: String,description: String,keywords: String,myForm: Form[models.garaDB.tables.pojos.University])
+
+
+@onePageForms(title,description,keywords) {
+
+
+    <div class="container verticalAllign">
+        @if(myForm.hasErrors) {
+
+            @if(myForm.errors.size() > 0) {
+                <div class="alert alert-danger">
+                    <strong>errors:</strong>
+                    @for((key, value) <- myForm.errors) {
+                        <p>
+                        @for(err <- value) {
+                            @err.message().toString()
+                        }
+                        </p>
+                    }
+                </div>
+
+            }
+        }
+        <div class="row">
+            <div class="col-md-5">
+                <a href="/"><h1 class="white">Gara</h1></a>
+                <p class="white">Carpooling platform for universities! </p>
+                <div class="form-group">
+                    <a class="btn btn-primary btn-block" href="/login">Login!</a>
+                    <a class="btn btn-primary btn-block" href="/register">register!</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <form enctype="multipart/form-data" action="/newUniversity" method="post">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Url" name="url" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="emailformat" placeholder="Student email domain (xyz.edu)">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="contactpersonemail" placeholder="contact person email">
+                    </div>
+                    <input hidden type="text"  name="cityid" value="1">
+
+                    <input type="submit" value="Add New University Now" class="btn btn-primary btn-block bg-pomegranate">
+                </form>
+            </div>
+                <!-- /.col -->
+                <!-- /.col -->
+        </div>
+            <!-- /.row -->
+    </div>
+}
