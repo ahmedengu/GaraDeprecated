@@ -53,7 +53,6 @@ public class AdminCRUD extends Controller {
     }
 
     private List<String> getTableData(String table) throws SQLException {
-        List<Record> recordList = restHelper.getAll(table, 1);
         Field[] fields = RESTHelper.getTableByName(table).fields();
         List<String> stringList = new ArrayList<>();
         for (int i = 0; i < fields.length; i++) {

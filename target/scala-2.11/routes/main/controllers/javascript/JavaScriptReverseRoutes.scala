@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/ahmedengu/Documents/IdeaProjects/Gara/conf/routes
-// @DATE:Tue May 31 18:14:37 EET 2016
+// @DATE:Wed Jun 08 13:09:03 EET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,27 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:10
+  // @LINE:8
+  class ReverseAssets(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:8
+    def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Assets.at",
+      """
+        function(file1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file1)})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:9
   class ReverseRESTRouter(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,11 +43,19 @@ package controllers.javascript {
     }
 
   
-    // @LINE:10
+    // @LINE:9
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RESTRouter.index",
       """
         function(target0,table1,id2) {
+        
+          if (target0 == """ + implicitly[JavascriptLiteral[String]].to("login") + """ && table1 == """ + implicitly[JavascriptLiteral[String]].to("member"  ) + """ && id2 == """ + implicitly[JavascriptLiteral[String]].to("eouou") + """) {
+            return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/v1/login"})
+          }
+        
+          if (target0 == """ + implicitly[JavascriptLiteral[String]].to("dispatch") + """ && table1 == """ + implicitly[JavascriptLiteral[String]].to("member"  ) + """ && id2 == """ + implicitly[JavascriptLiteral[String]].to("eouou") + """) {
+            return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/v1/dispatch"})
+          }
         
           if (target0 == """ + implicitly[JavascriptLiteral[String]].to("list") + """ && id2 == """ + implicitly[JavascriptLiteral[String]].to("oeuoe") + """) {
             return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/v1/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("table", encodeURIComponent(table1))})
@@ -59,50 +87,40 @@ package controllers.javascript {
   
   }
 
-  // @LINE:9
-  class ReverseAssets(_prefix: => String) {
+  // @LINE:43
+  class ReverseUniversityPage(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:9
-    def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Assets.at",
+    // @LINE:44
+    def home: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UniversityPage.home",
       """
-        function(file1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file1)})
+        function(subdomain0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "university/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("subdomain", encodeURIComponent(subdomain0))})
         }
       """
     )
   
-  }
-
-  // @LINE:17
-  class ReverseAdminCRUD(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:18
-    def crudRouter: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.AdminCRUD.crudRouter",
+    // @LINE:45
+    def page: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UniversityPage.page",
       """
-        function(table0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("table", encodeURIComponent(table0))})
+        function(subdomain0,page1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "university/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("subdomain", encodeURIComponent(subdomain0)) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("page", encodeURIComponent(page1))})
         }
       """
     )
   
-    // @LINE:17
+    // @LINE:43
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.AdminCRUD.index",
+      "controllers.UniversityPage.index",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "university"})
         }
       """
     )
@@ -117,7 +135,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
+    // @LINE:26
     def newUniversityPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.newUniversityPost",
       """
@@ -127,7 +145,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:24
+    // @LINE:25
     def newUniversityGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.newUniversityGet",
       """
@@ -137,7 +155,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:31
+    // @LINE:32
     def memberSettingsPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.memberSettingsPost",
       """
@@ -147,7 +165,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:22
+    // @LINE:23
     def loginGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.loginGet",
       """
@@ -157,7 +175,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:22
     def registerPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.registerPost",
       """
@@ -167,7 +185,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:28
     def memberArea: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.memberArea",
       """
@@ -177,7 +195,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:35
+    // @LINE:36
     def dispatchPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.dispatchPost",
       """
@@ -187,7 +205,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:37
+    // @LINE:38
     def orderPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.orderPost",
       """
@@ -197,7 +215,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:30
+    // @LINE:31
     def memberSettingsGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.memberSettingsGet",
       """
@@ -207,7 +225,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:30
     def BecomeDriverPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.BecomeDriverPost",
       """
@@ -217,7 +235,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:39
+    // @LINE:40
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.logout",
       """
@@ -227,7 +245,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:33
+    // @LINE:34
     def addCarPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.addCarPost",
       """
@@ -237,7 +255,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:21
     def registerGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.registerGet",
       """
@@ -247,7 +265,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:24
     def loginPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.loginPost",
       """
@@ -257,7 +275,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
+    // @LINE:29
     def BecomeDriverGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.BecomeDriverGet",
       """
@@ -267,7 +285,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:32
+    // @LINE:33
     def addCarGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.addCarGet",
       """
@@ -283,6 +301,36 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:18
+  class ReverseAdminCRUD(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:19
+    def crudRouter: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminCRUD.crudRouter",
+      """
+        function(table0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("table", encodeURIComponent(table0))})
+        }
+      """
+    )
+  
+    // @LINE:18
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AdminCRUD.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin"})
         }
       """
     )

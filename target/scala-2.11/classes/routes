@@ -4,9 +4,10 @@
 
 # Home page
 GET           /                           controllers.Application.index
-
 # Map static resources from the /public folder to the /assets URL path
 GET           /assets/*file               controllers.Assets.at(path="/public", file)
+POST          /api/v1/login               controllers.RESTRouter.index(target = "login", table="member"  ,id="eouou")
+POST          /api/v1/dispatch            controllers.RESTRouter.index(target = "dispatch", table="member"  ,id="eouou")
 GET           /api/v1/:table              controllers.RESTRouter.index(target = "list", table,id = "oeuoe")
 GET           /api/v1/:table/:id          controllers.RESTRouter.index(target = "getByID", table,id)
 DELETE        /api/v1/:table/:id          controllers.RESTRouter.index(target = "deleteByID", table,id)
@@ -32,8 +33,14 @@ POST          /member/settings            controllers.Application.memberSettings
 GET           /member/addCar              controllers.Application.addCarGet()
 POST          /member/addCar              controllers.Application.addCarPost()
 
-POST          /member/dispatch              controllers.Application.dispatchPost()
+POST          /member/dispatch            controllers.Application.dispatchPost()
 
-POST          /member/order              controllers.Application.orderPost()
+POST          /member/order               controllers.Application.orderPost()
 
 GET           /logout                     controllers.Application.logout()
+
+
+GET           /university                 controllers.UniversityPage.index()
+GET           /university/:subdomain                 controllers.UniversityPage.home(subdomain)
+GET           /university/:subdomain/:page                 controllers.UniversityPage.page(subdomain,page)
+

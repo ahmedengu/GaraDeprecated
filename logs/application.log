@@ -1,32 +1,32 @@
-2016-06-08 00:31:18,583 [INFO] from play.core.server.NettyServer in pool-4-thread-2 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-06-08 00:31:28,094 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 00:31:29,869 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 00:31:29,900 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-06-08 00:31:35,475 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 00:31:36,527 [WARN] from application in ForkJoinPool-1-worker-1 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 00:31:37,494 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-06-08 00:31:37,718 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 00:34:04,654 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
-2016-06-08 00:34:04,776 [WARN] from application in application-akka.actor.default-dispatcher-10 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 00:34:04,900 [WARN] from application in application-akka.actor.default-dispatcher-10 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 00:34:04,900 [INFO] from application in application-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
-2016-06-08 00:34:12,862 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-10 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 00:34:12,969 [WARN] from application in application-akka.actor.default-dispatcher-10 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 00:34:13,104 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-10 - Application started (Dev)
-2016-06-08 00:34:13,155 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:03:28,259 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
-2016-06-08 02:03:28,366 [WARN] from application in application-akka.actor.default-dispatcher-6 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:03:28,498 [WARN] from application in application-akka.actor.default-dispatcher-6 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:03:28,498 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
-2016-06-08 02:03:31,493 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:03:31,550 [WARN] from application in application-akka.actor.default-dispatcher-6 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:03:31,607 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
-2016-06-08 02:03:31,630 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:03:31,669 [ERROR] from application in application-akka.actor.default-dispatcher-9 - 
+2016-06-08 13:02:59,460 [INFO] from play.core.server.NettyServer in pool-4-thread-2 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-06-08 13:03:45,447 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:03:46,882 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:03:46,923 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-06-08 13:03:54,809 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:03:56,168 [WARN] from application in ForkJoinPool-1-worker-1 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:03:57,234 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-06-08 13:03:57,468 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:09:15,892 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2016-06-08 13:09:15,976 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:09:16,101 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:09:16,101 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2016-06-08 13:09:19,003 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:09:19,094 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:09:19,243 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2016-06-08 13:09:19,263 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:10:36,394 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2016-06-08 13:10:36,456 [WARN] from application in application-akka.actor.default-dispatcher-9 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:10:36,577 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:10:36,580 [INFO] from application in application-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
+2016-06-08 13:10:39,512 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-9 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:10:39,583 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:10:39,655 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-9 - Application started (Dev)
+2016-06-08 13:10:39,674 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:10:55,408 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
 
-! @70bd4mk46 - Internal server error, for (POST) [/api/v1/dispatch] ->
+! @70bged2c4 - Internal server error, for (GET) [/university/aast] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[ClassCastException: models.garaDB.tables.pojos.University cannot be cast to models.garaDB.tables.records.UniversityRecord]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
 	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
@@ -57,11 +57,10 @@ play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPoint
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.NullPointerException: null
-	at controllers.RESTRouter.dispatch(RESTRouter.java:48)
-	at controllers.RESTRouter.index(RESTRouter.java:40)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
+Caused by: java.lang.ClassCastException: models.garaDB.tables.pojos.University cannot be cast to models.garaDB.tables.records.UniversityRecord
+	at controllers.UniversityPage.home(UniversityPage.java:40)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.apply(Routes.scala:803)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.apply(Routes.scala:803)
 	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
 	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
 	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
@@ -87,25 +86,28 @@ Caused by: java.lang.NullPointerException: null
 	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
 	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
 	... 14 common frames omitted
-2016-06-08 02:05:57,863 [ERROR] from application in application-akka.actor.default-dispatcher-10 - 
+2016-06-08 13:11:15,656 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2016-06-08 13:11:15,962 [WARN] from application in application-akka.actor.default-dispatcher-5 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:11:16,062 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:11:16,062 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2016-06-08 13:11:18,969 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:11:19,042 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:11:19,135 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-06-08 13:11:19,171 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:11:32,991 [WARN] from play.core.server.netty.NettyModelConversion in application-akka.actor.default-dispatcher-5 - Content-Type set both in header (image/x-icon) and attached to entity (image/x-icon), ignoring content type from entity. To remove this warning, use Result.as(...) to set the content type, rather than setting the header manually.
+2016-06-08 13:13:20,991 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2016-06-08 13:13:21,060 [WARN] from application in application-akka.actor.default-dispatcher-8 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:13:21,148 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:13:21,149 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
+2016-06-08 13:13:24,047 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:13:24,107 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:13:24,167 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
+2016-06-08 13:13:24,188 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:14:05,478 [ERROR] from application in application-akka.actor.default-dispatcher-2 - 
 
-! @70bd552ba - Internal server error, for (POST) [/api/v1/dispatch] ->
+! @70bgenngj - Internal server error, for (GET) [/university/aast54] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[DataAccessException: SQL [select `Gara`.`Car`.`ID`, `Gara`.`Car`.`driverID`, `Gara`.`Car`.`plateNumber`, `Gara`.`Car`.`platePic`, `Gara`.`Car`.`carModelID`, `Gara`.`Car`.`frontPic`, `Gara`.`Car`.`backPic`, `Gara`.`Car`.`sidePic`, `Gara`.`Car`.`insidePic`, `Gara`.`Car`.`licenseNumber`, `Gara`.`Car`.`licensePic`, `Gara`.`Car`.`licenseExpireDate`, `Gara`.`Car`.`DistLongitude`, `Gara`.`Car`.`DistLatitude`, `Gara`.`Car`.`availableSeats`, `Gara`.`Car`.`state`, `Gara`.`Driver`.`ID`, `Gara`.`Driver`.`memberID`, `Gara`.`Driver`.`licenseNumber`, `Gara`.`Driver`.`licensePic`, `Gara`.`Driver`.`identyCardPic`, `Gara`.`Driver`.`licenseExpireDate`, `Gara`.`Member`.`ID`, `Gara`.`Member`.`TIMESTAMP`, `Gara`.`Member`.`name`, `Gara`.`Member`.`username`, `Gara`.`Member`.`studentEmail`, `Gara`.`Member`.`phoneNumber`, `Gara`.`Member`.`birthDate`, `Gara`.`Member`.`activited`, `Gara`.`Member`.`gender`, `Gara`.`Member`.`password`, `Gara`.`Member`.`collegeID`, `Gara`.`Member`.`salt`, `Gara`.`Member`.`pic`, `Gara`.`Member`.`bloodType`, `Gara`.`Member`.`emergencyNumber`, `Gara`.`Member`.`balance`, `Gara`.`Member`.`studentEmailActivationCode`, `Gara`.`Member`.`rideID`, `Gara`.`Member`.`memberGroupID`, `Gara`.`Member`.`longitude`, `Gara`.`Member`.`latitude` from `Gara`.`Car` join `Gara`.`Driver` on `Gara`.`Car`.`driverID` = `Gara`.`Driver`.`ID` join `Gara`.`Member` on `Gara`.`Member`.`ID` = `Gara`.`Driver`.`memberID` where (SELECT * 
-FROM Car
-JOIN Driver ON Car.driverID = Driver.ID
-JOIN Member ON Member.ID = Driver.memberID
-WHERE ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-? - ABS( Car.DistLatitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Car.DistLatitude ) * PI( ) /180 ) * POWER( SIN( (
-? - Car.DistLongitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-? - ABS( Member.latitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Member.latitude ) * PI( ) /180 ) * POWER( SIN( (
-? - Member.longitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND Member.ID !=?)]; Operand should contain 1 column(s)]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IndexOutOfBoundsException: Index: 0, Size: 0]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
 	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
@@ -136,31 +138,12 @@ AND Member.ID !=?)]; Operand should contain 1 column(s)]]
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: org.jooq.exception.DataAccessException: SQL [select `Gara`.`Car`.`ID`, `Gara`.`Car`.`driverID`, `Gara`.`Car`.`plateNumber`, `Gara`.`Car`.`platePic`, `Gara`.`Car`.`carModelID`, `Gara`.`Car`.`frontPic`, `Gara`.`Car`.`backPic`, `Gara`.`Car`.`sidePic`, `Gara`.`Car`.`insidePic`, `Gara`.`Car`.`licenseNumber`, `Gara`.`Car`.`licensePic`, `Gara`.`Car`.`licenseExpireDate`, `Gara`.`Car`.`DistLongitude`, `Gara`.`Car`.`DistLatitude`, `Gara`.`Car`.`availableSeats`, `Gara`.`Car`.`state`, `Gara`.`Driver`.`ID`, `Gara`.`Driver`.`memberID`, `Gara`.`Driver`.`licenseNumber`, `Gara`.`Driver`.`licensePic`, `Gara`.`Driver`.`identyCardPic`, `Gara`.`Driver`.`licenseExpireDate`, `Gara`.`Member`.`ID`, `Gara`.`Member`.`TIMESTAMP`, `Gara`.`Member`.`name`, `Gara`.`Member`.`username`, `Gara`.`Member`.`studentEmail`, `Gara`.`Member`.`phoneNumber`, `Gara`.`Member`.`birthDate`, `Gara`.`Member`.`activited`, `Gara`.`Member`.`gender`, `Gara`.`Member`.`password`, `Gara`.`Member`.`collegeID`, `Gara`.`Member`.`salt`, `Gara`.`Member`.`pic`, `Gara`.`Member`.`bloodType`, `Gara`.`Member`.`emergencyNumber`, `Gara`.`Member`.`balance`, `Gara`.`Member`.`studentEmailActivationCode`, `Gara`.`Member`.`rideID`, `Gara`.`Member`.`memberGroupID`, `Gara`.`Member`.`longitude`, `Gara`.`Member`.`latitude` from `Gara`.`Car` join `Gara`.`Driver` on `Gara`.`Car`.`driverID` = `Gara`.`Driver`.`ID` join `Gara`.`Member` on `Gara`.`Member`.`ID` = `Gara`.`Driver`.`memberID` where (SELECT * 
-FROM Car
-JOIN Driver ON Car.driverID = Driver.ID
-JOIN Member ON Member.ID = Driver.memberID
-WHERE ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-? - ABS( Car.DistLatitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Car.DistLatitude ) * PI( ) /180 ) * POWER( SIN( (
-? - Car.DistLongitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-? - ABS( Member.latitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Member.latitude ) * PI( ) /180 ) * POWER( SIN( (
-? - Member.longitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND Member.ID !=?)]; Operand should contain 1 column(s)
-	at org.jooq.impl.Tools.translate(Tools.java:1907)
-	at org.jooq.impl.DefaultExecuteContext.sqlException(DefaultExecuteContext.java:659)
-	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:362)
-	at org.jooq.impl.AbstractResultQuery.fetch(AbstractResultQuery.java:312)
-	at org.jooq.impl.SelectImpl.fetch(SelectImpl.java:2705)
-	at models.RESTHelper.dispatch(RESTHelper.java:339)
-	at controllers.RESTRouter.dispatch(RESTRouter.java:53)
-	at controllers.RESTRouter.index(RESTRouter.java:40)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at controllers.UniversityPage.home(UniversityPage.java:40)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.apply(Routes.scala:803)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.apply(Routes.scala:803)
 	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
 	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
 	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
@@ -186,570 +169,51 @@ AND Member.ID !=?)]; Operand should contain 1 column(s)
 	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
 	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
 	... 14 common frames omitted
-Caused by: java.sql.SQLException: Operand should contain 1 column(s)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1094)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158)
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840)
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
-	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
-	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194)
-	at org.jooq.impl.AbstractResultQuery.execute(AbstractResultQuery.java:269)
-	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:348)
-	... 45 common frames omitted
-2016-06-08 02:10:26,459 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2016-06-08 02:10:26,574 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:10:26,719 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:10:26,719 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2016-06-08 02:10:29,715 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:10:29,785 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:10:29,875 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2016-06-08 02:10:29,911 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:10:32,530 [ERROR] from application in application-akka.actor.default-dispatcher-5 - 
-
-! @70bd5kijc - Internal server error, for (POST) [/api/v1/dispatch] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[DataAccessException: SQL [select `Gara`.`Car`.`ID`, `Gara`.`Car`.`driverID`, `Gara`.`Car`.`plateNumber`, `Gara`.`Car`.`platePic`, `Gara`.`Car`.`carModelID`, `Gara`.`Car`.`frontPic`, `Gara`.`Car`.`backPic`, `Gara`.`Car`.`sidePic`, `Gara`.`Car`.`insidePic`, `Gara`.`Car`.`licenseNumber`, `Gara`.`Car`.`licensePic`, `Gara`.`Car`.`licenseExpireDate`, `Gara`.`Car`.`DistLongitude`, `Gara`.`Car`.`DistLatitude`, `Gara`.`Car`.`availableSeats`, `Gara`.`Car`.`state`, `Gara`.`Driver`.`ID`, `Gara`.`Driver`.`memberID`, `Gara`.`Driver`.`licenseNumber`, `Gara`.`Driver`.`licensePic`, `Gara`.`Driver`.`identyCardPic`, `Gara`.`Driver`.`licenseExpireDate`, `Gara`.`Member`.`ID`, `Gara`.`Member`.`TIMESTAMP`, `Gara`.`Member`.`name`, `Gara`.`Member`.`username`, `Gara`.`Member`.`studentEmail`, `Gara`.`Member`.`phoneNumber`, `Gara`.`Member`.`birthDate`, `Gara`.`Member`.`activited`, `Gara`.`Member`.`gender`, `Gara`.`Member`.`password`, `Gara`.`Member`.`collegeID`, `Gara`.`Member`.`salt`, `Gara`.`Member`.`pic`, `Gara`.`Member`.`bloodType`, `Gara`.`Member`.`emergencyNumber`, `Gara`.`Member`.`balance`, `Gara`.`Member`.`studentEmailActivationCode`, `Gara`.`Member`.`rideID`, `Gara`.`Member`.`memberGroupID`, `Gara`.`Member`.`longitude`, `Gara`.`Member`.`latitude` from `Gara`.`Car` join `Gara`.`Driver` on `Gara`.`Car`.`driverID` = `Gara`.`Driver`.`ID` join `Gara`.`Member` on `Gara`.`Member`.`ID` = `Gara`.`Driver`.`memberID` where (SELECT * 
-FROM Car
-JOIN Driver ON Car.driverID = Driver.ID
-JOIN Member ON Member.ID = Driver.memberID
-WHERE ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-30.8025 - ABS( Car.DistLatitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( 30.8025 * PI( ) /180 ) * COS( ABS( Car.DistLatitude ) * PI( ) /180 ) * POWER( SIN( (
-26.8206 - Car.DistLongitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-30.8025 - ABS( Member.latitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( 30.8025 * PI( ) /180 ) * COS( ABS( Member.latitude ) * PI( ) /180 ) * POWER( SIN( (
-26.8206 - Member.longitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND Member.ID !=1)]; Operand should contain 1 column(s)]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
-	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
-	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: org.jooq.exception.DataAccessException: SQL [select `Gara`.`Car`.`ID`, `Gara`.`Car`.`driverID`, `Gara`.`Car`.`plateNumber`, `Gara`.`Car`.`platePic`, `Gara`.`Car`.`carModelID`, `Gara`.`Car`.`frontPic`, `Gara`.`Car`.`backPic`, `Gara`.`Car`.`sidePic`, `Gara`.`Car`.`insidePic`, `Gara`.`Car`.`licenseNumber`, `Gara`.`Car`.`licensePic`, `Gara`.`Car`.`licenseExpireDate`, `Gara`.`Car`.`DistLongitude`, `Gara`.`Car`.`DistLatitude`, `Gara`.`Car`.`availableSeats`, `Gara`.`Car`.`state`, `Gara`.`Driver`.`ID`, `Gara`.`Driver`.`memberID`, `Gara`.`Driver`.`licenseNumber`, `Gara`.`Driver`.`licensePic`, `Gara`.`Driver`.`identyCardPic`, `Gara`.`Driver`.`licenseExpireDate`, `Gara`.`Member`.`ID`, `Gara`.`Member`.`TIMESTAMP`, `Gara`.`Member`.`name`, `Gara`.`Member`.`username`, `Gara`.`Member`.`studentEmail`, `Gara`.`Member`.`phoneNumber`, `Gara`.`Member`.`birthDate`, `Gara`.`Member`.`activited`, `Gara`.`Member`.`gender`, `Gara`.`Member`.`password`, `Gara`.`Member`.`collegeID`, `Gara`.`Member`.`salt`, `Gara`.`Member`.`pic`, `Gara`.`Member`.`bloodType`, `Gara`.`Member`.`emergencyNumber`, `Gara`.`Member`.`balance`, `Gara`.`Member`.`studentEmailActivationCode`, `Gara`.`Member`.`rideID`, `Gara`.`Member`.`memberGroupID`, `Gara`.`Member`.`longitude`, `Gara`.`Member`.`latitude` from `Gara`.`Car` join `Gara`.`Driver` on `Gara`.`Car`.`driverID` = `Gara`.`Driver`.`ID` join `Gara`.`Member` on `Gara`.`Member`.`ID` = `Gara`.`Driver`.`memberID` where (SELECT * 
-FROM Car
-JOIN Driver ON Car.driverID = Driver.ID
-JOIN Member ON Member.ID = Driver.memberID
-WHERE ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-30.8025 - ABS( Car.DistLatitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( 30.8025 * PI( ) /180 ) * COS( ABS( Car.DistLatitude ) * PI( ) /180 ) * POWER( SIN( (
-26.8206 - Car.DistLongitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND ( 3956 *2 * ASIN( SQRT( POWER( SIN( (
-30.8025 - ABS( Member.latitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( 30.8025 * PI( ) /180 ) * COS( ABS( Member.latitude ) * PI( ) /180 ) * POWER( SIN( (
-26.8206 - Member.longitude
-) * PI( ) /180 /2 ) , 2 ) ) )
-) < 5.0 
-AND Member.ID !=1)]; Operand should contain 1 column(s)
-	at org.jooq.impl.Tools.translate(Tools.java:1907)
-	at org.jooq.impl.DefaultExecuteContext.sqlException(DefaultExecuteContext.java:659)
-	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:362)
-	at org.jooq.impl.AbstractResultQuery.fetch(AbstractResultQuery.java:312)
-	at org.jooq.impl.SelectImpl.fetch(SelectImpl.java:2705)
-	at models.RESTHelper.dispatch(RESTHelper.java:339)
-	at controllers.RESTRouter.dispatch(RESTRouter.java:53)
-	at controllers.RESTRouter.index(RESTRouter.java:40)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
-	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.Future$.apply(Future.scala:31)
-	at scala.concurrent.Future$.apply(Future.scala:492)
-	at play.core.j.JavaAction.apply(JavaAction.scala:108)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
-	at scala.Option.map(Option.scala:146)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
-	... 14 common frames omitted
-Caused by: java.sql.SQLException: Operand should contain 1 column(s)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1094)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158)
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2840)
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2082)
-	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1302)
-	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194)
-	at org.jooq.impl.AbstractResultQuery.execute(AbstractResultQuery.java:269)
-	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:348)
-	... 45 common frames omitted
-2016-06-08 02:13:54,199 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-06-08 02:13:54,279 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:13:54,348 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:13:54,349 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-06-08 02:13:58,297 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:13:58,346 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:13:58,411 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-06-08 02:13:58,439 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:14:01,092 [ERROR] from application in application-akka.actor.default-dispatcher-2 - 
-
-! @70bd66f73 - Internal server error, for (POST) [/api/v1/dispatch] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[RuntimeException: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
-	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
-	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.RuntimeException: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])
-	at play.libs.Json.toJson(Json.java:73)
-	at controllers.RESTRouter.dispatch(RESTRouter.java:53)
-	at controllers.RESTRouter.index(RESTRouter.java:40)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
-	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.Future$.apply(Future.scala:31)
-	at scala.concurrent.Future$.apply(Future.scala:492)
-	at play.core.j.JavaAction.apply(JavaAction.scala:108)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
-	at scala.Option.map(Option.scala:146)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
-	... 14 common frames omitted
-Caused by: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])
-	at com.fasterxml.jackson.databind.ObjectMapper.valueToTree(ObjectMapper.java:2573)
-	at play.libs.Json.toJson(Json.java:71)
-	... 42 common frames omitted
-Caused by: com.fasterxml.jackson.databind.JsonMappingException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])
-	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:230)
-	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:68)
-	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:32)
-	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:149)
-	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:112)
-	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25)
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:130)
-	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:2436)
-	at com.fasterxml.jackson.databind.ObjectMapper.valueToTree(ObjectMapper.java:2568)
-	... 43 common frames omitted
-2016-06-08 02:16:59,279 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
-2016-06-08 02:16:59,342 [WARN] from application in application-akka.actor.default-dispatcher-8 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:16:59,437 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:16:59,438 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2016-06-08 02:17:02,435 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:17:02,467 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:17:02,510 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
-2016-06-08 02:17:02,531 [WARN] from application in application-akka.actor.default-dispatcher-6 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:17:07,010 [ERROR] from application in application-akka.actor.default-dispatcher-6 - 
-
-! @70bd6h47k - Internal server error, for (POST) [/api/v1/dispatch] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[RuntimeException: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
-	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
-	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.RuntimeException: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])
-	at play.libs.Json.toJson(Json.java:73)
-	at controllers.RESTRouter.dispatch(RESTRouter.java:53)
-	at controllers.RESTRouter.index(RESTRouter.java:40)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
-	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.Future$.apply(Future.scala:31)
-	at scala.concurrent.Future$.apply(Future.scala:492)
-	at play.core.j.JavaAction.apply(JavaAction.scala:108)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
-	at scala.Option.map(Option.scala:146)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
-	... 14 common frames omitted
-Caused by: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])
-	at com.fasterxml.jackson.databind.ObjectMapper.valueToTree(ObjectMapper.java:2573)
-	at play.libs.Json.toJson(Json.java:71)
-	... 42 common frames omitted
-Caused by: com.fasterxml.jackson.databind.JsonMappingException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) ) (through reference chain: org.jooq.impl.ResultImpl[0])
-	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:230)
-	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:68)
-	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:32)
-	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:149)
-	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:112)
-	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25)
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:130)
-	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:2436)
-	at com.fasterxml.jackson.databind.ObjectMapper.valueToTree(ObjectMapper.java:2568)
-	... 43 common frames omitted
-2016-06-08 02:19:41,945 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2016-06-08 02:19:42,004 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:19:42,054 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:19:42,054 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2016-06-08 02:19:45,619 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:19:45,663 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:19:45,711 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2016-06-08 02:19:45,731 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:23:28,601 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-06-08 02:23:28,666 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:23:28,734 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:23:28,736 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-06-08 02:23:32,694 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:23:32,728 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:23:32,765 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-06-08 02:23:32,783 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:23:35,421 [ERROR] from application in application-akka.actor.default-dispatcher-9 - 
-
-! @70bd7d6mh - Internal server error, for (POST) [/api/v1/dispatch] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[RuntimeException: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) )]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
-	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
-	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.lang.RuntimeException: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) )
-	at play.libs.Json.toJson(Json.java:73)
-	at controllers.RESTRouter.dispatch(RESTRouter.java:53)
-	at controllers.RESTRouter.index(RESTRouter.java:40)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
-	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.Future$.apply(Future.scala:31)
-	at scala.concurrent.Future$.apply(Future.scala:492)
-	at play.core.j.JavaAction.apply(JavaAction.scala:108)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
-	at scala.Option.map(Option.scala:146)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
-	... 14 common frames omitted
-Caused by: java.lang.IllegalArgumentException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) )
-	at com.fasterxml.jackson.databind.ObjectMapper.valueToTree(ObjectMapper.java:2573)
-	at play.libs.Json.toJson(Json.java:71)
-	... 42 common frames omitted
-Caused by: com.fasterxml.jackson.databind.JsonMappingException: No serializer found for class org.jooq.impl.RecordImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) )
-	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:230)
-	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:68)
-	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:32)
-	at com.fasterxml.jackson.databind.ser.std.ObjectArraySerializer.serializeContents(ObjectArraySerializer.java:256)
-	at com.fasterxml.jackson.databind.ser.std.ObjectArraySerializer.serialize(ObjectArraySerializer.java:216)
-	at com.fasterxml.jackson.databind.ser.std.ObjectArraySerializer.serialize(ObjectArraySerializer.java:26)
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:130)
-	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:2436)
-	at com.fasterxml.jackson.databind.ObjectMapper.valueToTree(ObjectMapper.java:2568)
-	... 43 common frames omitted
-2016-06-08 02:24:44,399 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2016-06-08 02:24:44,468 [WARN] from application in application-akka.actor.default-dispatcher-2 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:24:44,555 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:24:44,555 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
-2016-06-08 02:24:47,534 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:24:47,583 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:24:47,613 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
-2016-06-08 02:24:47,628 [WARN] from application in application-akka.actor.default-dispatcher-6 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:28:20,436 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-06-08 02:28:20,491 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:28:20,561 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:28:20,562 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-06-08 02:28:23,723 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:28:23,775 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:28:23,816 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-06-08 02:28:23,831 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 02:29:21,563 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2016-06-08 02:29:21,631 [WARN] from application in application-akka.actor.default-dispatcher-2 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 02:29:21,718 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 02:29:21,718 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
-2016-06-08 02:29:24,734 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 02:29:24,781 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 02:29:24,816 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
-2016-06-08 02:29:24,840 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 03:51:48,680 [WARN] from com.zaxxer.hikari.pool.HikariPool in Hikari housekeeper (pool HikariPool-10) - HikariPool-10 - Unusual system clock change detected, soft-evicting connections from pool.
-2016-06-08 03:53:09,128 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2016-06-08 03:53:09,198 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 03:53:09,267 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 03:53:09,267 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2016-06-08 03:53:12,271 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 03:53:12,313 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 03:53:12,347 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2016-06-08 03:53:12,364 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 04:04:51,309 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
-2016-06-08 04:04:51,392 [WARN] from application in application-akka.actor.default-dispatcher-9 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 04:04:51,488 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 04:04:51,488 [INFO] from application in application-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
-2016-06-08 04:04:54,468 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-9 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 04:04:54,592 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 04:04:54,641 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-9 - Application started (Dev)
-2016-06-08 04:04:54,684 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 04:05:36,693 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2016-06-08 04:05:38,933 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 04:05:38,984 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 04:05:38,984 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2016-06-08 04:05:41,966 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 04:05:42,006 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 04:05:42,045 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2016-06-08 04:05:42,058 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 04:06:32,213 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
-2016-06-08 04:06:32,254 [WARN] from application in application-akka.actor.default-dispatcher-7 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 04:06:32,287 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 04:06:32,287 [INFO] from application in application-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
-2016-06-08 04:06:35,268 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-7 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 04:06:35,321 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 04:06:35,358 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-7 - Application started (Dev)
-2016-06-08 04:06:35,373 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 04:06:37,993 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
-
-! @70bdl10ho - Internal server error, for (POST) [/api/v1/dispatch] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[InvalidResultException: Field ID is not unique in Record : +----+--------+-----------+--------+----------+--------+-------+-------+---------+-------------+----------+-----------------+-------------+------------+--------------+-----+----+--------+-------------+----------+-------------+-----------------+----+---------------------+----------------+---------+--------------------------+-----------+---------+---------+------+------------------+---------+------+------+---------+---------------+-------+--------------------------+------+-------------+---------+--------+
-|  ID|driverID|plateNumber|platePic|carModelID|frontPic|backPic|sidePic|insidePic|licenseNumber|licensePic|licenseExpireDate|DistLongitude|DistLatitude|availableSeats|state|  ID|memberID|licenseNumber|licensePic|identyCardPic|licenseExpireDate|  ID|TIMESTAMP            |name            |username |studentEmail              |phoneNumber|birthDate|activited|gender|password          |collegeID|salt  |pic   |bloodType|emergencyNumber|balance|studentEmailActivationCode|rideID|memberGroupID|longitude|latitude|
-+----+--------+-----------+--------+----------+--------+-------+-------+---------+-------------+----------+-----------------+-------------+------------+--------------+-----+----+--------+-------------+----------+-------------+-----------------+----+---------------------+----------------+---------+--------------------------+-----------+---------+---------+------+------------------+---------+------+------+---------+---------------+-------+--------------------------+------+-------------+---------+--------+
-|   1|       1|121212     |{null}  |         1|{null}  |{null} |{null} |{null}   |12121212     |{null}    |2016-06-15       |      26.8206|     30.8025|        {null}|false|   1|       2|45654654     |456546    |456546456    |2016-06-23       |   2|2016-06-01 04:36:00.0|Ahmed Kamel Taha|ahmedengu|ahmedengu@student.aast.edu|12751883550|{null}   |   {null}|{null}|uoeoeu!!!oeueo!!11|   {null}|{null}|{null}|{null}   |{null}         | {null}|{null}                    |{null}|       {null}|  26.8206| 30.8025|
-+----+--------+-----------+--------+----------+--------+-------+-------+---------+-------------+----------+-----------------+-------------+------------+--------------+-----+----+--------+-------------+----------+-------------+-----------------+----+---------------------+----------------+---------+--------------------------+-----------+---------+---------+------+------------------+---------+------+------+---------+---------------+-------+--------------------------+------+-------------+---------+--------+]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
-	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
-	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: org.jooq.exception.InvalidResultException: Field ID is not unique in Record : +----+--------+-----------+--------+----------+--------+-------+-------+---------+-------------+----------+-----------------+-------------+------------+--------------+-----+----+--------+-------------+----------+-------------+-----------------+----+---------------------+----------------+---------+--------------------------+-----------+---------+---------+------+------------------+---------+------+------+---------+---------------+-------+--------------------------+------+-------------+---------+--------+
-|  ID|driverID|plateNumber|platePic|carModelID|frontPic|backPic|sidePic|insidePic|licenseNumber|licensePic|licenseExpireDate|DistLongitude|DistLatitude|availableSeats|state|  ID|memberID|licenseNumber|licensePic|identyCardPic|licenseExpireDate|  ID|TIMESTAMP            |name            |username |studentEmail              |phoneNumber|birthDate|activited|gender|password          |collegeID|salt  |pic   |bloodType|emergencyNumber|balance|studentEmailActivationCode|rideID|memberGroupID|longitude|latitude|
-+----+--------+-----------+--------+----------+--------+-------+-------+---------+-------------+----------+-----------------+-------------+------------+--------------+-----+----+--------+-------------+----------+-------------+-----------------+----+---------------------+----------------+---------+--------------------------+-----------+---------+---------+------+------------------+---------+------+------+---------+---------------+-------+--------------------------+------+-------------+---------+--------+
-|   1|       1|121212     |{null}  |         1|{null}  |{null} |{null} |{null}   |12121212     |{null}    |2016-06-15       |      26.8206|     30.8025|        {null}|false|   1|       2|45654654     |456546    |456546456    |2016-06-23       |   2|2016-06-01 04:36:00.0|Ahmed Kamel Taha|ahmedengu|ahmedengu@student.aast.edu|12751883550|{null}   |   {null}|{null}|uoeoeu!!!oeueo!!11|   {null}|{null}|{null}|{null}   |{null}         | {null}|{null}                    |{null}|       {null}|  26.8206| 30.8025|
-+----+--------+-----------+--------+----------+--------+-------+-------+---------+-------------+----------+-----------------+-------------+------------+--------------+-----+----+--------+-------------+----------+-------------+-----------------+----+---------------------+----------------+---------+--------------------------+-----------+---------+---------+------+------------------+---------+------+------+---------+---------------+-------+--------------------------+------+-------------+---------+--------+
-	at org.jooq.impl.AbstractRecord.intoMap(AbstractRecord.java:539)
-	at org.jooq.impl.ResultImpl.intoMaps(ResultImpl.java:1197)
-	at org.jooq.impl.AbstractResultQuery.fetchMaps(AbstractResultQuery.java:935)
-	at org.jooq.impl.SelectImpl.fetchMaps(SelectImpl.java:3265)
-	at models.RESTHelper.dispatch(RESTHelper.java:334)
-	at controllers.RESTRouter.dispatch(RESTRouter.java:54)
-	at controllers.RESTRouter.index(RESTRouter.java:41)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:589)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
-	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
-	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.Future$.apply(Future.scala:31)
-	at scala.concurrent.Future$.apply(Future.scala:492)
-	at play.core.j.JavaAction.apply(JavaAction.scala:108)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
-	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
-	at scala.Option.map(Option.scala:146)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
-	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
-	... 14 common frames omitted
-2016-06-08 04:17:21,133 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-06-08 04:17:21,173 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 04:17:21,210 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 04:17:21,211 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-06-08 04:17:24,196 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 04:17:24,241 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 04:17:24,287 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-06-08 04:17:24,313 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 04:21:04,036 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-06-08 04:21:04,081 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 04:21:04,116 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 04:21:04,117 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-06-08 04:21:07,108 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 04:21:07,214 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 04:21:07,312 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-06-08 04:21:07,390 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-08 04:22:25,133 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-06-08 04:22:25,169 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-08 04:22:25,206 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-08 04:22:25,207 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-06-08 04:22:28,197 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-08 04:22:28,231 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-08 04:22:28,257 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-06-08 04:22:28,270 [WARN] from application in application-akka.actor.default-dispatcher-6 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:14:51,935 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2016-06-08 13:14:52,002 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:14:52,072 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:14:52,072 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2016-06-08 13:14:54,981 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:14:55,019 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:14:55,071 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2016-06-08 13:14:55,094 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:15:21,662 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2016-06-08 13:15:21,714 [WARN] from application in application-akka.actor.default-dispatcher-8 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:15:21,776 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:15:21,776 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
+2016-06-08 13:15:24,736 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:15:24,784 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:15:24,836 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
+2016-06-08 13:15:24,857 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:19:46,719 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2016-06-08 13:19:46,769 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:19:46,810 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:19:46,811 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2016-06-08 13:19:50,801 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:19:50,852 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:19:50,898 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2016-06-08 13:19:50,916 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:22:58,803 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2016-06-08 13:22:58,889 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:22:58,954 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:22:58,954 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2016-06-08 13:23:02,780 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:23:02,845 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:23:02,880 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2016-06-08 13:23:02,902 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:24:33,673 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2016-06-08 13:24:33,719 [WARN] from application in application-akka.actor.default-dispatcher-5 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:24:33,779 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:24:33,780 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2016-06-08 13:24:37,192 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:24:37,231 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:24:37,272 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-06-08 13:24:37,304 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-08 13:25:00,743 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2016-06-08 13:25:02,125 [WARN] from application in application-akka.actor.default-dispatcher-8 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-08 13:25:02,176 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-08 13:25:02,177 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
+2016-06-08 13:25:05,076 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-08 13:25:05,118 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-08 13:25:05,151 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
+2016-06-08 13:25:05,167 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead

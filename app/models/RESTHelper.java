@@ -1,6 +1,5 @@
 package models;
 
-import javafx.scene.control.Tab;
 import models.garaDB.Tables;
 import models.garaDB.tables.pojos.*;
 import models.garaDB.tables.records.*;
@@ -190,6 +189,8 @@ public class RESTHelper {
                 return Tables.SITEOPTION;
             case "UNIVERSITY":
                 return Tables.UNIVERSITY;
+            case "UNIVERSITYPAGECONTENT":
+                return Tables.UNIVERSITYPAGECONTENT;
         }
         return null;
     }
@@ -232,6 +233,8 @@ public class RESTHelper {
                 return Siteoption.class;
             case "UNIVERSITY":
                 return University.class;
+            case "UNIVERSITYPAGECONTENT":
+                return Universitypagecontent.class;
         }
         return null;
     }
@@ -273,8 +276,12 @@ public class RESTHelper {
                 return Tables.SITEOPTION.fields();
             case "UNIVERSITY":
                 return Tables.UNIVERSITY.fields();
+            case "UNIVERSITYPAGECONTENT":
+                return Tables.UNIVERSITYPAGECONTENT.fields();
             case "DISPATCH":
                 return new Field<?>[]{Tables.MEMBER.ID,Tables.MEMBER.NAME,Tables.MEMBER.USERNAME,Tables.MEMBER.PIC,Tables.MEMBER.LONGITUDE,Tables.MEMBER.LATITUDE,Tables.CAR.DISTLATITUDE,Tables.CAR.DISTLONGITUDE,Tables.CAR.CARMODELID,Tables.CAR.AVAILABLESEATS,Tables.CAR.FRONTPIC};
+            case "UNIVERSITYPAGECONTENTJOIN":
+                return new Field<?>[]{Tables.UNIVERSITY.NAME,Tables.UNIVERSITY.PIC,Tables.UNIVERSITYPAGECONTENT.TITLE,Tables.UNIVERSITYPAGECONTENT.TIMESTAMP,Tables.UNIVERSITYPAGECONTENT.BODY,Tables.UNIVERSITYPAGECONTENT.DESCRIPTION,Tables.UNIVERSITYPAGECONTENT.KEYWORDS};
         }
         return null;
     }
@@ -316,12 +323,14 @@ public class RESTHelper {
                 return new SiteoptionRecord();
             case "UNIVERSITY":
                 return new UniversityRecord();
+            case "UNIVERSITYPAGECONTENT":
+                return new UniversitypagecontentRecord();
         }
         return null;
     }
 
 
-    public List<Map<String, Object>> dispatch(String memberID, String distLongitude, String distLatitude, String longitude, String latitude) {
+    public List<Map<String, Object>> dispatch(String memberID, String distLongitude, String distLatitude, String longitude, String latitude)throws SQLException {
                 return getDslContext().select(getSelectFieldsByName("dispatch")).from(Tables.CAR.join(Tables.DRIVER).on(Tables.CAR.DRIVERID.equal(Tables.DRIVER.ID)).join(Tables.MEMBER).on(Tables.MEMBER.ID.equal(Tables.DRIVER.MEMBERID))).where(
                 " ( 3956 *2 * ASIN( SQRT( POWER( SIN( (\n" +
                 "? - ABS( Car.DistLatitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Car.DistLatitude ) * PI( ) /180 ) * POWER( SIN( (\n" +
@@ -334,5 +343,10 @@ public class RESTHelper {
                 ") * PI( ) /180 /2 ) , 2 ) ) )\n" +
                 ") < 5.0 \n" +
                 "AND Member.ID !=?",distLatitude,distLatitude,distLongitude,latitude,latitude,longitude,memberID).fetchMaps();
+    }
+
+    public Map<String, Object> getUniversityContentPage(String pageSubdomain, String link)throws SQLException {
+        return getDslContext().select(getSelectFieldsByName("UNIVERSITYPAGECONTENTJOIN")).from(Tables.UNIVERSITY).join(Tables.UNIVERSITYPAGECONTENT).on(Tables.UNIVERSITY.ID.equal(Tables.UNIVERSITYPAGECONTENT.UNIVERSITYID)).where(Tables.UNIVERSITY.PAGESUBDOMAIN.equal(pageSubdomain)).and(Tables.UNIVERSITYPAGECONTENT.LINK.equal(link)).fetchOneMap();
+
     }
 }

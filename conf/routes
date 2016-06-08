@@ -4,7 +4,6 @@
 
 # Home page
 GET           /                           controllers.Application.index
-
 # Map static resources from the /public folder to the /assets URL path
 GET           /assets/*file               controllers.Assets.at(path="/public", file)
 POST          /api/v1/login               controllers.RESTRouter.index(target = "login", table="member"  ,id="eouou")
@@ -39,3 +38,9 @@ POST          /member/dispatch            controllers.Application.dispatchPost()
 POST          /member/order               controllers.Application.orderPost()
 
 GET           /logout                     controllers.Application.logout()
+
+
+GET           /university                 controllers.UniversityPage.index()
+GET           /university/:subdomain                 controllers.UniversityPage.home(subdomain)
+GET           /university/:subdomain/:page                 controllers.UniversityPage.page(subdomain,page)
+

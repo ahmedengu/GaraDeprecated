@@ -51,7 +51,12 @@ public class RESTRouter extends Controller {
         String latitude = form.data().get("latitude").toString();
         String longitude = form.data().get("longitude").toString();
         String memberID = form.data().get("id").toString();
-        List<Map<String, Object>> dispatch = restHelper.dispatch(memberID, distLongitude, distLatitude, longitude, latitude);
+        List<Map<String, Object>> dispatch = null;
+        try {
+            dispatch = restHelper.dispatch(memberID, distLongitude, distLatitude, longitude, latitude);
+        } catch (Exception e) {
+            return badRequest("{\"error\":\"bad request\"}");
+        }
 
         return ok(Json.toJson(dispatch));
     }
