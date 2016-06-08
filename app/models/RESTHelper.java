@@ -1,5 +1,6 @@
 package models;
 
+import javafx.scene.control.Tab;
 import models.garaDB.Tables;
 import models.garaDB.tables.pojos.*;
 import models.garaDB.tables.records.*;
@@ -9,10 +10,7 @@ import play.data.Form;
 
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 import static play.mvc.Controller.request;
 
@@ -29,11 +27,11 @@ public class RESTHelper {
 
         AccesstokenRecord accesstoken=  getDslContext().newRecord(Tables.ACCESSTOKEN);
         accesstoken.setIp(request().remoteAddress());
-        accesstoken.setBrowser( request().headers().get("User-Agent").toString() );
+        accesstoken.setBrowser(Arrays.toString(request().headers().get("User-Agent")) );
 
         accesstoken.setValue(axtok );
         accesstoken.setLastused(new Timestamp((new Date()).getTime()));
-
+        accesstoken.setTimestamp(accesstoken.getLastused());
         accesstoken.setMemberid(member.getId());
         accesstoken.store();
 
@@ -275,6 +273,8 @@ public class RESTHelper {
                 return Tables.SITEOPTION.fields();
             case "UNIVERSITY":
                 return Tables.UNIVERSITY.fields();
+            case "DISPATCH":
+                return new Field<?>[]{Tables.MEMBER.ID,Tables.MEMBER.NAME,Tables.MEMBER.USERNAME,Tables.MEMBER.PIC,Tables.MEMBER.LONGITUDE,Tables.MEMBER.LATITUDE,Tables.CAR.DISTLATITUDE,Tables.CAR.DISTLONGITUDE,Tables.CAR.CARMODELID,Tables.CAR.AVAILABLESEATS,Tables.CAR.FRONTPIC};
         }
         return null;
     }
@@ -321,4 +321,18 @@ public class RESTHelper {
     }
 
 
+    public List<Map<String, Object>> dispatch(String memberID, String distLongitude, String distLatitude, String longitude, String latitude) {
+                return getDslContext().select(getSelectFieldsByName("dispatch")).from(Tables.CAR.join(Tables.DRIVER).on(Tables.CAR.DRIVERID.equal(Tables.DRIVER.ID)).join(Tables.MEMBER).on(Tables.MEMBER.ID.equal(Tables.DRIVER.MEMBERID))).where(
+                " ( 3956 *2 * ASIN( SQRT( POWER( SIN( (\n" +
+                "? - ABS( Car.DistLatitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Car.DistLatitude ) * PI( ) /180 ) * POWER( SIN( (\n" +
+                "? - Car.DistLongitude\n" +
+                ") * PI( ) /180 /2 ) , 2 ) ) )\n" +
+                ") < 5.0 \n" +
+                "AND ( 3956 *2 * ASIN( SQRT( POWER( SIN( (\n" +
+                "? - ABS( Member.latitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Member.latitude ) * PI( ) /180 ) * POWER( SIN( (\n" +
+                "? - Member.longitude\n" +
+                ") * PI( ) /180 /2 ) , 2 ) ) )\n" +
+                ") < 5.0 \n" +
+                "AND Member.ID !=?",distLatitude,distLatitude,distLongitude,latitude,latitude,longitude,memberID).fetchMaps();
+    }
 }

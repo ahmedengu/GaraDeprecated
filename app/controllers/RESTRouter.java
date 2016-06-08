@@ -1,15 +1,20 @@
 package controllers;
 
 import models.RESTHelper;
+import models.garaDB.tables.pojos.Accesstoken;
 import models.garaDB.tables.pojos.Member;
 import play.data.Form;
 import play.data.FormFactory;
+import play.data.validation.ValidationError;
 import play.libs.Json;
 import play.mvc.Controller;
+import play.mvc.Result;
 
 import javax.inject.Inject;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class RESTRouter extends Controller {
 
@@ -30,11 +35,54 @@ public class RESTRouter extends Controller {
                 return create(table);
             case "updateByID":
                 return updateByID(table, id);
-
+            case "login":
+                return login();
+            case "dispatch":
+                return dispatch();
         }
 
         return badRequest("{\"error\":\"bad request\"}");
     }
+
+    private Result dispatch() {
+        Form form = formFactory.form().bindFromRequest();
+        String distLatitude = form.data().get("distLatitude").toString();
+        String distLongitude = form.data().get("distLongitude").toString();
+        String latitude = form.data().get("latitude").toString();
+        String longitude = form.data().get("longitude").toString();
+        String memberID = form.data().get("id").toString();
+        List<Map<String, Object>> dispatch = restHelper.dispatch(memberID, distLongitude, distLatitude, longitude, latitude);
+
+        return ok(Json.toJson(dispatch));
+    }
+
+    private Result login() {
+
+        Form form = formFactory.form().bindFromRequest();
+        String password = form.data().get("password").toString();
+        String username = form.data().get("username").toString();
+        try {
+            Accesstoken accesstokenRecord = restHelper.login(username, password);
+            if (accesstokenRecord.getValue() == null) {
+                return badRequest("{\"error\":\"username or password not correct\"}");
+            }
+
+            session("username", username);
+            session("Accesstoken", accesstokenRecord.getValue());
+            session("Accesstokenid", String.valueOf(accesstokenRecord.getId()));
+            session("lastused", accesstokenRecord.getLastused().toString());
+
+            List<Object> list = new ArrayList();
+            list.add(accesstokenRecord);
+            list.add(restHelper.getWhere("member","username",username));
+            return created(Json.toJson(list));
+
+        } catch (Exception e) {
+            return badRequest("{\"error\":\"username or password not correct\"}");
+        }
+    }
+
+
 
     public play.mvc.Result list(String tableName) {
 
