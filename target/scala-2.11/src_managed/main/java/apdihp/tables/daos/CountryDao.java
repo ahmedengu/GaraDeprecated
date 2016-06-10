@@ -91,4 +91,11 @@ public class CountryDao extends DAOImpl<CountryRecord, apdihp.tables.pojos.Count
     public List<apdihp.tables.pojos.Country> fetchByLatitude(Double... values) {
         return fetch(Country.COUNTRY.LATITUDE, values);
     }
+
+    /**
+     * Fetch records that have <code>gasPrice IN (values)</code>
+     */
+    public List<apdihp.tables.pojos.Country> fetchByGasprice(Integer... values) {
+        return fetch(Country.COUNTRY.GASPRICE, values);
+    }
 }

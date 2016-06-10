@@ -38,7 +38,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @Table(name = "CarManufacture", schema = "Gara")
 public class CarmanufactureRecord extends UpdatableRecordImpl<CarmanufactureRecord> implements Record4<Integer, String, Integer, String> {
 
-    private static final long serialVersionUID = -558246528;
+    private static final long serialVersionUID = -1029218493;
 
     /**
      * Setter for <code>Gara.CarManufacture.ID</code>.
@@ -85,8 +85,7 @@ public class CarmanufactureRecord extends UpdatableRecordImpl<CarmanufactureReco
     /**
      * Getter for <code>Gara.CarManufacture.countryID</code>.
      */
-    @Column(name = "countryID", nullable = false, precision = 10)
-    @NotNull
+    @Column(name = "countryID", precision = 10)
     public Integer getCountryid() {
         return (Integer) get(2);
     }

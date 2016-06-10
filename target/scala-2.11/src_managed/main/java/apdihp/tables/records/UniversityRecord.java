@@ -18,8 +18,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record15;
-import org.jooq.Row15;
+import org.jooq.Record16;
+import org.jooq.Row16;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -36,9 +36,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "University", schema = "Gara")
-public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> implements Record15<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String> {
+public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> implements Record16<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer> {
 
-    private static final long serialVersionUID = 1753737599;
+    private static final long serialVersionUID = 1912919445;
 
     /**
      * Setter for <code>Gara.University.ID</code>.
@@ -85,8 +85,7 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     /**
      * Getter for <code>Gara.University.cityID</code>.
      */
-    @Column(name = "cityID", nullable = false, precision = 10)
-    @NotNull
+    @Column(name = "cityID", precision = 10)
     public Integer getCityid() {
         return (Integer) get(2);
     }
@@ -283,6 +282,21 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
         return (String) get(14);
     }
 
+    /**
+     * Setter for <code>Gara.University.parkingCost</code>.
+     */
+    public void setParkingcost(Integer value) {
+        set(15, value);
+    }
+
+    /**
+     * Getter for <code>Gara.University.parkingCost</code>.
+     */
+    @Column(name = "parkingCost", precision = 10)
+    public Integer getParkingcost() {
+        return (Integer) get(15);
+    }
+
     // -------------------------------------------------------------------------
     // Primary key information
     // -------------------------------------------------------------------------
@@ -296,23 +310,23 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     // -------------------------------------------------------------------------
-    // Record15 type implementation
+    // Record16 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row15<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String> fieldsRow() {
-        return (Row15) super.fieldsRow();
+    public Row16<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer> fieldsRow() {
+        return (Row16) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row15<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String> valuesRow() {
-        return (Row15) super.valuesRow();
+    public Row16<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer> valuesRow() {
+        return (Row16) super.valuesRow();
     }
 
     /**
@@ -439,6 +453,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
      * {@inheritDoc}
      */
     @Override
+    public Field<Integer> field16() {
+        return University.UNIVERSITY.PARKINGCOST;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -553,6 +575,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     @Override
     public String value15() {
         return getContactpersonpassword();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value16() {
+        return getParkingcost();
     }
 
     /**
@@ -694,7 +724,16 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
      * {@inheritDoc}
      */
     @Override
-    public UniversityRecord values(Integer value1, String value2, Integer value3, Double value4, Double value5, String value6, String value7, String value8, String value9, String value10, String value11, String value12, String value13, String value14, String value15) {
+    public UniversityRecord value16(Integer value) {
+        setParkingcost(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public UniversityRecord values(Integer value1, String value2, Integer value3, Double value4, Double value5, String value6, String value7, String value8, String value9, String value10, String value11, String value12, String value13, String value14, String value15, Integer value16) {
         value1(value1);
         value2(value2);
         value3(value3);
@@ -710,6 +749,7 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
         value13(value13);
         value14(value14);
         value15(value15);
+        value16(value16);
         return this;
     }
 
@@ -727,7 +767,7 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     /**
      * Create a detached, initialised UniversityRecord
      */
-    public UniversityRecord(Integer id, String name, Integer cityid, Double longitude, Double latitude, String pic, String url, String emailformat, String pagename, String pagecontent, String pagedescription, String pagekeywords, String pagesubdomain, String contactpersonemail, String contactpersonpassword) {
+    public UniversityRecord(Integer id, String name, Integer cityid, Double longitude, Double latitude, String pic, String url, String emailformat, String pagename, String pagecontent, String pagedescription, String pagekeywords, String pagesubdomain, String contactpersonemail, String contactpersonpassword, Integer parkingcost) {
         super(University.UNIVERSITY);
 
         set(0, id);
@@ -745,5 +785,6 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
         set(12, pagesubdomain);
         set(13, contactpersonemail);
         set(14, contactpersonpassword);
+        set(15, parkingcost);
     }
 }

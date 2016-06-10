@@ -32,7 +32,7 @@ import javax.validation.constraints.Size;
 @Table(name = "CarManufacture", schema = "Gara")
 public class Carmanufacture implements Serializable {
 
-    private static final long serialVersionUID = 1127747514;
+    private static final long serialVersionUID = 561478673;
 
     private Integer id;
     private String  name;
@@ -83,8 +83,7 @@ public class Carmanufacture implements Serializable {
         this.name = name;
     }
 
-    @Column(name = "countryID", nullable = false, precision = 10)
-    @NotNull
+    @Column(name = "countryID", precision = 10)
     public Integer getCountryid() {
         return this.countryid;
     }

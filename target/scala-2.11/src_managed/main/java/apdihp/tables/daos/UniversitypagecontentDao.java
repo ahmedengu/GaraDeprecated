@@ -115,13 +115,6 @@ public class UniversitypagecontentDao extends DAOImpl<UniversitypagecontentRecor
     }
 
     /**
-     * Fetch records that have <code>name IN (values)</code>
-     */
-    public List<apdihp.tables.pojos.Universitypagecontent> fetchByName(String... values) {
-        return fetch(Universitypagecontent.UNIVERSITYPAGECONTENT.NAME, values);
-    }
-
-    /**
      * Fetch records that have <code>universityID IN (values)</code>
      */
     public List<apdihp.tables.pojos.Universitypagecontent> fetchByUniversityid(Integer... values) {

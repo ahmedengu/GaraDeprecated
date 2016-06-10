@@ -33,7 +33,7 @@ import javax.validation.constraints.Size;
 @Table(name = "UniversityPageContent", schema = "Gara")
 public class Universitypagecontent implements Serializable {
 
-    private static final long serialVersionUID = 1016260131;
+    private static final long serialVersionUID = -1857321874;
 
     private Integer   id;
     private Timestamp timestamp;
@@ -43,7 +43,6 @@ public class Universitypagecontent implements Serializable {
     private String    description;
     private String    keywords;
     private String    pic;
-    private String    name;
     private Integer   universityid;
 
     public Universitypagecontent() {}
@@ -57,7 +56,6 @@ public class Universitypagecontent implements Serializable {
         this.description = value.description;
         this.keywords = value.keywords;
         this.pic = value.pic;
-        this.name = value.name;
         this.universityid = value.universityid;
     }
 
@@ -70,7 +68,6 @@ public class Universitypagecontent implements Serializable {
         String    description,
         String    keywords,
         String    pic,
-        String    name,
         Integer   universityid
     ) {
         this.id = id;
@@ -81,7 +78,6 @@ public class Universitypagecontent implements Serializable {
         this.description = description;
         this.keywords = keywords;
         this.pic = pic;
-        this.name = name;
         this.universityid = universityid;
     }
 
@@ -166,16 +162,6 @@ public class Universitypagecontent implements Serializable {
         this.pic = pic;
     }
 
-    @Column(name = "name", length = 65535)
-    @Size(max = 65535)
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Column(name = "universityID", nullable = false, precision = 10)
     @NotNull
     public Integer getUniversityid() {
@@ -198,7 +184,6 @@ public class Universitypagecontent implements Serializable {
         sb.append(", ").append(description);
         sb.append(", ").append(keywords);
         sb.append(", ").append(pic);
-        sb.append(", ").append(name);
         sb.append(", ").append(universityid);
 
         sb.append(")");

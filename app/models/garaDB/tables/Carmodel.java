@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Carmodel extends TableImpl<CarmodelRecord> {
 
-    private static final long serialVersionUID = -763663733;
+    private static final long serialVersionUID = 678489657;
 
     /**
      * The reference instance of <code>Gara.CarModel</code>
@@ -64,7 +64,7 @@ public class Carmodel extends TableImpl<CarmodelRecord> {
     /**
      * The column <code>Gara.CarModel.numberOfSeats</code>.
      */
-    public final TableField<CarmodelRecord, Integer> NUMBEROFSEATS = createField("numberOfSeats", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<CarmodelRecord, Integer> NUMBEROFSEATS = createField("numberOfSeats", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>Gara.CarModel.carManufactureID</code>.
@@ -75,6 +75,11 @@ public class Carmodel extends TableImpl<CarmodelRecord> {
      * The column <code>Gara.CarModel.pic</code>.
      */
     public final TableField<CarmodelRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>Gara.CarModel.gasConsumption</code>.
+     */
+    public final TableField<CarmodelRecord, Integer> GASCONSUMPTION = createField("gasConsumption", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * Create a <code>Gara.CarModel</code> table reference

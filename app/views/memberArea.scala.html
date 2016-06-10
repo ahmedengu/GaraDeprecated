@@ -83,6 +83,11 @@
                         <!--// End Navigation -->
                 </div>
                     <!--// End Container -->
+                @if(flash.containsKey("alertMessage")) {
+                    <div class="alert @if(flash.containsKey("alertMessageType")) { @flash.get("alertMessageType") } else {alert-success}" style="text-align: center;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        @if(flash.containsKey("alertMessageStrong")) {<strong> @flash.get("alertMessageStrong") </strong> } @flash.get("alertMessage")
+                    </div>}
             </nav>
                 <!--// End Navbar -->
         </header>

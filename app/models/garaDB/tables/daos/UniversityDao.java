@@ -161,4 +161,11 @@ public class UniversityDao extends DAOImpl<UniversityRecord, models.garaDB.table
     public List<models.garaDB.tables.pojos.University> fetchByContactpersonpassword(String... values) {
         return fetch(University.UNIVERSITY.CONTACTPERSONPASSWORD, values);
     }
+
+    /**
+     * Fetch records that have <code>parkingCost IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.University> fetchByParkingcost(Integer... values) {
+        return fetch(University.UNIVERSITY.PARKINGCOST, values);
+    }
 }

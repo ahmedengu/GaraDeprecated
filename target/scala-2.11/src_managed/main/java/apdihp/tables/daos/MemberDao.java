@@ -204,4 +204,18 @@ public class MemberDao extends DAOImpl<MemberRecord, apdihp.tables.pojos.Member,
     public List<apdihp.tables.pojos.Member> fetchByLatitude(Double... values) {
         return fetch(Member.MEMBER.LATITUDE, values);
     }
+
+    /**
+     * Fetch records that have <code>pin IN (values)</code>
+     */
+    public List<apdihp.tables.pojos.Member> fetchByPin(String... values) {
+        return fetch(Member.MEMBER.PIN, values);
+    }
+
+    /**
+     * Fetch records that have <code>universityID IN (values)</code>
+     */
+    public List<apdihp.tables.pojos.Member> fetchByUniversityid(Integer... values) {
+        return fetch(Member.MEMBER.UNIVERSITYID, values);
+    }
 }

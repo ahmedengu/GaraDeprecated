@@ -24,12 +24,12 @@ import play.mvc.Http.Context.Implicit._
 class main extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template4[String,String,String,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(title: String,description: String,keywords: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(title: String, description: String, keywords: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.69*/("""
+Seq[Any](format.raw/*1.71*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE html>
 <html lang="en" style="height: 100%;">
     <head>
@@ -72,7 +72,7 @@ Seq[Any](format.raw/*1.69*/("""
             color: #f0f0f0;
             transform: rotate(-45deg);
             -webkit-transform: rotate(-45deg);
-            box-shadow: 0 0 3px rgba(0,0,0,.3);
+            box-shadow: 0 0 3px rgba(0, 0, 0, .3);
             visibility: visible;
             display: block;
             z-index: 9999;
@@ -123,14 +123,21 @@ Seq[Any](format.raw/*1.69*/("""
                         <!--// End Navigation -->
                 </div>
                     <!--// End Container -->
-            </nav>
+                """),_display_(/*95.18*/if(flash.containsKey("alertMessage"))/*95.55*/ {_display_(Seq[Any](format.raw/*95.57*/("""
+                    """),format.raw/*96.21*/("""<div class="alert """),_display_(/*96.40*/if(flash.containsKey("alertMessageType"))/*96.81*/ {_display_(Seq[Any](format.raw/*96.83*/(""" """),_display_(/*96.85*/flash/*96.90*/.get("alertMessageType")),format.raw/*96.114*/(""" """)))}/*96.117*/else/*96.122*/{_display_(Seq[Any](format.raw/*96.123*/("""alert-success""")))}),format.raw/*96.137*/("""" style="text-align: center;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        """),_display_(/*98.26*/if(flash.containsKey("alertMessageStrong"))/*98.69*/ {_display_(Seq[Any](format.raw/*98.71*/("""<strong> """),_display_(/*98.81*/flash/*98.86*/.get("alertMessageStrong")),format.raw/*98.112*/(""" """),format.raw/*98.113*/("""</strong> """)))}),format.raw/*98.124*/(""" """),_display_(/*98.126*/flash/*98.131*/.get("alertMessage")),format.raw/*98.151*/("""
+                    """),format.raw/*99.21*/("""</div>""")))}),format.raw/*99.28*/("""
+
+            """),format.raw/*101.13*/("""</nav>
                 <!--// End Navbar -->
+
         </header>
-        """),_display_(/*98.10*/content),format.raw/*98.17*/("""
-        """),format.raw/*99.9*/("""<section class="content-block-nopad bg-deepocean footer-wrap-1-3">
+        """),_display_(/*105.10*/content),format.raw/*105.17*/("""
+        """),format.raw/*106.9*/("""<section class="content-block-nopad bg-deepocean footer-wrap-1-3">
             <div class="container footer-1-3">
                 <div class="col-md-4 pull-left">
-                    <img src=""""),_display_(/*102.32*/routes/*102.38*/.Assets.at("images/logo.png")),format.raw/*102.67*/("""" class="brand-img img-responsive" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce">
+                    <img src=""""),_display_(/*109.32*/routes/*109.38*/.Assets.at("images/logo.png")),format.raw/*109.67*/("""" class="brand-img img-responsive" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce">
                     <ul class="social social-light">
                         <li>
                             <a href="http://www.facebook.com/g-ara-1711870822420636/"><i class="fa fa-2x fa-facebook"></i></a>
@@ -154,11 +161,11 @@ Seq[Any](format.raw/*1.69*/("""
             </div>
                 <!-- /.container -->
         </section>
-        <script type="text/javascript" src=""""),_display_(/*126.46*/routes/*126.52*/.Assets.at("js/jquery-1.11.1.min.js")),format.raw/*126.89*/(""""></script>
-        <script type="text/javascript" src=""""),_display_(/*127.46*/routes/*127.52*/.Assets.at("js/bootstrap.min.js")),format.raw/*127.85*/(""""></script>
-        <script type="text/javascript" src=""""),_display_(/*128.46*/routes/*128.52*/.Assets.at("js/plugins.js")),format.raw/*128.79*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*133.46*/routes/*133.52*/.Assets.at("js/jquery-1.11.1.min.js")),format.raw/*133.89*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*134.46*/routes/*134.52*/.Assets.at("js/bootstrap.min.js")),format.raw/*134.85*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*135.46*/routes/*135.52*/.Assets.at("js/plugins.js")),format.raw/*135.79*/(""""></script>
         <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
-        <script type="text/javascript" src=""""),_display_(/*130.46*/routes/*130.52*/.Assets.at("js/bskit-scripts.js")),format.raw/*130.85*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*137.46*/routes/*137.52*/.Assets.at("js/bskit-scripts.js")),format.raw/*137.85*/(""""></script>
         <script type="text/javascript" src="https://cdn.rawgit.com/MhdAljuboori/6ea3a3fa48248e3a132a/raw/animator.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
     </body>
@@ -183,11 +190,11 @@ Seq[Any](format.raw/*1.69*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 01 00:25:39 EET 2016
+                  DATE: Fri Jun 10 18:22:51 EET 2016
                   SOURCE: C:/Users/ahmedengu/Documents/IdeaProjects/Gara/app/views/main.scala.html
-                  HASH: 451962c79588ea0b32973b0e8c5496b06a898946
-                  MATRIX: 762->1|924->68|951->69|1090->182|1115->187|1269->315|1294->320|1322->321|1351->324|1379->332|1453->380|1478->385|1506->386|1535->389|1566->400|1639->446|1654->452|1703->480|1784->534|1799->540|1865->585|1933->626|1948->632|2007->670|2379->1015|2394->1021|2452->1058|2520->1099|2535->1105|2585->1134|2653->1175|2668->1181|2717->1209|2785->1250|2800->1256|2849->1284|3075->1483|3090->1489|3142->1520|3227->1578|3242->1584|3292->1613|4817->3111|4832->3117|4873->3137|4942->3179|4957->3185|5007->3214|6674->4854|6702->4861|6738->4870|6960->5064|6976->5070|7027->5099|8879->6923|8895->6929|8954->6966|9039->7023|9055->7029|9110->7062|9195->7119|9211->7125|9260->7152|9425->7289|9441->7295|9496->7328
-                  LINES: 27->1|32->1|33->2|37->6|37->6|39->8|39->8|39->8|39->8|39->8|40->9|40->9|40->9|40->9|40->9|41->10|41->10|41->10|43->12|43->12|43->12|44->13|44->13|44->13|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|55->24|55->24|55->24|56->25|56->25|56->25|93->62|93->62|93->62|94->63|94->63|94->63|129->98|129->98|130->99|133->102|133->102|133->102|157->126|157->126|157->126|158->127|158->127|158->127|159->128|159->128|159->128|161->130|161->130|161->130
+                  HASH: 478610b81171e0b662e91fa4f1b88ba2ca92b352
+                  MATRIX: 762->1|926->70|953->71|1092->184|1117->189|1271->317|1296->322|1324->323|1353->326|1381->334|1455->382|1480->387|1508->388|1537->391|1568->402|1641->448|1656->454|1705->482|1786->536|1801->542|1867->587|1935->628|1950->634|2009->672|2381->1017|2396->1023|2454->1060|2522->1101|2537->1107|2587->1136|2655->1177|2670->1183|2719->1211|2787->1252|2802->1258|2851->1286|3077->1485|3092->1491|3144->1522|3229->1580|3244->1586|3294->1615|4822->3116|4837->3122|4878->3142|4947->3184|4962->3190|5012->3219|6612->4792|6658->4829|6698->4831|6747->4852|6793->4871|6843->4912|6883->4914|6912->4916|6926->4921|6972->4945|6994->4948|7008->4953|7048->4954|7094->4968|7294->5141|7346->5184|7386->5186|7423->5196|7437->5201|7485->5227|7515->5228|7558->5239|7588->5241|7603->5246|7645->5266|7694->5287|7732->5294|7775->5308|7876->5381|7905->5388|7942->5397|8164->5591|8180->5597|8231->5626|10083->7450|10099->7456|10158->7493|10243->7550|10259->7556|10314->7589|10399->7646|10415->7652|10464->7679|10629->7816|10645->7822|10700->7855
+                  LINES: 27->1|32->1|33->2|37->6|37->6|39->8|39->8|39->8|39->8|39->8|40->9|40->9|40->9|40->9|40->9|41->10|41->10|41->10|43->12|43->12|43->12|44->13|44->13|44->13|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|55->24|55->24|55->24|56->25|56->25|56->25|93->62|93->62|93->62|94->63|94->63|94->63|126->95|126->95|126->95|127->96|127->96|127->96|127->96|127->96|127->96|127->96|127->96|127->96|127->96|127->96|129->98|129->98|129->98|129->98|129->98|129->98|129->98|129->98|129->98|129->98|129->98|130->99|130->99|132->101|136->105|136->105|137->106|140->109|140->109|140->109|164->133|164->133|164->133|165->134|165->134|165->134|166->135|166->135|166->135|168->137|168->137|168->137
                   -- GENERATED --
               */
           

@@ -39,7 +39,7 @@ import javax.validation.constraints.Size;
 @Table(name = "Member", schema = "Gara")
 public class Member implements Serializable {
 
-    private static final long serialVersionUID = -1274699756;
+    private static final long serialVersionUID = -1906348765;
 
     private Integer   id;
     private Timestamp timestamp;
@@ -62,6 +62,8 @@ public class Member implements Serializable {
     private Integer   membergroupid;
     private Double    longitude;
     private Double    latitude;
+    private String    pin;
+    private Integer   universityid;
 
     public Member() {}
 
@@ -87,6 +89,8 @@ public class Member implements Serializable {
         this.membergroupid = value.membergroupid;
         this.longitude = value.longitude;
         this.latitude = value.latitude;
+        this.pin = value.pin;
+        this.universityid = value.universityid;
     }
 
     public Member(
@@ -110,7 +114,9 @@ public class Member implements Serializable {
         Integer   rideid,
         Integer   membergroupid,
         Double    longitude,
-        Double    latitude
+        Double    latitude,
+        String    pin,
+        Integer   universityid
     ) {
         this.id = id;
         this.timestamp = timestamp;
@@ -133,6 +139,8 @@ public class Member implements Serializable {
         this.membergroupid = membergroupid;
         this.longitude = longitude;
         this.latitude = latitude;
+        this.pin = pin;
+        this.universityid = universityid;
     }
     public List<ValidationError> validate() throws SQLException {
         List<ValidationError> errors = new ArrayList<ValidationError>();
@@ -278,7 +286,8 @@ public class Member implements Serializable {
         this.gender = gender;
     }
 
-    @Column(name = "password", length = 65535)
+    @Column(name = "password", nullable = false, length = 65535)
+    @NotNull
     @Size(max = 65535)
     public String getPassword() {
         return this.password;
@@ -392,6 +401,25 @@ public class Member implements Serializable {
         this.latitude = latitude;
     }
 
+    @Column(name = "pin", length = 65535)
+    @Size(max = 65535)
+    public String getPin() {
+        return this.pin;
+    }
+
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+    @Column(name = "universityID", precision = 10)
+    public Integer getUniversityid() {
+        return this.universityid;
+    }
+
+    public void setUniversityid(Integer universityid) {
+        this.universityid = universityid;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Member (");
@@ -417,6 +445,8 @@ public class Member implements Serializable {
         sb.append(", ").append(membergroupid);
         sb.append(", ").append(longitude);
         sb.append(", ").append(latitude);
+        sb.append(", ").append(pin);
+        sb.append(", ").append(universityid);
 
         sb.append(")");
         return sb.toString();

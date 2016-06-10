@@ -79,7 +79,7 @@ public class RESTRouter extends Controller {
 
             List<Object> list = new ArrayList();
             list.add(accesstokenRecord);
-            list.add(restHelper.getWhere("member","username",username));
+            list.add(restHelper.getWhere("member","username",username).get(0));
             return created(Json.toJson(list));
 
         } catch (Exception e) {

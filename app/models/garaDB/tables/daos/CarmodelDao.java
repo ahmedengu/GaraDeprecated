@@ -91,4 +91,11 @@ public class CarmodelDao extends DAOImpl<CarmodelRecord, models.garaDB.tables.po
     public List<models.garaDB.tables.pojos.Carmodel> fetchByPic(String... values) {
         return fetch(Carmodel.CARMODEL.PIC, values);
     }
+
+    /**
+     * Fetch records that have <code>gasConsumption IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Carmodel> fetchByGasconsumption(Integer... values) {
+        return fetch(Carmodel.CARMODEL.GASCONSUMPTION, values);
+    }
 }

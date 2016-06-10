@@ -20,8 +20,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record10;
-import org.jooq.Row10;
+import org.jooq.Record9;
+import org.jooq.Row9;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -38,9 +38,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "UniversityPageContent", schema = "Gara")
-public class UniversitypagecontentRecord extends UpdatableRecordImpl<UniversitypagecontentRecord> implements Record10<Integer, Timestamp, String, String, String, String, String, String, String, Integer> {
+public class UniversitypagecontentRecord extends UpdatableRecordImpl<UniversitypagecontentRecord> implements Record9<Integer, Timestamp, String, String, String, String, String, String, Integer> {
 
-    private static final long serialVersionUID = 1912593273;
+    private static final long serialVersionUID = 1230586272;
 
     /**
      * Setter for <code>Gara.UniversityPageContent.ID</code>.
@@ -171,26 +171,10 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.name</code>.
-     */
-    public void setName(String value) {
-        set(8, value);
-    }
-
-    /**
-     * Getter for <code>Gara.UniversityPageContent.name</code>.
-     */
-    @Column(name = "name", length = 65535)
-    @Size(max = 65535)
-    public String getName() {
-        return (String) get(8);
-    }
-
-    /**
      * Setter for <code>Gara.UniversityPageContent.universityID</code>.
      */
     public void setUniversityid(Integer value) {
-        set(9, value);
+        set(8, value);
     }
 
     /**
@@ -199,7 +183,7 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     @Column(name = "universityID", nullable = false, precision = 10)
     @NotNull
     public Integer getUniversityid() {
-        return (Integer) get(9);
+        return (Integer) get(8);
     }
 
     // -------------------------------------------------------------------------
@@ -215,23 +199,23 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     // -------------------------------------------------------------------------
-    // Record10 type implementation
+    // Record9 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row10<Integer, Timestamp, String, String, String, String, String, String, String, Integer> fieldsRow() {
-        return (Row10) super.fieldsRow();
+    public Row9<Integer, Timestamp, String, String, String, String, String, String, Integer> fieldsRow() {
+        return (Row9) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row10<Integer, Timestamp, String, String, String, String, String, String, String, Integer> valuesRow() {
-        return (Row10) super.valuesRow();
+    public Row9<Integer, Timestamp, String, String, String, String, String, String, Integer> valuesRow() {
+        return (Row9) super.valuesRow();
     }
 
     /**
@@ -302,15 +286,7 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
      * {@inheritDoc}
      */
     @Override
-    public Field<String> field9() {
-        return Universitypagecontent.UNIVERSITYPAGECONTENT.NAME;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Field<Integer> field10() {
+    public Field<Integer> field9() {
         return Universitypagecontent.UNIVERSITYPAGECONTENT.UNIVERSITYID;
     }
 
@@ -382,15 +358,7 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
      * {@inheritDoc}
      */
     @Override
-    public String value9() {
-        return getName();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public Integer value10() {
+    public Integer value9() {
         return getUniversityid();
     }
 
@@ -470,16 +438,7 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
      * {@inheritDoc}
      */
     @Override
-    public UniversitypagecontentRecord value9(String value) {
-        setName(value);
-        return this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public UniversitypagecontentRecord value10(Integer value) {
+    public UniversitypagecontentRecord value9(Integer value) {
         setUniversityid(value);
         return this;
     }
@@ -488,7 +447,7 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
      * {@inheritDoc}
      */
     @Override
-    public UniversitypagecontentRecord values(Integer value1, Timestamp value2, String value3, String value4, String value5, String value6, String value7, String value8, String value9, Integer value10) {
+    public UniversitypagecontentRecord values(Integer value1, Timestamp value2, String value3, String value4, String value5, String value6, String value7, String value8, Integer value9) {
         value1(value1);
         value2(value2);
         value3(value3);
@@ -498,7 +457,6 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
         value7(value7);
         value8(value8);
         value9(value9);
-        value10(value10);
         return this;
     }
 
@@ -516,7 +474,7 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     /**
      * Create a detached, initialised UniversitypagecontentRecord
      */
-    public UniversitypagecontentRecord(Integer id, Timestamp timestamp, String title, String body, String link, String description, String keywords, String pic, String name, Integer universityid) {
+    public UniversitypagecontentRecord(Integer id, Timestamp timestamp, String title, String body, String link, String description, String keywords, String pic, Integer universityid) {
         super(Universitypagecontent.UNIVERSITYPAGECONTENT);
 
         set(0, id);
@@ -527,7 +485,6 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
         set(5, description);
         set(6, keywords);
         set(7, pic);
-        set(8, name);
-        set(9, universityid);
+        set(8, universityid);
     }
 }

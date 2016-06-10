@@ -18,8 +18,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record5;
-import org.jooq.Row5;
+import org.jooq.Record6;
+import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -36,9 +36,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "Country", schema = "Gara")
-public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements Record5<Integer, String, String, Double, Double> {
+public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements Record6<Integer, String, String, Double, Double, Integer> {
 
-    private static final long serialVersionUID = -832629729;
+    private static final long serialVersionUID = 76977865;
 
     /**
      * Setter for <code>Gara.Country.ID</code>.
@@ -120,6 +120,21 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
         return (Double) get(4);
     }
 
+    /**
+     * Setter for <code>Gara.Country.gasPrice</code>.
+     */
+    public void setGasprice(Integer value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>Gara.Country.gasPrice</code>.
+     */
+    @Column(name = "gasPrice", precision = 10)
+    public Integer getGasprice() {
+        return (Integer) get(5);
+    }
+
     // -------------------------------------------------------------------------
     // Primary key information
     // -------------------------------------------------------------------------
@@ -133,23 +148,23 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     }
 
     // -------------------------------------------------------------------------
-    // Record5 type implementation
+    // Record6 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row5<Integer, String, String, Double, Double> fieldsRow() {
-        return (Row5) super.fieldsRow();
+    public Row6<Integer, String, String, Double, Double, Integer> fieldsRow() {
+        return (Row6) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row5<Integer, String, String, Double, Double> valuesRow() {
-        return (Row5) super.valuesRow();
+    public Row6<Integer, String, String, Double, Double, Integer> valuesRow() {
+        return (Row6) super.valuesRow();
     }
 
     /**
@@ -196,6 +211,14 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
      * {@inheritDoc}
      */
     @Override
+    public Field<Integer> field6() {
+        return Country.COUNTRY.GASPRICE;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -230,6 +253,14 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     @Override
     public Double value5() {
         return getLatitude();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value6() {
+        return getGasprice();
     }
 
     /**
@@ -281,12 +312,22 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
      * {@inheritDoc}
      */
     @Override
-    public CountryRecord values(Integer value1, String value2, String value3, Double value4, Double value5) {
+    public CountryRecord value6(Integer value) {
+        setGasprice(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public CountryRecord values(Integer value1, String value2, String value3, Double value4, Double value5, Integer value6) {
         value1(value1);
         value2(value2);
         value3(value3);
         value4(value4);
         value5(value5);
+        value6(value6);
         return this;
     }
 
@@ -304,7 +345,7 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     /**
      * Create a detached, initialised CountryRecord
      */
-    public CountryRecord(Integer id, String name, String pic, Double longitude, Double latitude) {
+    public CountryRecord(Integer id, String name, String pic, Double longitude, Double latitude, Integer gasprice) {
         super(Country.COUNTRY);
 
         set(0, id);
@@ -312,5 +353,6 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
         set(2, pic);
         set(3, longitude);
         set(4, latitude);
+        set(5, gasprice);
     }
 }

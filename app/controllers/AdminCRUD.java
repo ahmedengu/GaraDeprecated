@@ -43,7 +43,8 @@ public class AdminCRUD extends Controller {
     }
 
     public Result crudRouter(String table) throws SQLException {
-    try {
+
+        try {
         if(!request().getQueryString("password").equals("123456"))
             return badRequest();
     }catch (Exception e){

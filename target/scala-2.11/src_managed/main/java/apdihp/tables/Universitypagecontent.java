@@ -37,7 +37,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Universitypagecontent extends TableImpl<UniversitypagecontentRecord> {
 
-    private static final long serialVersionUID = -161317183;
+    private static final long serialVersionUID = 1143386362;
 
     /**
      * The reference instance of <code>Gara.UniversityPageContent</code>
@@ -91,11 +91,6 @@ public class Universitypagecontent extends TableImpl<UniversitypagecontentRecord
      * The column <code>Gara.UniversityPageContent.pic</code>.
      */
     public final TableField<UniversitypagecontentRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
-
-    /**
-     * The column <code>Gara.UniversityPageContent.name</code>.
-     */
-    public final TableField<UniversitypagecontentRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
      * The column <code>Gara.UniversityPageContent.universityID</code>.

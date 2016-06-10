@@ -3,6 +3,7 @@ package models;
 import org.jooq.ConnectionProvider;
 import org.jooq.exception.DataAccessException;
 import play.Logger;
+import play.Play;
 import play.db.Database;
 
 import javax.inject.Inject;
@@ -16,7 +17,11 @@ public class PlayConnectionProvider implements ConnectionProvider {
     @Inject Database db;
     public Connection acquire() throws DataAccessException {
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://209.148.94.217:3306/Gara", "Gara", "123456");
+
+            String url = Play.application().configuration().getString("db.default.url");
+            String user = Play.application().configuration().getString("db.default.user");
+            String password = Play.application().configuration().getString("db.default.password");
+            conn = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             Logger.error("Error closing connection " + conn, e);
         }

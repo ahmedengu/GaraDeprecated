@@ -79,3 +79,11 @@ jooq:codegen
 liquibaseUpdate
 jooq:codegen
 dist
+liquibaseUpdate
+jooq:codegen
+liquibaseUpdate
+jooq:codegen
+liquibaseUpdate
+jooq:codegen
+liquibaseUpdate
+jooq:codegen

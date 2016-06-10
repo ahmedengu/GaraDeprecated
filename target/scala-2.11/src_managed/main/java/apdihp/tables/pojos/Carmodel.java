@@ -32,13 +32,14 @@ import javax.validation.constraints.Size;
 @Table(name = "CarModel", schema = "Gara")
 public class Carmodel implements Serializable {
 
-    private static final long serialVersionUID = -1095779010;
+    private static final long serialVersionUID = -1696992664;
 
     private Integer id;
     private String  name;
     private Integer numberofseats;
     private Integer carmanufactureid;
     private String  pic;
+    private Integer gasconsumption;
 
     public Carmodel() {}
 
@@ -48,6 +49,7 @@ public class Carmodel implements Serializable {
         this.numberofseats = value.numberofseats;
         this.carmanufactureid = value.carmanufactureid;
         this.pic = value.pic;
+        this.gasconsumption = value.gasconsumption;
     }
 
     public Carmodel(
@@ -55,13 +57,15 @@ public class Carmodel implements Serializable {
         String  name,
         Integer numberofseats,
         Integer carmanufactureid,
-        String  pic
+        String  pic,
+        Integer gasconsumption
     ) {
         this.id = id;
         this.name = name;
         this.numberofseats = numberofseats;
         this.carmanufactureid = carmanufactureid;
         this.pic = pic;
+        this.gasconsumption = gasconsumption;
     }
 
     @Id
@@ -87,8 +91,7 @@ public class Carmodel implements Serializable {
         this.name = name;
     }
 
-    @Column(name = "numberOfSeats", nullable = false, precision = 10)
-    @NotNull
+    @Column(name = "numberOfSeats", precision = 10)
     public Integer getNumberofseats() {
         return this.numberofseats;
     }
@@ -117,6 +120,15 @@ public class Carmodel implements Serializable {
         this.pic = pic;
     }
 
+    @Column(name = "gasConsumption", precision = 10)
+    public Integer getGasconsumption() {
+        return this.gasconsumption;
+    }
+
+    public void setGasconsumption(Integer gasconsumption) {
+        this.gasconsumption = gasconsumption;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Carmodel (");
@@ -126,6 +138,7 @@ public class Carmodel implements Serializable {
         sb.append(", ").append(numberofseats);
         sb.append(", ").append(carmanufactureid);
         sb.append(", ").append(pic);
+        sb.append(", ").append(gasconsumption);
 
         sb.append(")");
         return sb.toString();

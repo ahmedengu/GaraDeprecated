@@ -37,7 +37,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Member extends TableImpl<MemberRecord> {
 
-    private static final long serialVersionUID = -1129823081;
+    private static final long serialVersionUID = 126127041;
 
     /**
      * The reference instance of <code>Gara.Member</code>
@@ -100,7 +100,7 @@ public class Member extends TableImpl<MemberRecord> {
     /**
      * The column <code>Gara.Member.password</code>.
      */
-    public final TableField<MemberRecord, String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.CLOB, this, "");
+    public final TableField<MemberRecord, String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
      * The column <code>Gara.Member.collegeID</code>.
@@ -156,6 +156,16 @@ public class Member extends TableImpl<MemberRecord> {
      * The column <code>Gara.Member.latitude</code>.
      */
     public final TableField<MemberRecord, Double> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
+
+    /**
+     * The column <code>Gara.Member.pin</code>.
+     */
+    public final TableField<MemberRecord, String> PIN = createField("pin", org.jooq.impl.SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>Gara.Member.universityID</code>.
+     */
+    public final TableField<MemberRecord, Integer> UNIVERSITYID = createField("universityID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * Create a <code>Gara.Member</code> table reference
@@ -216,7 +226,7 @@ public class Member extends TableImpl<MemberRecord> {
      */
     @Override
     public List<ForeignKey<MemberRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<MemberRecord, ?>>asList(Keys.FKMEMBER175873, Keys.FKMEMBER419676, Keys.FKMEMBER861549);
+        return Arrays.<ForeignKey<MemberRecord, ?>>asList(Keys.FKMEMBER175873, Keys.FKMEMBER419676, Keys.FKMEMBER861549, Keys.FKMEMBER491900);
     }
 
     /**

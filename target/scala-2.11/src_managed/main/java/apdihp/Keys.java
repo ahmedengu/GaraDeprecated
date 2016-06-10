@@ -135,6 +135,7 @@ public class Keys {
     public static final ForeignKey<MemberRecord, CollegeRecord> FKMEMBER175873 = ForeignKeys0.FKMEMBER175873;
     public static final ForeignKey<MemberRecord, RideRecord> FKMEMBER419676 = ForeignKeys0.FKMEMBER419676;
     public static final ForeignKey<MemberRecord, MembergroupRecord> FKMEMBER861549 = ForeignKeys0.FKMEMBER861549;
+    public static final ForeignKey<MemberRecord, UniversityRecord> FKMEMBER491900 = ForeignKeys0.FKMEMBER491900;
     public static final ForeignKey<MembercardRecord, MemberRecord> FKMEMBERCARD555539 = ForeignKeys0.FKMEMBERCARD555539;
     public static final ForeignKey<MembermessageRecord, MemberRecord> FKMEMBERMESS962617 = ForeignKeys0.FKMEMBERMESS962617;
     public static final ForeignKey<MembermessageRecord, MemberRecord> FKMEMBERMESS110700 = ForeignKeys0.FKMEMBERMESS110700;
@@ -208,6 +209,7 @@ public class Keys {
         public static final ForeignKey<MemberRecord, CollegeRecord> FKMEMBER175873 = createForeignKey(apdihp.Keys.KEY_COLLEGE_PRIMARY, Member.MEMBER, "FKMember175873", Member.MEMBER.COLLEGEID);
         public static final ForeignKey<MemberRecord, RideRecord> FKMEMBER419676 = createForeignKey(apdihp.Keys.KEY_RIDE_PRIMARY, Member.MEMBER, "FKMember419676", Member.MEMBER.RIDEID);
         public static final ForeignKey<MemberRecord, MembergroupRecord> FKMEMBER861549 = createForeignKey(apdihp.Keys.KEY_MEMBERGROUP_PRIMARY, Member.MEMBER, "FKMember861549", Member.MEMBER.MEMBERGROUPID);
+        public static final ForeignKey<MemberRecord, UniversityRecord> FKMEMBER491900 = createForeignKey(apdihp.Keys.KEY_UNIVERSITY_PRIMARY, Member.MEMBER, "FKMember491900", Member.MEMBER.UNIVERSITYID);
         public static final ForeignKey<MembercardRecord, MemberRecord> FKMEMBERCARD555539 = createForeignKey(apdihp.Keys.KEY_MEMBER_PRIMARY, Membercard.MEMBERCARD, "FKMemberCard555539", Membercard.MEMBERCARD.MEMBERID);
         public static final ForeignKey<MembermessageRecord, MemberRecord> FKMEMBERMESS962617 = createForeignKey(apdihp.Keys.KEY_MEMBER_PRIMARY, Membermessage.MEMBERMESSAGE, "FKMemberMess962617", Membermessage.MEMBERMESSAGE.FROM);
         public static final ForeignKey<MembermessageRecord, MemberRecord> FKMEMBERMESS110700 = createForeignKey(apdihp.Keys.KEY_MEMBER_PRIMARY, Membermessage.MEMBERMESSAGE, "FKMemberMess110700", Membermessage.MEMBERMESSAGE.TO);

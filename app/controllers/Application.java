@@ -54,10 +54,14 @@ public class Application extends Controller {
 
 
     public Result index() throws SQLException {
+//        flash("alertMessage","helllllo");
+//        flash("alertMessageType","alert-warning");
+//        flash("alertMessageStrong","helllllo");
         return ok(index.render("Gara", "Carpooling platform for universities ", "Carpooling ,platform, for universities ,Gara"));
     }
 
     public Result loginGet() throws SQLException {
+
         if (restHelper.getByID("accesstoken", session("Accesstokenid")).size() != 0) {
             return redirect(routes.Application.memberArea());
         }

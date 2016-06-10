@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Carmanufacture extends TableImpl<CarmanufactureRecord> {
 
-    private static final long serialVersionUID = 687794818;
+    private static final long serialVersionUID = -1008594047;
 
     /**
      * The reference instance of <code>Gara.CarManufacture</code>
@@ -64,7 +64,7 @@ public class Carmanufacture extends TableImpl<CarmanufactureRecord> {
     /**
      * The column <code>Gara.CarManufacture.countryID</code>.
      */
-    public final TableField<CarmanufactureRecord, Integer> COUNTRYID = createField("countryID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<CarmanufactureRecord, Integer> COUNTRYID = createField("countryID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>Gara.CarManufacture.pic</code>.

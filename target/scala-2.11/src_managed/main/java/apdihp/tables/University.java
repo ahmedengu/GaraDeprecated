@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class University extends TableImpl<UniversityRecord> {
 
-    private static final long serialVersionUID = -1020554494;
+    private static final long serialVersionUID = 662149727;
 
     /**
      * The reference instance of <code>Gara.University</code>
@@ -64,7 +64,7 @@ public class University extends TableImpl<UniversityRecord> {
     /**
      * The column <code>Gara.University.cityID</code>.
      */
-    public final TableField<UniversityRecord, Integer> CITYID = createField("cityID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<UniversityRecord, Integer> CITYID = createField("cityID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * The column <code>Gara.University.longitude</code>.
@@ -125,6 +125,11 @@ public class University extends TableImpl<UniversityRecord> {
      * The column <code>Gara.University.contactPersonPassword</code>.
      */
     public final TableField<UniversityRecord, String> CONTACTPERSONPASSWORD = createField("contactPersonPassword", org.jooq.impl.SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>Gara.University.parkingCost</code>.
+     */
+    public final TableField<UniversityRecord, Integer> PARKINGCOST = createField("parkingCost", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * Create a <code>Gara.University</code> table reference

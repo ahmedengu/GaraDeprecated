@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Country extends TableImpl<CountryRecord> {
 
-    private static final long serialVersionUID = 1693215973;
+    private static final long serialVersionUID = 222956872;
 
     /**
      * The reference instance of <code>Gara.Country</code>
@@ -74,6 +74,11 @@ public class Country extends TableImpl<CountryRecord> {
      * The column <code>Gara.Country.latitude</code>.
      */
     public final TableField<CountryRecord, Double> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
+
+    /**
+     * The column <code>Gara.Country.gasPrice</code>.
+     */
+    public final TableField<CountryRecord, Integer> GASPRICE = createField("gasPrice", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * Create a <code>Gara.Country</code> table reference

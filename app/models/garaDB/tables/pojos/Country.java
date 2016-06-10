@@ -32,13 +32,14 @@ import javax.validation.constraints.Size;
 @Table(name = "Country", schema = "Gara")
 public class Country implements Serializable {
 
-    private static final long serialVersionUID = 1584853651;
+    private static final long serialVersionUID = 388252670;
 
     private Integer id;
     private String  name;
     private String  pic;
     private Double  longitude;
     private Double  latitude;
+    private Integer gasprice;
 
     public Country() {}
 
@@ -48,6 +49,7 @@ public class Country implements Serializable {
         this.pic = value.pic;
         this.longitude = value.longitude;
         this.latitude = value.latitude;
+        this.gasprice = value.gasprice;
     }
 
     public Country(
@@ -55,13 +57,15 @@ public class Country implements Serializable {
         String  name,
         String  pic,
         Double  longitude,
-        Double  latitude
+        Double  latitude,
+        Integer gasprice
     ) {
         this.id = id;
         this.name = name;
         this.pic = pic;
         this.longitude = longitude;
         this.latitude = latitude;
+        this.gasprice = gasprice;
     }
 
     @Id
@@ -114,6 +118,15 @@ public class Country implements Serializable {
         this.latitude = latitude;
     }
 
+    @Column(name = "gasPrice", precision = 10)
+    public Integer getGasprice() {
+        return this.gasprice;
+    }
+
+    public void setGasprice(Integer gasprice) {
+        this.gasprice = gasprice;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Country (");
@@ -123,6 +136,7 @@ public class Country implements Serializable {
         sb.append(", ").append(pic);
         sb.append(", ").append(longitude);
         sb.append(", ").append(latitude);
+        sb.append(", ").append(gasprice);
 
         sb.append(")");
         return sb.toString();

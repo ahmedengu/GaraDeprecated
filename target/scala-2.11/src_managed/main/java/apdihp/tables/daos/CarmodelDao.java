@@ -91,4 +91,11 @@ public class CarmodelDao extends DAOImpl<CarmodelRecord, apdihp.tables.pojos.Car
     public List<apdihp.tables.pojos.Carmodel> fetchByPic(String... values) {
         return fetch(Carmodel.CARMODEL.PIC, values);
     }
+
+    /**
+     * Fetch records that have <code>gasConsumption IN (values)</code>
+     */
+    public List<apdihp.tables.pojos.Carmodel> fetchByGasconsumption(Integer... values) {
+        return fetch(Carmodel.CARMODEL.GASCONSUMPTION, values);
+    }
 }

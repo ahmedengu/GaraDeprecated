@@ -18,8 +18,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record5;
-import org.jooq.Row5;
+import org.jooq.Record6;
+import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -36,9 +36,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "CarModel", schema = "Gara")
-public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implements Record5<Integer, String, Integer, Integer, String> {
+public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implements Record6<Integer, String, Integer, Integer, String, Integer> {
 
-    private static final long serialVersionUID = -1601363269;
+    private static final long serialVersionUID = -229022751;
 
     /**
      * Setter for <code>Gara.CarModel.ID</code>.
@@ -85,8 +85,7 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     /**
      * Getter for <code>Gara.CarModel.numberOfSeats</code>.
      */
-    @Column(name = "numberOfSeats", nullable = false, precision = 10)
-    @NotNull
+    @Column(name = "numberOfSeats", precision = 10)
     public Integer getNumberofseats() {
         return (Integer) get(2);
     }
@@ -123,6 +122,21 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
         return (String) get(4);
     }
 
+    /**
+     * Setter for <code>Gara.CarModel.gasConsumption</code>.
+     */
+    public void setGasconsumption(Integer value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>Gara.CarModel.gasConsumption</code>.
+     */
+    @Column(name = "gasConsumption", precision = 10)
+    public Integer getGasconsumption() {
+        return (Integer) get(5);
+    }
+
     // -------------------------------------------------------------------------
     // Primary key information
     // -------------------------------------------------------------------------
@@ -136,23 +150,23 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     }
 
     // -------------------------------------------------------------------------
-    // Record5 type implementation
+    // Record6 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row5<Integer, String, Integer, Integer, String> fieldsRow() {
-        return (Row5) super.fieldsRow();
+    public Row6<Integer, String, Integer, Integer, String, Integer> fieldsRow() {
+        return (Row6) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row5<Integer, String, Integer, Integer, String> valuesRow() {
-        return (Row5) super.valuesRow();
+    public Row6<Integer, String, Integer, Integer, String, Integer> valuesRow() {
+        return (Row6) super.valuesRow();
     }
 
     /**
@@ -199,6 +213,14 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
      * {@inheritDoc}
      */
     @Override
+    public Field<Integer> field6() {
+        return Carmodel.CARMODEL.GASCONSUMPTION;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -233,6 +255,14 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     @Override
     public String value5() {
         return getPic();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value6() {
+        return getGasconsumption();
     }
 
     /**
@@ -284,12 +314,22 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
      * {@inheritDoc}
      */
     @Override
-    public CarmodelRecord values(Integer value1, String value2, Integer value3, Integer value4, String value5) {
+    public CarmodelRecord value6(Integer value) {
+        setGasconsumption(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public CarmodelRecord values(Integer value1, String value2, Integer value3, Integer value4, String value5, Integer value6) {
         value1(value1);
         value2(value2);
         value3(value3);
         value4(value4);
         value5(value5);
+        value6(value6);
         return this;
     }
 
@@ -307,7 +347,7 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     /**
      * Create a detached, initialised CarmodelRecord
      */
-    public CarmodelRecord(Integer id, String name, Integer numberofseats, Integer carmanufactureid, String pic) {
+    public CarmodelRecord(Integer id, String name, Integer numberofseats, Integer carmanufactureid, String pic, Integer gasconsumption) {
         super(Carmodel.CARMODEL);
 
         set(0, id);
@@ -315,5 +355,6 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
         set(2, numberofseats);
         set(3, carmanufactureid);
         set(4, pic);
+        set(5, gasconsumption);
     }
 }

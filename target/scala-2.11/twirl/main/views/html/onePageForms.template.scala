@@ -74,19 +74,25 @@ Seq[Any](format.raw/*1.69*/("""
             display: block;
             z-index: 9999;
         ">Beta v0.1</div>
-        <section id="promo-1" class="content-block promo-1 bg-offwhite" >
-            """),_display_(/*47.14*/content),format.raw/*47.21*/("""
-        """),format.raw/*48.9*/("""</section>
+        """),_display_(/*46.10*/if(flash.containsKey("alertMessage"))/*46.47*/ {_display_(Seq[Any](format.raw/*46.49*/("""
+            """),format.raw/*47.13*/("""<div class="alert """),_display_(/*47.32*/if(flash.containsKey("alertMessageType"))/*47.73*/ {_display_(Seq[Any](format.raw/*47.75*/(""" """),_display_(/*47.77*/flash/*47.82*/.get("alertMessageType")),format.raw/*47.106*/(""" """)))}/*47.109*/else/*47.114*/{_display_(Seq[Any](format.raw/*47.115*/("""alert-success""")))}),format.raw/*47.129*/("""" style="text-align: center;margin-bottom: 0px">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                """),_display_(/*49.18*/if(flash.containsKey("alertMessageStrong"))/*49.61*/ {_display_(Seq[Any](format.raw/*49.63*/("""<strong> """),_display_(/*49.73*/flash/*49.78*/.get("alertMessageStrong")),format.raw/*49.104*/(""" """),format.raw/*49.105*/("""</strong> """)))}),format.raw/*49.116*/(""" """),_display_(/*49.118*/flash/*49.123*/.get("alertMessage")),format.raw/*49.143*/("""
+            """),format.raw/*50.13*/("""</div>""")))}),format.raw/*50.20*/("""
+        """),format.raw/*51.9*/("""<section id="promo-1" class="content-block promo-1 bg-offwhite" >
+
+            """),_display_(/*53.14*/content),format.raw/*53.21*/("""
+        """),format.raw/*54.9*/("""</section>
         <div class="copyright-bar bg-black margin-bottom0 pad-bottom0" id="thefooter">
             <div class="container">
                 <p class="pull-left small">© Gara</p>
             </div>
         </div>
-        <script type="text/javascript" src=""""),_display_(/*54.46*/routes/*54.52*/.Assets.at("js/jquery-1.11.1.min.js")),format.raw/*54.89*/(""""></script>
-        <script type="text/javascript" src=""""),_display_(/*55.46*/routes/*55.52*/.Assets.at("js/bootstrap.min.js")),format.raw/*55.85*/(""""></script>
-        <script type="text/javascript" src=""""),_display_(/*56.46*/routes/*56.52*/.Assets.at("js/plugins.js")),format.raw/*56.79*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*60.46*/routes/*60.52*/.Assets.at("js/jquery-1.11.1.min.js")),format.raw/*60.89*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*61.46*/routes/*61.52*/.Assets.at("js/bootstrap.min.js")),format.raw/*61.85*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*62.46*/routes/*62.52*/.Assets.at("js/plugins.js")),format.raw/*62.79*/(""""></script>
         <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
-        <script type="text/javascript" src=""""),_display_(/*58.46*/routes/*58.52*/.Assets.at("js/bskit-scripts.js")),format.raw/*58.85*/(""""></script>
+        <script type="text/javascript" src=""""),_display_(/*64.46*/routes/*64.52*/.Assets.at("js/bskit-scripts.js")),format.raw/*64.85*/(""""></script>
         <script type="text/javascript" src="https://cdn.rawgit.com/MhdAljuboori/6ea3a3fa48248e3a132a/raw/animator.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
     </body>
@@ -111,11 +117,11 @@ Seq[Any](format.raw/*1.69*/("""
 object onePageForms extends onePageForms_Scope0.onePageForms
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 01 00:26:39 EET 2016
+                  DATE: Fri Jun 10 18:27:58 EET 2016
                   SOURCE: C:/Users/ahmedengu/Documents/IdeaProjects/Gara/app/views/onePageForms.scala.html
-                  HASH: 6b22fc61719e13219267c5283ee41639a1d33adc
-                  MATRIX: 778->1|940->68|968->70|1110->186|1135->191|1291->321|1319->329|1394->378|1425->389|1499->436|1514->442|1563->470|1646->526|1661->532|1727->577|1796->619|1811->625|1870->663|2246->1012|2261->1018|2319->1055|2388->1097|2403->1103|2453->1132|2522->1174|2537->1180|2586->1208|2655->1250|2670->1256|2719->1284|2922->1460|2937->1466|2987->1495|3047->1528|3062->1534|3114->1565|3993->2417|4021->2424|4058->2434|4358->2707|4373->2713|4431->2750|4516->2808|4531->2814|4585->2847|4670->2905|4685->2911|4733->2938|4899->3077|4914->3083|4968->3116
-                  LINES: 27->1|32->1|33->2|37->6|37->6|39->8|39->8|40->9|40->9|41->10|41->10|41->10|43->12|43->12|43->12|44->13|44->13|44->13|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|54->23|54->23|54->23|55->24|55->24|55->24|78->47|78->47|79->48|85->54|85->54|85->54|86->55|86->55|86->55|87->56|87->56|87->56|89->58|89->58|89->58
+                  HASH: b9c29f4f1f4ed2dc2ddcec065c401eba6b0ca50d
+                  MATRIX: 778->1|940->68|968->70|1110->186|1135->191|1291->321|1319->329|1394->378|1425->389|1499->436|1514->442|1563->470|1646->526|1661->532|1727->577|1796->619|1811->625|1870->663|2246->1012|2261->1018|2319->1055|2388->1097|2403->1103|2453->1132|2522->1174|2537->1180|2586->1208|2655->1250|2670->1256|2719->1284|2922->1460|2937->1466|2987->1495|3047->1528|3062->1534|3114->1565|3914->2338|3960->2375|4000->2377|4042->2391|4088->2410|4138->2451|4178->2453|4207->2455|4221->2460|4267->2484|4289->2487|4303->2492|4343->2493|4389->2507|4593->2684|4645->2727|4685->2729|4722->2739|4736->2744|4784->2770|4814->2771|4857->2782|4887->2784|4902->2789|4944->2809|4986->2823|5024->2830|5061->2840|5170->2922|5198->2929|5235->2939|5535->3212|5550->3218|5608->3255|5693->3313|5708->3319|5762->3352|5847->3410|5862->3416|5910->3443|6076->3582|6091->3588|6145->3621
+                  LINES: 27->1|32->1|33->2|37->6|37->6|39->8|39->8|40->9|40->9|41->10|41->10|41->10|43->12|43->12|43->12|44->13|44->13|44->13|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|54->23|54->23|54->23|55->24|55->24|55->24|77->46|77->46|77->46|78->47|78->47|78->47|78->47|78->47|78->47|78->47|78->47|78->47|78->47|78->47|80->49|80->49|80->49|80->49|80->49|80->49|80->49|80->49|80->49|80->49|80->49|81->50|81->50|82->51|84->53|84->53|85->54|91->60|91->60|91->60|92->61|92->61|92->61|93->62|93->62|93->62|95->64|95->64|95->64
                   -- GENERATED --
               */
           

@@ -1,4 +1,4 @@
-@(title: String,description: String,keywords: String)(content: Html)
+@(title: String, description: String, keywords: String)(content: Html)
 <!DOCTYPE html>
 <html lang="en" style="height: 100%;">
     <head>
@@ -41,7 +41,7 @@
             color: #f0f0f0;
             transform: rotate(-45deg);
             -webkit-transform: rotate(-45deg);
-            box-shadow: 0 0 3px rgba(0,0,0,.3);
+            box-shadow: 0 0 3px rgba(0, 0, 0, .3);
             visibility: visible;
             display: block;
             z-index: 9999;
@@ -92,8 +92,15 @@
                         <!--// End Navigation -->
                 </div>
                     <!--// End Container -->
+                @if(flash.containsKey("alertMessage")) {
+                    <div class="alert @if(flash.containsKey("alertMessageType")) { @flash.get("alertMessageType") } else {alert-success}" style="text-align: center;">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        @if(flash.containsKey("alertMessageStrong")) {<strong> @flash.get("alertMessageStrong") </strong> } @flash.get("alertMessage")
+                    </div>}
+
             </nav>
                 <!--// End Navbar -->
+
         </header>
         @content
         <section class="content-block-nopad bg-deepocean footer-wrap-1-3">

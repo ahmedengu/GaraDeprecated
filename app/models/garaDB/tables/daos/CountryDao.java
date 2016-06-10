@@ -91,4 +91,11 @@ public class CountryDao extends DAOImpl<CountryRecord, models.garaDB.tables.pojo
     public List<models.garaDB.tables.pojos.Country> fetchByLatitude(Double... values) {
         return fetch(Country.COUNTRY.LATITUDE, values);
     }
+
+    /**
+     * Fetch records that have <code>gasPrice IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Country> fetchByGasprice(Integer... values) {
+        return fetch(Country.COUNTRY.GASPRICE, values);
+    }
 }

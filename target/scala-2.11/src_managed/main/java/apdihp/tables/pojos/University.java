@@ -32,7 +32,7 @@ import javax.validation.constraints.Size;
 @Table(name = "University", schema = "Gara")
 public class University implements Serializable {
 
-    private static final long serialVersionUID = 1170970182;
+    private static final long serialVersionUID = 1512747404;
 
     private Integer id;
     private String  name;
@@ -49,6 +49,7 @@ public class University implements Serializable {
     private String  pagesubdomain;
     private String  contactpersonemail;
     private String  contactpersonpassword;
+    private Integer parkingcost;
 
     public University() {}
 
@@ -68,6 +69,7 @@ public class University implements Serializable {
         this.pagesubdomain = value.pagesubdomain;
         this.contactpersonemail = value.contactpersonemail;
         this.contactpersonpassword = value.contactpersonpassword;
+        this.parkingcost = value.parkingcost;
     }
 
     public University(
@@ -85,7 +87,8 @@ public class University implements Serializable {
         String  pagekeywords,
         String  pagesubdomain,
         String  contactpersonemail,
-        String  contactpersonpassword
+        String  contactpersonpassword,
+        Integer parkingcost
     ) {
         this.id = id;
         this.name = name;
@@ -102,6 +105,7 @@ public class University implements Serializable {
         this.pagesubdomain = pagesubdomain;
         this.contactpersonemail = contactpersonemail;
         this.contactpersonpassword = contactpersonpassword;
+        this.parkingcost = parkingcost;
     }
 
     @Id
@@ -127,8 +131,7 @@ public class University implements Serializable {
         this.name = name;
     }
 
-    @Column(name = "cityID", nullable = false, precision = 10)
-    @NotNull
+    @Column(name = "cityID", precision = 10)
     public Integer getCityid() {
         return this.cityid;
     }
@@ -257,6 +260,15 @@ public class University implements Serializable {
         this.contactpersonpassword = contactpersonpassword;
     }
 
+    @Column(name = "parkingCost", precision = 10)
+    public Integer getParkingcost() {
+        return this.parkingcost;
+    }
+
+    public void setParkingcost(Integer parkingcost) {
+        this.parkingcost = parkingcost;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("University (");
@@ -276,6 +288,7 @@ public class University implements Serializable {
         sb.append(", ").append(pagesubdomain);
         sb.append(", ").append(contactpersonemail);
         sb.append(", ").append(contactpersonpassword);
+        sb.append(", ").append(parkingcost);
 
         sb.append(")");
         return sb.toString();
