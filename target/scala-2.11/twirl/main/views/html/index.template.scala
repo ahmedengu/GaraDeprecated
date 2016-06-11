@@ -152,21 +152,16 @@ Seq[Any](format.raw/*1.56*/("""
                 <!--end of row-->
             <div class="row client-row">
                 <div class="row-wrapper">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-md-3 col-sm-6 col-xs-12" style=" display:inline-block;float:none;">
                         <a href="aast.edu">
                             <img alt="client" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/AASTMT.png" width="50%">
                         </a>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-md-3 col-sm-6 col-xs-12" style=" display:inline-block;float:none;">
                         <img alt="client" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/2000px-Android_robot.svg.png" height="50%" width="50%">
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-md-3 col-sm-6 col-xs-12" style=" display:inline-block;float:none;">
                         <img alt="client" src="https://www.playframework.com/assets/images/logos/play_full_color.png">
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <a href="http://www.aast.edu/en/colleges/ccit/">
-                            <img alt="client" src="http://www.mhmoudko.net/e-learning/images/ccit.png" width="50%">
-                        </a>
                     </div>
                 </div>
             </div>
@@ -186,7 +181,7 @@ Seq[Any](format.raw/*1.56*/("""
             <div class="row">
                 <div class="col-md-3 col-sm-6 team-member-wrap" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
                     <div class="team-member">
-                        <img src=""""),_display_(/*158.36*/routes/*158.42*/.Assets.at("images/team/1.jpg")),format.raw/*158.73*/("""" class="img-responsive" alt="Member Image" width="50%" height="50%">
+                        <img src=""""),_display_(/*153.36*/routes/*153.42*/.Assets.at("images/team/1.jpg")),format.raw/*153.73*/("""" class="img-responsive" alt="Member Image" width="50%" height="50%">
                         <div class="team-details">
                             <h4 class="member-name">Ahmed Kamel Taha</h4>
                             <p class="position">Full Stack Developer</p>
@@ -210,7 +205,7 @@ Seq[Any](format.raw/*1.56*/("""
                 </div>
                 <div class="col-md-3 col-sm-6 team-member-wrap" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
                     <div class="team-member">
-                        <img src=""""),_display_(/*182.36*/routes/*182.42*/.Assets.at("images/team/2.jpg")),format.raw/*182.73*/("""" class="img-responsive" alt="Member Image">
+                        <img src=""""),_display_(/*177.36*/routes/*177.42*/.Assets.at("images/team/2.jpg")),format.raw/*177.73*/("""" class="img-responsive" alt="Member Image">
                         <div class="team-details">
                             <h4 class="member-name">Abed EL Rahman</h4>
                             <p class="position">Developer</p>
@@ -225,7 +220,7 @@ Seq[Any](format.raw/*1.56*/("""
                 </div>
                 <div class="col-md-3 col-sm-6 team-member-wrap" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
                     <div class="team-member">
-                        <img src=""""),_display_(/*197.36*/routes/*197.42*/.Assets.at("images/team/3.jpg")),format.raw/*197.73*/("""" class="img-responsive" alt="Member Image">
+                        <img src=""""),_display_(/*192.36*/routes/*192.42*/.Assets.at("images/team/3.jpg")),format.raw/*192.73*/("""" class="img-responsive" alt="Member Image">
                         <div class="team-details">
                             <h4 class="member-name">Mohamed El Soussi</h4>
                             <p class="position">Developer</p>
@@ -239,7 +234,7 @@ Seq[Any](format.raw/*1.56*/("""
                 </div>
                 <div class="col-md-3 col-sm-6 team-member-wrap" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
                     <div class="team-member">
-                        <img src=""""),_display_(/*211.36*/routes/*211.42*/.Assets.at("images/team/4.jpg")),format.raw/*211.73*/("""" class="img-responsive" alt="Member Image">
+                        <img src=""""),_display_(/*206.36*/routes/*206.42*/.Assets.at("images/team/4.jpg")),format.raw/*206.73*/("""" class="img-responsive" alt="Member Image">
                         <div class="team-details">
                             <h4 class="member-name">Mohammed Hassan</h4>
                             <p class="position">Developer</p>
@@ -256,8 +251,56 @@ Seq[Any](format.raw/*1.56*/("""
         </div>
             <!-- /.container -->
     </section>
+    <section class="content-block team-1 team-1-2">
+        <div class="container">
+            <div class="underlined-title" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce">
+                <h1>Supervised By</h1>
+                <hr>
+            </div>
+            <div class="row text-center" style="text-align:center;">
+                <div class="col-md-3 col-sm-6" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse" data-pg-collapsed style="display:inline-block;     float:none;">
+                    <div class="team-member">
+                        <img src=""""),_display_(/*232.36*/routes/*232.42*/.Assets.at("images/team/6.png")),format.raw/*232.73*/("""" class="img-responsive" alt="Member Image" width="50%" height="50%">
+                        <div class="team-details">
+                            <h4 class="member-name">Dr.Walid Aly</h4>
+                            <p class="position">Assistant Professor at AAST</p>
+                            <ul class="social social-dark">
+                                <li>
+                                    <a href="https://ae.linkedin.com/in/walid-ahmed-6ab009a5"><i class="fa fa-2x fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.aast.edu/cv.php?ser=41775"><i class="fa fa-2x fa-external-link"></i></a>
+                                </li>
+                            </ul>
+                                <!-- /.social -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team-member-wrap" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse" data-pg-collapsed style="display:inline-block;     float:none;">
+                    <div class="team-member">
+                        <img src=""""),_display_(/*250.36*/routes/*250.42*/.Assets.at("images/team/5.png")),format.raw/*250.73*/("""" class="img-responsive" alt="Member Image" width="50%" height="50%">
+                        <div class="team-details">
+                            <h4 class="member-name">Dr.Khalid Eskaf</h4>
+                            <p class="position">Assistant Professor at AAST</p>
+                            <ul class="social social-dark">
+                                <li>
+                                    <a href="https://eg.linkedin.com/in/khalid-eskaf-285ab43b"><i class="fa fa-2x fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.aast.edu/cv.php?ser=20850"><i class="fa fa-2x fa-external-link"></i></a>
+                                </li>
+                            </ul>
+                                <!-- /.social -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- /.row -->
+        </div>
+            <!-- /.container -->
+    </section>
 
-""")))}),format.raw/*229.2*/("""
+""")))}),format.raw/*272.2*/("""
 """))
       }
     }
@@ -278,11 +321,11 @@ Seq[Any](format.raw/*1.56*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 01 00:02:58 EET 2016
+                  DATE: Sat Jun 11 06:12:22 EET 2016
                   SOURCE: C:/Users/ahmedengu/Documents/IdeaProjects/Gara/app/views/index.scala.html
-                  HASH: b98d14485a3db27bc8df67637658b5d720db752a
-                  MATRIX: 759->1|908->55|936->58|978->92|1017->94|1049->100|9248->8271|9264->8277|9317->8308|10841->9804|10857->9810|10910->9841|11780->10683|11796->10689|11849->10720|12707->11550|12723->11556|12776->11587|13524->12304
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|189->158|189->158|189->158|213->182|213->182|213->182|228->197|228->197|228->197|242->211|242->211|242->211|260->229
+                  HASH: 9a70df27963d3778c16f04e7c9b148e35e317ec1
+                  MATRIX: 759->1|908->55|936->58|978->92|1017->94|1049->100|9067->8090|9083->8096|9136->8127|10660->9623|10676->9629|10729->9660|11599->10502|11615->10508|11668->10539|12526->11369|12542->11375|12595->11406|13967->12750|13983->12756|14036->12787|15264->13987|15280->13993|15333->14024|16393->15053
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|184->153|184->153|184->153|208->177|208->177|208->177|223->192|223->192|223->192|237->206|237->206|237->206|263->232|263->232|263->232|281->250|281->250|281->250|303->272
                   -- GENERATED --
               */
           

@@ -28,7 +28,19 @@ public class Application extends Controller {
     @Inject
     FormFactory formFactory;
 
-    public  Result orderPost() {
+    public Result memberActivation(String member, String code) {
+        if (restRouter.memberActivation(member, code).status() == 200) {
+            flash("alertMessage", "done successfully!");
+            flash("alertMessageStrong", "Email Activation");
+        } else {
+            flash("alertMessage", "something went wrong!");
+            flash("alertMessageType", "alert-danger");
+            flash("alertMessageStrong", "Email Activation");
+        }
+        return redirect(routes.Application.index());
+    }
+
+    public Result orderPost() {
         return play.mvc.Results.TODO;
     }
 
@@ -40,15 +52,15 @@ public class Application extends Controller {
         return play.mvc.Results.TODO;
     }
 
-    public  Result addCarGet() {
+    public Result addCarGet() {
         return play.mvc.Results.TODO;
     }
 
-    public  Result memberSettingsPost() {
+    public Result memberSettingsPost() {
         return play.mvc.Results.TODO;
     }
 
-    public  Result memberSettingsGet() {
+    public Result memberSettingsGet() {
         return play.mvc.Results.TODO;
     }
 
@@ -180,11 +192,11 @@ public class Application extends Controller {
         return redirect(routes.Application.index());
     }
 
-    public  Result BecomeDriverPost() {
+    public Result BecomeDriverPost() {
         return play.mvc.Results.TODO;
     }
 
-    public  Result BecomeDriverGet() {
+    public Result BecomeDriverGet() {
         return play.mvc.Results.TODO;
 
     }

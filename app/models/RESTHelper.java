@@ -3,10 +3,16 @@ package models;
 import models.garaDB.Tables;
 import models.garaDB.tables.pojos.*;
 import models.garaDB.tables.records.*;
+import org.apache.commons.mail.SimpleEmail;
 import org.jooq.*;
 import org.jooq.impl.DSL;
-import play.data.Form;
 
+import play.*;
+import play.data.Form;
+import play.libs.mailer.Email;
+import play.libs.mailer.MailerClient;
+
+import javax.inject.Inject;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.*;
@@ -14,6 +20,9 @@ import java.util.*;
 import static play.mvc.Controller.request;
 
 public class RESTHelper {
+    @Inject
+    MailerClient mailerClient;
+
     public Accesstoken login(String username,String password) throws SQLException {
         Member member= null;
         try {
@@ -117,14 +126,32 @@ public class RESTHelper {
 
     public List create(Table table,Field[] selectFields, Class tableClass, Object form) throws SQLException {
         UpdatableRecord record = (UpdatableRecord) getDslContext().newRecord(table);
-//        Form<Member> memberForm = (Form<Member>) form;
-//        Member member = memberForm.get();
+
         record.from(((Form) form).get());
         record.set(table.field("ID"),null);
+        if(table.equals(Tables.MEMBER)){
+            record.set(table.field("studentEmailActivationCode"),UUID.randomUUID().toString().replace("-","").substring(0,9));
+        }
+
         record.store();
 
         List list = new ArrayList<>();
         list.add(record.into(tableClass));
+        if (list.size()==1&&table.equals(Tables.MEMBER)){
+            Member o = (Member) list.get(0);
+            List<String> mail = new ArrayList();
+            mail.add(o.getStudentemail());
+            String from = Play.application().configuration().getString("play.mailer.user");
+            String subject = "Welcome to Gara";
+            String body = "dear " + o.getName() + ",\n Welcome to G-ara.com\n use this link to activate your account: g-ara.com/member/"+o.getUsername()+"/activate/"+o.getStudentemailactivationcode()+" \n Best Regards,\n";
+
+            Email email = new Email().setSubject(subject).setFrom(from).setTo(mail).setBodyText(body);
+            try {
+                mailerClient.send(email);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         return list;
     }
 
@@ -257,7 +284,7 @@ public class RESTHelper {
             case "DRIVER":
                 return Tables.DRIVER.fields();
             case "MEMBER":
-                return new Field<?>[]{Tables.MEMBER.ID,Tables.MEMBER.NAME,Tables.MEMBER.STUDENTEMAIL};
+                return new Field<?>[]{Tables.MEMBER.ID,Tables.MEMBER.NAME,Tables.MEMBER.STUDENTEMAIL,Tables.MEMBER.USERNAME};
             case "MEMBERCARD":
                 return Tables.MEMBERCARD.fields();
             case "MEMBERGROUP":

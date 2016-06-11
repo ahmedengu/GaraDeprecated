@@ -87,3 +87,5 @@ liquibaseUpdate
 jooq:codegen
 liquibaseUpdate
 jooq:codegen
+dist
+run

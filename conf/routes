@@ -3,44 +3,47 @@
 # ~~~~
 
 # Home page
-GET           /                           controllers.Application.index
+GET           /                                         controllers.Application.index
 # Map static resources from the /public folder to the /assets URL path
-GET           /assets/*file               controllers.Assets.at(path="/public", file)
-POST          /api/v1/login               controllers.RESTRouter.index(target = "login", table="member"  ,id="eouou")
-POST          /api/v1/dispatch            controllers.RESTRouter.index(target = "dispatch", table="member"  ,id="eouou")
-GET           /api/v1/:table              controllers.RESTRouter.index(target = "list", table,id = "oeuoe")
-GET           /api/v1/:table/:id          controllers.RESTRouter.index(target = "getByID", table,id)
-DELETE        /api/v1/:table/:id          controllers.RESTRouter.index(target = "deleteByID", table,id)
-POST          /api/v1/:table              controllers.RESTRouter.index(target = "create", table  ,id="eouou")
-PUT           /api/v1/:table/:id          controllers.RESTRouter.index(target = "updateByID", table , id)
-POST          /api/v1/:table/:id          controllers.RESTRouter.index(target = "updateByID", table , id)
+GET           /assets/*file                             controllers.Assets.at(path="/public", file)
+POST          /api/v1/login                             controllers.RESTRouter.index(target = "login", table="member"  ,id="eouou")
+POST          /api/v1/dispatch                          controllers.RESTRouter.index(target = "dispatch", table="member"  ,id="eouou")
+GET           /api/v1/member/:table/activate/:id        controllers.RESTRouter.index(target = "activate", table,id)
+GET           /api/v1/:table                            controllers.RESTRouter.index(target = "list", table,id = "oeuoe")
+GET           /api/v1/:table/:id                        controllers.RESTRouter.index(target = "getByID", table,id)
+DELETE        /api/v1/:table/:id                        controllers.RESTRouter.index(target = "deleteByID", table,id)
+POST          /api/v1/:table                            controllers.RESTRouter.index(target = "create", table  ,id="eouou")
+PUT           /api/v1/:table/:id                        controllers.RESTRouter.index(target = "updateByID", table , id)
+POST          /api/v1/:table/:id                        controllers.RESTRouter.index(target = "updateByID", table , id)
 
-GET           /admin                      controllers.AdminCRUD.index()
-GET           /admin/:table               controllers.AdminCRUD.crudRouter(table)
+GET           /admin                                    controllers.AdminCRUD.index()
+GET           /admin/:table                             controllers.AdminCRUD.crudRouter(table)
 
-GET           /register                   controllers.Application.registerGet()
-POST          /register                   controllers.Application.registerPost()
-GET           /login                      controllers.Application.loginGet()
-POST          /login                      controllers.Application.loginPost()
-GET           /newUniversity              controllers.Application.newUniversityGet()
-POST          /newUniversity              controllers.Application.newUniversityPost()
+GET           /register                                 controllers.Application.registerGet()
+POST          /register                                 controllers.Application.registerPost()
+GET           /login                                    controllers.Application.loginGet()
+POST          /login                                    controllers.Application.loginPost()
+GET           /newUniversity                            controllers.Application.newUniversityGet()
+POST          /newUniversity                            controllers.Application.newUniversityPost()
 
-GET           /member                     controllers.Application.memberArea()
-GET           /member/becomeDriver        controllers.Application.BecomeDriverGet()
-POST          /member/becomeDriver        controllers.Application.BecomeDriverPost()
-GET           /member/settings            controllers.Application.memberSettingsGet()
-POST          /member/settings            controllers.Application.memberSettingsPost()
-GET           /member/addCar              controllers.Application.addCarGet()
-POST          /member/addCar              controllers.Application.addCarPost()
+GET           /member                                   controllers.Application.memberArea()
+GET           /member/:member/activate/:code            controllers.Application.memberActivation(member,code)
 
-POST          /member/dispatch            controllers.Application.dispatchPost()
+GET           /member/becomeDriver                      controllers.Application.BecomeDriverGet()
+POST          /member/becomeDriver                      controllers.Application.BecomeDriverPost()
+GET           /member/settings                          controllers.Application.memberSettingsGet()
+POST          /member/settings                          controllers.Application.memberSettingsPost()
+GET           /member/addCar                            controllers.Application.addCarGet()
+POST          /member/addCar                            controllers.Application.addCarPost()
 
-POST          /member/order               controllers.Application.orderPost()
+POST          /member/dispatch                          controllers.Application.dispatchPost()
 
-GET           /logout                     controllers.Application.logout()
+POST          /member/order                             controllers.Application.orderPost()
+
+GET           /logout                                   controllers.Application.logout()
 
 
-GET           /university                 controllers.UniversityPage.index()
-GET           /university/:subdomain                 controllers.UniversityPage.home(subdomain)
-GET           /university/:subdomain/:page                 controllers.UniversityPage.page(subdomain,page)
+GET           /university                               controllers.UniversityPage.index()
+GET           /university/:subdomain                    controllers.UniversityPage.home(subdomain)
+GET           /university/:subdomain/:page              controllers.UniversityPage.page(subdomain,page)
 

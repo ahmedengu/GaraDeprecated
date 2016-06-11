@@ -24,23 +24,50 @@ public class RESTRouter extends Controller {
     FormFactory formFactory;
 
     public play.mvc.Result index(String target, String table, String id) {
-        switch (target) {
-            case "list":
+        switch (target.toUpperCase()) {
+            case "LIST":
                 return list(table);
-            case "getByID":
+            case "GETBYID":
                 return getByID(table, id);
-            case "deleteByID":
+            case "DELETEBYID":
                 return deleteByID(table, id);
-            case "create":
+            case "CREATE":
                 return create(table);
-            case "updateByID":
+            case "UPDATEBYID":
                 return updateByID(table, id);
-            case "login":
+            case "LOGIN":
                 return login();
-            case "dispatch":
+            case "DISPATCH":
                 return dispatch();
+            case "ACTIVATE":
+                return memberActivation(table,id);
         }
 
+        return badRequest("{\"error\":\"bad request\"}");
+    }
+
+    public Result memberActivation(String member, String code) {
+        try {
+            List list = restHelper.getWhere("member", "studentEmailActivationCode", code);
+            if (list.size() > 0) {
+                Member m = (Member) list.get(0);
+
+                if (m.getUsername().equals(member)||m.getId().equals(Integer.parseInt(member))) {
+                    String id = m.getId().toString();
+                    m.setActivited(1);
+                    m.setStudentemailactivationcode("");
+                    Form form = formFactory.form(Member.class).fill(m);
+
+                    List updateByID = restHelper.updateByID("member", form, id);
+                    if (updateByID.size() > 0) {
+                        m = (Member) list.get(0);
+                        return ok(Json.toJson(m));
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return badRequest("{\"error\":\"bad request\"}");
     }
 
@@ -79,14 +106,13 @@ public class RESTRouter extends Controller {
 
             List<Object> list = new ArrayList();
             list.add(accesstokenRecord);
-            list.add(restHelper.getWhere("member","username",username).get(0));
+            list.add(restHelper.getWhere("member", "username", username).get(0));
             return created(Json.toJson(list));
 
         } catch (Exception e) {
             return badRequest("{\"error\":\"username or password not correct\"}");
         }
     }
-
 
 
     public play.mvc.Result list(String tableName) {
