@@ -28,8 +28,8 @@ libraryDependencies ++= Seq(
   "javax.persistence" % "persistence-api" % "1.0.2",
   "javax.validation" % "validation-api" % "1.1.0.Final",
   "com.fasterxml.uuid" % "java-uuid-generator" % "3.1.3",
-  "com.typesafe.play" %% "play-mailer" % "5.0.0-M1"
-
+  "com.typesafe.play" %% "play-mailer" % "5.0.0-M1",
+  "org.mindrot" % "jbcrypt" % "0.3m"
 )
 
 libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.31" % "jooq"

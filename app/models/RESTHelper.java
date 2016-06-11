@@ -7,12 +7,15 @@ import org.apache.commons.mail.SimpleEmail;
 import org.jooq.*;
 import org.jooq.impl.DSL;
 
+import org.mindrot.jbcrypt.BCrypt;
 import play.*;
 import play.data.Form;
 import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
 
+import javax.crypto.spec.PBEKeySpec;
 import javax.inject.Inject;
+import java.security.SecureRandom;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.*;
@@ -26,7 +29,10 @@ public class RESTHelper {
     public Accesstoken login(String username,String password) throws SQLException {
         Member member= null;
         try {
-            member = getDslContext().selectFrom(Tables.MEMBER).where(Tables.MEMBER.USERNAME.equal(username)).and(Tables.MEMBER.PASSWORD.equal(password)).fetchOne().into(Member.class);
+            member = getDslContext().selectFrom(Tables.MEMBER).where(Tables.MEMBER.USERNAME.equal(username)).fetchOne().into(Member.class);
+            if(!BCrypt.checkpw(password, member.getPassword())){
+                return null;
+            }
         } catch (Exception e) {
             return null;
         }
@@ -131,6 +137,11 @@ public class RESTHelper {
         record.set(table.field("ID"),null);
         if(table.equals(Tables.MEMBER)){
             record.set(table.field("studentEmailActivationCode"),UUID.randomUUID().toString().replace("-","").substring(0,9));
+            String salt = UUID.randomUUID().toString().replace("-","").substring(0,9);
+            String password= BCrypt.hashpw((String) record.get("password"), BCrypt.gensalt());
+
+            record.set(table.field("password"),password);
+
         }
 
         record.store();
@@ -139,20 +150,26 @@ public class RESTHelper {
         list.add(record.into(tableClass));
         if (list.size()==1&&table.equals(Tables.MEMBER)){
             Member o = (Member) list.get(0);
-            List<String> mail = new ArrayList();
-            mail.add(o.getStudentemail());
+
             String from = Play.application().configuration().getString("play.mailer.user");
             String subject = "Welcome to Gara";
             String body = "dear " + o.getName() + ",\n Welcome to G-ara.com\n use this link to activate your account: http://www.g-ara.com/member/"+o.getUsername()+"/activate/"+o.getStudentemailactivationcode()+" \n Best Regards,\n";
+            String to = o.getStudentemail();
 
-            Email email = new Email().setSubject(subject).setFrom(from).setTo(mail).setBodyText(body);
-            try {
-                mailerClient.send(email);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            sendMail(from, to, subject, body);
         }
         return list;
+    }
+
+    private void sendMail(String from, String to, String subject, String body) {
+        List<String> mailTo = new ArrayList();
+        mailTo.add(to);
+        Email email = new Email().setSubject(subject).setFrom(from).setTo(mailTo).setBodyText(body);
+        try {
+            mailerClient.send(email);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public List updateByID(String tableName, Object form,String id) throws SQLException {
