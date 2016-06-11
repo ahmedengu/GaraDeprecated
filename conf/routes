@@ -47,3 +47,4 @@ GET           /university                               controllers.UniversityPa
 GET           /university/:subdomain                    controllers.UniversityPage.home(subdomain)
 GET           /university/:subdomain/:page              controllers.UniversityPage.page(subdomain,page)
 
+GET           /:siteContent                                   controllers.Application.siteContent(siteContent)

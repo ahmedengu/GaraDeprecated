@@ -28,6 +28,19 @@ public class Application extends Controller {
     @Inject
     FormFactory formFactory;
 
+    public  Result siteContent(String siteContent) {
+
+        try {
+            List where = restHelper.getWhere("SiteContent", "link", siteContent);
+            Sitecontent sitecontent = (Sitecontent) where.get(0);
+            return ok(views.html.main.render(sitecontent.getTitle(),sitecontent.getDescription(),sitecontent.getKeywords(),new Html(sitecontent.getBody())));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return notFound();
+    }
+
     public Result memberActivation(String member, String code) {
         if (restRouter.memberActivation(member, code).status() == 200) {
             flash("alertMessage", "done successfully!");

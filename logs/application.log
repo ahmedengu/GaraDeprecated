@@ -1,22 +1,80 @@
-2016-06-11 19:28:21,626 [INFO] from play.core.server.NettyServer in pool-4-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-06-11 19:28:58,545 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-11 19:29:05,341 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-11 19:29:05,364 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-06-11 19:29:08,744 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-11 19:29:09,310 [WARN] from application in ForkJoinPool-1-worker-1 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-11 19:29:10,034 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-06-11 19:31:08,854 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
-2016-06-11 19:31:09,312 [WARN] from application in application-akka.actor.default-dispatcher-8 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-11 19:31:09,474 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-11 19:31:09,474 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2016-06-11 19:31:12,386 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-11 19:31:12,976 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-11 19:31:16,209 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
-2016-06-11 19:36:28,419 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
-2016-06-11 19:36:28,541 [WARN] from application in application-akka.actor.default-dispatcher-10 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-11 19:36:28,788 [WARN] from application in application-akka.actor.default-dispatcher-10 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-11 19:36:28,789 [INFO] from application in application-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
-2016-06-11 19:36:31,719 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-10 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-11 19:36:31,959 [WARN] from application in application-akka.actor.default-dispatcher-10 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-11 19:36:32,173 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-10 - Application started (Dev)
-2016-06-11 19:38:30,398 [WARN] from application in application-akka.actor.default-dispatcher-15 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-11 22:00:42,746 [INFO] from play.core.server.NettyServer in pool-4-thread-5 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-06-11 22:00:54,277 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-11 22:00:56,514 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-11 22:00:56,566 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-06-11 22:01:00,421 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-11 22:01:01,565 [WARN] from application in ForkJoinPool-1-worker-1 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-11 22:01:03,012 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-06-11 22:02:31,200 [ERROR] from application in application-akka.actor.default-dispatcher-5 - 
+
+! @70cf1d5e4 - Internal server error, for (GET) [/toseuqi] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IndexOutOfBoundsException: Index: 0, Size: 0]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
+	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at controllers.Application.siteContent(Application.java:35)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$34$$anonfun$apply$34.apply(Routes.scala:881)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$34$$anonfun$apply$34.apply(Routes.scala:881)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	... 14 common frames omitted
+2016-06-11 22:02:59,825 [INFO] from application in application-akka.actor.default-dispatcher-13 - Shutting down connection pool.
+2016-06-11 22:02:59,921 [WARN] from application in application-akka.actor.default-dispatcher-13 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-11 22:03:00,039 [WARN] from application in application-akka.actor.default-dispatcher-13 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-11 22:03:00,039 [INFO] from application in application-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
+2016-06-11 22:03:02,948 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-13 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-11 22:03:03,025 [WARN] from application in application-akka.actor.default-dispatcher-13 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-11 22:03:03,165 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-13 - Application started (Dev)
