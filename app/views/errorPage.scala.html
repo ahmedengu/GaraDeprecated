@@ -1,0 +1,16 @@
+@(title: String, description: String, keywords: String)
+
+@main(title, description, keywords) {
+
+    <section id="promo-1" class="content-block promo-1 min-height-600px bg-offwhite" style="" align>
+        <div class="container">
+            <div class="row" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="bounce" data-animation-2>
+                <h1 class="text-center white">@title</h1>
+                @if(!title.equalsIgnoreCase(description)){
+                    <h3 class="text-center offwhite">@description</h3>
+                }
+            </div>
+                <!-- /.row -->
+        </div>
+    </section>
+   }
