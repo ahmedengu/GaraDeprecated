@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/ahmedengu/Documents/IdeaProjects/Gara/conf/routes
-// @DATE:Sat Jun 11 10:15:35 EET 2016
+// @DATE:Sat Jun 11 21:57:07 EET 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -130,6 +130,12 @@ package controllers {
     def newUniversityGet(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "newUniversity")
+    }
+  
+    // @LINE:50
+    def siteContent(siteContent:String): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + implicitly[PathBindable[String]].unbind("siteContent", dynamicString(siteContent)))
     }
   
     // @LINE:35

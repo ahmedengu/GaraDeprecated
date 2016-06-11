@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/ahmedengu/Documents/IdeaProjects/Gara/conf/routes
-// @DATE:Sat Jun 11 10:15:35 EET 2016
+// @DATE:Sat Jun 11 21:57:07 EET 2016
 
 package router
 
@@ -88,6 +88,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """university""", """controllers.UniversityPage.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """university/""" + "$" + """subdomain<[^/]+>""", """controllers.UniversityPage.home(subdomain:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """university/""" + "$" + """subdomain<[^/]+>/""" + "$" + """page<[^/]+>""", """controllers.UniversityPage.page(subdomain:String, page:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """""" + "$" + """siteContent<[^/]+>""", """controllers.Application.siteContent(siteContent:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -656,6 +657,23 @@ class Routes(
     )
   )
 
+  // @LINE:50
+  private[this] lazy val controllers_Application_siteContent33_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), DynamicPart("siteContent", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Application_siteContent33_invoker = createInvoker(
+    Application_4.siteContent(fakeValue[String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "siteContent",
+      Seq(classOf[String]),
+      "GET",
+      """""",
+      this.prefix + """""" + "$" + """siteContent<[^/]+>"""
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -855,6 +873,12 @@ class Routes(
     case controllers_UniversityPage_page32_route(params) =>
       call(params.fromPath[String]("subdomain", None), params.fromPath[String]("page", None)) { (subdomain, page) =>
         controllers_UniversityPage_page32_invoker.call(UniversityPage_0.page(subdomain, page))
+      }
+  
+    // @LINE:50
+    case controllers_Application_siteContent33_route(params) =>
+      call(params.fromPath[String]("siteContent", None)) { (siteContent) =>
+        controllers_Application_siteContent33_invoker.call(Application_4.siteContent(siteContent))
       }
   }
 }

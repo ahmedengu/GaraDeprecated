@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/ahmedengu/Documents/IdeaProjects/Gara/conf/routes
-// @DATE:Sat Jun 11 10:15:35 EET 2016
+// @DATE:Sat Jun 11 21:57:07 EET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -155,6 +155,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "newUniversity"})
+        }
+      """
+    )
+  
+    // @LINE:50
+    def siteContent: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.siteContent",
+      """
+        function(siteContent0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("siteContent", encodeURIComponent(siteContent0))})
         }
       """
     )
