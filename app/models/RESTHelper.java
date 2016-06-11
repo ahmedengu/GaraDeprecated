@@ -143,7 +143,7 @@ public class RESTHelper {
             mail.add(o.getStudentemail());
             String from = Play.application().configuration().getString("play.mailer.user");
             String subject = "Welcome to Gara";
-            String body = "dear " + o.getName() + ",\n Welcome to G-ara.com\n use this link to activate your account: g-ara.com/member/"+o.getUsername()+"/activate/"+o.getStudentemailactivationcode()+" \n Best Regards,\n";
+            String body = "dear " + o.getName() + ",\n Welcome to G-ara.com\n use this link to activate your account: http://www.g-ara.com/member/"+o.getUsername()+"/activate/"+o.getStudentemailactivationcode()+" \n Best Regards,\n";
 
             Email email = new Email().setSubject(subject).setFrom(from).setTo(mail).setBodyText(body);
             try {
@@ -308,7 +308,7 @@ public class RESTHelper {
             case "DISPATCH":
                 return new Field<?>[]{Tables.MEMBER.ID,Tables.MEMBER.NAME,Tables.MEMBER.USERNAME,Tables.MEMBER.PIC,Tables.MEMBER.LONGITUDE,Tables.MEMBER.LATITUDE,Tables.CAR.DISTLATITUDE,Tables.CAR.DISTLONGITUDE,Tables.CAR.CARMODELID,Tables.CAR.AVAILABLESEATS,Tables.CAR.FRONTPIC};
             case "UNIVERSITYPAGECONTENTJOIN":
-                return new Field<?>[]{Tables.UNIVERSITY.NAME,Tables.UNIVERSITY.PIC,Tables.UNIVERSITYPAGECONTENT.TITLE,Tables.UNIVERSITYPAGECONTENT.TIMESTAMP,Tables.UNIVERSITYPAGECONTENT.BODY,Tables.UNIVERSITYPAGECONTENT.DESCRIPTION,Tables.UNIVERSITYPAGECONTENT.KEYWORDS};
+                return new Field<?>[]{Tables.UNIVERSITY.NAME,Tables.UNIVERSITY.PIC.as("upic"),Tables.UNIVERSITY.PIC,Tables.UNIVERSITYPAGECONTENT.TITLE,Tables.UNIVERSITYPAGECONTENT.TIMESTAMP,Tables.UNIVERSITYPAGECONTENT.BODY,Tables.UNIVERSITYPAGECONTENT.DESCRIPTION,Tables.UNIVERSITYPAGECONTENT.KEYWORDS};
         }
         return null;
     }

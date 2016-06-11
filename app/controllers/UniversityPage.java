@@ -39,7 +39,7 @@ public class UniversityPage extends Controller {
         try {
             University university = (University) restHelper.getWhere("University", "pageSubdomain", subdomain).get(0);
 
-            return ok(views.html.subdomainMain.render(university.getPagename(),university.getPagedescription(),university.getPagekeywords(),new Html(university.getPagecontent())));
+            return ok(views.html.subdomainMain.render(university.getPagename(),university.getPagedescription(),university.getPagekeywords(),university.getPic(),new Html(university.getPagecontent())));
 
         } catch (Exception e){
             return notFound();
@@ -51,7 +51,7 @@ public class UniversityPage extends Controller {
         try {
             Map<String, Object> universityContentPage = restHelper.getUniversityContentPage(subdomain, page);
 
-          return ok(views.html.subdomainMain.render(universityContentPage.get("title").toString(),universityContentPage.get("description").toString(),universityContentPage.get("keywords").toString(),new Html( universityContentPage.get("body").toString())));
+          return ok(views.html.subdomainMain.render(universityContentPage.get("title").toString(),universityContentPage.get("description").toString(),universityContentPage.get("keywords").toString(),universityContentPage.get("upic").toString(),new Html( universityContentPage.get("body").toString())));
 
         } catch (Exception e){
             return notFound();

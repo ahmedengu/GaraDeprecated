@@ -1,4 +1,4 @@
-@(title: String,description: String,keywords: String)(content: Html)
+@(title: String,description: String,keywords: String,logo :String)(content: Html)
 <!DOCTYPE html>
 <html lang="en" style="height: 100%;">
     <head>
@@ -59,15 +59,27 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="http://www.g-ara.com">
-                            <img src="@routes.Assets.at("images/logo.png")" class="brand-img img-responsive">
-                        </a>
+                        <div style="display:inline-block">
+                            <div class="col-md-4">
+                                <a href="http://www.g-ara.com">
+                                    <img src="@routes.Assets.at("images/logo.png")" class="brand-img img-responsive">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="/">
+                                    <img src="@logo" class="brand-img img-responsive" style="
+                                        max-height: 70px;
+                                        margin-left: 40px;
+                                    ">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                         <!-- Navigation -->
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item">
-                                <a class="loginButton black-hover" href="/login">login</a>
+                                <a class="loginButton black-hover" href="http://www.g-ara.com/login">login</a>
                             </li>
                         </ul>
                             <!--//nav-->
@@ -99,13 +111,13 @@
                         <!-- /.social -->
                 </div>
                 <div class="col-md-3 pull-right">
-                    <p class="address-bold-line" data-animation-1="" data-animation-trigger-1="hover" data-animation-type-1="bounce">
+                    <p class="address-bold-line" >
                         Download The App:</p>
-                    <img src="https://mlsvc01-prod.s3.amazonaws.com/7e69fcc9001/3769a535-7b20-4f0a-ba3d-471f24c61c9d.png" class="img-rounded img-responsive" width="50%" height="50%" align="" data-animation-1="" data-animation-trigger-1="hover" data-animation-type-1="jello">
-                    <img src="http://www.tapsmart.com/wp-content/uploads/2014/04/Download_on_the_App_Store_Badge_US-UK_135x40_0824.png" width="50%" height="50%" class="img-responsive" data-animation-1="" data-animation-trigger-1="hover" data-animation-type-1="jello">
+                    <img src="https://mlsvc01-prod.s3.amazonaws.com/7e69fcc9001/3769a535-7b20-4f0a-ba3d-471f24c61c9d.png" class="img-rounded img-responsive" width="50%" height="50%" align="" >
+                    <img src="http://www.tapsmart.com/wp-content/uploads/2014/04/Download_on_the_App_Store_Badge_US-UK_135x40_0824.png" width="50%" height="50%" class="img-responsive" >
                 </div>
-                <div class="col-xs-12 footer-text" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce">
-                    <p data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="jello">
+                <div class="col-xs-12 footer-text">
+                    <p >
                         All copyrights resevied Gara 2016</p>
                 </div>
             </div>
