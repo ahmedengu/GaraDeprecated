@@ -3,6 +3,7 @@ package controllers;
 import models.RESTHelper;
 import models.garaDB.tables.pojos.Accesstoken;
 import models.garaDB.tables.pojos.Member;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.data.FormFactory;
 import play.data.validation.ValidationError;
@@ -185,7 +186,9 @@ public class RESTRouter extends Controller {
         List result = null;
         try {
             Class aClass = RESTHelper.getClassByName(tableName);
-            Form form = formFactory.form(aClass).bindFromRequest();
+//            Form form = formFactory.form(aClass).bindFromRequest();
+
+            Form form = formFactory.form().bindFromRequest();
             result = restHelper.updateByID(tableName, form, id);
             return ok(Json.toJson(result));
         } catch (SQLException e) {

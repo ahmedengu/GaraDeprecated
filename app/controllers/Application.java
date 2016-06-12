@@ -2,6 +2,7 @@ package controllers;
 
 import models.RESTHelper;
 import models.garaDB.tables.pojos.*;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.data.FormFactory;
 import play.data.validation.ValidationError;
@@ -13,6 +14,7 @@ import views.html.onePageForms;
 
 import javax.inject.Inject;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -117,6 +119,8 @@ public class Application extends Controller {
                 form.reject(new ValidationError("username", "username or password not correct"));
                 return badRequest(views.html.login.render("login", "login", "login", form));
             }
+
+            session("memberID", accesstokenRecord.getMemberid().toString());
             session("username", username);
             session("Accesstoken", accesstokenRecord.getValue());
             session("Accesstokenid", String.valueOf(accesstokenRecord.getId()));
@@ -229,7 +233,10 @@ public class Application extends Controller {
     }
 
     public Result BecomeDriverPost() {
-        Form<Driver> form = formFactory.form(Driver.class).bindFromRequest();
+        Map<String, String> f = formFactory.form().bindFromRequest().data();
+        f.put("memberid", session().get("memberID"));
+        Form<Driver> form  = Form.form(Driver.class).bind(f);
+
         if (form.hasErrors()) {
             return badRequest(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", form));
         } else {
@@ -240,7 +247,7 @@ public class Application extends Controller {
 
                 return redirect(routes.Application.memberArea());
             } else {
-                return ok(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", formFactory.form(Driver.class)));
+                return ok(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", this.formFactory.form(Driver.class)));
             }
         }
     }

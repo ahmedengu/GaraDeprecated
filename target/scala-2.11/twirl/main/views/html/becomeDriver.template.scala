@@ -55,19 +55,16 @@ Seq[Any](format.raw/*1.102*/("""
         """)))}),format.raw/*24.10*/("""
         """),format.raw/*25.9*/("""<form action="/member/becomeDriver" method="post">
             <div class="form-group">
-                <input type="text" name="licenseNumber" placeholder="licenseNumber" class="form-control">
+                <input type="text" name="licensenumber" placeholder="licenseNumber" class="form-control">
             </div>
             <div class="form-group">
-                <input type="text" name="studentEmail" placeholder="Student email address" class="form-control">
+                <input type="text" name="licensepic" placeholder="licensePic" class="form-control">
             </div>
             <div class="form-group">
-                <input type="text" name="licensePic" placeholder="licensePic" class="form-control">
+                <input type="text" name="identycardpic" placeholder="identyCardPic" class="form-control">
             </div>
             <div class="form-group">
-                <input type="text" name="identyCardPic" placeholder="identyCardPic" class="form-control">
-            </div>
-            <div class="form-group">
-                <input type="text" name="licenseExpireDate" placeholder="licenseExpireDate" class="form-control">
+                <input type="text" name="licenseexpiredate" placeholder="licenseExpireDate" class="form-control">
             </div>
             <div class="form-group">
                 <input type="submit" value="Go!" class="btn btn-primary btn-block bg-marina">
@@ -75,7 +72,7 @@ Seq[Any](format.raw/*1.102*/("""
         </form>
     </div>
 
-""")))}),format.raw/*47.2*/("""
+""")))}),format.raw/*44.2*/("""
 """))
       }
     }
@@ -96,11 +93,11 @@ Seq[Any](format.raw/*1.102*/("""
 object becomeDriver extends becomeDriver_Scope0.becomeDriver
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 12 01:50:18 EET 2016
+                  DATE: Sun Jun 12 04:51:07 EET 2016
                   SOURCE: C:/Users/ahmedengu/Documents/IdeaProjects/Gara/app/views/becomeDriver.scala.html
-                  HASH: 3a85b6252687377f4f2cae853d7a0804d9dffa5c
-                  MATRIX: 813->1|1009->101|1039->106|1085->144|1124->146|1158->154|1284->254|1312->274|1351->276|1395->293|1432->321|1472->323|1518->341|1646->442|1696->476|1736->478|1790->504|1847->534|1880->551|1920->553|1978->584|1990->587|2032->608|2090->635|2144->661|2202->688|2248->706|2302->729|2344->740|2381->750|3482->1821
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|42->11|42->11|42->11|43->12|45->14|45->14|45->14|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|50->19|51->20|52->21|54->23|55->24|56->25|78->47
+                  HASH: 3506906de9e4f268a41d45e56b224cfd58ee91b6
+                  MATRIX: 813->1|1009->101|1039->106|1085->144|1124->146|1158->154|1284->254|1312->274|1351->276|1395->293|1432->321|1472->323|1518->341|1646->442|1696->476|1736->478|1790->504|1847->534|1880->551|1920->553|1978->584|1990->587|2032->608|2090->635|2144->661|2202->688|2248->706|2302->729|2344->740|2381->750|3310->1649
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|42->11|42->11|42->11|43->12|45->14|45->14|45->14|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|50->19|51->20|52->21|54->23|55->24|56->25|75->44
                   -- GENERATED --
               */
           

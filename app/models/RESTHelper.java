@@ -9,6 +9,7 @@ import org.jooq.impl.DSL;
 
 import org.mindrot.jbcrypt.BCrypt;
 import play.*;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
@@ -195,7 +196,10 @@ public class RESTHelper {
 
     public List updateByID(Table table, Field[] selectFields, Class tableClass, Object form, String id) throws SQLException {
         UpdatableRecord record = (UpdatableRecord) getDslContext().newRecord(table);
-        record.from(((Form) form).get());
+        Object l = getByID(table, selectFields, tableClass, record, id).get(0);
+        record.from(l);
+        Map<String,String> data = ((Form) form).data();
+        record.from(data);
         record.set(table.field("ID"), id);
         record.update();
 
