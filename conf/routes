@@ -9,6 +9,8 @@ GET           /assets/*file                             controllers.Assets.at(pa
 POST          /api/v1/login                             controllers.RESTRouter.index(target = "login", table="member"  ,id="eouou")
 POST          /api/v1/dispatch                          controllers.RESTRouter.index(target = "dispatch", table="member"  ,id="eouou")
 GET           /api/v1/member/:table/activate/:id        controllers.RESTRouter.index(target = "activate", table,id)
+POST          /api/v1/:table/where/*condition                            controllers.RESTRouter.index(target = "whereWithCondition", table  ,condition)
+
 GET           /api/v1/:table                            controllers.RESTRouter.index(target = "list", table,id = "oeuoe")
 GET           /api/v1/:table/:id                        controllers.RESTRouter.index(target = "getByID", table,id)
 DELETE        /api/v1/:table/:id                        controllers.RESTRouter.index(target = "deleteByID", table,id)
@@ -31,8 +33,8 @@ GET           /member/:member/activate/:code            controllers.Application.
 
 GET           /member/becomeDriver                      controllers.Application.BecomeDriverGet()
 POST          /member/becomeDriver                      controllers.Application.BecomeDriverPost()
-GET           /member/addCar                      controllers.Application.addCarGet()
-POST          /member/addCar                      controllers.Application.addCarPost()
+GET           /member/addCar                            controllers.Application.addCarGet()
+POST          /member/addCar                            controllers.Application.addCarPost()
 GET           /member/settings                          controllers.Application.memberSettingsGet()
 POST          /member/settings                          controllers.Application.memberSettingsPost()
 GET           /member/addCar                            controllers.Application.addCarGet()

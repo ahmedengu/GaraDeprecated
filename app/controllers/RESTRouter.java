@@ -3,10 +3,8 @@ package controllers;
 import models.RESTHelper;
 import models.garaDB.tables.pojos.Accesstoken;
 import models.garaDB.tables.pojos.Member;
-import play.data.DynamicForm;
 import play.data.Form;
 import play.data.FormFactory;
-import play.data.validation.ValidationError;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -42,8 +40,25 @@ public class RESTRouter extends Controller {
                 return dispatch();
             case "ACTIVATE":
                 return memberActivation(table,id);
+            case "WHEREWITHCONDITION":
+                return getWhereWithCondition(table,id);
         }
 
+        return badRequest("{\"error\":\"bad request\"}");
+    }
+
+    private Result getWhereWithCondition(String table, String condition ) {
+
+        String[] conditions = condition.split("/");
+        Map<String, String> data = formFactory.form().bindFromRequest().data();
+        try {
+            List list =restHelper.getWhereCondition(table,conditions,data);
+            if(list.size()>0){
+                return ok(Json.toJson(list));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return badRequest("{\"error\":\"bad request\"}");
     }
 

@@ -198,7 +198,7 @@ public class RESTHelper {
         UpdatableRecord record = (UpdatableRecord) getDslContext().newRecord(table);
         Object l = getByID(table, selectFields, tableClass, record, id).get(0);
         record.from(l);
-        Map<String,String> data = ((Form) form).data();
+        Map<String, String> data = ((Form) form).data();
         record.from(data);
         record.set(table.field("ID"), id);
         record.update();
@@ -411,5 +411,83 @@ public class RESTHelper {
     public Map<String, Object> getUniversityContentPage(String pageSubdomain, String link) throws SQLException {
         return getDslContext().select(getSelectFieldsByName("UNIVERSITYPAGECONTENTJOIN")).from(Tables.UNIVERSITY).join(Tables.UNIVERSITYPAGECONTENT).on(Tables.UNIVERSITY.ID.equal(Tables.UNIVERSITYPAGECONTENT.UNIVERSITYID)).where(Tables.UNIVERSITY.PAGESUBDOMAIN.equal(pageSubdomain)).and(Tables.UNIVERSITYPAGECONTENT.LINK.equal(link)).fetchOneMap();
 
+    }
+
+    public List getWhereCondition(String tableName, String[] conditions, Map<String, String> data) {
+        Table table = getTableByName(tableName);
+        Class tableClass = getClassByName(tableName);
+        UpdatableRecord record = getRecordByName(tableName);
+        Field[] selectFields = getSelectFieldsByName(tableName);
+
+        SelectJoinStep from = getDslContext().select(selectFields).from(table);
+//        int i = -1;
+//        for (Map.Entry<String, String> entry : data.entrySet()) {
+//            if (i != -1 && i < conditions.length) {
+//                switch (conditions[i].toUpperCase()) {
+//                    case "AND":
+//                        from.where(table.field(entry.getKey()).equal(entry.getValue()));
+//                        break;
+//                    case "OR":
+//                        from.where().or(table.field(entry.getKey()).equal(entry.getValue()));
+//                        break;
+//                    case "ORNOT":
+//                        from.where().orNot(table.field(entry.getKey()).equal(entry.getValue()));
+//                        break;
+//
+//                    case "ANDNOT":
+//                        from.where().andNot(table.field(entry.getKey()).equal(entry.getValue()));
+//                        break;
+//                }
+//            } else
+//                from.where(table.field(entry.getKey()).equal(entry.getValue()));
+//
+//            i++;
+//        }
+//        return from.fetch().into(tableClass);
+
+
+        List<Map.Entry<String, String>> lm = new ArrayList<>(data.entrySet());
+//        for (Map.Entry<String, String> entry : data.entrySet()) {
+//            lm.add(entry);
+//        }
+        String ki, kj;
+        for (int i = 0, j = 1; i < lm.size(); i++, j++) {
+            if (i < conditions.length && j < lm.size()) {
+                switch (conditions[i].toUpperCase()) {
+                    case "AND":
+                        ki = lm.get(i).getKey().replaceAll("%", "");
+                        kj = lm.get(j).getKey().replaceAll("%", "");
+
+                        from.where(table.field(ki).equal(lm.get(i).getValue())).and(table.field(kj).equal(lm.get(j).getValue()));
+                        break;
+                    case "OR":
+                        ki = lm.get(i).getKey().replaceAll("%", "");
+                        kj = lm.get(j).getKey().replaceAll("%", "");
+
+                        from.where(table.field(ki).equal(lm.get(i).getValue())).or(table.field(kj).equal(lm.get(j).getValue()));
+                        break;
+                    case "ORNOT":
+                        ki = lm.get(i).getKey().replaceAll("%", "");
+                        kj = lm.get(j).getKey().replaceAll("%", "");
+
+                        from.where(table.field(ki).equal(lm.get(i).getValue())).orNot(table.field(kj).equal(lm.get(j).getValue()));
+                        break;
+
+                    case "ANDNOT":
+                        ki = lm.get(i).getKey().replaceAll("%", "");
+                        kj = lm.get(j).getKey().replaceAll("%", "");
+
+                        from.where(table.field(ki).equal(lm.get(i).getValue())).andNot(table.field(kj).equal(lm.get(j).getValue()));
+                        break;
+
+                }
+                i++;
+                j++;
+            } else {
+                ki = lm.get(i).getKey().replaceAll("%", "");
+                from.where(table.field(ki).equal(lm.get(i).getValue()));
+            }
+        }
+        return from.fetch().into(tableClass);
     }
 }
