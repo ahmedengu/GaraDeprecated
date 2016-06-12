@@ -1,10 +1,7 @@
 package controllers;
 
 import models.RESTHelper;
-import models.garaDB.tables.pojos.Accesstoken;
-import models.garaDB.tables.pojos.Member;
-import models.garaDB.tables.pojos.Sitecontent;
-import models.garaDB.tables.pojos.University;
+import models.garaDB.tables.pojos.*;
 import play.data.Form;
 import play.data.FormFactory;
 import play.data.validation.ValidationError;
@@ -28,12 +25,12 @@ public class Application extends Controller {
     @Inject
     FormFactory formFactory;
 
-    public  Result siteContent(String siteContent) {
+    public Result siteContent(String siteContent) {
 
         try {
             List where = restHelper.getWhere("SiteContent", "link", siteContent);
             Sitecontent sitecontent = (Sitecontent) where.get(0);
-            return ok(views.html.main.render(sitecontent.getTitle(),sitecontent.getDescription(),sitecontent.getKeywords(),new Html(sitecontent.getBody())));
+            return ok(views.html.main.render(sitecontent.getTitle(), sitecontent.getDescription(), sitecontent.getKeywords(), new Html(sitecontent.getBody())));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -62,11 +59,26 @@ public class Application extends Controller {
     }
 
     public Result addCarPost() {
-        return play.mvc.Results.TODO;
+        Form<Car> form = formFactory.form(Car.class).bindFromRequest();
+        if (form.hasErrors()) {
+            return ok(views.html.addCar.render("add a car", "add a car", "add a car", form));
+        } else {
+
+            if (restRouter.create("Car").status() == 201) {
+                flash("alertMessage", "done successfully!");
+                flash("alertMessageStrong", "Add a car");
+
+                return redirect(routes.Application.memberArea());
+            } else {
+                return ok(views.html.addCar.render("add a car", "add a car", "add a car", formFactory.form(Car.class)));
+            }
+
+
+        }
     }
 
     public Result addCarGet() {
-        return play.mvc.Results.TODO;
+        return ok(views.html.addCar.render("add a car", "add a car", "add a car", formFactory.form(Car.class)));
     }
 
     public Result memberSettingsPost() {
@@ -188,14 +200,25 @@ public class Application extends Controller {
     }
 
     public Result memberArea() throws SQLException {
-        if (restHelper.getByID("accesstoken", session("Accesstokenid")).size() == 0) {
-            session().clear();
-            Form form = formFactory.form().bindFromRequest();
-            form.reject(new ValidationError("username", "you should login first "));
-            return unauthorized(views.html.login.render("login", "login", "login", form));
+        Boolean isDriver = false;
+        try {
+            List byID = restHelper.getByID("accesstoken", session("Accesstokenid"));
+            if (byID.size() == 0) {
+                session().clear();
+                Form form = formFactory.form().bindFromRequest();
+                form.reject(new ValidationError("username", "you should login first "));
+                return unauthorized(views.html.login.render("login", "login", "login", form));
+            }
+            Accesstoken o = (Accesstoken) byID.get(0);
+
+            List<Driver> where = restHelper.getWhere("driver", "memberID", String.valueOf(o.getMemberid()));
+            if (where.size() > 0)
+                isDriver = true;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         String username = session("username");
-        return ok(views.html.memberAreaIndex.render(username, username, username));
+        return ok(views.html.memberAreaIndex.render(username, username, username, isDriver));
     }
 
     public Result logout() throws SQLException {
@@ -206,11 +229,24 @@ public class Application extends Controller {
     }
 
     public Result BecomeDriverPost() {
-        return play.mvc.Results.TODO;
+        Form<Driver> form = formFactory.form(Driver.class).bindFromRequest();
+        if (form.hasErrors()) {
+            return badRequest(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", form));
+        } else {
+
+            if (restRouter.create("Driver").status() == 201) {
+                flash("alertMessage", "done successfully!");
+                flash("alertMessageStrong", "Becoming a member");
+
+                return redirect(routes.Application.memberArea());
+            } else {
+                return ok(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", formFactory.form(Driver.class)));
+            }
+        }
     }
 
     public Result BecomeDriverGet() {
-        return play.mvc.Results.TODO;
+        return ok(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", formFactory.form(Driver.class)));
 
     }
 

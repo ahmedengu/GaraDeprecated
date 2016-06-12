@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/ahmedengu/Documents/IdeaProjects/Gara/conf/routes
-// @DATE:Sat Jun 11 21:57:07 EET 2016
+// @DATE:Sun Jun 12 02:13:53 EET 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -86,26 +86,26 @@ package controllers {
   
   }
 
-  // @LINE:46
+  // @LINE:48
   class ReverseUniversityPage(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:47
+    // @LINE:49
     def home(subdomain:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "university/" + implicitly[PathBindable[String]].unbind("subdomain", dynamicString(subdomain)))
     }
   
-    // @LINE:48
+    // @LINE:50
     def page(subdomain:String, page:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "university/" + implicitly[PathBindable[String]].unbind("subdomain", dynamicString(subdomain)) + "/" + implicitly[PathBindable[String]].unbind("page", dynamicString(page)))
     }
   
-    // @LINE:46
+    // @LINE:48
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "university")
@@ -132,13 +132,13 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "newUniversity")
     }
   
-    // @LINE:50
+    // @LINE:52
     def siteContent(siteContent:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + implicitly[PathBindable[String]].unbind("siteContent", dynamicString(siteContent)))
     }
   
-    // @LINE:35
+    // @LINE:37
     def memberSettingsPost(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "member/settings")
@@ -162,19 +162,19 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "member")
     }
   
-    // @LINE:39
+    // @LINE:41
     def dispatchPost(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "member/dispatch")
     }
   
-    // @LINE:41
+    // @LINE:43
     def orderPost(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "member/order")
     }
   
-    // @LINE:34
+    // @LINE:36
     def memberSettingsGet(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "member/settings")
@@ -186,16 +186,24 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "member/becomeDriver")
     }
   
-    // @LINE:43
+    // @LINE:45
     def logout(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:37
+    // @LINE:35
     def addCarPost(): Call = {
-      import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "member/addCar")
+    
+      () match {
+      
+        // @LINE:35
+        case ()  =>
+          import ReverseRouteContext.empty
+          Call("POST", _prefix + { _defaultPrefix } + "member/addCar")
+      
+      }
+    
     }
   
     // @LINE:22
@@ -222,10 +230,18 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "member/becomeDriver")
     }
   
-    // @LINE:36
+    // @LINE:34
     def addCarGet(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "member/addCar")
+    
+      () match {
+      
+        // @LINE:34
+        case ()  =>
+          import ReverseRouteContext.empty
+          Call("GET", _prefix + { _defaultPrefix } + "member/addCar")
+      
+      }
+    
     }
   
     // @LINE:6

@@ -99,6 +99,7 @@ public class RESTRouter extends Controller {
                 return badRequest("{\"error\":\"username or password not correct\"}");
             }
 
+            session("memberID", accesstokenRecord.getMemberid().toString());
             session("username", username);
             session("Accesstoken", accesstokenRecord.getValue());
             session("Accesstokenid", String.valueOf(accesstokenRecord.getId()));

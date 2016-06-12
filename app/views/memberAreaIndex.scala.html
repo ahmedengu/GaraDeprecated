@@ -1,18 +1,42 @@
-@(title: String,description: String,keywords: String)
+@(title: String,description: String,keywords: String,isDriver: Boolean)
 
 @memberArea(title,description,keywords) {
     <section id="content-3-22" class="content-block-nopad content-3-22">
-        <div class="overlay overlay-green">
-            <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
-                <h1 class="pad90" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="flash">Want to make some money</h1>
-                <h2>Become a driver</h2>
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <a href="@routes.Application.BecomeDriverGet()" class="btn btn-block btn-outline btn-outline-lg outline-light">Strart Here</a>
+        @if(isDriver){
+            <div class="overlay overlay-green">
+                <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <a href="@routes.Application.BecomeDriverGet()" class="btn btn-block btn-outline btn-outline-lg outline-light">add your car</a>
+                    </div>
+                </div>
+                    <!-- /.container -->
+            </div>
+        }else{
+            <div class="overlay overlay-green">
+                <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
+                    <h1 class="pad90" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="flash">Want to make some money</h1>
+                    <h2>Become a driver</h2>
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <a href="@routes.Application.BecomeDriverGet()" class="btn btn-block btn-outline btn-outline-lg outline-light">Strart Here</a>
+                    </div>
+                </div>
+                    <!-- /.container -->
+            </div>
+        }
+    </section>
+
+    <section id="content-3-8" class="content-block content-3-7">
+        <div class="container">
+            <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
+                <div class="underlined-title">
+                    <h1>Choose your Source</h1>
+                    <hr>
                 </div>
             </div>
-                <!-- /.container -->
         </div>
     </section>
+    <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
+
     <section id="content-3-8" class="content-block content-3-7">
         <div class="container">
             <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
@@ -24,6 +48,8 @@
         </div>
     </section>
     <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
+
+
     <section id="content-3-7" class="content-block content-3-7">
         <div class="container">
             <div class="col-sm-12">
@@ -35,6 +61,8 @@
             </div>
         </div>
     </section>
+
+
     <div class="modal fade pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

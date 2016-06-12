@@ -21,29 +21,53 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class memberAreaIndex extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[String,String,String,play.twirl.api.HtmlFormat.Appendable] {
+class memberAreaIndex extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template4[String,String,String,Boolean,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(title: String,description: String,keywords: String):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(title: String,description: String,keywords: String,isDriver: Boolean):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.54*/("""
+Seq[Any](format.raw/*1.72*/("""
 
 """),_display_(/*3.2*/memberArea(title,description,keywords)/*3.40*/ {_display_(Seq[Any](format.raw/*3.42*/("""
     """),format.raw/*4.5*/("""<section id="content-3-22" class="content-block-nopad content-3-22">
-        <div class="overlay overlay-green">
-            <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
-                <h1 class="pad90" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="flash">Want to make some money</h1>
-                <h2>Become a driver</h2>
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <a href=""""),_display_(/*10.31*/routes/*10.37*/.Application.BecomeDriverGet()),format.raw/*10.67*/("""" class="btn btn-block btn-outline btn-outline-lg outline-light">Strart Here</a>
+        """),_display_(/*5.10*/if(isDriver)/*5.22*/{_display_(Seq[Any](format.raw/*5.23*/("""
+            """),format.raw/*6.13*/("""<div class="overlay overlay-green">
+                <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <a href=""""),_display_(/*9.35*/routes/*9.41*/.Application.BecomeDriverGet()),format.raw/*9.71*/("""" class="btn btn-block btn-outline btn-outline-lg outline-light">add your car</a>
+                    </div>
+                </div>
+                    <!-- /.container -->
+            </div>
+        """)))}/*14.10*/else/*14.14*/{_display_(Seq[Any](format.raw/*14.15*/("""
+            """),format.raw/*15.13*/("""<div class="overlay overlay-green">
+                <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
+                    <h1 class="pad90" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="flash">Want to make some money</h1>
+                    <h2>Become a driver</h2>
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <a href=""""),_display_(/*20.35*/routes/*20.41*/.Application.BecomeDriverGet()),format.raw/*20.71*/("""" class="btn btn-block btn-outline btn-outline-lg outline-light">Strart Here</a>
+                    </div>
+                </div>
+                    <!-- /.container -->
+            </div>
+        """)))}),format.raw/*25.10*/("""
+    """),format.raw/*26.5*/("""</section>
+
+    <section id="content-3-8" class="content-block content-3-7">
+        <div class="container">
+            <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
+                <div class="underlined-title">
+                    <h1>Choose your Source</h1>
+                    <hr>
                 </div>
             </div>
-                <!-- /.container -->
         </div>
     </section>
+    <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
+
     <section id="content-3-8" class="content-block content-3-7">
         <div class="container">
             <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
@@ -55,6 +79,8 @@ Seq[Any](format.raw/*1.54*/("""
         </div>
     </section>
     <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
+
+
     <section id="content-3-7" class="content-block content-3-7">
         <div class="container">
             <div class="col-sm-12">
@@ -66,6 +92,8 @@ Seq[Any](format.raw/*1.54*/("""
             </div>
         </div>
     </section>
+
+
     <div class="modal fade pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -78,7 +106,7 @@ Seq[Any](format.raw/*1.54*/("""
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src=""""),_display_(/*50.48*/routes/*50.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*50.89*/("""" alt="">
+                                    <img src=""""),_display_(/*78.48*/routes/*78.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*78.89*/("""" alt="">
                                     <div class="caption">
                                         <h3>Ahmed</h3>
 
@@ -88,7 +116,7 @@ Seq[Any](format.raw/*1.54*/("""
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src=""""),_display_(/*60.48*/routes/*60.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*60.89*/("""" alt="">
+                                    <img src=""""),_display_(/*88.48*/routes/*88.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*88.89*/("""" alt="">
                                     <div class="caption">
                                         <h3>Mohamed</h3>
 
@@ -98,7 +126,7 @@ Seq[Any](format.raw/*1.54*/("""
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src=""""),_display_(/*70.48*/routes/*70.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*70.89*/("""" alt="">
+                                    <img src=""""),_display_(/*98.48*/routes/*98.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*98.89*/("""" alt="">
                                     <div class="caption">
                                         <h3>Hesham</h3>
 
@@ -110,7 +138,7 @@ Seq[Any](format.raw/*1.54*/("""
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src=""""),_display_(/*82.48*/routes/*82.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*82.89*/("""" alt="">
+                                    <img src=""""),_display_(/*110.48*/routes/*110.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*110.89*/("""" alt="">
                                     <div class="caption">
                                         <h3>Ahmed</h3>
 
@@ -120,7 +148,7 @@ Seq[Any](format.raw/*1.54*/("""
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src=""""),_display_(/*92.48*/routes/*92.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*92.89*/("""" alt="">
+                                    <img src=""""),_display_(/*120.48*/routes/*120.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*120.89*/("""" alt="">
                                     <div class="caption">
                                         <h3>Mohamed</h3>
 
@@ -130,7 +158,7 @@ Seq[Any](format.raw/*1.54*/("""
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
-                                    <img src=""""),_display_(/*102.48*/routes/*102.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*102.89*/("""" alt="">
+                                    <img src=""""),_display_(/*130.48*/routes/*130.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*130.89*/("""" alt="">
                                     <div class="caption">
                                         <h3>Hesham</h3>
 
@@ -146,15 +174,15 @@ Seq[Any](format.raw/*1.54*/("""
         </div>
     </div>
 
-""")))}),format.raw/*118.2*/("""
+""")))}),format.raw/*146.2*/("""
 """))
       }
     }
   }
 
-  def render(title:String,description:String,keywords:String): play.twirl.api.HtmlFormat.Appendable = apply(title,description,keywords)
+  def render(title:String,description:String,keywords:String,isDriver:Boolean): play.twirl.api.HtmlFormat.Appendable = apply(title,description,keywords,isDriver)
 
-  def f:((String,String,String) => play.twirl.api.HtmlFormat.Appendable) = (title,description,keywords) => apply(title,description,keywords)
+  def f:((String,String,String,Boolean) => play.twirl.api.HtmlFormat.Appendable) = (title,description,keywords,isDriver) => apply(title,description,keywords,isDriver)
 
   def ref: this.type = this
 
@@ -167,11 +195,11 @@ Seq[Any](format.raw/*1.54*/("""
 object memberAreaIndex extends memberAreaIndex_Scope0.memberAreaIndex
               /*
                   -- GENERATED --
-                  DATE: Tue May 31 23:59:58 EET 2016
+                  DATE: Sun Jun 12 02:18:51 EET 2016
                   SOURCE: C:/Users/ahmedengu/Documents/IdeaProjects/Gara/app/views/memberAreaIndex.scala.html
-                  HASH: 5254081e4f97316aa166fc40406e6f8bef7df650
-                  MATRIX: 779->1|926->53|956->58|1002->96|1041->98|1073->104|1627->631|1642->637|1693->667|3931->2878|3946->2884|4002->2919|4552->3442|4567->3448|4623->3483|5175->4008|5190->4014|5246->4049|5872->4648|5887->4654|5943->4689|6493->5212|6508->5218|6564->5253|7117->5778|7133->5784|7190->5819|7769->6367
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|41->10|41->10|41->10|81->50|81->50|81->50|91->60|91->60|91->60|101->70|101->70|101->70|113->82|113->82|113->82|123->92|123->92|123->92|133->102|133->102|133->102|149->118
+                  HASH: 0eb5676669385bd9aa03544b7a47b778f2cea1ca
+                  MATRIX: 787->1|952->71|982->76|1028->114|1067->116|1099->122|1204->201|1224->213|1262->214|1303->228|1604->503|1618->509|1668->539|1893->745|1906->749|1945->750|1987->764|2483->1233|2498->1239|2549->1269|2785->1474|2818->1480|5502->4137|5517->4143|5573->4178|6123->4701|6138->4707|6194->4742|6746->5267|6761->5273|6817->5308|7444->5907|7460->5913|7517->5948|8068->6471|8084->6477|8141->6512|8694->7037|8710->7043|8767->7078|9346->7626
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|36->5|36->5|36->5|37->6|40->9|40->9|40->9|45->14|45->14|45->14|46->15|51->20|51->20|51->20|56->25|57->26|109->78|109->78|109->78|119->88|119->88|119->88|129->98|129->98|129->98|141->110|141->110|141->110|151->120|151->120|151->120|161->130|161->130|161->130|177->146
                   -- GENERATED --
               */
           

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/ahmedengu/Documents/IdeaProjects/Gara/conf/routes
-// @DATE:Sat Jun 11 21:57:07 EET 2016
+// @DATE:Sun Jun 12 02:13:53 EET 2016
 
 package router
 
@@ -24,7 +24,7 @@ class Routes(
   RESTRouter_1: controllers.RESTRouter,
   // @LINE:19
   AdminCRUD_2: controllers.AdminCRUD,
-  // @LINE:46
+  // @LINE:48
   UniversityPage_0: controllers.UniversityPage,
   val prefix: String
 ) extends GeneratedRouter {
@@ -39,7 +39,7 @@ class Routes(
     RESTRouter_1: controllers.RESTRouter,
     // @LINE:19
     AdminCRUD_2: controllers.AdminCRUD,
-    // @LINE:46
+    // @LINE:48
     UniversityPage_0: controllers.UniversityPage
   ) = this(errorHandler, Application_4, Assets_3, RESTRouter_1, AdminCRUD_2, UniversityPage_0, "/")
 
@@ -78,6 +78,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/""" + "$" + """member<[^/]+>/activate/""" + "$" + """code<[^/]+>""", """controllers.Application.memberActivation(member:String, code:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/becomeDriver""", """controllers.Application.BecomeDriverGet()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/becomeDriver""", """controllers.Application.BecomeDriverPost()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/addCar""", """controllers.Application.addCarGet()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/addCar""", """controllers.Application.addCarPost()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/settings""", """controllers.Application.memberSettingsGet()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/settings""", """controllers.Application.memberSettingsPost()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """member/addCar""", """controllers.Application.addCarGet()"""),
@@ -488,44 +490,10 @@ class Routes(
   )
 
   // @LINE:34
-  private[this] lazy val controllers_Application_memberSettingsGet23_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/settings")))
-  )
-  private[this] lazy val controllers_Application_memberSettingsGet23_invoker = createInvoker(
-    Application_4.memberSettingsGet(),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.Application",
-      "memberSettingsGet",
-      Nil,
-      "GET",
-      """""",
-      this.prefix + """member/settings"""
-    )
-  )
-
-  // @LINE:35
-  private[this] lazy val controllers_Application_memberSettingsPost24_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/settings")))
-  )
-  private[this] lazy val controllers_Application_memberSettingsPost24_invoker = createInvoker(
-    Application_4.memberSettingsPost(),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.Application",
-      "memberSettingsPost",
-      Nil,
-      "POST",
-      """""",
-      this.prefix + """member/settings"""
-    )
-  )
-
-  // @LINE:36
-  private[this] lazy val controllers_Application_addCarGet25_route = Route("GET",
+  private[this] lazy val controllers_Application_addCarGet23_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/addCar")))
   )
-  private[this] lazy val controllers_Application_addCarGet25_invoker = createInvoker(
+  private[this] lazy val controllers_Application_addCarGet23_invoker = createInvoker(
     Application_4.addCarGet(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -538,11 +506,11 @@ class Routes(
     )
   )
 
-  // @LINE:37
-  private[this] lazy val controllers_Application_addCarPost26_route = Route("POST",
+  // @LINE:35
+  private[this] lazy val controllers_Application_addCarPost24_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/addCar")))
   )
-  private[this] lazy val controllers_Application_addCarPost26_invoker = createInvoker(
+  private[this] lazy val controllers_Application_addCarPost24_invoker = createInvoker(
     Application_4.addCarPost(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -555,11 +523,79 @@ class Routes(
     )
   )
 
+  // @LINE:36
+  private[this] lazy val controllers_Application_memberSettingsGet25_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/settings")))
+  )
+  private[this] lazy val controllers_Application_memberSettingsGet25_invoker = createInvoker(
+    Application_4.memberSettingsGet(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "memberSettingsGet",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """member/settings"""
+    )
+  )
+
+  // @LINE:37
+  private[this] lazy val controllers_Application_memberSettingsPost26_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/settings")))
+  )
+  private[this] lazy val controllers_Application_memberSettingsPost26_invoker = createInvoker(
+    Application_4.memberSettingsPost(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "memberSettingsPost",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """member/settings"""
+    )
+  )
+
+  // @LINE:38
+  private[this] lazy val controllers_Application_addCarGet27_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/addCar")))
+  )
+  private[this] lazy val controllers_Application_addCarGet27_invoker = createInvoker(
+    Application_4.addCarGet(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "addCarGet",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """member/addCar"""
+    )
+  )
+
   // @LINE:39
-  private[this] lazy val controllers_Application_dispatchPost27_route = Route("POST",
+  private[this] lazy val controllers_Application_addCarPost28_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/addCar")))
+  )
+  private[this] lazy val controllers_Application_addCarPost28_invoker = createInvoker(
+    Application_4.addCarPost(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "addCarPost",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """member/addCar"""
+    )
+  )
+
+  // @LINE:41
+  private[this] lazy val controllers_Application_dispatchPost29_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/dispatch")))
   )
-  private[this] lazy val controllers_Application_dispatchPost27_invoker = createInvoker(
+  private[this] lazy val controllers_Application_dispatchPost29_invoker = createInvoker(
     Application_4.dispatchPost(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -572,11 +608,11 @@ class Routes(
     )
   )
 
-  // @LINE:41
-  private[this] lazy val controllers_Application_orderPost28_route = Route("POST",
+  // @LINE:43
+  private[this] lazy val controllers_Application_orderPost30_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("member/order")))
   )
-  private[this] lazy val controllers_Application_orderPost28_invoker = createInvoker(
+  private[this] lazy val controllers_Application_orderPost30_invoker = createInvoker(
     Application_4.orderPost(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -589,11 +625,11 @@ class Routes(
     )
   )
 
-  // @LINE:43
-  private[this] lazy val controllers_Application_logout29_route = Route("GET",
+  // @LINE:45
+  private[this] lazy val controllers_Application_logout31_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
   )
-  private[this] lazy val controllers_Application_logout29_invoker = createInvoker(
+  private[this] lazy val controllers_Application_logout31_invoker = createInvoker(
     Application_4.logout(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -606,11 +642,11 @@ class Routes(
     )
   )
 
-  // @LINE:46
-  private[this] lazy val controllers_UniversityPage_index30_route = Route("GET",
+  // @LINE:48
+  private[this] lazy val controllers_UniversityPage_index32_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("university")))
   )
-  private[this] lazy val controllers_UniversityPage_index30_invoker = createInvoker(
+  private[this] lazy val controllers_UniversityPage_index32_invoker = createInvoker(
     UniversityPage_0.index(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -623,11 +659,11 @@ class Routes(
     )
   )
 
-  // @LINE:47
-  private[this] lazy val controllers_UniversityPage_home31_route = Route("GET",
+  // @LINE:49
+  private[this] lazy val controllers_UniversityPage_home33_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("university/"), DynamicPart("subdomain", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_UniversityPage_home31_invoker = createInvoker(
+  private[this] lazy val controllers_UniversityPage_home33_invoker = createInvoker(
     UniversityPage_0.home(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -640,11 +676,11 @@ class Routes(
     )
   )
 
-  // @LINE:48
-  private[this] lazy val controllers_UniversityPage_page32_route = Route("GET",
+  // @LINE:50
+  private[this] lazy val controllers_UniversityPage_page34_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("university/"), DynamicPart("subdomain", """[^/]+""",true), StaticPart("/"), DynamicPart("page", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_UniversityPage_page32_invoker = createInvoker(
+  private[this] lazy val controllers_UniversityPage_page34_invoker = createInvoker(
     UniversityPage_0.page(fakeValue[String], fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -657,11 +693,11 @@ class Routes(
     )
   )
 
-  // @LINE:50
-  private[this] lazy val controllers_Application_siteContent33_route = Route("GET",
+  // @LINE:52
+  private[this] lazy val controllers_Application_siteContent35_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), DynamicPart("siteContent", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Application_siteContent33_invoker = createInvoker(
+  private[this] lazy val controllers_Application_siteContent35_invoker = createInvoker(
     Application_4.siteContent(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -816,69 +852,81 @@ class Routes(
       }
   
     // @LINE:34
-    case controllers_Application_memberSettingsGet23_route(params) =>
+    case controllers_Application_addCarGet23_route(params) =>
       call { 
-        controllers_Application_memberSettingsGet23_invoker.call(Application_4.memberSettingsGet())
+        controllers_Application_addCarGet23_invoker.call(Application_4.addCarGet())
       }
   
     // @LINE:35
-    case controllers_Application_memberSettingsPost24_route(params) =>
+    case controllers_Application_addCarPost24_route(params) =>
       call { 
-        controllers_Application_memberSettingsPost24_invoker.call(Application_4.memberSettingsPost())
+        controllers_Application_addCarPost24_invoker.call(Application_4.addCarPost())
       }
   
     // @LINE:36
-    case controllers_Application_addCarGet25_route(params) =>
+    case controllers_Application_memberSettingsGet25_route(params) =>
       call { 
-        controllers_Application_addCarGet25_invoker.call(Application_4.addCarGet())
+        controllers_Application_memberSettingsGet25_invoker.call(Application_4.memberSettingsGet())
       }
   
     // @LINE:37
-    case controllers_Application_addCarPost26_route(params) =>
+    case controllers_Application_memberSettingsPost26_route(params) =>
       call { 
-        controllers_Application_addCarPost26_invoker.call(Application_4.addCarPost())
+        controllers_Application_memberSettingsPost26_invoker.call(Application_4.memberSettingsPost())
+      }
+  
+    // @LINE:38
+    case controllers_Application_addCarGet27_route(params) =>
+      call { 
+        controllers_Application_addCarGet27_invoker.call(Application_4.addCarGet())
       }
   
     // @LINE:39
-    case controllers_Application_dispatchPost27_route(params) =>
+    case controllers_Application_addCarPost28_route(params) =>
       call { 
-        controllers_Application_dispatchPost27_invoker.call(Application_4.dispatchPost())
+        controllers_Application_addCarPost28_invoker.call(Application_4.addCarPost())
       }
   
     // @LINE:41
-    case controllers_Application_orderPost28_route(params) =>
+    case controllers_Application_dispatchPost29_route(params) =>
       call { 
-        controllers_Application_orderPost28_invoker.call(Application_4.orderPost())
+        controllers_Application_dispatchPost29_invoker.call(Application_4.dispatchPost())
       }
   
     // @LINE:43
-    case controllers_Application_logout29_route(params) =>
+    case controllers_Application_orderPost30_route(params) =>
       call { 
-        controllers_Application_logout29_invoker.call(Application_4.logout())
+        controllers_Application_orderPost30_invoker.call(Application_4.orderPost())
       }
   
-    // @LINE:46
-    case controllers_UniversityPage_index30_route(params) =>
+    // @LINE:45
+    case controllers_Application_logout31_route(params) =>
       call { 
-        controllers_UniversityPage_index30_invoker.call(UniversityPage_0.index())
-      }
-  
-    // @LINE:47
-    case controllers_UniversityPage_home31_route(params) =>
-      call(params.fromPath[String]("subdomain", None)) { (subdomain) =>
-        controllers_UniversityPage_home31_invoker.call(UniversityPage_0.home(subdomain))
+        controllers_Application_logout31_invoker.call(Application_4.logout())
       }
   
     // @LINE:48
-    case controllers_UniversityPage_page32_route(params) =>
-      call(params.fromPath[String]("subdomain", None), params.fromPath[String]("page", None)) { (subdomain, page) =>
-        controllers_UniversityPage_page32_invoker.call(UniversityPage_0.page(subdomain, page))
+    case controllers_UniversityPage_index32_route(params) =>
+      call { 
+        controllers_UniversityPage_index32_invoker.call(UniversityPage_0.index())
+      }
+  
+    // @LINE:49
+    case controllers_UniversityPage_home33_route(params) =>
+      call(params.fromPath[String]("subdomain", None)) { (subdomain) =>
+        controllers_UniversityPage_home33_invoker.call(UniversityPage_0.home(subdomain))
       }
   
     // @LINE:50
-    case controllers_Application_siteContent33_route(params) =>
+    case controllers_UniversityPage_page34_route(params) =>
+      call(params.fromPath[String]("subdomain", None), params.fromPath[String]("page", None)) { (subdomain, page) =>
+        controllers_UniversityPage_page34_invoker.call(UniversityPage_0.page(subdomain, page))
+      }
+  
+    // @LINE:52
+    case controllers_Application_siteContent35_route(params) =>
       call(params.fromPath[String]("siteContent", None)) { (siteContent) =>
-        controllers_Application_siteContent33_invoker.call(Application_4.siteContent(siteContent))
+        controllers_Application_siteContent35_invoker.call(Application_4.siteContent(siteContent))
       }
   }
 }

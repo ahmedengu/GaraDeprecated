@@ -1,15 +1,47 @@
-@(title: String,description: String,keywords: String)
+@(title: String,description: String,keywords: String,myForm: Form[models.garaDB.tables.pojos.Driver])
 
 @memberArea(title,description,keywords) {
 
-    <form action="/login" method="post">
-        <div class="form-group">
-            <input type="text" name="username" placeholder="Username" class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="password" name="password" placeholder="Password" class="form-control">
-        </div>
-        <input type="submit" value="login" class="btn btn-primary btn-block">
-    </form>
+    <div class="container">
+        <br />
+        <h1>Become a Driver</h1>
+        <hr />
+        @if(myForm.hasErrors) {
+
+            @if(myForm.errors.size() > 0) {
+                <div class="alert alert-danger">
+                    <strong>errors:</strong>
+                    @for((key, value) <- myForm.errors) {
+                        <p>
+                        @for(err <- value) {
+                            @err.message().toString()
+                        }
+                        </p>
+                    }
+                </div>
+
+            }
+        }
+        <form action="/member/becomeDriver" method="post">
+            <div class="form-group">
+                <input type="text" name="licenseNumber" placeholder="licenseNumber" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="studentEmail" placeholder="Student email address" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="licensePic" placeholder="licensePic" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="identyCardPic" placeholder="identyCardPic" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="licenseExpireDate" placeholder="licenseExpireDate" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Go!" class="btn btn-primary btn-block bg-marina">
+            </div>
+        </form>
+    </div>
 
 }

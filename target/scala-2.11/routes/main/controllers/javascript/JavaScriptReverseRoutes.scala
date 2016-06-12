@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/ahmedengu/Documents/IdeaProjects/Gara/conf/routes
-// @DATE:Sat Jun 11 21:57:07 EET 2016
+// @DATE:Sun Jun 12 02:13:53 EET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -91,7 +91,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:46
+  // @LINE:48
   class ReverseUniversityPage(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -99,7 +99,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:47
+    // @LINE:49
     def home: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UniversityPage.home",
       """
@@ -109,7 +109,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:48
+    // @LINE:50
     def page: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UniversityPage.page",
       """
@@ -119,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:46
+    // @LINE:48
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UniversityPage.index",
       """
@@ -159,7 +159,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:50
+    // @LINE:52
     def siteContent: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.siteContent",
       """
@@ -169,7 +169,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:35
+    // @LINE:37
     def memberSettingsPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.memberSettingsPost",
       """
@@ -209,7 +209,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:39
+    // @LINE:41
     def dispatchPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.dispatchPost",
       """
@@ -219,7 +219,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:41
+    // @LINE:43
     def orderPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.orderPost",
       """
@@ -229,7 +229,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:34
+    // @LINE:36
     def memberSettingsGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.memberSettingsGet",
       """
@@ -249,7 +249,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:45
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.logout",
       """
@@ -259,12 +259,16 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:37
+    // @LINE:35
     def addCarPost: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.addCarPost",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "member/addCar"})
+        
+          if (true) {
+            return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "member/addCar"})
+          }
+        
         }
       """
     )
@@ -309,12 +313,16 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:36
+    // @LINE:34
     def addCarGet: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.addCarGet",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "member/addCar"})
+        
+          if (true) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "member/addCar"})
+          }
+        
         }
       """
     )

@@ -31,6 +31,8 @@ GET           /member/:member/activate/:code            controllers.Application.
 
 GET           /member/becomeDriver                      controllers.Application.BecomeDriverGet()
 POST          /member/becomeDriver                      controllers.Application.BecomeDriverPost()
+GET           /member/addCar                      controllers.Application.addCarGet()
+POST          /member/addCar                      controllers.Application.addCarPost()
 GET           /member/settings                          controllers.Application.memberSettingsGet()
 POST          /member/settings                          controllers.Application.memberSettingsPost()
 GET           /member/addCar                            controllers.Application.addCarGet()
@@ -47,4 +49,4 @@ GET           /university                               controllers.UniversityPa
 GET           /university/:subdomain                    controllers.UniversityPage.home(subdomain)
 GET           /university/:subdomain/:page              controllers.UniversityPage.page(subdomain,page)
 
-GET           /:siteContent                                   controllers.Application.siteContent(siteContent)
+GET           /:siteContent                             controllers.Application.siteContent(siteContent)

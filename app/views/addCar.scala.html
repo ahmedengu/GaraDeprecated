@@ -1,0 +1,44 @@
+@(title: String,description: String,keywords: String,myForm: Form[models.garaDB.tables.pojos.Car])
+
+@memberArea(title,description,keywords) {
+
+    <div class="container">
+        <br />
+        <h1>Become a Driver</h1>
+        <hr />
+        @if(myForm.hasErrors) {
+
+            @if(myForm.errors.size() > 0) {
+                <div class="alert alert-danger">
+                    <strong>errors:</strong>
+                    @for((key, value) <- myForm.errors) {
+                        <p>
+                        @for(err <- value) {
+                            @err.message().toString()
+                        }
+                        </p>
+                    }
+                </div>
+
+            }
+        }
+        <form action="/member/becomeDriver" method="post">
+            <div class="form-group">
+                <input type="text" name="plateNumber" placeholder="plateNumber" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="carModelID" placeholder="carModelID" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="licenseNumber" placeholder="licenseNumber" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="licenseExpireDate" placeholder="licenseExpireDate" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Go!" class="btn btn-primary btn-block bg-marina">
+            </div>
+        </form>
+    </div>
+
+}
