@@ -1,24 +1,8 @@
-2016-06-14 03:54:42,024 [INFO] from play.core.server.NettyServer in pool-4-thread-2 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-06-14 03:54:55,647 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-14 03:54:57,099 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-14 03:54:57,121 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-06-14 03:55:02,149 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-14 03:55:03,369 [WARN] from application in ForkJoinPool-1-worker-1 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-14 03:55:04,332 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-06-14 03:55:04,613 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-14 04:01:57,517 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
-2016-06-14 04:01:57,621 [WARN] from application in application-akka.actor.default-dispatcher-11 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-14 04:01:57,768 [WARN] from application in application-akka.actor.default-dispatcher-11 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-14 04:01:57,768 [INFO] from application in application-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2016-06-14 04:02:06,968 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-11 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-14 04:02:07,318 [WARN] from application in application-akka.actor.default-dispatcher-11 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-14 04:02:07,418 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-11 - Application started (Dev)
-2016-06-14 04:02:07,455 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
-2016-06-14 04:04:04,134 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-06-14 04:04:04,196 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-06-14 04:04:04,322 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
-2016-06-14 04:04:04,322 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-06-14 04:04:08,579 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
-2016-06-14 04:04:09,161 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.langs is deprecated, use play.i18n.langs instead
-2016-06-14 04:04:09,254 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-06-14 04:04:09,270 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2016-06-14 07:23:23,832 [INFO] from play.core.server.NettyServer in pool-4-thread-2 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-06-14 07:23:32,318 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2016-06-14 07:23:33,683 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 38: user is deprecated, use username instead
+2016-06-14 07:23:33,703 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-06-14 07:23:38,323 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://209.148.94.217:3306/Gara
+2016-06-14 07:23:39,180 [WARN] from application in ForkJoinPool-1-worker-1 - application.langs is deprecated, use play.i18n.langs instead
+2016-06-14 07:23:40,103 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-06-14 07:23:40,391 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/Users/ahmedengu/Documents/IdeaProjects/Gara/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
