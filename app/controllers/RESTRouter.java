@@ -95,7 +95,7 @@ public class RESTRouter extends Controller {
         String latitude = form.data().get("latitude").toString();
         String longitude = form.data().get("longitude").toString();
         String memberID = form.data().get("id").toString();
-        String dist = form.data().getOrDefault("dist","1000").toString();
+        String dist = form.data().getOrDefault("dist","10").toString();
 
         List<Map<String, Object>> dispatch = null;
         try {
@@ -128,16 +128,23 @@ public class RESTRouter extends Controller {
             list.add(accesstokenRecord);
             list.add(restHelper.getByID("member", accesstokenRecord.getMemberid().toString()).get(0));
 
-            List driver = restHelper.getWhere("driver", "memberID", accesstokenRecord.getMemberid().toString());
-            if (driver.size() > 0) {
-                list.add(driver.get(0));
-                Integer id = ((Driver) driver).getId();
-                list.add(restHelper.getWhere("car", "driverID", String.valueOf(id)));
+            try {
+                List driver = restHelper.getWhere("driver", "memberID", accesstokenRecord.getMemberid().toString());
+                if (driver.size() > 0) {
+                    list.add(driver.get(0));
+
+                    Driver driver1 = (Driver) driver.get(0);
+                    Integer id = driver1.getId();
+                    list.add(restHelper.getWhere("car", "driverID", String.valueOf(id)));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
             return created(Json.toJson(list));
 
         } catch (Exception e) {
+            e.printStackTrace();
             return badRequest("{\"error\":\"username or password not correct\"}");
         }
     }

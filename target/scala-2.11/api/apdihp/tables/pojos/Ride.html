@@ -90,7 +90,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="apdihp.tables.pojos.Ride#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:Integer,timestamp:java.sql.Timestamp,sourcelongitude:Double,sourcelatitude:Double,destinationlongitude:Double,destinationlatitude:Double,fare:Integer,starttime:java.sql.Timestamp,endtime:java.sql.Timestamp,carid:Integer,accepted:Integer):apdihp.tables.pojos.Ride"></a>
+      <a id="&lt;init&gt;(id:Integer,timestamp:java.sql.Timestamp,sourcelongitude:Double,sourcelatitude:Double,destinationlongitude:Double,destinationlatitude:Double,fare:Integer,starttime:java.sql.Timestamp,endtime:java.sql.Timestamp,carid:Integer,accepted:Integer,drivercheck:Integer,passangercheck:Integer):apdihp.tables.pojos.Ride"></a>
       <a id="&lt;init&gt;:Ride"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,10 +98,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Ride</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="timestamp">timestamp: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>, <span name="sourcelongitude">sourcelongitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="sourcelatitude">sourcelatitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="destinationlongitude">destinationlongitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="destinationlatitude">destinationlatitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="fare">fare: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="starttime">starttime: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>, <span name="endtime">endtime: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>, <span name="carid">carid: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="accepted">accepted: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
+        <span class="name">Ride</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="timestamp">timestamp: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>, <span name="sourcelongitude">sourcelongitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="sourcelatitude">sourcelatitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="destinationlongitude">destinationlongitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="destinationlatitude">destinationlatitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="fare">fare: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="starttime">starttime: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>, <span name="endtime">endtime: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>, <span name="carid">carid: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="accepted">accepted: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="drivercheck">drivercheck: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="passangercheck">passangercheck: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#apdihp.tables.pojos.Ride@&lt;init&gt;(id:Integer,timestamp:java.sql.Timestamp,sourcelongitude:Double,sourcelatitude:Double,destinationlongitude:Double,destinationlatitude:Double,fare:Integer,starttime:java.sql.Timestamp,endtime:java.sql.Timestamp,carid:Integer,accepted:Integer):apdihp.tables.pojos.Ride" title="Permalink" target="_top">
+      <a href="../../../index.html#apdihp.tables.pojos.Ride@&lt;init&gt;(id:Integer,timestamp:java.sql.Timestamp,sourcelongitude:Double,sourcelatitude:Double,destinationlongitude:Double,destinationlatitude:Double,fare:Integer,starttime:java.sql.Timestamp,endtime:java.sql.Timestamp,carid:Integer,accepted:Integer,drivercheck:Integer,passangercheck:Integer):apdihp.tables.pojos.Ride" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
@@ -382,6 +382,23 @@
       </a>
     </span>
       
+    </li><li name="apdihp.tables.pojos.Ride#getDrivercheck" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getDrivercheck():Integer"></a>
+      <a id="getDrivercheck():Integer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDrivercheck</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Ride@getDrivercheck():Integer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="apdihp.tables.pojos.Ride#getEndtime" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getEndtime():java.sql.Timestamp"></a>
       <a id="getEndtime():Timestamp"></a>
@@ -429,6 +446,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#apdihp.tables.pojos.Ride@getId():Integer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Ride#getPassangercheck" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getPassangercheck():Integer"></a>
+      <a id="getPassangercheck():Integer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPassangercheck</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Ride@getPassangercheck():Integer" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
@@ -654,6 +688,23 @@
       </a>
     </span>
       
+    </li><li name="apdihp.tables.pojos.Ride#setDrivercheck" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setDrivercheck(drivercheck:Integer):Unit"></a>
+      <a id="setDrivercheck(Integer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDrivercheck</span><span class="params">(<span name="drivercheck">drivercheck: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Ride@setDrivercheck(drivercheck:Integer):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="apdihp.tables.pojos.Ride#setEndtime" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setEndtime(endtime:java.sql.Timestamp):Unit"></a>
       <a id="setEndtime(Timestamp):Unit"></a>
@@ -701,6 +752,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#apdihp.tables.pojos.Ride@setId(id:Integer):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="apdihp.tables.pojos.Ride#setPassangercheck" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPassangercheck(passangercheck:Integer):Unit"></a>
+      <a id="setPassangercheck(Integer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPassangercheck</span><span class="params">(<span name="passangercheck">passangercheck: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#apdihp.tables.pojos.Ride@setPassangercheck(passangercheck:Integer):Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
