@@ -131,7 +131,21 @@ public class RideDao extends DAOImpl<RideRecord, models.garaDB.tables.pojos.Ride
     /**
      * Fetch records that have <code>accepted IN (values)</code>
      */
-    public List<models.garaDB.tables.pojos.Ride> fetchByAccepted(Boolean... values) {
+    public List<models.garaDB.tables.pojos.Ride> fetchByAccepted(Integer... values) {
         return fetch(Ride.RIDE.ACCEPTED, values);
+    }
+
+    /**
+     * Fetch records that have <code>driverCheck IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Ride> fetchByDrivercheck(Integer... values) {
+        return fetch(Ride.RIDE.DRIVERCHECK, values);
+    }
+
+    /**
+     * Fetch records that have <code>passangerCheck IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Ride> fetchByPassangercheck(Integer... values) {
+        return fetch(Ride.RIDE.PASSANGERCHECK, values);
     }
 }

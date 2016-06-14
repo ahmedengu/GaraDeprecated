@@ -18,6 +18,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static play.data.Form.form;
+
 public class Application extends Controller {
 
     @Inject
@@ -53,30 +55,84 @@ public class Application extends Controller {
     }
 
     public Result orderPost() {
-        return play.mvc.Results.TODO;
+        Map<String, String> f = formFactory.form().bindFromRequest().data();
+        f.put("memberid", session().get("memberID"));
+        Form<Ride> form = form(Ride.class).bind(f);
+        try {
+            List list = restHelper.create("ride", form);
+            if(list.size()>0){
+                flash("alertMessage", "done successfully!");
+                flash("alertMessageStrong", "Ride Order");
+
+                return redirect(routes.Application.memberArea());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        flash("alertMessage", "something went wrong!");
+        flash("alertMessageType", "alert-danger");
+        flash("alertMessageStrong", "Ride Order");
+        return redirect(routes.Application.memberArea());
+
     }
 
-    public Result dispatchPost() {
-        return play.mvc.Results.TODO;
+    public Result dispatchGet() {
+        DynamicForm dynamicForm = formFactory.form().bindFromRequest();
+
+        try {
+
+            String distLng = dynamicForm.get("distLng").substring(0,9);
+            String distLat = dynamicForm.get("distLat").substring(0,9);
+            String srclng = dynamicForm.get("srclng").substring(0,9);
+            String srcLat = dynamicForm.get("srcLat").substring(0,9);
+            String dist = dynamicForm.get("dist");
+            if (dist==null||dist.length()==0)
+                dist = "1000";
+            List<Map<String, Object>> dispatch = restHelper.dispatch(session("memberID"),dist, distLng, distLat, srclng, srcLat);
+            if (dispatch.size()>0) {
+                return ok(views.html.memberDispatchResult.render(session("username"), session("username"), session("username"), dispatch, srcLat, srclng, distLat, distLng));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        flash("alertMessage", "something went wrong!");
+        flash("alertMessageType", "alert-danger");
+        flash("alertMessageStrong", "Dispatching ");
+        return redirect(routes.Application.memberArea());
     }
 
     public Result addCarPost() {
-        Form<Car> form = formFactory.form(Car.class).bindFromRequest();
+        Map<String, String> f = formFactory.form().bindFromRequest().data();
+        List where = null;
+        try {
+            where = restHelper.getWhere("driver", "memberID", session("memberID"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        f.put("driverid", ((Driver)where.get(0)).getId().toString());
+        Form<Car> form = form(Car.class).bind(f);
+
         if (form.hasErrors()) {
             return ok(views.html.addCar.render("add a car", "add a car", "add a car", form));
         } else {
 
-            if (restRouter.create("Car").status() == 201) {
-                flash("alertMessage", "done successfully!");
-                flash("alertMessageStrong", "Add a car");
+            try {
+                List list = restHelper.create("car", form);
 
-                return redirect(routes.Application.memberArea());
-            } else {
-                return ok(views.html.addCar.render("add a car", "add a car", "add a car", formFactory.form(Car.class)));
+                if (list.size() > 0) {
+                    flash("alertMessage", "done successfully!");
+                    flash("alertMessageStrong", "Add a car");
+
+                    return redirect(routes.Application.memberArea());
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-
-
         }
+
+        return ok(views.html.addCar.render("add a car", "add a car", "add a car", formFactory.form(Car.class)));
+
     }
 
     public Result addCarGet() {
@@ -174,6 +230,10 @@ public class Application extends Controller {
         } else {
             session().clear();
             if (restRouter.create("MEMBER").status() == 201) {
+
+                flash("alertMessage", "done successfully! , check your email for verification link. ");
+                flash("alertMessageStrong", "Registration");
+
                 return redirect(routes.Application.loginGet());
             } else {
                 return registerGet();
@@ -233,23 +293,29 @@ public class Application extends Controller {
     }
 
     public Result BecomeDriverPost() {
+
         Map<String, String> f = formFactory.form().bindFromRequest().data();
         f.put("memberid", session().get("memberID"));
-        Form<Driver> form  = Form.form(Driver.class).bind(f);
+        Form<Driver> form = form(Driver.class).bind(f);
 
         if (form.hasErrors()) {
             return badRequest(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", form));
         } else {
+            try {
+                List list = restHelper.create("driver", form);
+                if (list.size() > 0) {
+                    flash("alertMessage", "done successfully!");
+                    flash("alertMessageStrong", "Becoming a driver");
 
-            if (restRouter.create("Driver").status() == 201) {
-                flash("alertMessage", "done successfully!");
-                flash("alertMessageStrong", "Becoming a member");
-
-                return redirect(routes.Application.memberArea());
-            } else {
-                return ok(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", this.formFactory.form(Driver.class)));
+                    return redirect(routes.Application.memberArea());
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
+
+        return ok(views.html.becomeDriver.render("Become a driver", "Become a driver", "Become a driver", this.formFactory.form(Driver.class)));
+
     }
 
     public Result BecomeDriverGet() {

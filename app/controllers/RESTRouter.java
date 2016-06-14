@@ -2,6 +2,7 @@ package controllers;
 
 import models.RESTHelper;
 import models.garaDB.tables.pojos.Accesstoken;
+import models.garaDB.tables.pojos.Driver;
 import models.garaDB.tables.pojos.Member;
 import play.data.Form;
 import play.data.FormFactory;
@@ -39,21 +40,21 @@ public class RESTRouter extends Controller {
             case "DISPATCH":
                 return dispatch();
             case "ACTIVATE":
-                return memberActivation(table,id);
+                return memberActivation(table, id);
             case "WHEREWITHCONDITION":
-                return getWhereWithCondition(table,id);
+                return getWhereWithCondition(table, id);
         }
 
         return badRequest("{\"error\":\"bad request\"}");
     }
 
-    private Result getWhereWithCondition(String table, String condition ) {
+    private Result getWhereWithCondition(String table, String condition) {
 
         String[] conditions = condition.split("/");
         Map<String, String> data = formFactory.form().bindFromRequest().data();
         try {
-            List list =restHelper.getWhereCondition(table,conditions,data);
-            if(list.size()>0){
+            List list = restHelper.getWhereCondition(table, conditions, data);
+            if (list.size() > 0) {
                 return ok(Json.toJson(list));
             }
         } catch (Exception e) {
@@ -68,7 +69,7 @@ public class RESTRouter extends Controller {
             if (list.size() > 0) {
                 Member m = (Member) list.get(0);
 
-                if (m.getUsername().equals(member)||m.getId().equals(Integer.parseInt(member))) {
+                if (m.getUsername().equals(member) || m.getId().equals(Integer.parseInt(member))) {
                     String id = m.getId().toString();
                     m.setActivited(1);
                     m.setStudentemailactivationcode("");
@@ -94,9 +95,11 @@ public class RESTRouter extends Controller {
         String latitude = form.data().get("latitude").toString();
         String longitude = form.data().get("longitude").toString();
         String memberID = form.data().get("id").toString();
+        String dist = form.data().getOrDefault("dist","1000").toString();
+
         List<Map<String, Object>> dispatch = null;
         try {
-            dispatch = restHelper.dispatch(memberID, distLongitude, distLatitude, longitude, latitude);
+            dispatch = restHelper.dispatch(memberID, dist,distLongitude, distLatitude, longitude, latitude);
         } catch (Exception e) {
             return badRequest("{\"error\":\"bad request\"}");
         }
@@ -123,7 +126,15 @@ public class RESTRouter extends Controller {
 
             List<Object> list = new ArrayList();
             list.add(accesstokenRecord);
-            list.add(restHelper.getWhere("member", "username", username).get(0));
+            list.add(restHelper.getByID("member", accesstokenRecord.getMemberid().toString()).get(0));
+
+            List driver = restHelper.getWhere("driver", "memberID", accesstokenRecord.getMemberid().toString());
+            if (driver.size() > 0) {
+                list.add(driver.get(0));
+                Integer id = ((Driver) driver).getId();
+                list.add(restHelper.getWhere("car", "driverID", String.valueOf(id)));
+            }
+
             return created(Json.toJson(list));
 
         } catch (Exception e) {
@@ -174,14 +185,8 @@ public class RESTRouter extends Controller {
     public play.mvc.Result create(String tableName) {
         Class aClass = RESTHelper.getClassByName(tableName);
         Form form = formFactory.form(aClass).bindFromRequest();
-        if (form.hasErrors()) {
-//            Map<String, List> listMap = new HashMap<>();
-//            List list = new ArrayList<>();
-//            for (:form.errorsAsJson()
-//                 ) {
-//
-//            }
 
+        if (form.hasErrors()) {
             return badRequest("{\"error\":" + form.errorsAsJson() + "}");
         } else {
             try {

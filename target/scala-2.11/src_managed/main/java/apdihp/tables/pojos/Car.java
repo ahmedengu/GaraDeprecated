@@ -33,7 +33,7 @@ import javax.validation.constraints.Size;
 @Table(name = "Car", schema = "Gara")
 public class Car implements Serializable {
 
-    private static final long serialVersionUID = 935799066;
+    private static final long serialVersionUID = -1941096447;
 
     private Integer id;
     private Integer driverid;
@@ -50,7 +50,7 @@ public class Car implements Serializable {
     private Double  distlongitude;
     private Double  distlatitude;
     private Integer availableseats;
-    private Boolean state;
+    private Integer state;
 
     public Car() {}
 
@@ -89,7 +89,7 @@ public class Car implements Serializable {
         Double  distlongitude,
         Double  distlatitude,
         Integer availableseats,
-        Boolean state
+        Integer state
     ) {
         this.id = id;
         this.driverid = driverid;
@@ -223,8 +223,7 @@ public class Car implements Serializable {
         this.licensepic = licensepic;
     }
 
-    @Column(name = "licenseExpireDate", nullable = false)
-    @NotNull
+    @Column(name = "licenseExpireDate")
     public Date getLicenseexpiredate() {
         return this.licenseexpiredate;
     }
@@ -260,12 +259,12 @@ public class Car implements Serializable {
         this.availableseats = availableseats;
     }
 
-    @Column(name = "state", precision = 1)
-    public Boolean getState() {
+    @Column(name = "state", precision = 10)
+    public Integer getState() {
         return this.state;
     }
 
-    public void setState(Boolean state) {
+    public void setState(Integer state) {
         this.state = state;
     }
 

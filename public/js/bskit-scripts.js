@@ -1,7 +1,7 @@
 /*	Javascript code for all elements
 /*----------------------------------------------------*/
 $(document).ready(function() {
-	initMaps();
+	// initMaps();
 });
 
 
@@ -86,54 +86,54 @@ $(document).ready(function(){
 
 
 /* -------- Google Map -------- MTCH */
-function initMap(elem) {
+// function initMap(elem) {
+//
+//     var $e = $(elem);
+// 	if($e.length==0){
+// 		return 0;
+// 	};
+//
+//     var lat = parseFloat($e.attr('data-map-lat') || 51.5111507);
+//     var long = parseFloat($e.attr('data-map-long') || -0.1239844);
+//     var zoom = parseInt($e.attr('data-map-zoom') || 15);
+//
+//     var marker_image = $e.attr('data-marker-image') || 'assets/images/map-pin.png';
+//
+// 	//Map start init
+//     var mapOptions = {
+//         center: new google.maps.LatLng(lat, long),
+//         zoom: zoom,
+//         zoomControl: true,
+//         zoomControlOptions: {
+//             style: google.maps.ZoomControlStyle.DEFAULT,
+//         },
+//         disableDoubleClickZoom: false,
+//         mapTypeControl: true,
+//         mapTypeControlOptions: {
+//             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+//         },
+//         scaleControl: true,
+//         scrollwheel: false,
+//         streetViewControl: true,
+//         draggable : true,
+//         overviewMapControl: false,
+//         mapTypeId: google.maps.MapTypeId.ROADMAP,
+// 		styles: [{stylers:[{saturation:-100},{gamma:1}]},{elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:50},{gamma:0},{hue:"#50a5d1"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{color:"#333333"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{weight:0.5},{color:"#333333"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{gamma:1},{saturation:50}]}]
+// 		}
+//
+//     var map = new google.maps.Map($e.get(0), mapOptions);
+//     var marker = new google.maps.Marker({
+//     	icon: marker_image,
+//         map: map,
+//         position: map.getCenter()
+//     });
+// }
 
-    var $e = $(elem);
-	if($e.length==0){
-		return 0;
-	};
-
-    var lat = parseFloat($e.attr('data-map-lat') || 51.5111507);
-    var long = parseFloat($e.attr('data-map-long') || -0.1239844);
-    var zoom = parseInt($e.attr('data-map-zoom') || 15);
-
-    var marker_image = $e.attr('data-marker-image') || 'images/map-pin.png';
-
-	//Map start init
-    var mapOptions = {
-        center: new google.maps.LatLng(lat, long),
-        zoom: zoom,
-        zoomControl: true,
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.DEFAULT,
-        },
-        disableDoubleClickZoom: false,
-        mapTypeControl: true,
-        mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-        },
-        scaleControl: true,
-        scrollwheel: false,
-        streetViewControl: true,
-        draggable : true,
-        overviewMapControl: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-		styles: [{stylers:[{saturation:-100},{gamma:1}]},{elementType:"labels.text.stroke",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:50},{gamma:0},{hue:"#50a5d1"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{color:"#333333"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{weight:0.5},{color:"#333333"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{gamma:1},{saturation:50}]}]
-		}
-                    
-    var map = new google.maps.Map($e.get(0), mapOptions);
-    var marker = new google.maps.Marker({
-    	icon: marker_image,
-        map: map,
-        position: map.getCenter() 
-    });
-}
-
-function initMaps() {
-    $('.map').each(function(i, e) {
-        initMap(e);
-    })
-}
+// function initMaps() {
+//     $('.map').each(function(i, e) {
+//         initMap(e);
+//     })
+// }
 //end Google Map
 
 

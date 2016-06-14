@@ -166,7 +166,7 @@ public class CarDao extends DAOImpl<CarRecord, apdihp.tables.pojos.Car, Integer>
     /**
      * Fetch records that have <code>state IN (values)</code>
      */
-    public List<apdihp.tables.pojos.Car> fetchByState(Boolean... values) {
+    public List<apdihp.tables.pojos.Car> fetchByState(Integer... values) {
         return fetch(Car.CAR.STATE, values);
     }
 }

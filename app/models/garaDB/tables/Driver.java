@@ -37,7 +37,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Driver extends TableImpl<DriverRecord> {
 
-    private static final long serialVersionUID = 1093701220;
+    private static final long serialVersionUID = -1532658973;
 
     /**
      * The reference instance of <code>Gara.Driver</code>
@@ -80,7 +80,7 @@ public class Driver extends TableImpl<DriverRecord> {
     /**
      * The column <code>Gara.Driver.licenseExpireDate</code>.
      */
-    public final TableField<DriverRecord, Date> LICENSEEXPIREDATE = createField("licenseExpireDate", org.jooq.impl.SQLDataType.DATE.nullable(false), this, "");
+    public final TableField<DriverRecord, Date> LICENSEEXPIREDATE = createField("licenseExpireDate", org.jooq.impl.SQLDataType.DATE, this, "");
 
     /**
      * Create a <code>Gara.Driver</code> table reference

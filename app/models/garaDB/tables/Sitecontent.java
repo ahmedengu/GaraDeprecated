@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Sitecontent extends TableImpl<SitecontentRecord> {
 
-    private static final long serialVersionUID = 1922502976;
+    private static final long serialVersionUID = 1894526535;
 
     /**
      * The reference instance of <code>Gara.SiteContent</code>
@@ -90,11 +90,6 @@ public class Sitecontent extends TableImpl<SitecontentRecord> {
      * The column <code>Gara.SiteContent.pic</code>.
      */
     public final TableField<SitecontentRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
-
-    /**
-     * The column <code>Gara.SiteContent.name</code>.
-     */
-    public final TableField<SitecontentRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
      * Create a <code>Gara.SiteContent</code> table reference

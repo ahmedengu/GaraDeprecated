@@ -37,7 +37,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Member extends TableImpl<MemberRecord> {
 
-    private static final long serialVersionUID = 126127041;
+    private static final long serialVersionUID = 132611790;
 
     /**
      * The reference instance of <code>Gara.Member</code>
@@ -106,11 +106,6 @@ public class Member extends TableImpl<MemberRecord> {
      * The column <code>Gara.Member.collegeID</code>.
      */
     public final TableField<MemberRecord, Integer> COLLEGEID = createField("collegeID", org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>Gara.Member.salt</code>.
-     */
-    public final TableField<MemberRecord, String> SALT = createField("salt", org.jooq.impl.SQLDataType.VARCHAR.length(10), this, "");
 
     /**
      * The column <code>Gara.Member.pic</code>.

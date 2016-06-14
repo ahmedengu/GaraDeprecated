@@ -38,9 +38,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "Car", schema = "Gara")
-public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Boolean> {
+public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer> {
 
-    private static final long serialVersionUID = 153918298;
+    private static final long serialVersionUID = -157143995;
 
     /**
      * Setter for <code>Gara.Car.ID</code>.
@@ -54,7 +54,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false, precision = 10)
+    @Column(name = "ID", unique = true, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
@@ -231,8 +231,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     /**
      * Getter for <code>Gara.Car.licenseExpireDate</code>.
      */
-    @Column(name = "licenseExpireDate", nullable = false)
-    @NotNull
+    @Column(name = "licenseExpireDate")
     public Date getLicenseexpiredate() {
         return (Date) get(11);
     }
@@ -285,16 +284,16 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     /**
      * Setter for <code>Gara.Car.state</code>.
      */
-    public void setState(Boolean value) {
+    public void setState(Integer value) {
         set(15, value);
     }
 
     /**
      * Getter for <code>Gara.Car.state</code>.
      */
-    @Column(name = "state", precision = 1)
-    public Boolean getState() {
-        return (Boolean) get(15);
+    @Column(name = "state", precision = 10)
+    public Integer getState() {
+        return (Integer) get(15);
     }
 
     // -------------------------------------------------------------------------
@@ -317,7 +316,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
-    public Row16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Boolean> fieldsRow() {
+    public Row16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer> fieldsRow() {
         return (Row16) super.fieldsRow();
     }
 
@@ -325,7 +324,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
-    public Row16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Boolean> valuesRow() {
+    public Row16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer> valuesRow() {
         return (Row16) super.valuesRow();
     }
 
@@ -453,7 +452,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
-    public Field<Boolean> field16() {
+    public Field<Integer> field16() {
         return Car.CAR.STATE;
     }
 
@@ -581,7 +580,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
-    public Boolean value16() {
+    public Integer value16() {
         return getState();
     }
 
@@ -724,7 +723,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
-    public CarRecord value16(Boolean value) {
+    public CarRecord value16(Integer value) {
         setState(value);
         return this;
     }
@@ -733,7 +732,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
-    public CarRecord values(Integer value1, Integer value2, String value3, String value4, Integer value5, String value6, String value7, String value8, String value9, String value10, String value11, Date value12, Double value13, Double value14, Integer value15, Boolean value16) {
+    public CarRecord values(Integer value1, Integer value2, String value3, String value4, Integer value5, String value6, String value7, String value8, String value9, String value10, String value11, Date value12, Double value13, Double value14, Integer value15, Integer value16) {
         value1(value1);
         value2(value2);
         value3(value3);
@@ -767,7 +766,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     /**
      * Create a detached, initialised CarRecord
      */
-    public CarRecord(Integer id, Integer driverid, String platenumber, String platepic, Integer carmodelid, String frontpic, String backpic, String sidepic, String insidepic, String licensenumber, String licensepic, Date licenseexpiredate, Double distlongitude, Double distlatitude, Integer availableseats, Boolean state) {
+    public CarRecord(Integer id, Integer driverid, String platenumber, String platepic, Integer carmodelid, String frontpic, String backpic, String sidepic, String insidepic, String licensenumber, String licensepic, Date licenseexpiredate, Double distlongitude, Double distlatitude, Integer availableseats, Integer state) {
         super(Car.CAR);
 
         set(0, id);

@@ -21,6 +21,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.*;
 
+import static play.data.Form.form;
 import static play.mvc.Controller.request;
 
 public class RESTHelper {
@@ -120,6 +121,18 @@ public class RESTHelper {
     public List deleteByID(Table table, Field[] selectFields, Class tableClass, UpdatableRecord record, String id) throws SQLException {
         List list = new ArrayList<>();
         int deletedRecord = getDslContext().delete(table).where("id = ?", id).execute();
+
+        if (table.equals(Tables.RIDE)) {
+            Map<String, String> f = new HashMap<>();
+            f.put("rideID", "");
+            Form<Ride> rideForm = form(Ride.class).bind(f);
+            List where = getWhere("member", "rideID", id);
+            if (where.size() > 0) {
+                Integer id1 = ((Member) where.get(0)).getId();
+                updateByID("member", rideForm, String.valueOf(id1));
+            }
+        }
+
         list.add(deletedRecord);
         return list;
     }
@@ -140,7 +153,6 @@ public class RESTHelper {
         record.set(table.field("ID"), null);
         if (table.equals(Tables.MEMBER)) {
             record.set(table.field("studentEmailActivationCode"), UUID.randomUUID().toString().replace("-", "").substring(0, 9));
-            String salt = UUID.randomUUID().toString().replace("-", "").substring(0, 9);
             String password = BCrypt.hashpw((String) record.get("password"), BCrypt.gensalt());
 
             record.set(table.field("password"), password);
@@ -170,6 +182,13 @@ public class RESTHelper {
                 String to = university.getContactpersonemail();
 
                 sendMail(from, to, subject, body);
+            } else if (table.equals(Tables.RIDE)) {
+                String memberid = (String) ((Form) form).data().get("memberid");
+                Integer rideID = ((Ride) list.get(0)).getId();
+                Map<String, String> f = new HashMap<>();
+                f.put("rideID", String.valueOf(rideID));
+                Form<Ride> rideForm = form(Ride.class).bind(f);
+                updateByID("member", rideForm, memberid);
             }
         }
         return list;
@@ -199,12 +218,46 @@ public class RESTHelper {
         Object l = getByID(table, selectFields, tableClass, record, id).get(0);
         record.from(l);
         Map<String, String> data = ((Form) form).data();
+        if (table.equals(Tables.MEMBER)) {
+            if (!data.getOrDefault("password", "").equals("")) {
+                String password = BCrypt.hashpw((String) data.get("password"), BCrypt.gensalt());
+                data.put("password", password);
+            }
+        } else if (table.equals(Tables.RIDE)) {
+            if (!data.getOrDefault("driverCheck", "").equals("")) {
+                if ( record.get("passangerCheck").toString().equals(data.get("driverCheck"))) {
+                    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                    if (data.get("driverCheck").equals("1"))
+                        data.put("startTime", timestamp.toString());
+                  else   if (data.get("driverCheck").equals("2"))
+                        data.put("endTime", timestamp.toString());
+                }
+            }
+            if (!data.getOrDefault("passangerCheck", "").equals("")) {
+                if (record.get("driverCheck").toString().equals(data.get("passangerCheck"))) {
+                    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                    if (data.get("passangerCheck").equals("1"))
+                        data.put("startTime", timestamp.toString());
+                    else if (data.get("passangerCheck").equals("2"))
+                        data.put("endTime", timestamp.toString());
+                }
+            }
+        } else if (table.equals(Tables.CAR)) {
+            if (!data.getOrDefault("state", "").equals("")) {
+                if (data.get("state").equals("1")) {
+                    getDslContext().update(Tables.CAR)
+                            .set(Tables.CAR.STATE, 0)
+                            .where(Tables.CAR.DRIVERID.equal(((CarRecord) record).getDriverid())).execute();
+                }
+            }
+        }
         record.from(data);
         record.set(table.field("ID"), id);
         record.update();
 
         List list = new ArrayList<>();
         list.add(record.into(tableClass));
+
         return list;
     }
 
@@ -319,7 +372,7 @@ public class RESTHelper {
             case "DRIVER":
                 return Tables.DRIVER.fields();
             case "MEMBER":
-                return new Field<?>[]{Tables.MEMBER.ID, Tables.MEMBER.NAME, Tables.MEMBER.STUDENTEMAIL, Tables.MEMBER.USERNAME};
+                return new Field<?>[]{Tables.MEMBER.ID, Tables.MEMBER.NAME, Tables.MEMBER.STUDENTEMAIL, Tables.MEMBER.USERNAME, Tables.MEMBER.PIC};
             case "MEMBERCARD":
                 return Tables.MEMBERCARD.fields();
             case "MEMBERGROUP":
@@ -341,7 +394,7 @@ public class RESTHelper {
             case "UNIVERSITYPAGECONTENT":
                 return Tables.UNIVERSITYPAGECONTENT.fields();
             case "DISPATCH":
-                return new Field<?>[]{Tables.MEMBER.ID, Tables.MEMBER.NAME, Tables.MEMBER.USERNAME, Tables.MEMBER.PIC, Tables.MEMBER.LONGITUDE, Tables.MEMBER.LATITUDE, Tables.CAR.DISTLATITUDE, Tables.CAR.DISTLONGITUDE, Tables.CAR.CARMODELID, Tables.CAR.AVAILABLESEATS, Tables.CAR.FRONTPIC};
+                return new Field<?>[]{Tables.MEMBER.ID, Tables.MEMBER.NAME, Tables.MEMBER.USERNAME, Tables.MEMBER.PIC, Tables.MEMBER.LONGITUDE, Tables.MEMBER.LATITUDE, Tables.CAR.DISTLATITUDE, Tables.CAR.DISTLONGITUDE, Tables.CAR.CARMODELID, Tables.CAR.AVAILABLESEATS, Tables.CAR.FRONTPIC, Tables.CAR.ID.as("carid"), Tables.MEMBER.PHONENUMBER};
             case "UNIVERSITYPAGECONTENTJOIN":
                 return new Field<?>[]{Tables.UNIVERSITY.NAME, Tables.UNIVERSITY.PIC.as("upic"), Tables.UNIVERSITY.PIC, Tables.UNIVERSITYPAGECONTENT.TITLE, Tables.UNIVERSITYPAGECONTENT.TIMESTAMP, Tables.UNIVERSITYPAGECONTENT.BODY, Tables.UNIVERSITYPAGECONTENT.DESCRIPTION, Tables.UNIVERSITYPAGECONTENT.KEYWORDS};
         }
@@ -393,19 +446,20 @@ public class RESTHelper {
     }
 
 
-    public List<Map<String, Object>> dispatch(String memberID, String distLongitude, String distLatitude, String longitude, String latitude) throws SQLException {
+    public List<Map<String, Object>> dispatch(String memberID, String dist, String distLongitude, String distLatitude, String longitude, String latitude) throws SQLException {
+
         return getDslContext().select(getSelectFieldsByName("dispatch")).from(Tables.CAR.join(Tables.DRIVER).on(Tables.CAR.DRIVERID.equal(Tables.DRIVER.ID)).join(Tables.MEMBER).on(Tables.MEMBER.ID.equal(Tables.DRIVER.MEMBERID))).where(
                 " ( 3956 *2 * ASIN( SQRT( POWER( SIN( (\n" +
                         "? - ABS( Car.DistLatitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Car.DistLatitude ) * PI( ) /180 ) * POWER( SIN( (\n" +
                         "? - Car.DistLongitude\n" +
                         ") * PI( ) /180 /2 ) , 2 ) ) )\n" +
-                        ") < 5.0 \n" +
+                        ") < ? \n" +
                         "AND ( 3956 *2 * ASIN( SQRT( POWER( SIN( (\n" +
                         "? - ABS( Member.latitude ) ) * PI( ) /180 /2 ) , 2 ) + COS( ? * PI( ) /180 ) * COS( ABS( Member.latitude ) * PI( ) /180 ) * POWER( SIN( (\n" +
                         "? - Member.longitude\n" +
                         ") * PI( ) /180 /2 ) , 2 ) ) )\n" +
-                        ") < 5.0 \n" +
-                        "AND Member.ID !=?", distLatitude, distLatitude, distLongitude, latitude, latitude, longitude, memberID).fetchMaps();
+                        ") < ? \n" +
+                        "AND Member.ID !=? AND Car.state = 1", distLatitude, distLatitude, distLongitude, dist, latitude, latitude, longitude, dist, memberID).fetchMaps();
     }
 
     public Map<String, Object> getUniversityContentPage(String pageSubdomain, String link) throws SQLException {

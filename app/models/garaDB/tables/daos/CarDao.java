@@ -166,7 +166,7 @@ public class CarDao extends DAOImpl<CarRecord, models.garaDB.tables.pojos.Car, I
     /**
      * Fetch records that have <code>state IN (values)</code>
      */
-    public List<models.garaDB.tables.pojos.Car> fetchByState(Boolean... values) {
+    public List<models.garaDB.tables.pojos.Car> fetchByState(Integer... values) {
         return fetch(Car.CAR.STATE, values);
     }
 }

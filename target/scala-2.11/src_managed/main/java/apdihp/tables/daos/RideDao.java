@@ -131,7 +131,21 @@ public class RideDao extends DAOImpl<RideRecord, apdihp.tables.pojos.Ride, Integ
     /**
      * Fetch records that have <code>accepted IN (values)</code>
      */
-    public List<apdihp.tables.pojos.Ride> fetchByAccepted(Boolean... values) {
+    public List<apdihp.tables.pojos.Ride> fetchByAccepted(Integer... values) {
         return fetch(Ride.RIDE.ACCEPTED, values);
+    }
+
+    /**
+     * Fetch records that have <code>driverCheck IN (values)</code>
+     */
+    public List<apdihp.tables.pojos.Ride> fetchByDrivercheck(Integer... values) {
+        return fetch(Ride.RIDE.DRIVERCHECK, values);
+    }
+
+    /**
+     * Fetch records that have <code>passangerCheck IN (values)</code>
+     */
+    public List<apdihp.tables.pojos.Ride> fetchByPassangercheck(Integer... values) {
+        return fetch(Ride.RIDE.PASSANGERCHECK, values);
     }
 }

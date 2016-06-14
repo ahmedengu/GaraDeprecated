@@ -6,7 +6,15 @@
             <div class="overlay overlay-green">
                 <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
                     <div class="col-md-6 col-md-offset-3 text-center">
-                        <a href="@routes.Application.BecomeDriverGet()" class="btn btn-block btn-outline btn-outline-lg outline-light">add your car</a>
+                        <h1> </h1>
+                        <h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </h2>
+
+                        <a href="@routes.Application.addCarGet()" class="btn btn-block btn-outline btn-outline-lg outline-light">add your car</a>
                     </div>
                 </div>
                     <!-- /.container -->
@@ -29,25 +37,102 @@
         <div class="container">
             <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
                 <div class="underlined-title">
-                    <h1>Choose your Source</h1>
+                    <h1>Choose your distention </h1>
                     <hr>
                 </div>
             </div>
         </div>
     </section>
-    <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
 
-    <section id="content-3-8" class="content-block content-3-7">
-        <div class="container">
-            <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
-                <div class="underlined-title">
-                    <h1>Choose your destination</h1>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
+    <div class="map min-height-500px" id="mapholder" ></div>
+
+
+    <script>
+            var map,lat,lng,distLng,distLat;
+            var markersArray = [];
+
+            getLocation();
+
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                }
+            }
+
+            function showPosition(position) {
+                lat = position.coords.latitude;
+                lng = position.coords.longitude;
+                latlon = new google.maps.LatLng(lat, lng)
+                mapholder = document.getElementById('mapholder')
+                mapholder.style.height = '250px';
+
+                var myOptions = {
+                    center:latlon,zoom:14
+                }
+
+                 map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+                var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!",icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png"});
+
+                google.maps.event.addListener(map, "click", function(event)
+                {
+                    // place a marker
+                    placeMarker(event.latLng);
+
+                    // display the lat/lng in your form's lat/lng fields
+                    document.getElementById("latFld").value = event.latLng.lat();
+                    document.getElementById("lngFld").value = event.latLng.lng();
+                });
+
+            }
+
+            function placeMarker(location) {
+                // first remove all markers if there are any
+                deleteOverlays();
+                distLat = location.lat();
+                distLng = location.lng();
+
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+
+                // add marker in markers array
+                markersArray.push(marker);
+
+                //map.setCenter(location);
+            }
+            function deleteOverlays() {
+                if (markersArray) {
+                    for (i in markersArray) {
+                        markersArray[i].setMap(null);
+                    }
+                    markersArray.length = 0;
+                }
+            }
+            function showError(error) {
+                switch(error.code) {
+                    case error.PERMISSION_DENIED:
+                        x.innerHTML = "User denied the request for Geolocation."
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHTML = "Location information is unavailable."
+                        break;
+                    case error.TIMEOUT:
+                        x.innerHTML = "The request to get user location timed out."
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        x.innerHTML = "An unknown error occurred."
+                        break;
+                }
+            }
+        function dispatch() {
+            window.location = "@routes.Application.dispatchGet()"+"?srcLat=" + lat + "&srclng=" + lng +"&distLat=" + distLat + "&distLng=" + distLng;
+        }
+    </script>
+
+
+
 
 
     <section id="content-3-7" class="content-block content-3-7">
@@ -55,91 +140,12 @@
             <div class="col-sm-12">
                 <div class="underlined-title">
                     <hr>
-                    <button type="button" class="btn white bg-marina bg-transparent-hover black-hover btn-block" data-animation-1 data-animation-trigger-1="click" data-animation-type-1="shake" data-target="#modal1" data-toggle="modal">Get your Ride!</button>
+                    <button type="button" class="btn white bg-marina bg-transparent-hover black-hover btn-block" data-animation-1 data-animation-trigger-1="click" data-animation-type-1="shake" onclick="dispatch()">Get your Ride!</button>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <div class="modal fade pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Drivers</h4>
-                </div>
-                <div class="modal-body">
-                    <section class="content-block">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
-                                    <div class="caption">
-                                        <h3>Ahmed</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
-                                    <div class="caption">
-                                        <h3>Mohamed</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
-                                    <div class="caption">
-                                        <h3>Hesham</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
-                                    <div class="caption">
-                                        <h3>Ahmed</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
-                                    <div class="caption">
-                                        <h3>Mohamed</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src="@routes.Assets.at("placeholders/img7.jpg")" alt="">
-                                    <div class="caption">
-                                        <h3>Hesham</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- /.container -->
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
 
 }

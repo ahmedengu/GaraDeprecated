@@ -20,8 +20,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record9;
-import org.jooq.Row9;
+import org.jooq.Record8;
+import org.jooq.Row8;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -38,9 +38,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "SiteContent", schema = "Gara")
-public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> implements Record9<Integer, Timestamp, String, String, String, String, String, String, String> {
+public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> implements Record8<Integer, Timestamp, String, String, String, String, String, String> {
 
-    private static final long serialVersionUID = 1353411176;
+    private static final long serialVersionUID = -2055819592;
 
     /**
      * Setter for <code>Gara.SiteContent.ID</code>.
@@ -54,7 +54,7 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false, precision = 10)
+    @Column(name = "ID", unique = true, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
@@ -170,22 +170,6 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
         return (String) get(7);
     }
 
-    /**
-     * Setter for <code>Gara.SiteContent.name</code>.
-     */
-    public void setName(String value) {
-        set(8, value);
-    }
-
-    /**
-     * Getter for <code>Gara.SiteContent.name</code>.
-     */
-    @Column(name = "name", length = 65535)
-    @Size(max = 65535)
-    public String getName() {
-        return (String) get(8);
-    }
-
     // -------------------------------------------------------------------------
     // Primary key information
     // -------------------------------------------------------------------------
@@ -199,23 +183,23 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     }
 
     // -------------------------------------------------------------------------
-    // Record9 type implementation
+    // Record8 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row9<Integer, Timestamp, String, String, String, String, String, String, String> fieldsRow() {
-        return (Row9) super.fieldsRow();
+    public Row8<Integer, Timestamp, String, String, String, String, String, String> fieldsRow() {
+        return (Row8) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row9<Integer, Timestamp, String, String, String, String, String, String, String> valuesRow() {
-        return (Row9) super.valuesRow();
+    public Row8<Integer, Timestamp, String, String, String, String, String, String> valuesRow() {
+        return (Row8) super.valuesRow();
     }
 
     /**
@@ -286,14 +270,6 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
      * {@inheritDoc}
      */
     @Override
-    public Field<String> field9() {
-        return Sitecontent.SITECONTENT.NAME;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
     public Integer value1() {
         return getId();
     }
@@ -352,14 +328,6 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     @Override
     public String value8() {
         return getPic();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String value9() {
-        return getName();
     }
 
     /**
@@ -438,16 +406,7 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
      * {@inheritDoc}
      */
     @Override
-    public SitecontentRecord value9(String value) {
-        setName(value);
-        return this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public SitecontentRecord values(Integer value1, Timestamp value2, String value3, String value4, String value5, String value6, String value7, String value8, String value9) {
+    public SitecontentRecord values(Integer value1, Timestamp value2, String value3, String value4, String value5, String value6, String value7, String value8) {
         value1(value1);
         value2(value2);
         value3(value3);
@@ -456,7 +415,6 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
         value6(value6);
         value7(value7);
         value8(value8);
-        value9(value9);
         return this;
     }
 
@@ -474,7 +432,7 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     /**
      * Create a detached, initialised SitecontentRecord
      */
-    public SitecontentRecord(Integer id, Timestamp timestamp, String title, String body, String link, String description, String keywords, String pic, String name) {
+    public SitecontentRecord(Integer id, Timestamp timestamp, String title, String body, String link, String description, String keywords, String pic) {
         super(Sitecontent.SITECONTENT);
 
         set(0, id);
@@ -485,6 +443,5 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
         set(5, description);
         set(6, keywords);
         set(7, pic);
-        set(8, name);
     }
 }

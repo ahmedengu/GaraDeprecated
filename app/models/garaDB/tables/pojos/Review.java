@@ -66,7 +66,7 @@ public class Review implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false, precision = 10)
+    @Column(name = "ID", unique = true, precision = 10)
     public Integer getId() {
         return this.id;
     }

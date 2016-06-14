@@ -37,48 +37,133 @@ Seq[Any](format.raw/*1.72*/("""
             """),format.raw/*6.13*/("""<div class="overlay overlay-green">
                 <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
                     <div class="col-md-6 col-md-offset-3 text-center">
-                        <a href=""""),_display_(/*9.35*/routes/*9.41*/.Application.BecomeDriverGet()),format.raw/*9.71*/("""" class="btn btn-block btn-outline btn-outline-lg outline-light">add your car</a>
+                        <h1> </h1>
+                        <h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </h2>
+
+                        <a href=""""),_display_(/*17.35*/routes/*17.41*/.Application.addCarGet()),format.raw/*17.65*/("""" class="btn btn-block btn-outline btn-outline-lg outline-light">add your car</a>
                     </div>
                 </div>
                     <!-- /.container -->
             </div>
-        """)))}/*14.10*/else/*14.14*/{_display_(Seq[Any](format.raw/*14.15*/("""
-            """),format.raw/*15.13*/("""<div class="overlay overlay-green">
+        """)))}/*22.10*/else/*22.14*/{_display_(Seq[Any](format.raw/*22.15*/("""
+            """),format.raw/*23.13*/("""<div class="overlay overlay-green">
                 <div class="container text-center" data-animation-1 data-animation-trigger-1="load" data-animation-type-1="pulse">
                     <h1 class="pad90" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="flash">Want to make some money</h1>
                     <h2>Become a driver</h2>
                     <div class="col-md-6 col-md-offset-3 text-center">
-                        <a href=""""),_display_(/*20.35*/routes/*20.41*/.Application.BecomeDriverGet()),format.raw/*20.71*/("""" class="btn btn-block btn-outline btn-outline-lg outline-light">Strart Here</a>
+                        <a href=""""),_display_(/*28.35*/routes/*28.41*/.Application.BecomeDriverGet()),format.raw/*28.71*/("""" class="btn btn-block btn-outline btn-outline-lg outline-light">Strart Here</a>
                     </div>
                 </div>
                     <!-- /.container -->
             </div>
-        """)))}),format.raw/*25.10*/("""
-    """),format.raw/*26.5*/("""</section>
+        """)))}),format.raw/*33.10*/("""
+    """),format.raw/*34.5*/("""</section>
 
     <section id="content-3-8" class="content-block content-3-7">
         <div class="container">
             <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
                 <div class="underlined-title">
-                    <h1>Choose your Source</h1>
+                    <h1>Choose your distention </h1>
                     <hr>
                 </div>
             </div>
         </div>
     </section>
-    <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
 
-    <section id="content-3-8" class="content-block content-3-7">
-        <div class="container">
-            <div class="col-sm-12" data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="pulse">
-                <div class="underlined-title">
-                    <h1>Choose your destination</h1>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="map min-height-500px" data-map-lat="31.309842" data-map-long="30.065063" align data-animation-1 data-animation-trigger-1="hover" data-animation-type-1="bounce" data-map-zoom="16"></div>
+    <div class="map min-height-500px" id="mapholder" ></div>
+
+
+    <script>
+            var map,lat,lng,distLng,distLat;
+            var markersArray = [];
+
+            getLocation();
+
+
+            function getLocation() """),format.raw/*57.36*/("""{"""),format.raw/*57.37*/("""
+                """),format.raw/*58.17*/("""if (navigator.geolocation) """),format.raw/*58.44*/("""{"""),format.raw/*58.45*/("""
+                    """),format.raw/*59.21*/("""navigator.geolocation.getCurrentPosition(showPosition, showError);
+                """),format.raw/*60.17*/("""}"""),format.raw/*60.18*/("""
+            """),format.raw/*61.13*/("""}"""),format.raw/*61.14*/("""
+
+            """),format.raw/*63.13*/("""function showPosition(position) """),format.raw/*63.45*/("""{"""),format.raw/*63.46*/("""
+                """),format.raw/*64.17*/("""lat = position.coords.latitude;
+                lng = position.coords.longitude;
+                latlon = new google.maps.LatLng(lat, lng)
+                mapholder = document.getElementById('mapholder')
+                mapholder.style.height = '250px';
+
+                var myOptions = """),format.raw/*70.33*/("""{"""),format.raw/*70.34*/("""
+                    """),format.raw/*71.21*/("""center:latlon,zoom:14
+                """),format.raw/*72.17*/("""}"""),format.raw/*72.18*/("""
+
+                 """),format.raw/*74.18*/("""map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+                var marker = new google.maps.Marker("""),format.raw/*75.53*/("""{"""),format.raw/*75.54*/("""position:latlon,map:map,title:"You are here!",icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png""""),format.raw/*75.161*/("""}"""),format.raw/*75.162*/(""");
+
+                google.maps.event.addListener(map, "click", function(event)
+                """),format.raw/*78.17*/("""{"""),format.raw/*78.18*/("""
+                    """),format.raw/*79.21*/("""// place a marker
+                    placeMarker(event.latLng);
+
+                    // display the lat/lng in your form's lat/lng fields
+                    document.getElementById("latFld").value = event.latLng.lat();
+                    document.getElementById("lngFld").value = event.latLng.lng();
+                """),format.raw/*85.17*/("""}"""),format.raw/*85.18*/(""");
+
+            """),format.raw/*87.13*/("""}"""),format.raw/*87.14*/("""
+
+            """),format.raw/*89.13*/("""function placeMarker(location) """),format.raw/*89.44*/("""{"""),format.raw/*89.45*/("""
+                """),format.raw/*90.17*/("""// first remove all markers if there are any
+                deleteOverlays();
+                distLat = location.lat();
+                distLng = location.lng();
+
+                var marker = new google.maps.Marker("""),format.raw/*95.53*/("""{"""),format.raw/*95.54*/("""
+                    """),format.raw/*96.21*/("""position: location,
+                    map: map
+                """),format.raw/*98.17*/("""}"""),format.raw/*98.18*/(""");
+
+                // add marker in markers array
+                markersArray.push(marker);
+
+                //map.setCenter(location);
+            """),format.raw/*104.13*/("""}"""),format.raw/*104.14*/("""
+            """),format.raw/*105.13*/("""function deleteOverlays() """),format.raw/*105.39*/("""{"""),format.raw/*105.40*/("""
+                """),format.raw/*106.17*/("""if (markersArray) """),format.raw/*106.35*/("""{"""),format.raw/*106.36*/("""
+                    """),format.raw/*107.21*/("""for (i in markersArray) """),format.raw/*107.45*/("""{"""),format.raw/*107.46*/("""
+                        """),format.raw/*108.25*/("""markersArray[i].setMap(null);
+                    """),format.raw/*109.21*/("""}"""),format.raw/*109.22*/("""
+                    """),format.raw/*110.21*/("""markersArray.length = 0;
+                """),format.raw/*111.17*/("""}"""),format.raw/*111.18*/("""
+            """),format.raw/*112.13*/("""}"""),format.raw/*112.14*/("""
+            """),format.raw/*113.13*/("""function showError(error) """),format.raw/*113.39*/("""{"""),format.raw/*113.40*/("""
+                """),format.raw/*114.17*/("""switch(error.code) """),format.raw/*114.36*/("""{"""),format.raw/*114.37*/("""
+                    case error.PERMISSION_DENIED:
+                        x.innerHTML = "User denied the request for Geolocation."
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHTML = "Location information is unavailable."
+                        break;
+                    case error.TIMEOUT:
+                        x.innerHTML = "The request to get user location timed out."
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        x.innerHTML = "An unknown error occurred."
+                        break;
+                """),format.raw/*127.17*/("""}"""),format.raw/*127.18*/("""
+            """),format.raw/*128.13*/("""}"""),format.raw/*128.14*/("""
+        """),format.raw/*129.9*/("""function dispatch() """),format.raw/*129.29*/("""{"""),format.raw/*129.30*/("""
+            """),format.raw/*130.13*/("""window.location = """"),_display_(/*130.33*/routes/*130.39*/.Application.dispatchGet()),format.raw/*130.65*/(""""+"?srcLat=" + lat + "&srclng=" + lng +"&distLat=" + distLat + "&distLng=" + distLng;
+        """),format.raw/*131.9*/("""}"""),format.raw/*131.10*/("""
+    """),format.raw/*132.5*/("""</script>
+
+
+
 
 
     <section id="content-3-7" class="content-block content-3-7">
@@ -86,94 +171,15 @@ Seq[Any](format.raw/*1.72*/("""
             <div class="col-sm-12">
                 <div class="underlined-title">
                     <hr>
-                    <button type="button" class="btn white bg-marina bg-transparent-hover black-hover btn-block" data-animation-1 data-animation-trigger-1="click" data-animation-type-1="shake" data-target="#modal1" data-toggle="modal">Get your Ride!</button>
+                    <button type="button" class="btn white bg-marina bg-transparent-hover black-hover btn-block" data-animation-1 data-animation-trigger-1="click" data-animation-type-1="shake" onclick="dispatch()">Get your Ride!</button>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <div class="modal fade pg-show-modal" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Drivers</h4>
-                </div>
-                <div class="modal-body">
-                    <section class="content-block">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src=""""),_display_(/*77.48*/routes/*77.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*77.89*/("""" alt="">
-                                    <div class="caption">
-                                        <h3>Ahmed</h3>
 
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src=""""),_display_(/*87.48*/routes/*87.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*87.89*/("""" alt="">
-                                    <div class="caption">
-                                        <h3>Mohamed</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src=""""),_display_(/*97.48*/routes/*97.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*97.89*/("""" alt="">
-                                    <div class="caption">
-                                        <h3>Hesham</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src=""""),_display_(/*109.48*/routes/*109.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*109.89*/("""" alt="">
-                                    <div class="caption">
-                                        <h3>Ahmed</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src=""""),_display_(/*119.48*/routes/*119.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*119.89*/("""" alt="">
-                                    <div class="caption">
-                                        <h3>Mohamed</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src=""""),_display_(/*129.48*/routes/*129.54*/.Assets.at("placeholders/img7.jpg")),format.raw/*129.89*/("""" alt="">
-                                    <div class="caption">
-                                        <h3>Hesham</h3>
-
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- /.container -->
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-
-""")))}),format.raw/*145.2*/("""
+""")))}),format.raw/*151.2*/("""
 """))
       }
     }
@@ -194,11 +200,11 @@ Seq[Any](format.raw/*1.72*/("""
 object memberAreaIndex extends memberAreaIndex_Scope0.memberAreaIndex
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 12 03:32:35 EET 2016
+                  DATE: Tue Jun 14 00:53:04 EET 2016
                   SOURCE: C:/Users/ahmedengu/Documents/IdeaProjects/Gara/app/views/memberAreaIndex.scala.html
-                  HASH: 64bfdcd05be0cef4ffca3ec97918ff8094a7d99a
-                  MATRIX: 787->1|952->71|982->76|1028->114|1067->116|1099->122|1204->201|1224->213|1262->214|1303->228|1604->503|1618->509|1668->539|1893->745|1906->749|1945->750|1987->764|2483->1233|2498->1239|2549->1269|2785->1474|2818->1480|5379->4014|5394->4020|5450->4055|6000->4578|6015->4584|6071->4619|6623->5144|6638->5150|6694->5185|7321->5784|7337->5790|7394->5825|7945->6348|7961->6354|8018->6389|8571->6914|8587->6920|8644->6955|9223->7503
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|36->5|36->5|36->5|37->6|40->9|40->9|40->9|45->14|45->14|45->14|46->15|51->20|51->20|51->20|56->25|57->26|108->77|108->77|108->77|118->87|118->87|118->87|128->97|128->97|128->97|140->109|140->109|140->109|150->119|150->119|150->119|160->129|160->129|160->129|176->145
+                  HASH: d79a93288c8930dd22bfdc4f3fca07e59f50b43e
+                  MATRIX: 787->1|952->71|982->76|1028->114|1067->116|1099->122|1204->201|1224->213|1262->214|1303->228|1840->738|1855->744|1900->768|2125->974|2138->978|2177->979|2219->993|2715->1462|2730->1468|2781->1498|3017->1703|3050->1709|3745->2376|3774->2377|3820->2395|3875->2422|3904->2423|3954->2445|4066->2529|4095->2530|4137->2544|4166->2545|4210->2561|4270->2593|4299->2594|4345->2612|4666->2905|4695->2906|4745->2928|4812->2967|4841->2968|4890->2989|5047->3118|5076->3119|5212->3226|5242->3227|5369->3326|5398->3327|5448->3349|5801->3674|5830->3675|5876->3693|5905->3694|5949->3710|6008->3741|6037->3742|6083->3760|6332->3981|6361->3982|6411->4004|6506->4071|6535->4072|6720->4228|6750->4229|6793->4243|6848->4269|6878->4270|6925->4288|6972->4306|7002->4307|7053->4329|7106->4353|7136->4354|7191->4380|7271->4431|7301->4432|7352->4454|7423->4496|7453->4497|7496->4511|7526->4512|7569->4526|7624->4552|7654->4553|7701->4571|7749->4590|7779->4591|8460->5243|8490->5244|8533->5258|8563->5259|8601->5269|8650->5289|8680->5290|8723->5304|8771->5324|8787->5330|8835->5356|8958->5451|8988->5452|9022->5458|9606->6011
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|36->5|36->5|36->5|37->6|48->17|48->17|48->17|53->22|53->22|53->22|54->23|59->28|59->28|59->28|64->33|65->34|88->57|88->57|89->58|89->58|89->58|90->59|91->60|91->60|92->61|92->61|94->63|94->63|94->63|95->64|101->70|101->70|102->71|103->72|103->72|105->74|106->75|106->75|106->75|106->75|109->78|109->78|110->79|116->85|116->85|118->87|118->87|120->89|120->89|120->89|121->90|126->95|126->95|127->96|129->98|129->98|135->104|135->104|136->105|136->105|136->105|137->106|137->106|137->106|138->107|138->107|138->107|139->108|140->109|140->109|141->110|142->111|142->111|143->112|143->112|144->113|144->113|144->113|145->114|145->114|145->114|158->127|158->127|159->128|159->128|160->129|160->129|160->129|161->130|161->130|161->130|161->130|162->131|162->131|163->132|182->151
                   -- GENERATED --
               */
           

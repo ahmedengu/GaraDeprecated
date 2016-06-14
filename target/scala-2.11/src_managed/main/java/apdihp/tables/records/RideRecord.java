@@ -19,8 +19,8 @@ import javax.validation.constraints.NotNull;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record11;
-import org.jooq.Row11;
+import org.jooq.Record13;
+import org.jooq.Row13;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -37,9 +37,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "Ride", schema = "Gara")
-public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Record11<Integer, Timestamp, Double, Double, Double, Double, Integer, Timestamp, Timestamp, Integer, Boolean> {
+public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Record13<Integer, Timestamp, Double, Double, Double, Double, Integer, Timestamp, Timestamp, Integer, Integer, Integer, Integer> {
 
-    private static final long serialVersionUID = 1119506284;
+    private static final long serialVersionUID = 569283449;
 
     /**
      * Setter for <code>Gara.Ride.ID</code>.
@@ -202,16 +202,46 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
     /**
      * Setter for <code>Gara.Ride.accepted</code>.
      */
-    public void setAccepted(Boolean value) {
+    public void setAccepted(Integer value) {
         set(10, value);
     }
 
     /**
      * Getter for <code>Gara.Ride.accepted</code>.
      */
-    @Column(name = "accepted", precision = 1)
-    public Boolean getAccepted() {
-        return (Boolean) get(10);
+    @Column(name = "accepted", precision = 10)
+    public Integer getAccepted() {
+        return (Integer) get(10);
+    }
+
+    /**
+     * Setter for <code>Gara.Ride.driverCheck</code>.
+     */
+    public void setDrivercheck(Integer value) {
+        set(11, value);
+    }
+
+    /**
+     * Getter for <code>Gara.Ride.driverCheck</code>.
+     */
+    @Column(name = "driverCheck", precision = 10)
+    public Integer getDrivercheck() {
+        return (Integer) get(11);
+    }
+
+    /**
+     * Setter for <code>Gara.Ride.passangerCheck</code>.
+     */
+    public void setPassangercheck(Integer value) {
+        set(12, value);
+    }
+
+    /**
+     * Getter for <code>Gara.Ride.passangerCheck</code>.
+     */
+    @Column(name = "passangerCheck", precision = 10)
+    public Integer getPassangercheck() {
+        return (Integer) get(12);
     }
 
     // -------------------------------------------------------------------------
@@ -227,23 +257,23 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
     }
 
     // -------------------------------------------------------------------------
-    // Record11 type implementation
+    // Record13 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row11<Integer, Timestamp, Double, Double, Double, Double, Integer, Timestamp, Timestamp, Integer, Boolean> fieldsRow() {
-        return (Row11) super.fieldsRow();
+    public Row13<Integer, Timestamp, Double, Double, Double, Double, Integer, Timestamp, Timestamp, Integer, Integer, Integer, Integer> fieldsRow() {
+        return (Row13) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row11<Integer, Timestamp, Double, Double, Double, Double, Integer, Timestamp, Timestamp, Integer, Boolean> valuesRow() {
-        return (Row11) super.valuesRow();
+    public Row13<Integer, Timestamp, Double, Double, Double, Double, Integer, Timestamp, Timestamp, Integer, Integer, Integer, Integer> valuesRow() {
+        return (Row13) super.valuesRow();
     }
 
     /**
@@ -330,8 +360,24 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
      * {@inheritDoc}
      */
     @Override
-    public Field<Boolean> field11() {
+    public Field<Integer> field11() {
         return Ride.RIDE.ACCEPTED;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field12() {
+        return Ride.RIDE.DRIVERCHECK;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field13() {
+        return Ride.RIDE.PASSANGERCHECK;
     }
 
     /**
@@ -418,8 +464,24 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
      * {@inheritDoc}
      */
     @Override
-    public Boolean value11() {
+    public Integer value11() {
         return getAccepted();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value12() {
+        return getDrivercheck();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value13() {
+        return getPassangercheck();
     }
 
     /**
@@ -516,7 +578,7 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
      * {@inheritDoc}
      */
     @Override
-    public RideRecord value11(Boolean value) {
+    public RideRecord value11(Integer value) {
         setAccepted(value);
         return this;
     }
@@ -525,7 +587,25 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
      * {@inheritDoc}
      */
     @Override
-    public RideRecord values(Integer value1, Timestamp value2, Double value3, Double value4, Double value5, Double value6, Integer value7, Timestamp value8, Timestamp value9, Integer value10, Boolean value11) {
+    public RideRecord value12(Integer value) {
+        setDrivercheck(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public RideRecord value13(Integer value) {
+        setPassangercheck(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public RideRecord values(Integer value1, Timestamp value2, Double value3, Double value4, Double value5, Double value6, Integer value7, Timestamp value8, Timestamp value9, Integer value10, Integer value11, Integer value12, Integer value13) {
         value1(value1);
         value2(value2);
         value3(value3);
@@ -537,6 +617,8 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
         value9(value9);
         value10(value10);
         value11(value11);
+        value12(value12);
+        value13(value13);
         return this;
     }
 
@@ -554,7 +636,7 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
     /**
      * Create a detached, initialised RideRecord
      */
-    public RideRecord(Integer id, Timestamp timestamp, Double sourcelongitude, Double sourcelatitude, Double destinationlongitude, Double destinationlatitude, Integer fare, Timestamp starttime, Timestamp endtime, Integer carid, Boolean accepted) {
+    public RideRecord(Integer id, Timestamp timestamp, Double sourcelongitude, Double sourcelatitude, Double destinationlongitude, Double destinationlatitude, Integer fare, Timestamp starttime, Timestamp endtime, Integer carid, Integer accepted, Integer drivercheck, Integer passangercheck) {
         super(Ride.RIDE);
 
         set(0, id);
@@ -568,5 +650,7 @@ public class RideRecord extends UpdatableRecordImpl<RideRecord> implements Recor
         set(8, endtime);
         set(9, carid);
         set(10, accepted);
+        set(11, drivercheck);
+        set(12, passangercheck);
     }
 }

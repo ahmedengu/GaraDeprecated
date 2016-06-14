@@ -40,7 +40,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @Table(name = "Driver", schema = "Gara")
 public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements Record6<Integer, Integer, String, String, String, Date> {
 
-    private static final long serialVersionUID = 561678768;
+    private static final long serialVersionUID = 1114419839;
 
     /**
      * Setter for <code>Gara.Driver.ID</code>.
@@ -137,8 +137,7 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     /**
      * Getter for <code>Gara.Driver.licenseExpireDate</code>.
      */
-    @Column(name = "licenseExpireDate", nullable = false)
-    @NotNull
+    @Column(name = "licenseExpireDate")
     public Date getLicenseexpiredate() {
         return (Date) get(5);
     }

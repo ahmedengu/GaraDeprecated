@@ -9,7 +9,7 @@ GET           /assets/*file                             controllers.Assets.at(pa
 POST          /api/v1/login                             controllers.RESTRouter.index(target = "login", table="member"  ,id="eouou")
 POST          /api/v1/dispatch                          controllers.RESTRouter.index(target = "dispatch", table="member"  ,id="eouou")
 GET           /api/v1/member/:table/activate/:id        controllers.RESTRouter.index(target = "activate", table,id)
-POST          /api/v1/:table/where/*condition                            controllers.RESTRouter.index(target = "whereWithCondition", table  ,condition)
+POST          /api/v1/:table/where/*condition           controllers.RESTRouter.index(target = "whereWithCondition", table  ,condition)
 
 GET           /api/v1/:table                            controllers.RESTRouter.index(target = "list", table,id = "oeuoe")
 GET           /api/v1/:table/:id                        controllers.RESTRouter.index(target = "getByID", table,id)
@@ -19,6 +19,8 @@ PUT           /api/v1/:table/:id                        controllers.RESTRouter.i
 POST          /api/v1/:table/:id                        controllers.RESTRouter.index(target = "updateByID", table , id)
 
 GET           /admin                                    controllers.AdminCRUD.index()
+GET           /admin/logout                             controllers.AdminCRUD.logout()
+POST          /admin                                    controllers.AdminCRUD.login()
 GET           /admin/:table                             controllers.AdminCRUD.crudRouter(table)
 
 GET           /register                                 controllers.Application.registerGet()
@@ -40,7 +42,7 @@ POST          /member/settings                          controllers.Application.
 GET           /member/addCar                            controllers.Application.addCarGet()
 POST          /member/addCar                            controllers.Application.addCarPost()
 
-POST          /member/dispatch                          controllers.Application.dispatchPost()
+GET          /member/dispatch                          controllers.Application.dispatchGet()
 
 POST          /member/order                             controllers.Application.orderPost()
 

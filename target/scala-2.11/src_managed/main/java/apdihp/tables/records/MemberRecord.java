@@ -18,7 +18,10 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.jooq.Field;
 import org.jooq.Record1;
+import org.jooq.Record22;
+import org.jooq.Row22;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -35,9 +38,9 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
 @Table(name = "Member", schema = "Gara")
-public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
+public class MemberRecord extends UpdatableRecordImpl<MemberRecord> implements Record22<Integer, Timestamp, String, String, String, String, Timestamp, Integer, String, String, Integer, String, String, String, Integer, String, Integer, Integer, Double, Double, String, Integer> {
 
-    private static final long serialVersionUID = 1556716252;
+    private static final long serialVersionUID = -669693148;
 
     /**
      * Setter for <code>Gara.Member.ID</code>.
@@ -218,26 +221,10 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     }
 
     /**
-     * Setter for <code>Gara.Member.salt</code>.
-     */
-    public void setSalt(String value) {
-        set(11, value);
-    }
-
-    /**
-     * Getter for <code>Gara.Member.salt</code>.
-     */
-    @Column(name = "salt", length = 10)
-    @Size(max = 10)
-    public String getSalt() {
-        return (String) get(11);
-    }
-
-    /**
      * Setter for <code>Gara.Member.pic</code>.
      */
     public void setPic(String value) {
-        set(12, value);
+        set(11, value);
     }
 
     /**
@@ -246,14 +233,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)
     public String getPic() {
-        return (String) get(12);
+        return (String) get(11);
     }
 
     /**
      * Setter for <code>Gara.Member.bloodType</code>.
      */
     public void setBloodtype(String value) {
-        set(13, value);
+        set(12, value);
     }
 
     /**
@@ -262,14 +249,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     @Column(name = "bloodType", length = 2)
     @Size(max = 2)
     public String getBloodtype() {
-        return (String) get(13);
+        return (String) get(12);
     }
 
     /**
      * Setter for <code>Gara.Member.emergencyNumber</code>.
      */
     public void setEmergencynumber(String value) {
-        set(14, value);
+        set(13, value);
     }
 
     /**
@@ -278,14 +265,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     @Column(name = "emergencyNumber", length = 65535)
     @Size(max = 65535)
     public String getEmergencynumber() {
-        return (String) get(14);
+        return (String) get(13);
     }
 
     /**
      * Setter for <code>Gara.Member.balance</code>.
      */
     public void setBalance(Integer value) {
-        set(15, value);
+        set(14, value);
     }
 
     /**
@@ -293,14 +280,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
      */
     @Column(name = "balance", precision = 10)
     public Integer getBalance() {
-        return (Integer) get(15);
+        return (Integer) get(14);
     }
 
     /**
      * Setter for <code>Gara.Member.studentEmailActivationCode</code>.
      */
     public void setStudentemailactivationcode(String value) {
-        set(16, value);
+        set(15, value);
     }
 
     /**
@@ -309,14 +296,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     @Column(name = "studentEmailActivationCode", length = 10)
     @Size(max = 10)
     public String getStudentemailactivationcode() {
-        return (String) get(16);
+        return (String) get(15);
     }
 
     /**
      * Setter for <code>Gara.Member.rideID</code>.
      */
     public void setRideid(Integer value) {
-        set(17, value);
+        set(16, value);
     }
 
     /**
@@ -324,14 +311,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
      */
     @Column(name = "rideID", precision = 10)
     public Integer getRideid() {
-        return (Integer) get(17);
+        return (Integer) get(16);
     }
 
     /**
      * Setter for <code>Gara.Member.memberGroupID</code>.
      */
     public void setMembergroupid(Integer value) {
-        set(18, value);
+        set(17, value);
     }
 
     /**
@@ -339,14 +326,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
      */
     @Column(name = "memberGroupID", precision = 10)
     public Integer getMembergroupid() {
-        return (Integer) get(18);
+        return (Integer) get(17);
     }
 
     /**
      * Setter for <code>Gara.Member.longitude</code>.
      */
     public void setLongitude(Double value) {
-        set(19, value);
+        set(18, value);
     }
 
     /**
@@ -354,14 +341,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
      */
     @Column(name = "longitude", precision = 22)
     public Double getLongitude() {
-        return (Double) get(19);
+        return (Double) get(18);
     }
 
     /**
      * Setter for <code>Gara.Member.latitude</code>.
      */
     public void setLatitude(Double value) {
-        set(20, value);
+        set(19, value);
     }
 
     /**
@@ -369,14 +356,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
      */
     @Column(name = "latitude", precision = 22)
     public Double getLatitude() {
-        return (Double) get(20);
+        return (Double) get(19);
     }
 
     /**
      * Setter for <code>Gara.Member.pin</code>.
      */
     public void setPin(String value) {
-        set(21, value);
+        set(20, value);
     }
 
     /**
@@ -385,14 +372,14 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     @Column(name = "pin", length = 65535)
     @Size(max = 65535)
     public String getPin() {
-        return (String) get(21);
+        return (String) get(20);
     }
 
     /**
      * Setter for <code>Gara.Member.universityID</code>.
      */
     public void setUniversityid(Integer value) {
-        set(22, value);
+        set(21, value);
     }
 
     /**
@@ -400,7 +387,7 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
      */
     @Column(name = "universityID", precision = 10)
     public Integer getUniversityid() {
-        return (Integer) get(22);
+        return (Integer) get(21);
     }
 
     // -------------------------------------------------------------------------
@@ -413,6 +400,606 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     @Override
     public Record1<Integer> key() {
         return (Record1) super.key();
+    }
+
+    // -------------------------------------------------------------------------
+    // Record22 type implementation
+    // -------------------------------------------------------------------------
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Row22<Integer, Timestamp, String, String, String, String, Timestamp, Integer, String, String, Integer, String, String, String, Integer, String, Integer, Integer, Double, Double, String, Integer> fieldsRow() {
+        return (Row22) super.fieldsRow();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Row22<Integer, Timestamp, String, String, String, String, Timestamp, Integer, String, String, Integer, String, String, String, Integer, String, Integer, Integer, Double, Double, String, Integer> valuesRow() {
+        return (Row22) super.valuesRow();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field1() {
+        return Member.MEMBER.ID;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Timestamp> field2() {
+        return Member.MEMBER.TIMESTAMP;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field3() {
+        return Member.MEMBER.NAME;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field4() {
+        return Member.MEMBER.USERNAME;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field5() {
+        return Member.MEMBER.STUDENTEMAIL;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field6() {
+        return Member.MEMBER.PHONENUMBER;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Timestamp> field7() {
+        return Member.MEMBER.BIRTHDATE;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field8() {
+        return Member.MEMBER.ACTIVITED;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field9() {
+        return Member.MEMBER.GENDER;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field10() {
+        return Member.MEMBER.PASSWORD;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field11() {
+        return Member.MEMBER.COLLEGEID;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field12() {
+        return Member.MEMBER.PIC;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field13() {
+        return Member.MEMBER.BLOODTYPE;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field14() {
+        return Member.MEMBER.EMERGENCYNUMBER;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field15() {
+        return Member.MEMBER.BALANCE;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field16() {
+        return Member.MEMBER.STUDENTEMAILACTIVATIONCODE;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field17() {
+        return Member.MEMBER.RIDEID;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field18() {
+        return Member.MEMBER.MEMBERGROUPID;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Double> field19() {
+        return Member.MEMBER.LONGITUDE;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Double> field20() {
+        return Member.MEMBER.LATITUDE;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<String> field21() {
+        return Member.MEMBER.PIN;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Field<Integer> field22() {
+        return Member.MEMBER.UNIVERSITYID;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value1() {
+        return getId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value2() {
+        return getTimestamp();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value3() {
+        return getName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value4() {
+        return getUsername();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value5() {
+        return getStudentemail();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value6() {
+        return getPhonenumber();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value7() {
+        return getBirthdate();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value8() {
+        return getActivited();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value9() {
+        return getGender();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value10() {
+        return getPassword();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value11() {
+        return getCollegeid();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value12() {
+        return getPic();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value13() {
+        return getBloodtype();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value14() {
+        return getEmergencynumber();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value15() {
+        return getBalance();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value16() {
+        return getStudentemailactivationcode();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value17() {
+        return getRideid();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value18() {
+        return getMembergroupid();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Double value19() {
+        return getLongitude();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Double value20() {
+        return getLatitude();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String value21() {
+        return getPin();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Integer value22() {
+        return getUniversityid();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value1(Integer value) {
+        setId(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value2(Timestamp value) {
+        setTimestamp(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value3(String value) {
+        setName(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value4(String value) {
+        setUsername(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value5(String value) {
+        setStudentemail(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value6(String value) {
+        setPhonenumber(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value7(Timestamp value) {
+        setBirthdate(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value8(Integer value) {
+        setActivited(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value9(String value) {
+        setGender(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value10(String value) {
+        setPassword(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value11(Integer value) {
+        setCollegeid(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value12(String value) {
+        setPic(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value13(String value) {
+        setBloodtype(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value14(String value) {
+        setEmergencynumber(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value15(Integer value) {
+        setBalance(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value16(String value) {
+        setStudentemailactivationcode(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value17(Integer value) {
+        setRideid(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value18(Integer value) {
+        setMembergroupid(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value19(Double value) {
+        setLongitude(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value20(Double value) {
+        setLatitude(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value21(String value) {
+        setPin(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord value22(Integer value) {
+        setUniversityid(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MemberRecord values(Integer value1, Timestamp value2, String value3, String value4, String value5, String value6, Timestamp value7, Integer value8, String value9, String value10, Integer value11, String value12, String value13, String value14, Integer value15, String value16, Integer value17, Integer value18, Double value19, Double value20, String value21, Integer value22) {
+        value1(value1);
+        value2(value2);
+        value3(value3);
+        value4(value4);
+        value5(value5);
+        value6(value6);
+        value7(value7);
+        value8(value8);
+        value9(value9);
+        value10(value10);
+        value11(value11);
+        value12(value12);
+        value13(value13);
+        value14(value14);
+        value15(value15);
+        value16(value16);
+        value17(value17);
+        value18(value18);
+        value19(value19);
+        value20(value20);
+        value21(value21);
+        value22(value22);
+        return this;
     }
 
     // -------------------------------------------------------------------------
@@ -429,7 +1016,7 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
     /**
      * Create a detached, initialised MemberRecord
      */
-    public MemberRecord(Integer id, Timestamp timestamp, String name, String username, String studentemail, String phonenumber, Timestamp birthdate, Integer activited, String gender, String password, Integer collegeid, String salt, String pic, String bloodtype, String emergencynumber, Integer balance, String studentemailactivationcode, Integer rideid, Integer membergroupid, Double longitude, Double latitude, String pin, Integer universityid) {
+    public MemberRecord(Integer id, Timestamp timestamp, String name, String username, String studentemail, String phonenumber, Timestamp birthdate, Integer activited, String gender, String password, Integer collegeid, String pic, String bloodtype, String emergencynumber, Integer balance, String studentemailactivationcode, Integer rideid, Integer membergroupid, Double longitude, Double latitude, String pin, Integer universityid) {
         super(Member.MEMBER);
 
         set(0, id);
@@ -443,17 +1030,16 @@ public class MemberRecord extends UpdatableRecordImpl<MemberRecord> {
         set(8, gender);
         set(9, password);
         set(10, collegeid);
-        set(11, salt);
-        set(12, pic);
-        set(13, bloodtype);
-        set(14, emergencynumber);
-        set(15, balance);
-        set(16, studentemailactivationcode);
-        set(17, rideid);
-        set(18, membergroupid);
-        set(19, longitude);
-        set(20, latitude);
-        set(21, pin);
-        set(22, universityid);
+        set(11, pic);
+        set(12, bloodtype);
+        set(13, emergencynumber);
+        set(14, balance);
+        set(15, studentemailactivationcode);
+        set(16, rideid);
+        set(17, membergroupid);
+        set(18, longitude);
+        set(19, latitude);
+        set(20, pin);
+        set(21, universityid);
     }
 }

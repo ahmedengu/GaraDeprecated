@@ -32,7 +32,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "Ride", schema = "Gara")
 public class Ride implements Serializable {
 
-    private static final long serialVersionUID = -1990303670;
+    private static final long serialVersionUID = -626788390;
 
     private Integer   id;
     private Timestamp timestamp;
@@ -44,7 +44,9 @@ public class Ride implements Serializable {
     private Timestamp starttime;
     private Timestamp endtime;
     private Integer   carid;
-    private Boolean   accepted;
+    private Integer   accepted;
+    private Integer   drivercheck;
+    private Integer   passangercheck;
 
     public Ride() {}
 
@@ -60,6 +62,8 @@ public class Ride implements Serializable {
         this.endtime = value.endtime;
         this.carid = value.carid;
         this.accepted = value.accepted;
+        this.drivercheck = value.drivercheck;
+        this.passangercheck = value.passangercheck;
     }
 
     public Ride(
@@ -73,7 +77,9 @@ public class Ride implements Serializable {
         Timestamp starttime,
         Timestamp endtime,
         Integer   carid,
-        Boolean   accepted
+        Integer   accepted,
+        Integer   drivercheck,
+        Integer   passangercheck
     ) {
         this.id = id;
         this.timestamp = timestamp;
@@ -86,11 +92,13 @@ public class Ride implements Serializable {
         this.endtime = endtime;
         this.carid = carid;
         this.accepted = accepted;
+        this.drivercheck = drivercheck;
+        this.passangercheck = passangercheck;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false, precision = 10)
+    @Column(name = "ID", unique = true, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -185,13 +193,31 @@ public class Ride implements Serializable {
         this.carid = carid;
     }
 
-    @Column(name = "accepted", precision = 1)
-    public Boolean getAccepted() {
+    @Column(name = "accepted", precision = 10)
+    public Integer getAccepted() {
         return this.accepted;
     }
 
-    public void setAccepted(Boolean accepted) {
+    public void setAccepted(Integer accepted) {
         this.accepted = accepted;
+    }
+
+    @Column(name = "driverCheck", precision = 10)
+    public Integer getDrivercheck() {
+        return this.drivercheck;
+    }
+
+    public void setDrivercheck(Integer drivercheck) {
+        this.drivercheck = drivercheck;
+    }
+
+    @Column(name = "passangerCheck", precision = 10)
+    public Integer getPassangercheck() {
+        return this.passangercheck;
+    }
+
+    public void setPassangercheck(Integer passangercheck) {
+        this.passangercheck = passangercheck;
     }
 
     @Override
@@ -209,6 +235,8 @@ public class Ride implements Serializable {
         sb.append(", ").append(endtime);
         sb.append(", ").append(carid);
         sb.append(", ").append(accepted);
+        sb.append(", ").append(drivercheck);
+        sb.append(", ").append(passangercheck);
 
         sb.append(")");
         return sb.toString();

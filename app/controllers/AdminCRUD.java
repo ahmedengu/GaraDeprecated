@@ -5,6 +5,8 @@ import models.garaDB.Gara;
 import org.jooq.Field;
 import org.jooq.Record;
 import org.jooq.Table;
+import play.data.Form;
+import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.adminDashboard;
@@ -22,15 +24,31 @@ public class AdminCRUD extends Controller {
 
     @Inject
     RESTHelper restHelper;
+    @Inject
+    FormFactory formFactory;
+
+    public Result logout() {
+        return redirect(routes.Application.logout());
+    }
+
+    public Result login() throws SQLException {
+        Form form = formFactory.form().bindFromRequest();
+        String password = form.data().get("password").toString();
+        String username = form.data().get("username").toString();
+        if (password.equals("aAaA1!1!") && username.equals("toor")) {
+            session("admin", "admin");
+            return ok(adminDashboard.render("siteoption", getTableNames(), getTableData("siteoption")));
+        }
+        return ok(views.html.adminLogin.render("Login"));
+
+    }
 
     public Result index() throws SQLException {
-        try {
-            if(!request().getQueryString("password").equals("123456"))
-                return badRequest();
-        }catch (Exception e){
-            return badRequest();
-        }
-        return ok(adminDashboard.render("siteoption", getTableNames(), getTableData("siteoption")));
+        if (session().getOrDefault("admin", "").equals("")) {
+            session().clear();
+            return ok(views.html.adminLogin.render("Login"));
+        } else
+            return ok(adminDashboard.render("member", getTableNames(), getTableData("member")));
     }
 
     private List<String> getTableNames() {
@@ -44,13 +62,11 @@ public class AdminCRUD extends Controller {
 
     public Result crudRouter(String table) throws SQLException {
 
-        try {
-        if(!request().getQueryString("password").equals("123456"))
-            return badRequest();
-    }catch (Exception e){
-        return badRequest();
-    }
-        return ok(adminDashboard.render(table, getTableNames(), getTableData(table)));
+        if (session().getOrDefault("admin", "").equals("")) {
+            session().clear();
+            return ok(views.html.adminLogin.render("Login"));
+        } else
+            return ok(adminDashboard.render(table, getTableNames(), getTableData(table)));
     }
 
     private List<String> getTableData(String table) throws SQLException {

@@ -90,3 +90,14 @@ jooq:codegen
 dist
 run
 dist
+liquibaseUpdate
+jooq:codegen
+dist
+liquibaseUpdate
+jooq:codegen
+liquibaseUpdate
+jooq:codegen
+liquibaseUpdate
+jooq:codegen
+liquibaseUpdate
+jooq:codegen

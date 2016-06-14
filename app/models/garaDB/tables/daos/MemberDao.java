@@ -136,13 +136,6 @@ public class MemberDao extends DAOImpl<MemberRecord, models.garaDB.tables.pojos.
     }
 
     /**
-     * Fetch records that have <code>salt IN (values)</code>
-     */
-    public List<models.garaDB.tables.pojos.Member> fetchBySalt(String... values) {
-        return fetch(Member.MEMBER.SALT, values);
-    }
-
-    /**
      * Fetch records that have <code>pic IN (values)</code>
      */
     public List<models.garaDB.tables.pojos.Member> fetchByPic(String... values) {

@@ -51,7 +51,7 @@ public class DatabasechangeloglockRecord extends UpdatableRecordImpl<Databasecha
      * Getter for <code>Gara.DATABASECHANGELOGLOCK.ID</code>.
      */
     @Id
-    @Column(name = "ID", unique = true, nullable = false, precision = 10)
+    @Column(name = "ID", unique = true, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }

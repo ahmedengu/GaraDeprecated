@@ -39,7 +39,7 @@ import javax.validation.constraints.Size;
 @Table(name = "Member", schema = "Gara")
 public class Member implements Serializable {
 
-    private static final long serialVersionUID = -1906348765;
+    private static final long serialVersionUID = -2048819260;
 
     private Integer   id;
     private Timestamp timestamp;
@@ -52,7 +52,6 @@ public class Member implements Serializable {
     private String    gender;
     private String    password;
     private Integer   collegeid;
-    private String    salt;
     private String    pic;
     private String    bloodtype;
     private String    emergencynumber;
@@ -79,7 +78,6 @@ public class Member implements Serializable {
         this.gender = value.gender;
         this.password = value.password;
         this.collegeid = value.collegeid;
-        this.salt = value.salt;
         this.pic = value.pic;
         this.bloodtype = value.bloodtype;
         this.emergencynumber = value.emergencynumber;
@@ -105,7 +103,6 @@ public class Member implements Serializable {
         String    gender,
         String    password,
         Integer   collegeid,
-        String    salt,
         String    pic,
         String    bloodtype,
         String    emergencynumber,
@@ -129,7 +126,6 @@ public class Member implements Serializable {
         this.gender = gender;
         this.password = password;
         this.collegeid = collegeid;
-        this.salt = salt;
         this.pic = pic;
         this.bloodtype = bloodtype;
         this.emergencynumber = emergencynumber;
@@ -197,7 +193,7 @@ public class Member implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false, precision = 10)
+    @Column(name = "ID", unique = true, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -304,16 +300,6 @@ public class Member implements Serializable {
 
     public void setCollegeid(Integer collegeid) {
         this.collegeid = collegeid;
-    }
-
-    @Column(name = "salt", length = 10)
-    @Size(max = 10)
-    public String getSalt() {
-        return this.salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
     }
 
     @Column(name = "pic", length = 65535)
@@ -435,7 +421,6 @@ public class Member implements Serializable {
         sb.append(", ").append(gender);
         sb.append(", ").append(password);
         sb.append(", ").append(collegeid);
-        sb.append(", ").append(salt);
         sb.append(", ").append(pic);
         sb.append(", ").append(bloodtype);
         sb.append(", ").append(emergencynumber);

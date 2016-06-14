@@ -37,7 +37,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ride extends TableImpl<RideRecord> {
 
-    private static final long serialVersionUID = -1642608826;
+    private static final long serialVersionUID = 745488872;
 
     /**
      * The reference instance of <code>Gara.Ride</code>
@@ -105,7 +105,17 @@ public class Ride extends TableImpl<RideRecord> {
     /**
      * The column <code>Gara.Ride.accepted</code>.
      */
-    public final TableField<RideRecord, Boolean> ACCEPTED = createField("accepted", org.jooq.impl.SQLDataType.BIT.defaultValue(org.jooq.impl.DSL.field("b'0'", org.jooq.impl.SQLDataType.BIT)), this, "");
+    public final TableField<RideRecord, Integer> ACCEPTED = createField("accepted", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.field("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+
+    /**
+     * The column <code>Gara.Ride.driverCheck</code>.
+     */
+    public final TableField<RideRecord, Integer> DRIVERCHECK = createField("driverCheck", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
+    /**
+     * The column <code>Gara.Ride.passangerCheck</code>.
+     */
+    public final TableField<RideRecord, Integer> PASSANGERCHECK = createField("passangerCheck", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
      * Create a <code>Gara.Ride</code> table reference

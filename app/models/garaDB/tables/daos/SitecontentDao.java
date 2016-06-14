@@ -113,11 +113,4 @@ public class SitecontentDao extends DAOImpl<SitecontentRecord, models.garaDB.tab
     public List<models.garaDB.tables.pojos.Sitecontent> fetchByPic(String... values) {
         return fetch(Sitecontent.SITECONTENT.PIC, values);
     }
-
-    /**
-     * Fetch records that have <code>name IN (values)</code>
-     */
-    public List<models.garaDB.tables.pojos.Sitecontent> fetchByName(String... values) {
-        return fetch(Sitecontent.SITECONTENT.NAME, values);
-    }
 }

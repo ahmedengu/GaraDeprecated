@@ -37,7 +37,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Car extends TableImpl<CarRecord> {
 
-    private static final long serialVersionUID = -413193705;
+    private static final long serialVersionUID = -1521504842;
 
     /**
      * The reference instance of <code>Gara.Car</code>
@@ -110,7 +110,7 @@ public class Car extends TableImpl<CarRecord> {
     /**
      * The column <code>Gara.Car.licenseExpireDate</code>.
      */
-    public final TableField<CarRecord, Date> LICENSEEXPIREDATE = createField("licenseExpireDate", org.jooq.impl.SQLDataType.DATE.nullable(false), this, "");
+    public final TableField<CarRecord, Date> LICENSEEXPIREDATE = createField("licenseExpireDate", org.jooq.impl.SQLDataType.DATE, this, "");
 
     /**
      * The column <code>Gara.Car.DistLongitude</code>.
@@ -130,7 +130,7 @@ public class Car extends TableImpl<CarRecord> {
     /**
      * The column <code>Gara.Car.state</code>.
      */
-    public final TableField<CarRecord, Boolean> STATE = createField("state", org.jooq.impl.SQLDataType.BIT.defaultValue(org.jooq.impl.DSL.field("b'0'", org.jooq.impl.SQLDataType.BIT)), this, "");
+    public final TableField<CarRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.field("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
      * Create a <code>Gara.Car</code> table reference

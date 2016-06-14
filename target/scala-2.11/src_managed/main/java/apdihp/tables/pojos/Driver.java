@@ -33,7 +33,7 @@ import javax.validation.constraints.Size;
 @Table(name = "Driver", schema = "Gara")
 public class Driver implements Serializable {
 
-    private static final long serialVersionUID = -647332062;
+    private static final long serialVersionUID = 607843;
 
     private Integer id;
     private Integer memberid;
@@ -124,8 +124,7 @@ public class Driver implements Serializable {
         this.identycardpic = identycardpic;
     }
 
-    @Column(name = "licenseExpireDate", nullable = false)
-    @NotNull
+    @Column(name = "licenseExpireDate")
     public Date getLicenseexpiredate() {
         return this.licenseexpiredate;
     }

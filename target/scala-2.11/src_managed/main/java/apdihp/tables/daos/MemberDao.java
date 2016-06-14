@@ -136,13 +136,6 @@ public class MemberDao extends DAOImpl<MemberRecord, apdihp.tables.pojos.Member,
     }
 
     /**
-     * Fetch records that have <code>salt IN (values)</code>
-     */
-    public List<apdihp.tables.pojos.Member> fetchBySalt(String... values) {
-        return fetch(Member.MEMBER.SALT, values);
-    }
-
-    /**
      * Fetch records that have <code>pic IN (values)</code>
      */
     public List<apdihp.tables.pojos.Member> fetchByPic(String... values) {

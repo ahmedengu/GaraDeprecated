@@ -33,7 +33,7 @@ import javax.validation.constraints.Size;
 @Table(name = "SiteContent", schema = "Gara")
 public class Sitecontent implements Serializable {
 
-    private static final long serialVersionUID = -2076569341;
+    private static final long serialVersionUID = -637491824;
 
     private Integer   id;
     private Timestamp timestamp;
@@ -43,7 +43,6 @@ public class Sitecontent implements Serializable {
     private String    description;
     private String    keywords;
     private String    pic;
-    private String    name;
 
     public Sitecontent() {}
 
@@ -56,7 +55,6 @@ public class Sitecontent implements Serializable {
         this.description = value.description;
         this.keywords = value.keywords;
         this.pic = value.pic;
-        this.name = value.name;
     }
 
     public Sitecontent(
@@ -67,8 +65,7 @@ public class Sitecontent implements Serializable {
         String    link,
         String    description,
         String    keywords,
-        String    pic,
-        String    name
+        String    pic
     ) {
         this.id = id;
         this.timestamp = timestamp;
@@ -78,7 +75,6 @@ public class Sitecontent implements Serializable {
         this.description = description;
         this.keywords = keywords;
         this.pic = pic;
-        this.name = name;
     }
 
     @Id
@@ -162,16 +158,6 @@ public class Sitecontent implements Serializable {
         this.pic = pic;
     }
 
-    @Column(name = "name", length = 65535)
-    @Size(max = 65535)
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Sitecontent (");
@@ -184,7 +170,6 @@ public class Sitecontent implements Serializable {
         sb.append(", ").append(description);
         sb.append(", ").append(keywords);
         sb.append(", ").append(pic);
-        sb.append(", ").append(name);
 
         sb.append(")");
         return sb.toString();

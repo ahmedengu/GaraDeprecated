@@ -1,0 +1,46 @@
+@(title: String,description: String,keywords: String,dispatchList: List[Map[String,Object]],sourcelatitude: String,sourcelongitude: String,destinationlatitude: String,destinationlongitude: String)
+
+@memberArea(title,description,keywords) {
+
+    <div>
+        <section class="content-block team-1 team-1-2" id="content-team">
+            <div class="container">
+                <div class="underlined-title animated" data-animation-1="" data-animation-trigger-1="hover" data-animation-type-1="bounce">
+                    <h1>Drivers&nbsp;</h1>
+                    <hr>
+                </div>
+                <div class="row">
+
+
+
+                        @for(dispatch<- dispatchList){
+                            <div class="col-md-3 col-sm-6 team-member-wrap animated" data-animation-1="" data-animation-trigger-1="hover" data-animation-type-1="pulse">
+                            <div class="team-member">
+                                @if(dispatch.get("pic")!=null){<img src="@dispatch.get("pic").toString" alt="" class="img-responsive" alt="Member Image" width="50%" height="50%">}else{
+                                    <img src="@routes.Assets.at("images/team/2.jpg")" alt="" class="img-responsive" alt="Member Image" width="50%" height="50%">
+                                }
+                                <div class="team-details">
+                                    <h4 class="member-name">@dispatch.get("name").toString
+                                    </h4>
+                                    <p class="position">phone number:&nbsp; @dispatch.get("phoneNumber")</p>
+                                    <form action="@routes.Application.orderPost()" method="post">
+                                        <input type="text" name="carid" hidden value="@dispatch.get("carid").toString">
+                                        <input type="text" name="sourcelatitude" hidden value="@sourcelatitude">
+                                        <input type="text" name="sourcelongitude" hidden value="@sourcelongitude">
+                                        <input type="text" name="destinationlatitude" hidden value="@destinationlatitude">
+                                        <input type="text" name="destinationlongitude" hidden value="@destinationlongitude">
+
+                                        <input type="submit" class="btn btn-primary btn-block bg-marina" value="Select">
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                        }
+
+                </div>
+                    <!-- /.row -->
+            </div>
+                <!-- /.container -->
+        </section>
+    </div>
+}
