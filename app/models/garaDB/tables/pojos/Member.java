@@ -5,6 +5,8 @@ package models.garaDB.tables.pojos;
 
 
 import models.RESTHelper;
+import org.springframework.format.annotation.DateTimeFormat;
+import play.data.format.Formats;
 import play.data.validation.ValidationError;
 
 import java.io.Serializable;
@@ -255,6 +257,7 @@ public class Member implements Serializable {
     }
 
     @Column(name = "birthDate")
+    @DateTimeFormat
     public Timestamp getBirthdate() {
         return this.birthdate;
     }

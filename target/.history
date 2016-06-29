@@ -104,3 +104,4 @@ jooq:codegen
 dist
 liquibaseUpdate
 jooq:codegen
+dist

@@ -90,7 +90,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="models.garaDB.tables.pojos.University#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:Integer,name:String,cityid:Integer,longitude:Double,latitude:Double,pic:String,url:String,emailformat:String,pagename:String,pagecontent:String,pagedescription:String,pagekeywords:String,pagesubdomain:String,contactpersonemail:String,contactpersonpassword:String,parkingcost:Integer):models.garaDB.tables.pojos.University"></a>
+      <a id="&lt;init&gt;(id:Integer,name:String,cityid:Integer,longitude:Double,latitude:Double,pic:String,url:String,emailformat:String,pagename:String,pagecontent:String,pagedescription:String,pagekeywords:String,pagesubdomain:String,contactpersonemail:String,contactpersonpassword:String,parkingcost:Integer,timestamp:java.sql.Timestamp):models.garaDB.tables.pojos.University"></a>
       <a id="&lt;init&gt;:University"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,10 +98,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">University</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="name">name: <span class="extype" name="java.lang.String">String</span></span>, <span name="cityid">cityid: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="longitude">longitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="latitude">latitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="pic">pic: <span class="extype" name="java.lang.String">String</span></span>, <span name="url">url: <span class="extype" name="java.lang.String">String</span></span>, <span name="emailformat">emailformat: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagename">pagename: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagecontent">pagecontent: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagedescription">pagedescription: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagekeywords">pagekeywords: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagesubdomain">pagesubdomain: <span class="extype" name="java.lang.String">String</span></span>, <span name="contactpersonemail">contactpersonemail: <span class="extype" name="java.lang.String">String</span></span>, <span name="contactpersonpassword">contactpersonpassword: <span class="extype" name="java.lang.String">String</span></span>, <span name="parkingcost">parkingcost: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
+        <span class="name">University</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="name">name: <span class="extype" name="java.lang.String">String</span></span>, <span name="cityid">cityid: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="longitude">longitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="latitude">latitude: <span class="extype" name="java.lang.Double">Double</span></span>, <span name="pic">pic: <span class="extype" name="java.lang.String">String</span></span>, <span name="url">url: <span class="extype" name="java.lang.String">String</span></span>, <span name="emailformat">emailformat: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagename">pagename: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagecontent">pagecontent: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagedescription">pagedescription: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagekeywords">pagekeywords: <span class="extype" name="java.lang.String">String</span></span>, <span name="pagesubdomain">pagesubdomain: <span class="extype" name="java.lang.String">String</span></span>, <span name="contactpersonemail">contactpersonemail: <span class="extype" name="java.lang.String">String</span></span>, <span name="contactpersonpassword">contactpersonpassword: <span class="extype" name="java.lang.String">String</span></span>, <span name="parkingcost">parkingcost: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="timestamp">timestamp: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#models.garaDB.tables.pojos.University@&lt;init&gt;(id:Integer,name:String,cityid:Integer,longitude:Double,latitude:Double,pic:String,url:String,emailformat:String,pagename:String,pagecontent:String,pagedescription:String,pagekeywords:String,pagesubdomain:String,contactpersonemail:String,contactpersonpassword:String,parkingcost:Integer):models.garaDB.tables.pojos.University" title="Permalink" target="_top">
+      <a href="../../../../index.html#models.garaDB.tables.pojos.University@&lt;init&gt;(id:Integer,name:String,cityid:Integer,longitude:Double,latitude:Double,pic:String,url:String,emailformat:String,pagename:String,pagecontent:String,pagedescription:String,pagekeywords:String,pagesubdomain:String,contactpersonemail:String,contactpersonpassword:String,parkingcost:Integer,timestamp:java.sql.Timestamp):models.garaDB.tables.pojos.University" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -569,6 +569,23 @@
       </a>
     </span>
       
+    </li><li name="models.garaDB.tables.pojos.University#getTimestamp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getTimestamp():java.sql.Timestamp"></a>
+      <a id="getTimestamp():Timestamp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTimestamp</span><span class="params">()</span><span class="result">: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#models.garaDB.tables.pojos.University@getTimestamp():java.sql.Timestamp" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="models.garaDB.tables.pojos.University#getUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getUrl():String"></a>
       <a id="getUrl():String"></a>
@@ -922,6 +939,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#models.garaDB.tables.pojos.University@setPic(pic:String):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="models.garaDB.tables.pojos.University#setTimestamp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setTimestamp(timestamp:java.sql.Timestamp):Unit"></a>
+      <a id="setTimestamp(Timestamp):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTimestamp</span><span class="params">(<span name="timestamp">timestamp: <span class="extype" name="java.sql.Timestamp">Timestamp</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#models.garaDB.tables.pojos.University@setTimestamp(timestamp:java.sql.Timestamp):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
