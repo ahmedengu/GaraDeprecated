@@ -28,10 +28,10 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "DATABASECHANGELOGLOCK", schema = "Gara")
+@Table(name = "DATABASECHANGELOGLOCK", schema = "gara")
 public class Databasechangeloglock implements Serializable {
 
-    private static final long serialVersionUID = -2045868135;
+    private static final long serialVersionUID = -1094999175;
 
     private Integer   id;
     private Boolean   locked;
@@ -60,7 +60,7 @@ public class Databasechangeloglock implements Serializable {
     }
 
     @Id
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }

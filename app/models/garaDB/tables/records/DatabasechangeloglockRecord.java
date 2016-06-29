@@ -35,36 +35,36 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "DATABASECHANGELOGLOCK", schema = "Gara")
+@Table(name = "DATABASECHANGELOGLOCK", schema = "gara")
 public class DatabasechangeloglockRecord extends UpdatableRecordImpl<DatabasechangeloglockRecord> implements Record4<Integer, Boolean, Timestamp, String> {
 
-    private static final long serialVersionUID = -962465284;
+    private static final long serialVersionUID = -1108774500;
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOGLOCK.ID</code>.
+     * Setter for <code>gara.DATABASECHANGELOGLOCK.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOGLOCK.ID</code>.
+     * Getter for <code>gara.DATABASECHANGELOGLOCK.ID</code>.
      */
     @Id
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOGLOCK.LOCKED</code>.
+     * Setter for <code>gara.DATABASECHANGELOGLOCK.LOCKED</code>.
      */
     public void setLocked(Boolean value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOGLOCK.LOCKED</code>.
+     * Getter for <code>gara.DATABASECHANGELOGLOCK.LOCKED</code>.
      */
     @Column(name = "LOCKED", nullable = false, precision = 1)
     @NotNull
@@ -73,14 +73,14 @@ public class DatabasechangeloglockRecord extends UpdatableRecordImpl<Databasecha
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOGLOCK.LOCKGRANTED</code>.
+     * Setter for <code>gara.DATABASECHANGELOGLOCK.LOCKGRANTED</code>.
      */
     public void setLockgranted(Timestamp value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOGLOCK.LOCKGRANTED</code>.
+     * Getter for <code>gara.DATABASECHANGELOGLOCK.LOCKGRANTED</code>.
      */
     @Column(name = "LOCKGRANTED")
     public Timestamp getLockgranted() {
@@ -88,14 +88,14 @@ public class DatabasechangeloglockRecord extends UpdatableRecordImpl<Databasecha
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOGLOCK.LOCKEDBY</code>.
+     * Setter for <code>gara.DATABASECHANGELOGLOCK.LOCKEDBY</code>.
      */
     public void setLockedby(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOGLOCK.LOCKEDBY</code>.
+     * Getter for <code>gara.DATABASECHANGELOGLOCK.LOCKEDBY</code>.
      */
     @Column(name = "LOCKEDBY", length = 255)
     @Size(max = 255)

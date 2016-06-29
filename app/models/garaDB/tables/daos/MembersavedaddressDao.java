@@ -7,6 +7,7 @@ package models.garaDB.tables.daos;
 import models.garaDB.tables.Membersavedaddress;
 import models.garaDB.tables.records.MembersavedaddressRecord;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.annotation.Generated;
@@ -97,5 +98,12 @@ public class MembersavedaddressDao extends DAOImpl<MembersavedaddressRecord, mod
      */
     public List<models.garaDB.tables.pojos.Membersavedaddress> fetchByLongitude(Double... values) {
         return fetch(Membersavedaddress.MEMBERSAVEDADDRESS.LONGITUDE, values);
+    }
+
+    /**
+     * Fetch records that have <code>TIMESTAMP IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Membersavedaddress> fetchByTimestamp(Timestamp... values) {
+        return fetch(Membersavedaddress.MEMBERSAVEDADDRESS.TIMESTAMP, values);
     }
 }

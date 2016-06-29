@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "SiteOption", schema = "Gara")
+@Table(name = "SiteOption", schema = "gara")
 public class SiteoptionRecord extends UpdatableRecordImpl<SiteoptionRecord> implements Record3<Integer, String, String> {
 
-    private static final long serialVersionUID = 1048419781;
+    private static final long serialVersionUID = 857037157;
 
     /**
-     * Setter for <code>Gara.SiteOption.ID</code>.
+     * Setter for <code>gara.SiteOption.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteOption.ID</code>.
+     * Getter for <code>gara.SiteOption.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.SiteOption.name</code>.
+     * Setter for <code>gara.SiteOption.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteOption.name</code>.
+     * Getter for <code>gara.SiteOption.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull
@@ -75,14 +75,14 @@ public class SiteoptionRecord extends UpdatableRecordImpl<SiteoptionRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.SiteOption.value</code>.
+     * Setter for <code>gara.SiteOption.value</code>.
      */
     public void setValue(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteOption.value</code>.
+     * Getter for <code>gara.SiteOption.value</code>.
      */
     @Column(name = "value", nullable = false, length = 65535)
     @NotNull

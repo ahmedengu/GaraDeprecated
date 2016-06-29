@@ -9,6 +9,7 @@ import models.garaDB.Keys;
 import models.garaDB.tables.records.CarRecord;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 
@@ -37,10 +38,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Car extends TableImpl<CarRecord> {
 
-    private static final long serialVersionUID = -1521504842;
+    private static final long serialVersionUID = 1882820147;
 
     /**
-     * The reference instance of <code>Gara.Car</code>
+     * The reference instance of <code>gara.Car</code>
      */
     public static final Car CAR = new Car();
 
@@ -53,94 +54,99 @@ public class Car extends TableImpl<CarRecord> {
     }
 
     /**
-     * The column <code>Gara.Car.ID</code>.
+     * The column <code>gara.Car.ID</code>.
      */
     public final TableField<CarRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Car.driverID</code>.
+     * The column <code>gara.Car.driverID</code>.
      */
     public final TableField<CarRecord, Integer> DRIVERID = createField("driverID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Car.plateNumber</code>.
+     * The column <code>gara.Car.plateNumber</code>.
      */
     public final TableField<CarRecord, String> PLATENUMBER = createField("plateNumber", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Car.platePic</code>.
+     * The column <code>gara.Car.platePic</code>.
      */
     public final TableField<CarRecord, String> PLATEPIC = createField("platePic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Car.carModelID</code>.
+     * The column <code>gara.Car.carModelID</code>.
      */
     public final TableField<CarRecord, Integer> CARMODELID = createField("carModelID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Car.frontPic</code>.
+     * The column <code>gara.Car.frontPic</code>.
      */
     public final TableField<CarRecord, String> FRONTPIC = createField("frontPic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Car.backPic</code>.
+     * The column <code>gara.Car.backPic</code>.
      */
     public final TableField<CarRecord, String> BACKPIC = createField("backPic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Car.sidePic</code>.
+     * The column <code>gara.Car.sidePic</code>.
      */
     public final TableField<CarRecord, String> SIDEPIC = createField("sidePic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Car.insidePic</code>.
+     * The column <code>gara.Car.insidePic</code>.
      */
     public final TableField<CarRecord, String> INSIDEPIC = createField("insidePic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Car.licenseNumber</code>.
+     * The column <code>gara.Car.licenseNumber</code>.
      */
     public final TableField<CarRecord, String> LICENSENUMBER = createField("licenseNumber", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Car.licensePic</code>.
+     * The column <code>gara.Car.licensePic</code>.
      */
     public final TableField<CarRecord, String> LICENSEPIC = createField("licensePic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Car.licenseExpireDate</code>.
+     * The column <code>gara.Car.licenseExpireDate</code>.
      */
     public final TableField<CarRecord, Date> LICENSEEXPIREDATE = createField("licenseExpireDate", org.jooq.impl.SQLDataType.DATE, this, "");
 
     /**
-     * The column <code>Gara.Car.DistLongitude</code>.
+     * The column <code>gara.Car.DistLongitude</code>.
      */
     public final TableField<CarRecord, Double> DISTLONGITUDE = createField("DistLongitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.Car.DistLatitude</code>.
+     * The column <code>gara.Car.DistLatitude</code>.
      */
     public final TableField<CarRecord, Double> DISTLATITUDE = createField("DistLatitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.Car.availableSeats</code>.
+     * The column <code>gara.Car.availableSeats</code>.
      */
     public final TableField<CarRecord, Integer> AVAILABLESEATS = createField("availableSeats", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.Car.state</code>.
+     * The column <code>gara.Car.state</code>.
      */
     public final TableField<CarRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.field("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * Create a <code>Gara.Car</code> table reference
+     * The column <code>gara.Car.TIMESTAMP</code>.
+     */
+    public final TableField<CarRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
+    /**
+     * Create a <code>gara.Car</code> table reference
      */
     public Car() {
         this("Car", null);
     }
 
     /**
-     * Create an aliased <code>Gara.Car</code> table reference
+     * Create an aliased <code>gara.Car</code> table reference
      */
     public Car(String alias) {
         this(alias, CAR);

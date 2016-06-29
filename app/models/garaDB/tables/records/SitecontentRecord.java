@@ -37,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "SiteContent", schema = "Gara")
+@Table(name = "SiteContent", schema = "gara")
 public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> implements Record8<Integer, Timestamp, String, String, String, String, String, String> {
 
-    private static final long serialVersionUID = -2055819592;
+    private static final long serialVersionUID = -826643944;
 
     /**
-     * Setter for <code>Gara.SiteContent.ID</code>.
+     * Setter for <code>gara.SiteContent.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.ID</code>.
+     * Getter for <code>gara.SiteContent.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.SiteContent.TIMESTAMP</code>.
+     * Setter for <code>gara.SiteContent.TIMESTAMP</code>.
      */
     public void setTimestamp(Timestamp value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.TIMESTAMP</code>.
+     * Getter for <code>gara.SiteContent.TIMESTAMP</code>.
      */
     @Column(name = "TIMESTAMP", nullable = false)
     public Timestamp getTimestamp() {
@@ -75,14 +75,14 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     }
 
     /**
-     * Setter for <code>Gara.SiteContent.title</code>.
+     * Setter for <code>gara.SiteContent.title</code>.
      */
     public void setTitle(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.title</code>.
+     * Getter for <code>gara.SiteContent.title</code>.
      */
     @Column(name = "title", length = 65535)
     @Size(max = 65535)
@@ -91,14 +91,14 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     }
 
     /**
-     * Setter for <code>Gara.SiteContent.body</code>.
+     * Setter for <code>gara.SiteContent.body</code>.
      */
     public void setBody(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.body</code>.
+     * Getter for <code>gara.SiteContent.body</code>.
      */
     @Column(name = "body", length = 65535)
     @Size(max = 65535)
@@ -107,14 +107,14 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     }
 
     /**
-     * Setter for <code>Gara.SiteContent.link</code>.
+     * Setter for <code>gara.SiteContent.link</code>.
      */
     public void setLink(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.link</code>.
+     * Getter for <code>gara.SiteContent.link</code>.
      */
     @Column(name = "link", length = 65535)
     @Size(max = 65535)
@@ -123,14 +123,14 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     }
 
     /**
-     * Setter for <code>Gara.SiteContent.description</code>.
+     * Setter for <code>gara.SiteContent.description</code>.
      */
     public void setDescription(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.description</code>.
+     * Getter for <code>gara.SiteContent.description</code>.
      */
     @Column(name = "description", length = 65535)
     @Size(max = 65535)
@@ -139,14 +139,14 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     }
 
     /**
-     * Setter for <code>Gara.SiteContent.keywords</code>.
+     * Setter for <code>gara.SiteContent.keywords</code>.
      */
     public void setKeywords(String value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.keywords</code>.
+     * Getter for <code>gara.SiteContent.keywords</code>.
      */
     @Column(name = "keywords", length = 65535)
     @Size(max = 65535)
@@ -155,14 +155,14 @@ public class SitecontentRecord extends UpdatableRecordImpl<SitecontentRecord> im
     }
 
     /**
-     * Setter for <code>Gara.SiteContent.pic</code>.
+     * Setter for <code>gara.SiteContent.pic</code>.
      */
     public void setPic(String value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContent.pic</code>.
+     * Getter for <code>gara.SiteContent.pic</code>.
      */
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)

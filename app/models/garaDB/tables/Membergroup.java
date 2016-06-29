@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Membergroup extends TableImpl<MembergroupRecord> {
 
-    private static final long serialVersionUID = 1402440506;
+    private static final long serialVersionUID = 1520814746;
 
     /**
-     * The reference instance of <code>Gara.MemberGroup</code>
+     * The reference instance of <code>gara.MemberGroup</code>
      */
     public static final Membergroup MEMBERGROUP = new Membergroup();
 
@@ -51,34 +51,34 @@ public class Membergroup extends TableImpl<MembergroupRecord> {
     }
 
     /**
-     * The column <code>Gara.MemberGroup.ID</code>.
+     * The column <code>gara.MemberGroup.ID</code>.
      */
     public final TableField<MembergroupRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberGroup.name</code>.
+     * The column <code>gara.MemberGroup.name</code>.
      */
     public final TableField<MembergroupRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberGroup.description</code>.
+     * The column <code>gara.MemberGroup.description</code>.
      */
     public final TableField<MembergroupRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.MemberGroup.permissions</code>.
+     * The column <code>gara.MemberGroup.permissions</code>.
      */
     public final TableField<MembergroupRecord, String> PERMISSIONS = createField("permissions", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * Create a <code>Gara.MemberGroup</code> table reference
+     * Create a <code>gara.MemberGroup</code> table reference
      */
     public Membergroup() {
         this("MemberGroup", null);
     }
 
     /**
-     * Create an aliased <code>Gara.MemberGroup</code> table reference
+     * Create an aliased <code>gara.MemberGroup</code> table reference
      */
     public Membergroup(String alias) {
         this(alias, MEMBERGROUP);

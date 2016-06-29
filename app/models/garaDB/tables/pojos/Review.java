@@ -5,6 +5,7 @@ package models.garaDB.tables.pojos;
 
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -29,16 +30,17 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Review", schema = "Gara")
+@Table(name = "Review", schema = "gara")
 public class Review implements Serializable {
 
-    private static final long serialVersionUID = -682694105;
+    private static final long serialVersionUID = -140567083;
 
-    private Integer id;
-    private Integer reviewermemberid;
-    private Integer reviewedmemberid;
-    private Integer rating;
-    private String  comment;
+    private Integer   id;
+    private Integer   reviewermemberid;
+    private Integer   reviewedmemberid;
+    private Integer   rating;
+    private String    comment;
+    private Timestamp timestamp;
 
     public Review() {}
 
@@ -48,25 +50,28 @@ public class Review implements Serializable {
         this.reviewedmemberid = value.reviewedmemberid;
         this.rating = value.rating;
         this.comment = value.comment;
+        this.timestamp = value.timestamp;
     }
 
     public Review(
-        Integer id,
-        Integer reviewermemberid,
-        Integer reviewedmemberid,
-        Integer rating,
-        String  comment
+        Integer   id,
+        Integer   reviewermemberid,
+        Integer   reviewedmemberid,
+        Integer   rating,
+        String    comment,
+        Timestamp timestamp
     ) {
         this.id = id;
         this.reviewermemberid = reviewermemberid;
         this.reviewedmemberid = reviewedmemberid;
         this.rating = rating;
         this.comment = comment;
+        this.timestamp = timestamp;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -115,6 +120,15 @@ public class Review implements Serializable {
         this.comment = comment;
     }
 
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return this.timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Review (");
@@ -124,6 +138,7 @@ public class Review implements Serializable {
         sb.append(", ").append(reviewedmemberid);
         sb.append(", ").append(rating);
         sb.append(", ").append(comment);
+        sb.append(", ").append(timestamp);
 
         sb.append(")");
         return sb.toString();

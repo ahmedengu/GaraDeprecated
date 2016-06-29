@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "MemberGroup", schema = "Gara")
+@Table(name = "MemberGroup", schema = "gara")
 public class MembergroupRecord extends UpdatableRecordImpl<MembergroupRecord> implements Record4<Integer, String, String, String> {
 
-    private static final long serialVersionUID = 1916550504;
+    private static final long serialVersionUID = 1763557576;
 
     /**
-     * Setter for <code>Gara.MemberGroup.ID</code>.
+     * Setter for <code>gara.MemberGroup.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberGroup.ID</code>.
+     * Getter for <code>gara.MemberGroup.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.MemberGroup.name</code>.
+     * Setter for <code>gara.MemberGroup.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberGroup.name</code>.
+     * Getter for <code>gara.MemberGroup.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull
@@ -75,14 +75,14 @@ public class MembergroupRecord extends UpdatableRecordImpl<MembergroupRecord> im
     }
 
     /**
-     * Setter for <code>Gara.MemberGroup.description</code>.
+     * Setter for <code>gara.MemberGroup.description</code>.
      */
     public void setDescription(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberGroup.description</code>.
+     * Getter for <code>gara.MemberGroup.description</code>.
      */
     @Column(name = "description", length = 65535)
     @Size(max = 65535)
@@ -91,14 +91,14 @@ public class MembergroupRecord extends UpdatableRecordImpl<MembergroupRecord> im
     }
 
     /**
-     * Setter for <code>Gara.MemberGroup.permissions</code>.
+     * Setter for <code>gara.MemberGroup.permissions</code>.
      */
     public void setPermissions(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberGroup.permissions</code>.
+     * Getter for <code>gara.MemberGroup.permissions</code>.
      */
     @Column(name = "permissions", length = 65535)
     @Size(max = 65535)

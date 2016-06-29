@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "SiteContentGroup", schema = "Gara")
+@Table(name = "SiteContentGroup", schema = "gara")
 public class SitecontentgroupRecord extends UpdatableRecordImpl<SitecontentgroupRecord> implements Record2<Integer, String> {
 
-    private static final long serialVersionUID = -1989155873;
+    private static final long serialVersionUID = 1917150079;
 
     /**
-     * Setter for <code>Gara.SiteContentGroup.ID</code>.
+     * Setter for <code>gara.SiteContentGroup.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContentGroup.ID</code>.
+     * Getter for <code>gara.SiteContentGroup.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.SiteContentGroup.name</code>.
+     * Setter for <code>gara.SiteContentGroup.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.SiteContentGroup.name</code>.
+     * Getter for <code>gara.SiteContentGroup.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull

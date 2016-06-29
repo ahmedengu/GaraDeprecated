@@ -29,10 +29,10 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "College", schema = "Gara")
+@Table(name = "College", schema = "gara")
 public class College implements Serializable {
 
-    private static final long serialVersionUID = -711446977;
+    private static final long serialVersionUID = -1978027489;
 
     private Integer id;
     private Integer universityid;
@@ -58,7 +58,7 @@ public class College implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }

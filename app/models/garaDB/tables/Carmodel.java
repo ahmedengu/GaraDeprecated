@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Carmodel extends TableImpl<CarmodelRecord> {
 
-    private static final long serialVersionUID = 678489657;
+    private static final long serialVersionUID = -96410151;
 
     /**
-     * The reference instance of <code>Gara.CarModel</code>
+     * The reference instance of <code>gara.CarModel</code>
      */
     public static final Carmodel CARMODEL = new Carmodel();
 
@@ -52,44 +52,44 @@ public class Carmodel extends TableImpl<CarmodelRecord> {
     }
 
     /**
-     * The column <code>Gara.CarModel.ID</code>.
+     * The column <code>gara.CarModel.ID</code>.
      */
     public final TableField<CarmodelRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.CarModel.name</code>.
+     * The column <code>gara.CarModel.name</code>.
      */
     public final TableField<CarmodelRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.CarModel.numberOfSeats</code>.
+     * The column <code>gara.CarModel.numberOfSeats</code>.
      */
     public final TableField<CarmodelRecord, Integer> NUMBEROFSEATS = createField("numberOfSeats", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.CarModel.carManufactureID</code>.
+     * The column <code>gara.CarModel.carManufactureID</code>.
      */
     public final TableField<CarmodelRecord, Integer> CARMANUFACTUREID = createField("carManufactureID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.CarModel.pic</code>.
+     * The column <code>gara.CarModel.pic</code>.
      */
     public final TableField<CarmodelRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.CarModel.gasConsumption</code>.
+     * The column <code>gara.CarModel.gasConsumption</code>.
      */
     public final TableField<CarmodelRecord, Integer> GASCONSUMPTION = createField("gasConsumption", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * Create a <code>Gara.CarModel</code> table reference
+     * Create a <code>gara.CarModel</code> table reference
      */
     public Carmodel() {
         this("CarModel", null);
     }
 
     /**
-     * Create an aliased <code>Gara.CarModel</code> table reference
+     * Create an aliased <code>gara.CarModel</code> table reference
      */
     public Carmodel(String alias) {
         this(alias, CARMODEL);

@@ -8,6 +8,7 @@ import models.garaDB.Gara;
 import models.garaDB.Keys;
 import models.garaDB.tables.records.MembersavedaddressRecord;
 
+import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Membersavedaddress extends TableImpl<MembersavedaddressRecord> {
 
-    private static final long serialVersionUID = -259804732;
+    private static final long serialVersionUID = -1905803231;
 
     /**
-     * The reference instance of <code>Gara.MemberSavedAddress</code>
+     * The reference instance of <code>gara.MemberSavedAddress</code>
      */
     public static final Membersavedaddress MEMBERSAVEDADDRESS = new Membersavedaddress();
 
@@ -52,44 +53,49 @@ public class Membersavedaddress extends TableImpl<MembersavedaddressRecord> {
     }
 
     /**
-     * The column <code>Gara.MemberSavedAddress.ID</code>.
+     * The column <code>gara.MemberSavedAddress.ID</code>.
      */
     public final TableField<MembersavedaddressRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberSavedAddress.memberID</code>.
+     * The column <code>gara.MemberSavedAddress.memberID</code>.
      */
     public final TableField<MembersavedaddressRecord, Integer> MEMBERID = createField("memberID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberSavedAddress.name</code>.
+     * The column <code>gara.MemberSavedAddress.name</code>.
      */
     public final TableField<MembersavedaddressRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberSavedAddress.address</code>.
+     * The column <code>gara.MemberSavedAddress.address</code>.
      */
     public final TableField<MembersavedaddressRecord, String> ADDRESS = createField("address", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.MemberSavedAddress.latitude</code>.
+     * The column <code>gara.MemberSavedAddress.latitude</code>.
      */
     public final TableField<MembersavedaddressRecord, Double> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.MemberSavedAddress.longitude</code>.
+     * The column <code>gara.MemberSavedAddress.longitude</code>.
      */
     public final TableField<MembersavedaddressRecord, Double> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * Create a <code>Gara.MemberSavedAddress</code> table reference
+     * The column <code>gara.MemberSavedAddress.TIMESTAMP</code>.
+     */
+    public final TableField<MembersavedaddressRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
+    /**
+     * Create a <code>gara.MemberSavedAddress</code> table reference
      */
     public Membersavedaddress() {
         this("MemberSavedAddress", null);
     }
 
     /**
-     * Create an aliased <code>Gara.MemberSavedAddress</code> table reference
+     * Create an aliased <code>gara.MemberSavedAddress</code> table reference
      */
     public Membersavedaddress(String alias) {
         this(alias, MEMBERSAVEDADDRESS);

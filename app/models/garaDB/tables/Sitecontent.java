@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Sitecontent extends TableImpl<SitecontentRecord> {
 
-    private static final long serialVersionUID = 1894526535;
+    private static final long serialVersionUID = -1909690969;
 
     /**
-     * The reference instance of <code>Gara.SiteContent</code>
+     * The reference instance of <code>gara.SiteContent</code>
      */
     public static final Sitecontent SITECONTENT = new Sitecontent();
 
@@ -52,54 +52,54 @@ public class Sitecontent extends TableImpl<SitecontentRecord> {
     }
 
     /**
-     * The column <code>Gara.SiteContent.ID</code>.
+     * The column <code>gara.SiteContent.ID</code>.
      */
     public final TableField<SitecontentRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.SiteContent.TIMESTAMP</code>.
+     * The column <code>gara.SiteContent.TIMESTAMP</code>.
      */
     public final TableField<SitecontentRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>Gara.SiteContent.title</code>.
+     * The column <code>gara.SiteContent.title</code>.
      */
     public final TableField<SitecontentRecord, String> TITLE = createField("title", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.SiteContent.body</code>.
+     * The column <code>gara.SiteContent.body</code>.
      */
     public final TableField<SitecontentRecord, String> BODY = createField("body", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.SiteContent.link</code>.
+     * The column <code>gara.SiteContent.link</code>.
      */
     public final TableField<SitecontentRecord, String> LINK = createField("link", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.SiteContent.description</code>.
+     * The column <code>gara.SiteContent.description</code>.
      */
     public final TableField<SitecontentRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.SiteContent.keywords</code>.
+     * The column <code>gara.SiteContent.keywords</code>.
      */
     public final TableField<SitecontentRecord, String> KEYWORDS = createField("keywords", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.SiteContent.pic</code>.
+     * The column <code>gara.SiteContent.pic</code>.
      */
     public final TableField<SitecontentRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * Create a <code>Gara.SiteContent</code> table reference
+     * Create a <code>gara.SiteContent</code> table reference
      */
     public Sitecontent() {
         this("SiteContent", null);
     }
 
     /**
-     * Create an aliased <code>Gara.SiteContent</code> table reference
+     * Create an aliased <code>gara.SiteContent</code> table reference
      */
     public Sitecontent(String alias) {
         this(alias, SITECONTENT);

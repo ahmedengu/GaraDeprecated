@@ -30,10 +30,10 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "AccessToken", schema = "Gara")
+@Table(name = "AccessToken", schema = "gara")
 public class Accesstoken implements Serializable {
 
-    private static final long serialVersionUID = -1028871455;
+    private static final long serialVersionUID = -888727871;
 
     private Integer   id;
     private Integer   memberid;
@@ -75,7 +75,7 @@ public class Accesstoken implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }

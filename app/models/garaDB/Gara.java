@@ -51,120 +51,120 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Gara extends SchemaImpl {
 
-    private static final long serialVersionUID = -1012714021;
+    private static final long serialVersionUID = 1745359515;
 
     /**
-     * The reference instance of <code>Gara</code>
+     * The reference instance of <code>gara</code>
      */
     public static final Gara GARA = new Gara();
 
     /**
-     * The table <code>Gara.AccessToken</code>.
+     * The table <code>gara.AccessToken</code>.
      */
     public final Accesstoken ACCESSTOKEN = models.garaDB.tables.Accesstoken.ACCESSTOKEN;
 
     /**
-     * The table <code>Gara.Car</code>.
+     * The table <code>gara.Car</code>.
      */
     public final Car CAR = models.garaDB.tables.Car.CAR;
 
     /**
-     * The table <code>Gara.CarManufacture</code>.
+     * The table <code>gara.CarManufacture</code>.
      */
     public final Carmanufacture CARMANUFACTURE = models.garaDB.tables.Carmanufacture.CARMANUFACTURE;
 
     /**
-     * The table <code>Gara.CarModel</code>.
+     * The table <code>gara.CarModel</code>.
      */
     public final Carmodel CARMODEL = models.garaDB.tables.Carmodel.CARMODEL;
 
     /**
-     * The table <code>Gara.City</code>.
+     * The table <code>gara.City</code>.
      */
     public final City CITY = models.garaDB.tables.City.CITY;
 
     /**
-     * The table <code>Gara.College</code>.
+     * The table <code>gara.College</code>.
      */
     public final College COLLEGE = models.garaDB.tables.College.COLLEGE;
 
     /**
-     * The table <code>Gara.Country</code>.
+     * The table <code>gara.Country</code>.
      */
     public final Country COUNTRY = models.garaDB.tables.Country.COUNTRY;
 
     /**
-     * The table <code>Gara.DATABASECHANGELOG</code>.
+     * The table <code>gara.DATABASECHANGELOG</code>.
      */
     public final Databasechangelog DATABASECHANGELOG = models.garaDB.tables.Databasechangelog.DATABASECHANGELOG;
 
     /**
-     * The table <code>Gara.DATABASECHANGELOGLOCK</code>.
+     * The table <code>gara.DATABASECHANGELOGLOCK</code>.
      */
     public final Databasechangeloglock DATABASECHANGELOGLOCK = models.garaDB.tables.Databasechangeloglock.DATABASECHANGELOGLOCK;
 
     /**
-     * The table <code>Gara.Driver</code>.
+     * The table <code>gara.Driver</code>.
      */
     public final Driver DRIVER = models.garaDB.tables.Driver.DRIVER;
 
     /**
-     * The table <code>Gara.Member</code>.
+     * The table <code>gara.Member</code>.
      */
     public final Member MEMBER = models.garaDB.tables.Member.MEMBER;
 
     /**
-     * The table <code>Gara.MemberCard</code>.
+     * The table <code>gara.MemberCard</code>.
      */
     public final Membercard MEMBERCARD = models.garaDB.tables.Membercard.MEMBERCARD;
 
     /**
-     * The table <code>Gara.MemberGroup</code>.
+     * The table <code>gara.MemberGroup</code>.
      */
     public final Membergroup MEMBERGROUP = models.garaDB.tables.Membergroup.MEMBERGROUP;
 
     /**
-     * The table <code>Gara.MemberMessage</code>.
+     * The table <code>gara.MemberMessage</code>.
      */
     public final Membermessage MEMBERMESSAGE = models.garaDB.tables.Membermessage.MEMBERMESSAGE;
 
     /**
-     * The table <code>Gara.MemberSavedAddress</code>.
+     * The table <code>gara.MemberSavedAddress</code>.
      */
     public final Membersavedaddress MEMBERSAVEDADDRESS = models.garaDB.tables.Membersavedaddress.MEMBERSAVEDADDRESS;
 
     /**
-     * The table <code>Gara.Review</code>.
+     * The table <code>gara.Review</code>.
      */
     public final Review REVIEW = models.garaDB.tables.Review.REVIEW;
 
     /**
-     * The table <code>Gara.Ride</code>.
+     * The table <code>gara.Ride</code>.
      */
     public final Ride RIDE = models.garaDB.tables.Ride.RIDE;
 
     /**
-     * The table <code>Gara.SiteContent</code>.
+     * The table <code>gara.SiteContent</code>.
      */
     public final Sitecontent SITECONTENT = models.garaDB.tables.Sitecontent.SITECONTENT;
 
     /**
-     * The table <code>Gara.SiteContentGroup</code>.
+     * The table <code>gara.SiteContentGroup</code>.
      */
     public final Sitecontentgroup SITECONTENTGROUP = models.garaDB.tables.Sitecontentgroup.SITECONTENTGROUP;
 
     /**
-     * The table <code>Gara.SiteOption</code>.
+     * The table <code>gara.SiteOption</code>.
      */
     public final Siteoption SITEOPTION = models.garaDB.tables.Siteoption.SITEOPTION;
 
     /**
-     * The table <code>Gara.University</code>.
+     * The table <code>gara.University</code>.
      */
     public final University UNIVERSITY = models.garaDB.tables.University.UNIVERSITY;
 
     /**
-     * The table <code>Gara.UniversityPageContent</code>.
+     * The table <code>gara.UniversityPageContent</code>.
      */
     public final Universitypagecontent UNIVERSITYPAGECONTENT = models.garaDB.tables.Universitypagecontent.UNIVERSITYPAGECONTENT;
 
@@ -172,7 +172,7 @@ public class Gara extends SchemaImpl {
      * No further instances allowed
      */
     private Gara() {
-        super("Gara", null);
+        super("gara", null);
     }
 
 

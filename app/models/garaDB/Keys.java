@@ -56,7 +56,7 @@ import org.jooq.impl.AbstractKeys;
 
 
 /**
- * A class modelling foreign key relationships between tables of the <code>Gara</code> 
+ * A class modelling foreign key relationships between tables of the <code>gara</code> 
  * schema
  */
 @Generated(
@@ -133,7 +133,6 @@ public class Keys {
     public static final ForeignKey<CollegeRecord, UniversityRecord> FKCOLLEGE525618 = ForeignKeys0.FKCOLLEGE525618;
     public static final ForeignKey<DriverRecord, MemberRecord> FKDRIVER32250 = ForeignKeys0.FKDRIVER32250;
     public static final ForeignKey<MemberRecord, CollegeRecord> FKMEMBER175873 = ForeignKeys0.FKMEMBER175873;
-    public static final ForeignKey<MemberRecord, RideRecord> FKMEMBER419676 = ForeignKeys0.FKMEMBER419676;
     public static final ForeignKey<MemberRecord, MembergroupRecord> FKMEMBER861549 = ForeignKeys0.FKMEMBER861549;
     public static final ForeignKey<MemberRecord, UniversityRecord> FKMEMBER491900 = ForeignKeys0.FKMEMBER491900;
     public static final ForeignKey<MembercardRecord, MemberRecord> FKMEMBERCARD555539 = ForeignKeys0.FKMEMBERCARD555539;
@@ -143,6 +142,7 @@ public class Keys {
     public static final ForeignKey<ReviewRecord, MemberRecord> FKREVIEW627031 = ForeignKeys0.FKREVIEW627031;
     public static final ForeignKey<ReviewRecord, MemberRecord> FKREVIEW185272 = ForeignKeys0.FKREVIEW185272;
     public static final ForeignKey<RideRecord, CarRecord> FKRIDE47095 = ForeignKeys0.FKRIDE47095;
+    public static final ForeignKey<RideRecord, MemberRecord> FKRIDE175896 = ForeignKeys0.FKRIDE175896;
     public static final ForeignKey<UniversityRecord, CityRecord> FKUNIVERSITY759378 = ForeignKeys0.FKUNIVERSITY759378;
     public static final ForeignKey<UniversitypagecontentRecord, UniversityRecord> FKUNIVERSITY451983 = ForeignKeys0.FKUNIVERSITY451983;
 
@@ -207,7 +207,6 @@ public class Keys {
         public static final ForeignKey<CollegeRecord, UniversityRecord> FKCOLLEGE525618 = createForeignKey(models.garaDB.Keys.KEY_UNIVERSITY_PRIMARY, College.COLLEGE, "FKCollege525618", College.COLLEGE.UNIVERSITYID);
         public static final ForeignKey<DriverRecord, MemberRecord> FKDRIVER32250 = createForeignKey(models.garaDB.Keys.KEY_MEMBER_PRIMARY, Driver.DRIVER, "FKDriver32250", Driver.DRIVER.MEMBERID);
         public static final ForeignKey<MemberRecord, CollegeRecord> FKMEMBER175873 = createForeignKey(models.garaDB.Keys.KEY_COLLEGE_PRIMARY, Member.MEMBER, "FKMember175873", Member.MEMBER.COLLEGEID);
-        public static final ForeignKey<MemberRecord, RideRecord> FKMEMBER419676 = createForeignKey(models.garaDB.Keys.KEY_RIDE_PRIMARY, Member.MEMBER, "FKMember419676", Member.MEMBER.RIDEID);
         public static final ForeignKey<MemberRecord, MembergroupRecord> FKMEMBER861549 = createForeignKey(models.garaDB.Keys.KEY_MEMBERGROUP_PRIMARY, Member.MEMBER, "FKMember861549", Member.MEMBER.MEMBERGROUPID);
         public static final ForeignKey<MemberRecord, UniversityRecord> FKMEMBER491900 = createForeignKey(models.garaDB.Keys.KEY_UNIVERSITY_PRIMARY, Member.MEMBER, "FKMember491900", Member.MEMBER.UNIVERSITYID);
         public static final ForeignKey<MembercardRecord, MemberRecord> FKMEMBERCARD555539 = createForeignKey(models.garaDB.Keys.KEY_MEMBER_PRIMARY, Membercard.MEMBERCARD, "FKMemberCard555539", Membercard.MEMBERCARD.MEMBERID);
@@ -217,6 +216,7 @@ public class Keys {
         public static final ForeignKey<ReviewRecord, MemberRecord> FKREVIEW627031 = createForeignKey(models.garaDB.Keys.KEY_MEMBER_PRIMARY, Review.REVIEW, "FKReview627031", Review.REVIEW.REVIEWERMEMBERID);
         public static final ForeignKey<ReviewRecord, MemberRecord> FKREVIEW185272 = createForeignKey(models.garaDB.Keys.KEY_MEMBER_PRIMARY, Review.REVIEW, "FKReview185272", Review.REVIEW.REVIEWEDMEMBERID);
         public static final ForeignKey<RideRecord, CarRecord> FKRIDE47095 = createForeignKey(models.garaDB.Keys.KEY_CAR_PRIMARY, Ride.RIDE, "FKRide47095", Ride.RIDE.CARID);
+        public static final ForeignKey<RideRecord, MemberRecord> FKRIDE175896 = createForeignKey(models.garaDB.Keys.KEY_MEMBER_PRIMARY, Ride.RIDE, "FKRide175896", Ride.RIDE.MEMBERID);
         public static final ForeignKey<UniversityRecord, CityRecord> FKUNIVERSITY759378 = createForeignKey(models.garaDB.Keys.KEY_CITY_PRIMARY, University.UNIVERSITY, "FKUniversity759378", University.UNIVERSITY.CITYID);
         public static final ForeignKey<UniversitypagecontentRecord, UniversityRecord> FKUNIVERSITY451983 = createForeignKey(models.garaDB.Keys.KEY_UNIVERSITY_PRIMARY, Universitypagecontent.UNIVERSITYPAGECONTENT, "FKUniversity451983", Universitypagecontent.UNIVERSITYPAGECONTENT.UNIVERSITYID);
     }

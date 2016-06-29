@@ -37,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Universitypagecontent extends TableImpl<UniversitypagecontentRecord> {
 
-    private static final long serialVersionUID = 1143386362;
+    private static final long serialVersionUID = 1839574458;
 
     /**
-     * The reference instance of <code>Gara.UniversityPageContent</code>
+     * The reference instance of <code>gara.UniversityPageContent</code>
      */
     public static final Universitypagecontent UNIVERSITYPAGECONTENT = new Universitypagecontent();
 
@@ -53,59 +53,59 @@ public class Universitypagecontent extends TableImpl<UniversitypagecontentRecord
     }
 
     /**
-     * The column <code>Gara.UniversityPageContent.ID</code>.
+     * The column <code>gara.UniversityPageContent.ID</code>.
      */
     public final TableField<UniversitypagecontentRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.TIMESTAMP</code>.
+     * The column <code>gara.UniversityPageContent.TIMESTAMP</code>.
      */
     public final TableField<UniversitypagecontentRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.title</code>.
+     * The column <code>gara.UniversityPageContent.title</code>.
      */
     public final TableField<UniversitypagecontentRecord, String> TITLE = createField("title", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.body</code>.
+     * The column <code>gara.UniversityPageContent.body</code>.
      */
     public final TableField<UniversitypagecontentRecord, String> BODY = createField("body", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.link</code>.
+     * The column <code>gara.UniversityPageContent.link</code>.
      */
     public final TableField<UniversitypagecontentRecord, String> LINK = createField("link", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.description</code>.
+     * The column <code>gara.UniversityPageContent.description</code>.
      */
     public final TableField<UniversitypagecontentRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.keywords</code>.
+     * The column <code>gara.UniversityPageContent.keywords</code>.
      */
     public final TableField<UniversitypagecontentRecord, String> KEYWORDS = createField("keywords", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.pic</code>.
+     * The column <code>gara.UniversityPageContent.pic</code>.
      */
     public final TableField<UniversitypagecontentRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.UniversityPageContent.universityID</code>.
+     * The column <code>gara.UniversityPageContent.universityID</code>.
      */
     public final TableField<UniversitypagecontentRecord, Integer> UNIVERSITYID = createField("universityID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * Create a <code>Gara.UniversityPageContent</code> table reference
+     * Create a <code>gara.UniversityPageContent</code> table reference
      */
     public Universitypagecontent() {
         this("UniversityPageContent", null);
     }
 
     /**
-     * Create an aliased <code>Gara.UniversityPageContent</code> table reference
+     * Create an aliased <code>gara.UniversityPageContent</code> table reference
      */
     public Universitypagecontent(String alias) {
         this(alias, UNIVERSITYPAGECONTENT);

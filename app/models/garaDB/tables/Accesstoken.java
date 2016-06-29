@@ -37,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Accesstoken extends TableImpl<AccesstokenRecord> {
 
-    private static final long serialVersionUID = -1354957485;
+    private static final long serialVersionUID = -577670957;
 
     /**
-     * The reference instance of <code>Gara.AccessToken</code>
+     * The reference instance of <code>gara.AccessToken</code>
      */
     public static final Accesstoken ACCESSTOKEN = new Accesstoken();
 
@@ -53,49 +53,49 @@ public class Accesstoken extends TableImpl<AccesstokenRecord> {
     }
 
     /**
-     * The column <code>Gara.AccessToken.ID</code>.
+     * The column <code>gara.AccessToken.ID</code>.
      */
     public final TableField<AccesstokenRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.AccessToken.memberID</code>.
+     * The column <code>gara.AccessToken.memberID</code>.
      */
     public final TableField<AccesstokenRecord, Integer> MEMBERID = createField("memberID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.AccessToken.TIMESTAMP</code>.
+     * The column <code>gara.AccessToken.TIMESTAMP</code>.
      */
     public final TableField<AccesstokenRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>Gara.AccessToken.value</code>.
+     * The column <code>gara.AccessToken.value</code>.
      */
     public final TableField<AccesstokenRecord, String> VALUE = createField("value", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.AccessToken.lastUsed</code>.
+     * The column <code>gara.AccessToken.lastUsed</code>.
      */
     public final TableField<AccesstokenRecord, Timestamp> LASTUSED = createField("lastUsed", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>Gara.AccessToken.ip</code>.
+     * The column <code>gara.AccessToken.ip</code>.
      */
     public final TableField<AccesstokenRecord, String> IP = createField("ip", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.AccessToken.browser</code>.
+     * The column <code>gara.AccessToken.browser</code>.
      */
     public final TableField<AccesstokenRecord, String> BROWSER = createField("browser", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * Create a <code>Gara.AccessToken</code> table reference
+     * Create a <code>gara.AccessToken</code> table reference
      */
     public Accesstoken() {
         this("AccessToken", null);
     }
 
     /**
-     * Create an aliased <code>Gara.AccessToken</code> table reference
+     * Create an aliased <code>gara.AccessToken</code> table reference
      */
     public Accesstoken(String alias) {
         this(alias, ACCESSTOKEN);

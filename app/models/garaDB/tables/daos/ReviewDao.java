@@ -7,6 +7,7 @@ package models.garaDB.tables.daos;
 import models.garaDB.tables.Review;
 import models.garaDB.tables.records.ReviewRecord;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.annotation.Generated;
@@ -90,5 +91,12 @@ public class ReviewDao extends DAOImpl<ReviewRecord, models.garaDB.tables.pojos.
      */
     public List<models.garaDB.tables.pojos.Review> fetchByComment(String... values) {
         return fetch(Review.REVIEW.COMMENT, values);
+    }
+
+    /**
+     * Fetch records that have <code>TIMESTAMP IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Review> fetchByTimestamp(Timestamp... values) {
+        return fetch(Review.REVIEW.TIMESTAMP, values);
     }
 }

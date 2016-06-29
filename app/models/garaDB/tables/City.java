@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class City extends TableImpl<CityRecord> {
 
-    private static final long serialVersionUID = 1707301828;
+    private static final long serialVersionUID = 1218330660;
 
     /**
-     * The reference instance of <code>Gara.City</code>
+     * The reference instance of <code>gara.City</code>
      */
     public static final City CITY = new City();
 
@@ -52,44 +52,44 @@ public class City extends TableImpl<CityRecord> {
     }
 
     /**
-     * The column <code>Gara.City.ID</code>.
+     * The column <code>gara.City.ID</code>.
      */
     public final TableField<CityRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.City.name</code>.
+     * The column <code>gara.City.name</code>.
      */
     public final TableField<CityRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(80).nullable(false), this, "");
 
     /**
-     * The column <code>Gara.City.countryID</code>.
+     * The column <code>gara.City.countryID</code>.
      */
     public final TableField<CityRecord, Integer> COUNTRYID = createField("countryID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.City.pic</code>.
+     * The column <code>gara.City.pic</code>.
      */
     public final TableField<CityRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.City.longitude</code>.
+     * The column <code>gara.City.longitude</code>.
      */
     public final TableField<CityRecord, Double> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.City.latitude</code>.
+     * The column <code>gara.City.latitude</code>.
      */
     public final TableField<CityRecord, Double> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * Create a <code>Gara.City</code> table reference
+     * Create a <code>gara.City</code> table reference
      */
     public City() {
         this("City", null);
     }
 
     /**
-     * Create an aliased <code>Gara.City</code> table reference
+     * Create an aliased <code>gara.City</code> table reference
      */
     public City(String alias) {
         this(alias, CITY);

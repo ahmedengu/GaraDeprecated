@@ -7,6 +7,7 @@ package models.garaDB.tables.daos;
 import models.garaDB.tables.Membercard;
 import models.garaDB.tables.records.MembercardRecord;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.annotation.Generated;
@@ -97,5 +98,12 @@ public class MembercardDao extends DAOImpl<MembercardRecord, models.garaDB.table
      */
     public List<models.garaDB.tables.pojos.Membercard> fetchBySecrit(String... values) {
         return fetch(Membercard.MEMBERCARD.SECRIT, values);
+    }
+
+    /**
+     * Fetch records that have <code>TIMESTAMP IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Membercard> fetchByTimestamp(Timestamp... values) {
+        return fetch(Membercard.MEMBERCARD.TIMESTAMP, values);
     }
 }

@@ -6,6 +6,8 @@ package models.garaDB.tables.records;
 
 import models.garaDB.tables.University;
 
+import java.sql.Timestamp;
+
 import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +20,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record16;
-import org.jooq.Row16;
+import org.jooq.Record17;
+import org.jooq.Row17;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -35,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "University", schema = "Gara")
-public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> implements Record16<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer> {
+@Table(name = "University", schema = "gara")
+public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> implements Record17<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer, Timestamp> {
 
-    private static final long serialVersionUID = 1912919445;
+    private static final long serialVersionUID = 241616132;
 
     /**
-     * Setter for <code>Gara.University.ID</code>.
+     * Setter for <code>gara.University.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.University.ID</code>.
+     * Getter for <code>gara.University.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.University.name</code>.
+     * Setter for <code>gara.University.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.University.name</code>.
+     * Getter for <code>gara.University.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull
@@ -75,14 +77,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.cityID</code>.
+     * Setter for <code>gara.University.cityID</code>.
      */
     public void setCityid(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.University.cityID</code>.
+     * Getter for <code>gara.University.cityID</code>.
      */
     @Column(name = "cityID", precision = 10)
     public Integer getCityid() {
@@ -90,14 +92,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.longitude</code>.
+     * Setter for <code>gara.University.longitude</code>.
      */
     public void setLongitude(Double value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.University.longitude</code>.
+     * Getter for <code>gara.University.longitude</code>.
      */
     @Column(name = "longitude", precision = 22)
     public Double getLongitude() {
@@ -105,14 +107,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.latitude</code>.
+     * Setter for <code>gara.University.latitude</code>.
      */
     public void setLatitude(Double value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.University.latitude</code>.
+     * Getter for <code>gara.University.latitude</code>.
      */
     @Column(name = "latitude", precision = 22)
     public Double getLatitude() {
@@ -120,14 +122,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.pic</code>.
+     * Setter for <code>gara.University.pic</code>.
      */
     public void setPic(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.University.pic</code>.
+     * Getter for <code>gara.University.pic</code>.
      */
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)
@@ -136,14 +138,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.url</code>.
+     * Setter for <code>gara.University.url</code>.
      */
     public void setUrl(String value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>Gara.University.url</code>.
+     * Getter for <code>gara.University.url</code>.
      */
     @Column(name = "url", nullable = false, length = 65535)
     @NotNull
@@ -153,14 +155,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.emailFormat</code>.
+     * Setter for <code>gara.University.emailFormat</code>.
      */
     public void setEmailformat(String value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>Gara.University.emailFormat</code>.
+     * Getter for <code>gara.University.emailFormat</code>.
      */
     @Column(name = "emailFormat", nullable = false, length = 65535)
     @NotNull
@@ -170,14 +172,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.pageName</code>.
+     * Setter for <code>gara.University.pageName</code>.
      */
     public void setPagename(String value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>Gara.University.pageName</code>.
+     * Getter for <code>gara.University.pageName</code>.
      */
     @Column(name = "pageName", length = 65535)
     @Size(max = 65535)
@@ -186,14 +188,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.pageContent</code>.
+     * Setter for <code>gara.University.pageContent</code>.
      */
     public void setPagecontent(String value) {
         set(9, value);
     }
 
     /**
-     * Getter for <code>Gara.University.pageContent</code>.
+     * Getter for <code>gara.University.pageContent</code>.
      */
     @Column(name = "pageContent", length = 65535)
     @Size(max = 65535)
@@ -202,14 +204,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.pageDescription</code>.
+     * Setter for <code>gara.University.pageDescription</code>.
      */
     public void setPagedescription(String value) {
         set(10, value);
     }
 
     /**
-     * Getter for <code>Gara.University.pageDescription</code>.
+     * Getter for <code>gara.University.pageDescription</code>.
      */
     @Column(name = "pageDescription", length = 65535)
     @Size(max = 65535)
@@ -218,14 +220,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.pageKeywords</code>.
+     * Setter for <code>gara.University.pageKeywords</code>.
      */
     public void setPagekeywords(String value) {
         set(11, value);
     }
 
     /**
-     * Getter for <code>Gara.University.pageKeywords</code>.
+     * Getter for <code>gara.University.pageKeywords</code>.
      */
     @Column(name = "pageKeywords", length = 65535)
     @Size(max = 65535)
@@ -234,14 +236,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.pageSubdomain</code>.
+     * Setter for <code>gara.University.pageSubdomain</code>.
      */
     public void setPagesubdomain(String value) {
         set(12, value);
     }
 
     /**
-     * Getter for <code>Gara.University.pageSubdomain</code>.
+     * Getter for <code>gara.University.pageSubdomain</code>.
      */
     @Column(name = "pageSubdomain", length = 65535)
     @Size(max = 65535)
@@ -250,14 +252,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.contactPersonEmail</code>.
+     * Setter for <code>gara.University.contactPersonEmail</code>.
      */
     public void setContactpersonemail(String value) {
         set(13, value);
     }
 
     /**
-     * Getter for <code>Gara.University.contactPersonEmail</code>.
+     * Getter for <code>gara.University.contactPersonEmail</code>.
      */
     @Column(name = "contactPersonEmail", length = 65535)
     @Size(max = 65535)
@@ -266,14 +268,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.contactPersonPassword</code>.
+     * Setter for <code>gara.University.contactPersonPassword</code>.
      */
     public void setContactpersonpassword(String value) {
         set(14, value);
     }
 
     /**
-     * Getter for <code>Gara.University.contactPersonPassword</code>.
+     * Getter for <code>gara.University.contactPersonPassword</code>.
      */
     @Column(name = "contactPersonPassword", length = 65535)
     @Size(max = 65535)
@@ -282,18 +284,33 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.University.parkingCost</code>.
+     * Setter for <code>gara.University.parkingCost</code>.
      */
     public void setParkingcost(Integer value) {
         set(15, value);
     }
 
     /**
-     * Getter for <code>Gara.University.parkingCost</code>.
+     * Getter for <code>gara.University.parkingCost</code>.
      */
     @Column(name = "parkingCost", precision = 10)
     public Integer getParkingcost() {
         return (Integer) get(15);
+    }
+
+    /**
+     * Setter for <code>gara.University.TIMESTAMP</code>.
+     */
+    public void setTimestamp(Timestamp value) {
+        set(16, value);
+    }
+
+    /**
+     * Getter for <code>gara.University.TIMESTAMP</code>.
+     */
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return (Timestamp) get(16);
     }
 
     // -------------------------------------------------------------------------
@@ -309,23 +326,23 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     }
 
     // -------------------------------------------------------------------------
-    // Record16 type implementation
+    // Record17 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row16<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer> fieldsRow() {
-        return (Row16) super.fieldsRow();
+    public Row17<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer, Timestamp> fieldsRow() {
+        return (Row17) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row16<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer> valuesRow() {
-        return (Row16) super.valuesRow();
+    public Row17<Integer, String, Integer, Double, Double, String, String, String, String, String, String, String, String, String, String, Integer, Timestamp> valuesRow() {
+        return (Row17) super.valuesRow();
     }
 
     /**
@@ -460,6 +477,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
      * {@inheritDoc}
      */
     @Override
+    public Field<Timestamp> field17() {
+        return University.UNIVERSITY.TIMESTAMP;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -582,6 +607,14 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     @Override
     public Integer value16() {
         return getParkingcost();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value17() {
+        return getTimestamp();
     }
 
     /**
@@ -732,7 +765,16 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
      * {@inheritDoc}
      */
     @Override
-    public UniversityRecord values(Integer value1, String value2, Integer value3, Double value4, Double value5, String value6, String value7, String value8, String value9, String value10, String value11, String value12, String value13, String value14, String value15, Integer value16) {
+    public UniversityRecord value17(Timestamp value) {
+        setTimestamp(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public UniversityRecord values(Integer value1, String value2, Integer value3, Double value4, Double value5, String value6, String value7, String value8, String value9, String value10, String value11, String value12, String value13, String value14, String value15, Integer value16, Timestamp value17) {
         value1(value1);
         value2(value2);
         value3(value3);
@@ -749,6 +791,7 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
         value14(value14);
         value15(value15);
         value16(value16);
+        value17(value17);
         return this;
     }
 
@@ -766,7 +809,7 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
     /**
      * Create a detached, initialised UniversityRecord
      */
-    public UniversityRecord(Integer id, String name, Integer cityid, Double longitude, Double latitude, String pic, String url, String emailformat, String pagename, String pagecontent, String pagedescription, String pagekeywords, String pagesubdomain, String contactpersonemail, String contactpersonpassword, Integer parkingcost) {
+    public UniversityRecord(Integer id, String name, Integer cityid, Double longitude, Double latitude, String pic, String url, String emailformat, String pagename, String pagecontent, String pagedescription, String pagekeywords, String pagesubdomain, String contactpersonemail, String contactpersonpassword, Integer parkingcost, Timestamp timestamp) {
         super(University.UNIVERSITY);
 
         set(0, id);
@@ -785,5 +828,6 @@ public class UniversityRecord extends UpdatableRecordImpl<UniversityRecord> impl
         set(13, contactpersonemail);
         set(14, contactpersonpassword);
         set(15, parkingcost);
+        set(16, timestamp);
     }
 }

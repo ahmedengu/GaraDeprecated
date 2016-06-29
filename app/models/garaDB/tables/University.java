@@ -8,6 +8,7 @@ import models.garaDB.Gara;
 import models.garaDB.Keys;
 import models.garaDB.tables.records.UniversityRecord;
 
+import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class University extends TableImpl<UniversityRecord> {
 
-    private static final long serialVersionUID = 662149727;
+    private static final long serialVersionUID = -1929562534;
 
     /**
-     * The reference instance of <code>Gara.University</code>
+     * The reference instance of <code>gara.University</code>
      */
     public static final University UNIVERSITY = new University();
 
@@ -52,94 +53,99 @@ public class University extends TableImpl<UniversityRecord> {
     }
 
     /**
-     * The column <code>Gara.University.ID</code>.
+     * The column <code>gara.University.ID</code>.
      */
     public final TableField<UniversityRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.University.name</code>.
+     * The column <code>gara.University.name</code>.
      */
     public final TableField<UniversityRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.University.cityID</code>.
+     * The column <code>gara.University.cityID</code>.
      */
     public final TableField<UniversityRecord, Integer> CITYID = createField("cityID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.University.longitude</code>.
+     * The column <code>gara.University.longitude</code>.
      */
     public final TableField<UniversityRecord, Double> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.University.latitude</code>.
+     * The column <code>gara.University.latitude</code>.
      */
     public final TableField<UniversityRecord, Double> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.University.pic</code>.
+     * The column <code>gara.University.pic</code>.
      */
     public final TableField<UniversityRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.url</code>.
+     * The column <code>gara.University.url</code>.
      */
     public final TableField<UniversityRecord, String> URL = createField("url", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.University.emailFormat</code>.
+     * The column <code>gara.University.emailFormat</code>.
      */
     public final TableField<UniversityRecord, String> EMAILFORMAT = createField("emailFormat", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.University.pageName</code>.
+     * The column <code>gara.University.pageName</code>.
      */
     public final TableField<UniversityRecord, String> PAGENAME = createField("pageName", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.pageContent</code>.
+     * The column <code>gara.University.pageContent</code>.
      */
     public final TableField<UniversityRecord, String> PAGECONTENT = createField("pageContent", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.pageDescription</code>.
+     * The column <code>gara.University.pageDescription</code>.
      */
     public final TableField<UniversityRecord, String> PAGEDESCRIPTION = createField("pageDescription", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.pageKeywords</code>.
+     * The column <code>gara.University.pageKeywords</code>.
      */
     public final TableField<UniversityRecord, String> PAGEKEYWORDS = createField("pageKeywords", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.pageSubdomain</code>.
+     * The column <code>gara.University.pageSubdomain</code>.
      */
     public final TableField<UniversityRecord, String> PAGESUBDOMAIN = createField("pageSubdomain", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.contactPersonEmail</code>.
+     * The column <code>gara.University.contactPersonEmail</code>.
      */
     public final TableField<UniversityRecord, String> CONTACTPERSONEMAIL = createField("contactPersonEmail", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.contactPersonPassword</code>.
+     * The column <code>gara.University.contactPersonPassword</code>.
      */
     public final TableField<UniversityRecord, String> CONTACTPERSONPASSWORD = createField("contactPersonPassword", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.University.parkingCost</code>.
+     * The column <code>gara.University.parkingCost</code>.
      */
     public final TableField<UniversityRecord, Integer> PARKINGCOST = createField("parkingCost", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * Create a <code>Gara.University</code> table reference
+     * The column <code>gara.University.TIMESTAMP</code>.
+     */
+    public final TableField<UniversityRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
+    /**
+     * Create a <code>gara.University</code> table reference
      */
     public University() {
         this("University", null);
     }
 
     /**
-     * Create an aliased <code>Gara.University</code> table reference
+     * Create an aliased <code>gara.University</code> table reference
      */
     public University(String alias) {
         this(alias, UNIVERSITY);

@@ -8,6 +8,7 @@ import models.garaDB.tables.Driver;
 import models.garaDB.tables.records.DriverRecord;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.annotation.Generated;
@@ -98,5 +99,12 @@ public class DriverDao extends DAOImpl<DriverRecord, models.garaDB.tables.pojos.
      */
     public List<models.garaDB.tables.pojos.Driver> fetchByLicenseexpiredate(Date... values) {
         return fetch(Driver.DRIVER.LICENSEEXPIREDATE, values);
+    }
+
+    /**
+     * Fetch records that have <code>TIMESTAMP IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Driver> fetchByTimestamp(Timestamp... values) {
+        return fetch(Driver.DRIVER.TIMESTAMP, values);
     }
 }

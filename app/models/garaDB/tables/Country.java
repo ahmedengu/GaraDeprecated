@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Country extends TableImpl<CountryRecord> {
 
-    private static final long serialVersionUID = 222956872;
+    private static final long serialVersionUID = -1198072728;
 
     /**
-     * The reference instance of <code>Gara.Country</code>
+     * The reference instance of <code>gara.Country</code>
      */
     public static final Country COUNTRY = new Country();
 
@@ -51,44 +51,44 @@ public class Country extends TableImpl<CountryRecord> {
     }
 
     /**
-     * The column <code>Gara.Country.ID</code>.
+     * The column <code>gara.Country.ID</code>.
      */
     public final TableField<CountryRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Country.name</code>.
+     * The column <code>gara.Country.name</code>.
      */
     public final TableField<CountryRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(80).nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Country.pic</code>.
+     * The column <code>gara.Country.pic</code>.
      */
     public final TableField<CountryRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Country.longitude</code>.
+     * The column <code>gara.Country.longitude</code>.
      */
     public final TableField<CountryRecord, Double> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.Country.latitude</code>.
+     * The column <code>gara.Country.latitude</code>.
      */
     public final TableField<CountryRecord, Double> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.Country.gasPrice</code>.
+     * The column <code>gara.Country.gasPrice</code>.
      */
     public final TableField<CountryRecord, Integer> GASPRICE = createField("gasPrice", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * Create a <code>Gara.Country</code> table reference
+     * Create a <code>gara.Country</code> table reference
      */
     public Country() {
         this("Country", null);
     }
 
     /**
-     * Create an aliased <code>Gara.Country</code> table reference
+     * Create an aliased <code>gara.Country</code> table reference
      */
     public Country(String alias) {
         this(alias, COUNTRY);

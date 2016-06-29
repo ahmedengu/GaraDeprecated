@@ -37,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Member extends TableImpl<MemberRecord> {
 
-    private static final long serialVersionUID = 132611790;
+    private static final long serialVersionUID = 1971830332;
 
     /**
-     * The reference instance of <code>Gara.Member</code>
+     * The reference instance of <code>gara.Member</code>
      */
     public static final Member MEMBER = new Member();
 
@@ -53,124 +53,124 @@ public class Member extends TableImpl<MemberRecord> {
     }
 
     /**
-     * The column <code>Gara.Member.ID</code>.
+     * The column <code>gara.Member.ID</code>.
      */
     public final TableField<MemberRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Member.TIMESTAMP</code>.
+     * The column <code>gara.Member.TIMESTAMP</code>.
      */
     public final TableField<MemberRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>Gara.Member.name</code>.
+     * The column <code>gara.Member.name</code>.
      */
     public final TableField<MemberRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Member.username</code>.
+     * The column <code>gara.Member.username</code>.
      */
     public final TableField<MemberRecord, String> USERNAME = createField("username", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Member.studentEmail</code>.
+     * The column <code>gara.Member.studentEmail</code>.
      */
     public final TableField<MemberRecord, String> STUDENTEMAIL = createField("studentEmail", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Member.phoneNumber</code>.
+     * The column <code>gara.Member.phoneNumber</code>.
      */
     public final TableField<MemberRecord, String> PHONENUMBER = createField("phoneNumber", org.jooq.impl.SQLDataType.VARCHAR.length(15), this, "");
 
     /**
-     * The column <code>Gara.Member.birthDate</code>.
+     * The column <code>gara.Member.birthDate</code>.
      */
     public final TableField<MemberRecord, Timestamp> BIRTHDATE = createField("birthDate", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
     /**
-     * The column <code>Gara.Member.activited</code>.
+     * The column <code>gara.Member.activited</code>.
      */
     public final TableField<MemberRecord, Integer> ACTIVITED = createField("activited", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.field("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>Gara.Member.gender</code>.
+     * The column <code>gara.Member.gender</code>.
      */
     public final TableField<MemberRecord, String> GENDER = createField("gender", org.jooq.impl.SQLDataType.CHAR.length(255).defaultValue(org.jooq.impl.DSL.field("M", org.jooq.impl.SQLDataType.CHAR)), this, "");
 
     /**
-     * The column <code>Gara.Member.password</code>.
+     * The column <code>gara.Member.password</code>.
      */
     public final TableField<MemberRecord, String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Member.collegeID</code>.
+     * The column <code>gara.Member.collegeID</code>.
      */
     public final TableField<MemberRecord, Integer> COLLEGEID = createField("collegeID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.Member.pic</code>.
+     * The column <code>gara.Member.pic</code>.
      */
     public final TableField<MemberRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Member.bloodType</code>.
+     * The column <code>gara.Member.bloodType</code>.
      */
     public final TableField<MemberRecord, String> BLOODTYPE = createField("bloodType", org.jooq.impl.SQLDataType.VARCHAR.length(2), this, "");
 
     /**
-     * The column <code>Gara.Member.emergencyNumber</code>.
+     * The column <code>gara.Member.emergencyNumber</code>.
      */
     public final TableField<MemberRecord, String> EMERGENCYNUMBER = createField("emergencyNumber", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Member.balance</code>.
+     * The column <code>gara.Member.balance</code>.
      */
     public final TableField<MemberRecord, Integer> BALANCE = createField("balance", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.field("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>Gara.Member.studentEmailActivationCode</code>.
+     * The column <code>gara.Member.studentEmailActivationCode</code>.
      */
     public final TableField<MemberRecord, String> STUDENTEMAILACTIVATIONCODE = createField("studentEmailActivationCode", org.jooq.impl.SQLDataType.VARCHAR.length(10), this, "");
 
     /**
-     * The column <code>Gara.Member.rideID</code>.
-     */
-    public final TableField<MemberRecord, Integer> RIDEID = createField("rideID", org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>Gara.Member.memberGroupID</code>.
+     * The column <code>gara.Member.memberGroupID</code>.
      */
     public final TableField<MemberRecord, Integer> MEMBERGROUPID = createField("memberGroupID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.Member.longitude</code>.
+     * The column <code>gara.Member.longitude</code>.
      */
     public final TableField<MemberRecord, Double> LONGITUDE = createField("longitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.Member.latitude</code>.
+     * The column <code>gara.Member.latitude</code>.
      */
     public final TableField<MemberRecord, Double> LATITUDE = createField("latitude", org.jooq.impl.SQLDataType.DOUBLE, this, "");
 
     /**
-     * The column <code>Gara.Member.pin</code>.
+     * The column <code>gara.Member.pin</code>.
      */
     public final TableField<MemberRecord, String> PIN = createField("pin", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>Gara.Member.universityID</code>.
+     * The column <code>gara.Member.universityID</code>.
      */
     public final TableField<MemberRecord, Integer> UNIVERSITYID = createField("universityID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * Create a <code>Gara.Member</code> table reference
+     * The column <code>gara.Member.preferences</code>.
+     */
+    public final TableField<MemberRecord, String> PREFERENCES = createField("preferences", org.jooq.impl.SQLDataType.CLOB, this, "");
+
+    /**
+     * Create a <code>gara.Member</code> table reference
      */
     public Member() {
         this("Member", null);
     }
 
     /**
-     * Create an aliased <code>Gara.Member</code> table reference
+     * Create an aliased <code>gara.Member</code> table reference
      */
     public Member(String alias) {
         this(alias, MEMBER);
@@ -221,7 +221,7 @@ public class Member extends TableImpl<MemberRecord> {
      */
     @Override
     public List<ForeignKey<MemberRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<MemberRecord, ?>>asList(Keys.FKMEMBER175873, Keys.FKMEMBER419676, Keys.FKMEMBER861549, Keys.FKMEMBER491900);
+        return Arrays.<ForeignKey<MemberRecord, ?>>asList(Keys.FKMEMBER175873, Keys.FKMEMBER861549, Keys.FKMEMBER491900);
     }
 
     /**

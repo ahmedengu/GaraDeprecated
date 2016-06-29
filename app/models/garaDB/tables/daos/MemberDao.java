@@ -171,13 +171,6 @@ public class MemberDao extends DAOImpl<MemberRecord, models.garaDB.tables.pojos.
     }
 
     /**
-     * Fetch records that have <code>rideID IN (values)</code>
-     */
-    public List<models.garaDB.tables.pojos.Member> fetchByRideid(Integer... values) {
-        return fetch(Member.MEMBER.RIDEID, values);
-    }
-
-    /**
      * Fetch records that have <code>memberGroupID IN (values)</code>
      */
     public List<models.garaDB.tables.pojos.Member> fetchByMembergroupid(Integer... values) {
@@ -210,5 +203,12 @@ public class MemberDao extends DAOImpl<MemberRecord, models.garaDB.tables.pojos.
      */
     public List<models.garaDB.tables.pojos.Member> fetchByUniversityid(Integer... values) {
         return fetch(Member.MEMBER.UNIVERSITYID, values);
+    }
+
+    /**
+     * Fetch records that have <code>preferences IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Member> fetchByPreferences(String... values) {
+        return fetch(Member.MEMBER.PREFERENCES, values);
     }
 }

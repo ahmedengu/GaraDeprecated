@@ -37,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Membermessage extends TableImpl<MembermessageRecord> {
 
-    private static final long serialVersionUID = 2027056602;
+    private static final long serialVersionUID = 760379802;
 
     /**
-     * The reference instance of <code>Gara.MemberMessage</code>
+     * The reference instance of <code>gara.MemberMessage</code>
      */
     public static final Membermessage MEMBERMESSAGE = new Membermessage();
 
@@ -53,39 +53,39 @@ public class Membermessage extends TableImpl<MembermessageRecord> {
     }
 
     /**
-     * The column <code>Gara.MemberMessage.ID</code>.
+     * The column <code>gara.MemberMessage.ID</code>.
      */
     public final TableField<MembermessageRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberMessage.TIMESTAMP</code>.
+     * The column <code>gara.MemberMessage.TIMESTAMP</code>.
      */
     public final TableField<MembermessageRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>Gara.MemberMessage.from</code>.
+     * The column <code>gara.MemberMessage.from</code>.
      */
     public final TableField<MembermessageRecord, Integer> FROM = createField("from", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberMessage.to</code>.
+     * The column <code>gara.MemberMessage.to</code>.
      */
     public final TableField<MembermessageRecord, Integer> TO = createField("to", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberMessage.message</code>.
+     * The column <code>gara.MemberMessage.message</code>.
      */
     public final TableField<MembermessageRecord, String> MESSAGE = createField("message", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * Create a <code>Gara.MemberMessage</code> table reference
+     * Create a <code>gara.MemberMessage</code> table reference
      */
     public Membermessage() {
         this("MemberMessage", null);
     }
 
     /**
-     * Create an aliased <code>Gara.MemberMessage</code> table reference
+     * Create an aliased <code>gara.MemberMessage</code> table reference
      */
     public Membermessage(String alias) {
         this(alias, MEMBERMESSAGE);

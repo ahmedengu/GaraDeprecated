@@ -9,6 +9,7 @@ import play.data.validation.ValidationError;
 
 import java.io.Serializable;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,27 +36,28 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "University", schema = "Gara")
+@Table(name = "University", schema = "gara")
 public class University implements Serializable {
 
-    private static final long serialVersionUID = 1512747404;
+    private static final long serialVersionUID = -524246476;
 
-    private Integer id;
-    private String  name;
-    private Integer cityid;
-    private Double  longitude;
-    private Double  latitude;
-    private String  pic;
-    private String  url;
-    private String  emailformat;
-    private String  pagename;
-    private String  pagecontent;
-    private String  pagedescription;
-    private String  pagekeywords;
-    private String  pagesubdomain;
-    private String  contactpersonemail;
-    private String  contactpersonpassword;
-    private Integer parkingcost;
+    private Integer   id;
+    private String    name;
+    private Integer   cityid;
+    private Double    longitude;
+    private Double    latitude;
+    private String    pic;
+    private String    url;
+    private String    emailformat;
+    private String    pagename;
+    private String    pagecontent;
+    private String    pagedescription;
+    private String    pagekeywords;
+    private String    pagesubdomain;
+    private String    contactpersonemail;
+    private String    contactpersonpassword;
+    private Integer   parkingcost;
+    private Timestamp timestamp;
 
     public University() {}
 
@@ -76,25 +78,27 @@ public class University implements Serializable {
         this.contactpersonemail = value.contactpersonemail;
         this.contactpersonpassword = value.contactpersonpassword;
         this.parkingcost = value.parkingcost;
+        this.timestamp = value.timestamp;
     }
 
     public University(
-        Integer id,
-        String  name,
-        Integer cityid,
-        Double  longitude,
-        Double  latitude,
-        String  pic,
-        String  url,
-        String  emailformat,
-        String  pagename,
-        String  pagecontent,
-        String  pagedescription,
-        String  pagekeywords,
-        String  pagesubdomain,
-        String  contactpersonemail,
-        String  contactpersonpassword,
-        Integer parkingcost
+        Integer   id,
+        String    name,
+        Integer   cityid,
+        Double    longitude,
+        Double    latitude,
+        String    pic,
+        String    url,
+        String    emailformat,
+        String    pagename,
+        String    pagecontent,
+        String    pagedescription,
+        String    pagekeywords,
+        String    pagesubdomain,
+        String    contactpersonemail,
+        String    contactpersonpassword,
+        Integer   parkingcost,
+        Timestamp timestamp
     ) {
         this.id = id;
         this.name = name;
@@ -112,6 +116,7 @@ public class University implements Serializable {
         this.contactpersonemail = contactpersonemail;
         this.contactpersonpassword = contactpersonpassword;
         this.parkingcost = parkingcost;
+        this.timestamp = timestamp;
     }
     public List<ValidationError> validate() throws SQLException {
         List<ValidationError> errors = new ArrayList<ValidationError>();
@@ -146,7 +151,7 @@ public class University implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -304,6 +309,15 @@ public class University implements Serializable {
         this.parkingcost = parkingcost;
     }
 
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return this.timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("University (");
@@ -324,6 +338,7 @@ public class University implements Serializable {
         sb.append(", ").append(contactpersonemail);
         sb.append(", ").append(contactpersonpassword);
         sb.append(", ").append(parkingcost);
+        sb.append(", ").append(timestamp);
 
         sb.append(")");
         return sb.toString();

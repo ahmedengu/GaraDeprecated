@@ -6,6 +6,7 @@ package models.garaDB.tables.pojos;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -30,17 +31,18 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Driver", schema = "Gara")
+@Table(name = "Driver", schema = "gara")
 public class Driver implements Serializable {
 
-    private static final long serialVersionUID = 607843;
+    private static final long serialVersionUID = -1893914223;
 
-    private Integer id;
-    private Integer memberid;
-    private String  licensenumber;
-    private String  licensepic;
-    private String  identycardpic;
-    private Date    licenseexpiredate;
+    private Integer   id;
+    private Integer   memberid;
+    private String    licensenumber;
+    private String    licensepic;
+    private String    identycardpic;
+    private Date      licenseexpiredate;
+    private Timestamp timestamp;
 
     public Driver() {}
 
@@ -51,15 +53,17 @@ public class Driver implements Serializable {
         this.licensepic = value.licensepic;
         this.identycardpic = value.identycardpic;
         this.licenseexpiredate = value.licenseexpiredate;
+        this.timestamp = value.timestamp;
     }
 
     public Driver(
-        Integer id,
-        Integer memberid,
-        String  licensenumber,
-        String  licensepic,
-        String  identycardpic,
-        Date    licenseexpiredate
+        Integer   id,
+        Integer   memberid,
+        String    licensenumber,
+        String    licensepic,
+        String    identycardpic,
+        Date      licenseexpiredate,
+        Timestamp timestamp
     ) {
         this.id = id;
         this.memberid = memberid;
@@ -67,11 +71,12 @@ public class Driver implements Serializable {
         this.licensepic = licensepic;
         this.identycardpic = identycardpic;
         this.licenseexpiredate = licenseexpiredate;
+        this.timestamp = timestamp;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -132,6 +137,15 @@ public class Driver implements Serializable {
         this.licenseexpiredate = licenseexpiredate;
     }
 
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return this.timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Driver (");
@@ -142,6 +156,7 @@ public class Driver implements Serializable {
         sb.append(", ").append(licensepic);
         sb.append(", ").append(identycardpic);
         sb.append(", ").append(licenseexpiredate);
+        sb.append(", ").append(timestamp);
 
         sb.append(")");
         return sb.toString();

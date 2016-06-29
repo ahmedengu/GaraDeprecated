@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "CarModel", schema = "Gara")
+@Table(name = "CarModel", schema = "gara")
 public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implements Record6<Integer, String, Integer, Integer, String, Integer> {
 
-    private static final long serialVersionUID = -229022751;
+    private static final long serialVersionUID = 1082717313;
 
     /**
-     * Setter for <code>Gara.CarModel.ID</code>.
+     * Setter for <code>gara.CarModel.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.CarModel.ID</code>.
+     * Getter for <code>gara.CarModel.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.CarModel.name</code>.
+     * Setter for <code>gara.CarModel.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.CarModel.name</code>.
+     * Getter for <code>gara.CarModel.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull
@@ -75,14 +75,14 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     }
 
     /**
-     * Setter for <code>Gara.CarModel.numberOfSeats</code>.
+     * Setter for <code>gara.CarModel.numberOfSeats</code>.
      */
     public void setNumberofseats(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.CarModel.numberOfSeats</code>.
+     * Getter for <code>gara.CarModel.numberOfSeats</code>.
      */
     @Column(name = "numberOfSeats", precision = 10)
     public Integer getNumberofseats() {
@@ -90,14 +90,14 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     }
 
     /**
-     * Setter for <code>Gara.CarModel.carManufactureID</code>.
+     * Setter for <code>gara.CarModel.carManufactureID</code>.
      */
     public void setCarmanufactureid(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.CarModel.carManufactureID</code>.
+     * Getter for <code>gara.CarModel.carManufactureID</code>.
      */
     @Column(name = "carManufactureID", nullable = false, precision = 10)
     @NotNull
@@ -106,14 +106,14 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     }
 
     /**
-     * Setter for <code>Gara.CarModel.pic</code>.
+     * Setter for <code>gara.CarModel.pic</code>.
      */
     public void setPic(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.CarModel.pic</code>.
+     * Getter for <code>gara.CarModel.pic</code>.
      */
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)
@@ -122,14 +122,14 @@ public class CarmodelRecord extends UpdatableRecordImpl<CarmodelRecord> implemen
     }
 
     /**
-     * Setter for <code>Gara.CarModel.gasConsumption</code>.
+     * Setter for <code>gara.CarModel.gasConsumption</code>.
      */
     public void setGasconsumption(Integer value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.CarModel.gasConsumption</code>.
+     * Getter for <code>gara.CarModel.gasConsumption</code>.
      */
     @Column(name = "gasConsumption", precision = 10)
     public Integer getGasconsumption() {

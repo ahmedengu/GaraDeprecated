@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Country", schema = "Gara")
+@Table(name = "Country", schema = "gara")
 public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements Record6<Integer, String, String, Double, Double, Integer> {
 
-    private static final long serialVersionUID = 76977865;
+    private static final long serialVersionUID = -392751255;
 
     /**
-     * Setter for <code>Gara.Country.ID</code>.
+     * Setter for <code>gara.Country.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.Country.ID</code>.
+     * Getter for <code>gara.Country.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.Country.name</code>.
+     * Setter for <code>gara.Country.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.Country.name</code>.
+     * Getter for <code>gara.Country.name</code>.
      */
     @Column(name = "name", nullable = false, length = 80)
     @NotNull
@@ -75,14 +75,14 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     }
 
     /**
-     * Setter for <code>Gara.Country.pic</code>.
+     * Setter for <code>gara.Country.pic</code>.
      */
     public void setPic(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.Country.pic</code>.
+     * Getter for <code>gara.Country.pic</code>.
      */
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)
@@ -91,14 +91,14 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     }
 
     /**
-     * Setter for <code>Gara.Country.longitude</code>.
+     * Setter for <code>gara.Country.longitude</code>.
      */
     public void setLongitude(Double value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.Country.longitude</code>.
+     * Getter for <code>gara.Country.longitude</code>.
      */
     @Column(name = "longitude", precision = 22)
     public Double getLongitude() {
@@ -106,14 +106,14 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     }
 
     /**
-     * Setter for <code>Gara.Country.latitude</code>.
+     * Setter for <code>gara.Country.latitude</code>.
      */
     public void setLatitude(Double value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.Country.latitude</code>.
+     * Getter for <code>gara.Country.latitude</code>.
      */
     @Column(name = "latitude", precision = 22)
     public Double getLatitude() {
@@ -121,14 +121,14 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     }
 
     /**
-     * Setter for <code>Gara.Country.gasPrice</code>.
+     * Setter for <code>gara.Country.gasPrice</code>.
      */
     public void setGasprice(Integer value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.Country.gasPrice</code>.
+     * Getter for <code>gara.Country.gasPrice</code>.
      */
     @Column(name = "gasPrice", precision = 10)
     public Integer getGasprice() {

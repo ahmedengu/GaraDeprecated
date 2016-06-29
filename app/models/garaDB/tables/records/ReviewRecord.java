@@ -6,6 +6,8 @@ package models.garaDB.tables.records;
 
 import models.garaDB.tables.Review;
 
+import java.sql.Timestamp;
+
 import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +20,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record5;
-import org.jooq.Row5;
+import org.jooq.Record6;
+import org.jooq.Row6;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -35,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Review", schema = "Gara")
-public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements Record5<Integer, Integer, Integer, Integer, String> {
+@Table(name = "Review", schema = "gara")
+public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements Record6<Integer, Integer, Integer, Integer, String, Timestamp> {
 
-    private static final long serialVersionUID = -624261258;
+    private static final long serialVersionUID = 423491719;
 
     /**
-     * Setter for <code>Gara.Review.ID</code>.
+     * Setter for <code>gara.Review.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.Review.ID</code>.
+     * Getter for <code>gara.Review.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.Review.reviewerMemberID</code>.
+     * Setter for <code>gara.Review.reviewerMemberID</code>.
      */
     public void setReviewermemberid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.Review.reviewerMemberID</code>.
+     * Getter for <code>gara.Review.reviewerMemberID</code>.
      */
     @Column(name = "reviewerMemberID", nullable = false, precision = 10)
     @NotNull
@@ -74,14 +76,14 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
     }
 
     /**
-     * Setter for <code>Gara.Review.reviewedMemberID</code>.
+     * Setter for <code>gara.Review.reviewedMemberID</code>.
      */
     public void setReviewedmemberid(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.Review.reviewedMemberID</code>.
+     * Getter for <code>gara.Review.reviewedMemberID</code>.
      */
     @Column(name = "reviewedMemberID", nullable = false, precision = 10)
     @NotNull
@@ -90,14 +92,14 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
     }
 
     /**
-     * Setter for <code>Gara.Review.rating</code>.
+     * Setter for <code>gara.Review.rating</code>.
      */
     public void setRating(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.Review.rating</code>.
+     * Getter for <code>gara.Review.rating</code>.
      */
     @Column(name = "rating", nullable = false, precision = 10)
     @NotNull
@@ -106,19 +108,34 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
     }
 
     /**
-     * Setter for <code>Gara.Review.comment</code>.
+     * Setter for <code>gara.Review.comment</code>.
      */
     public void setComment(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.Review.comment</code>.
+     * Getter for <code>gara.Review.comment</code>.
      */
     @Column(name = "comment", length = 65535)
     @Size(max = 65535)
     public String getComment() {
         return (String) get(4);
+    }
+
+    /**
+     * Setter for <code>gara.Review.TIMESTAMP</code>.
+     */
+    public void setTimestamp(Timestamp value) {
+        set(5, value);
+    }
+
+    /**
+     * Getter for <code>gara.Review.TIMESTAMP</code>.
+     */
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return (Timestamp) get(5);
     }
 
     // -------------------------------------------------------------------------
@@ -134,23 +151,23 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
     }
 
     // -------------------------------------------------------------------------
-    // Record5 type implementation
+    // Record6 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row5<Integer, Integer, Integer, Integer, String> fieldsRow() {
-        return (Row5) super.fieldsRow();
+    public Row6<Integer, Integer, Integer, Integer, String, Timestamp> fieldsRow() {
+        return (Row6) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row5<Integer, Integer, Integer, Integer, String> valuesRow() {
-        return (Row5) super.valuesRow();
+    public Row6<Integer, Integer, Integer, Integer, String, Timestamp> valuesRow() {
+        return (Row6) super.valuesRow();
     }
 
     /**
@@ -197,6 +214,14 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
      * {@inheritDoc}
      */
     @Override
+    public Field<Timestamp> field6() {
+        return Review.REVIEW.TIMESTAMP;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -231,6 +256,14 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
     @Override
     public String value5() {
         return getComment();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value6() {
+        return getTimestamp();
     }
 
     /**
@@ -282,12 +315,22 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
      * {@inheritDoc}
      */
     @Override
-    public ReviewRecord values(Integer value1, Integer value2, Integer value3, Integer value4, String value5) {
+    public ReviewRecord value6(Timestamp value) {
+        setTimestamp(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public ReviewRecord values(Integer value1, Integer value2, Integer value3, Integer value4, String value5, Timestamp value6) {
         value1(value1);
         value2(value2);
         value3(value3);
         value4(value4);
         value5(value5);
+        value6(value6);
         return this;
     }
 
@@ -305,7 +348,7 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
     /**
      * Create a detached, initialised ReviewRecord
      */
-    public ReviewRecord(Integer id, Integer reviewermemberid, Integer reviewedmemberid, Integer rating, String comment) {
+    public ReviewRecord(Integer id, Integer reviewermemberid, Integer reviewedmemberid, Integer rating, String comment, Timestamp timestamp) {
         super(Review.REVIEW);
 
         set(0, id);
@@ -313,5 +356,6 @@ public class ReviewRecord extends UpdatableRecordImpl<ReviewRecord> implements R
         set(2, reviewedmemberid);
         set(3, rating);
         set(4, comment);
+        set(5, timestamp);
     }
 }

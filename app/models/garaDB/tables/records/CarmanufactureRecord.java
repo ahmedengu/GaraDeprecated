@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "CarManufacture", schema = "Gara")
+@Table(name = "CarManufacture", schema = "gara")
 public class CarmanufactureRecord extends UpdatableRecordImpl<CarmanufactureRecord> implements Record4<Integer, String, Integer, String> {
 
-    private static final long serialVersionUID = -1029218493;
+    private static final long serialVersionUID = -6806749;
 
     /**
-     * Setter for <code>Gara.CarManufacture.ID</code>.
+     * Setter for <code>gara.CarManufacture.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.CarManufacture.ID</code>.
+     * Getter for <code>gara.CarManufacture.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.CarManufacture.name</code>.
+     * Setter for <code>gara.CarManufacture.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.CarManufacture.name</code>.
+     * Getter for <code>gara.CarManufacture.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull
@@ -75,14 +75,14 @@ public class CarmanufactureRecord extends UpdatableRecordImpl<CarmanufactureReco
     }
 
     /**
-     * Setter for <code>Gara.CarManufacture.countryID</code>.
+     * Setter for <code>gara.CarManufacture.countryID</code>.
      */
     public void setCountryid(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.CarManufacture.countryID</code>.
+     * Getter for <code>gara.CarManufacture.countryID</code>.
      */
     @Column(name = "countryID", precision = 10)
     public Integer getCountryid() {
@@ -90,14 +90,14 @@ public class CarmanufactureRecord extends UpdatableRecordImpl<CarmanufactureReco
     }
 
     /**
-     * Setter for <code>Gara.CarManufacture.pic</code>.
+     * Setter for <code>gara.CarManufacture.pic</code>.
      */
     public void setPic(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.CarManufacture.pic</code>.
+     * Getter for <code>gara.CarManufacture.pic</code>.
      */
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)

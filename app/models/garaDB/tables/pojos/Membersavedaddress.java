@@ -5,6 +5,7 @@ package models.garaDB.tables.pojos;
 
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -29,17 +30,18 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "MemberSavedAddress", schema = "Gara")
+@Table(name = "MemberSavedAddress", schema = "gara")
 public class Membersavedaddress implements Serializable {
 
-    private static final long serialVersionUID = 1185920006;
+    private static final long serialVersionUID = 748574174;
 
-    private Integer id;
-    private Integer memberid;
-    private String  name;
-    private String  address;
-    private Double  latitude;
-    private Double  longitude;
+    private Integer   id;
+    private Integer   memberid;
+    private String    name;
+    private String    address;
+    private Double    latitude;
+    private Double    longitude;
+    private Timestamp timestamp;
 
     public Membersavedaddress() {}
 
@@ -50,15 +52,17 @@ public class Membersavedaddress implements Serializable {
         this.address = value.address;
         this.latitude = value.latitude;
         this.longitude = value.longitude;
+        this.timestamp = value.timestamp;
     }
 
     public Membersavedaddress(
-        Integer id,
-        Integer memberid,
-        String  name,
-        String  address,
-        Double  latitude,
-        Double  longitude
+        Integer   id,
+        Integer   memberid,
+        String    name,
+        String    address,
+        Double    latitude,
+        Double    longitude,
+        Timestamp timestamp
     ) {
         this.id = id;
         this.memberid = memberid;
@@ -66,11 +70,12 @@ public class Membersavedaddress implements Serializable {
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.timestamp = timestamp;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -128,6 +133,15 @@ public class Membersavedaddress implements Serializable {
         this.longitude = longitude;
     }
 
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return this.timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Membersavedaddress (");
@@ -138,6 +152,7 @@ public class Membersavedaddress implements Serializable {
         sb.append(", ").append(address);
         sb.append(", ").append(latitude);
         sb.append(", ").append(longitude);
+        sb.append(", ").append(timestamp);
 
         sb.append(")");
         return sb.toString();

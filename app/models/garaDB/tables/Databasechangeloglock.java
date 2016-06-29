@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord> {
 
-    private static final long serialVersionUID = 558701048;
+    private static final long serialVersionUID = -190863016;
 
     /**
-     * The reference instance of <code>Gara.DATABASECHANGELOGLOCK</code>
+     * The reference instance of <code>gara.DATABASECHANGELOGLOCK</code>
      */
     public static final Databasechangeloglock DATABASECHANGELOGLOCK = new Databasechangeloglock();
 
@@ -51,34 +51,34 @@ public class Databasechangeloglock extends TableImpl<DatabasechangeloglockRecord
     }
 
     /**
-     * The column <code>Gara.DATABASECHANGELOGLOCK.ID</code>.
+     * The column <code>gara.DATABASECHANGELOGLOCK.ID</code>.
      */
     public final TableField<DatabasechangeloglockRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOGLOCK.LOCKED</code>.
+     * The column <code>gara.DATABASECHANGELOGLOCK.LOCKED</code>.
      */
     public final TableField<DatabasechangeloglockRecord, Boolean> LOCKED = createField("LOCKED", org.jooq.impl.SQLDataType.BIT.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOGLOCK.LOCKGRANTED</code>.
+     * The column <code>gara.DATABASECHANGELOGLOCK.LOCKGRANTED</code>.
      */
     public final TableField<DatabasechangeloglockRecord, Timestamp> LOCKGRANTED = createField("LOCKGRANTED", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOGLOCK.LOCKEDBY</code>.
+     * The column <code>gara.DATABASECHANGELOGLOCK.LOCKEDBY</code>.
      */
     public final TableField<DatabasechangeloglockRecord, String> LOCKEDBY = createField("LOCKEDBY", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
 
     /**
-     * Create a <code>Gara.DATABASECHANGELOGLOCK</code> table reference
+     * Create a <code>gara.DATABASECHANGELOGLOCK</code> table reference
      */
     public Databasechangeloglock() {
         this("DATABASECHANGELOGLOCK", null);
     }
 
     /**
-     * Create an aliased <code>Gara.DATABASECHANGELOGLOCK</code> table reference
+     * Create an aliased <code>gara.DATABASECHANGELOGLOCK</code> table reference
      */
     public Databasechangeloglock(String alias) {
         this(alias, DATABASECHANGELOGLOCK);

@@ -27,10 +27,10 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "DATABASECHANGELOG", schema = "Gara")
+@Table(name = "DATABASECHANGELOG", schema = "gara")
 public class Databasechangelog implements Serializable {
 
-    private static final long serialVersionUID = -202065506;
+    private static final long serialVersionUID = -43369090;
 
     private String    id;
     private String    author;

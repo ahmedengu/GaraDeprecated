@@ -37,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ride extends TableImpl<RideRecord> {
 
-    private static final long serialVersionUID = 745488872;
+    private static final long serialVersionUID = -2126589176;
 
     /**
-     * The reference instance of <code>Gara.Ride</code>
+     * The reference instance of <code>gara.Ride</code>
      */
     public static final Ride RIDE = new Ride();
 
@@ -53,79 +53,84 @@ public class Ride extends TableImpl<RideRecord> {
     }
 
     /**
-     * The column <code>Gara.Ride.ID</code>.
+     * The column <code>gara.Ride.ID</code>.
      */
     public final TableField<RideRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Ride.TIMESTAMP</code>.
+     * The column <code>gara.Ride.TIMESTAMP</code>.
      */
     public final TableField<RideRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
 
     /**
-     * The column <code>Gara.Ride.sourceLongitude</code>.
+     * The column <code>gara.Ride.sourceLongitude</code>.
      */
     public final TableField<RideRecord, Double> SOURCELONGITUDE = createField("sourceLongitude", org.jooq.impl.SQLDataType.DOUBLE.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Ride.sourceLatitude</code>.
+     * The column <code>gara.Ride.sourceLatitude</code>.
      */
     public final TableField<RideRecord, Double> SOURCELATITUDE = createField("sourceLatitude", org.jooq.impl.SQLDataType.DOUBLE.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Ride.destinationLongitude</code>.
+     * The column <code>gara.Ride.destinationLongitude</code>.
      */
     public final TableField<RideRecord, Double> DESTINATIONLONGITUDE = createField("destinationLongitude", org.jooq.impl.SQLDataType.DOUBLE.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Ride.destinationLatitude</code>.
+     * The column <code>gara.Ride.destinationLatitude</code>.
      */
     public final TableField<RideRecord, Double> DESTINATIONLATITUDE = createField("destinationLatitude", org.jooq.impl.SQLDataType.DOUBLE.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Ride.fare</code>.
+     * The column <code>gara.Ride.fare</code>.
      */
     public final TableField<RideRecord, Integer> FARE = createField("fare", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.Ride.startTime</code>.
+     * The column <code>gara.Ride.startTime</code>.
      */
     public final TableField<RideRecord, Timestamp> STARTTIME = createField("startTime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
     /**
-     * The column <code>Gara.Ride.endTime</code>.
+     * The column <code>gara.Ride.endTime</code>.
      */
     public final TableField<RideRecord, Timestamp> ENDTIME = createField("endTime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
     /**
-     * The column <code>Gara.Ride.carID</code>.
+     * The column <code>gara.Ride.carID</code>.
      */
     public final TableField<RideRecord, Integer> CARID = createField("carID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Ride.accepted</code>.
+     * The column <code>gara.Ride.accepted</code>.
      */
     public final TableField<RideRecord, Integer> ACCEPTED = createField("accepted", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.field("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>Gara.Ride.driverCheck</code>.
+     * The column <code>gara.Ride.driverCheck</code>.
      */
     public final TableField<RideRecord, Integer> DRIVERCHECK = createField("driverCheck", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.Ride.passangerCheck</code>.
+     * The column <code>gara.Ride.passangerCheck</code>.
      */
     public final TableField<RideRecord, Integer> PASSANGERCHECK = createField("passangerCheck", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * Create a <code>Gara.Ride</code> table reference
+     * The column <code>gara.Ride.memberID</code>.
+     */
+    public final TableField<RideRecord, Integer> MEMBERID = createField("memberID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+
+    /**
+     * Create a <code>gara.Ride</code> table reference
      */
     public Ride() {
         this("Ride", null);
     }
 
     /**
-     * Create an aliased <code>Gara.Ride</code> table reference
+     * Create an aliased <code>gara.Ride</code> table reference
      */
     public Ride(String alias) {
         this(alias, RIDE);
@@ -176,7 +181,7 @@ public class Ride extends TableImpl<RideRecord> {
      */
     @Override
     public List<ForeignKey<RideRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<RideRecord, ?>>asList(Keys.FKRIDE47095);
+        return Arrays.<ForeignKey<RideRecord, ?>>asList(Keys.FKRIDE47095, Keys.FKRIDE175896);
     }
 
     /**

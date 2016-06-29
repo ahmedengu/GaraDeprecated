@@ -29,10 +29,10 @@ import javax.validation.constraints.NotNull;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Ride", schema = "Gara")
+@Table(name = "Ride", schema = "gara")
 public class Ride implements Serializable {
 
-    private static final long serialVersionUID = -626788390;
+    private static final long serialVersionUID = 584251490;
 
     private Integer   id;
     private Timestamp timestamp;
@@ -47,6 +47,7 @@ public class Ride implements Serializable {
     private Integer   accepted;
     private Integer   drivercheck;
     private Integer   passangercheck;
+    private Integer   memberid;
 
     public Ride() {}
 
@@ -64,6 +65,7 @@ public class Ride implements Serializable {
         this.accepted = value.accepted;
         this.drivercheck = value.drivercheck;
         this.passangercheck = value.passangercheck;
+        this.memberid = value.memberid;
     }
 
     public Ride(
@@ -79,7 +81,8 @@ public class Ride implements Serializable {
         Integer   carid,
         Integer   accepted,
         Integer   drivercheck,
-        Integer   passangercheck
+        Integer   passangercheck,
+        Integer   memberid
     ) {
         this.id = id;
         this.timestamp = timestamp;
@@ -94,11 +97,12 @@ public class Ride implements Serializable {
         this.accepted = accepted;
         this.drivercheck = drivercheck;
         this.passangercheck = passangercheck;
+        this.memberid = memberid;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -220,6 +224,16 @@ public class Ride implements Serializable {
         this.passangercheck = passangercheck;
     }
 
+    @Column(name = "memberID", nullable = false, precision = 10)
+    @NotNull
+    public Integer getMemberid() {
+        return this.memberid;
+    }
+
+    public void setMemberid(Integer memberid) {
+        this.memberid = memberid;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Ride (");
@@ -237,6 +251,7 @@ public class Ride implements Serializable {
         sb.append(", ").append(accepted);
         sb.append(", ").append(drivercheck);
         sb.append(", ").append(passangercheck);
+        sb.append(", ").append(memberid);
 
         sb.append(")");
         return sb.toString();

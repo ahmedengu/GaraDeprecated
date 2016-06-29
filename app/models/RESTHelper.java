@@ -122,16 +122,16 @@ public class RESTHelper {
         List list = new ArrayList<>();
         int deletedRecord = getDslContext().delete(table).where("id = ?", id).execute();
 
-        if (table.equals(Tables.RIDE)) {
-            Map<String, String> f = new HashMap<>();
-            f.put("rideID", "");
-            Form<Ride> rideForm = form(Ride.class).bind(f);
-            List where = getWhere("member", "rideID", id);
-            if (where.size() > 0) {
-                Integer id1 = ((Member) where.get(0)).getId();
-                updateByID("member", rideForm, String.valueOf(id1));
-            }
-        }
+//        if (table.equals(Tables.RIDE)) {
+//            Map<String, String> f = new HashMap<>();
+//            f.put("rideID", "");
+//            Form<Ride> rideForm = form(Ride.class).bind(f);
+//            List where = getWhere("member", "rideID", id);
+//            if (where.size() > 0) {
+//                Integer id1 = ((Member) where.get(0)).getId();
+//                updateByID("member", rideForm, String.valueOf(id1));
+//            }
+//        }
 
         list.add(deletedRecord);
         return list;
@@ -182,14 +182,15 @@ public class RESTHelper {
                 String to = university.getContactpersonemail();
 
                 sendMail(from, to, subject, body);
-            } else if (table.equals(Tables.RIDE)) {
-                String memberid = (String) ((Form) form).data().get("memberid");
-                Integer rideID = ((Ride) list.get(0)).getId();
-                Map<String, String> f = new HashMap<>();
-                f.put("rideID", String.valueOf(rideID));
-                Form<Ride> rideForm = form(Ride.class).bind(f);
-                updateByID("member", rideForm, memberid);
             }
+//            else if (table.equals(Tables.RIDE)) {
+//                String memberid = (String) ((Form) form).data().get("memberid");
+//                Integer rideID = ((Ride) list.get(0)).getId();
+//                Map<String, String> f = new HashMap<>();
+//                f.put("rideID", String.valueOf(rideID));
+//                Form<Ride> rideForm = form(Ride.class).bind(f);
+//                updateByID("member", rideForm, memberid);
+//            }
         }
         return list;
     }

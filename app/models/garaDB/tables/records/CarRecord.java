@@ -7,6 +7,7 @@ package models.garaDB.tables.records;
 import models.garaDB.tables.Car;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -20,8 +21,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record16;
-import org.jooq.Row16;
+import org.jooq.Record17;
+import org.jooq.Row17;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -37,37 +38,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Car", schema = "Gara")
-public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer> {
+@Table(name = "Car", schema = "gara")
+public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record17<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer, Timestamp> {
 
-    private static final long serialVersionUID = -157143995;
+    private static final long serialVersionUID = 1890022764;
 
     /**
-     * Setter for <code>Gara.Car.ID</code>.
+     * Setter for <code>gara.Car.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.ID</code>.
+     * Getter for <code>gara.Car.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.Car.driverID</code>.
+     * Setter for <code>gara.Car.driverID</code>.
      */
     public void setDriverid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.driverID</code>.
+     * Getter for <code>gara.Car.driverID</code>.
      */
     @Column(name = "driverID", nullable = false, precision = 10)
     @NotNull
@@ -76,14 +77,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.plateNumber</code>.
+     * Setter for <code>gara.Car.plateNumber</code>.
      */
     public void setPlatenumber(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.plateNumber</code>.
+     * Getter for <code>gara.Car.plateNumber</code>.
      */
     @Column(name = "plateNumber", nullable = false, length = 65535)
     @NotNull
@@ -93,14 +94,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.platePic</code>.
+     * Setter for <code>gara.Car.platePic</code>.
      */
     public void setPlatepic(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.platePic</code>.
+     * Getter for <code>gara.Car.platePic</code>.
      */
     @Column(name = "platePic", length = 65535)
     @Size(max = 65535)
@@ -109,14 +110,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.carModelID</code>.
+     * Setter for <code>gara.Car.carModelID</code>.
      */
     public void setCarmodelid(Integer value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.carModelID</code>.
+     * Getter for <code>gara.Car.carModelID</code>.
      */
     @Column(name = "carModelID", nullable = false, precision = 10)
     @NotNull
@@ -125,14 +126,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.frontPic</code>.
+     * Setter for <code>gara.Car.frontPic</code>.
      */
     public void setFrontpic(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.frontPic</code>.
+     * Getter for <code>gara.Car.frontPic</code>.
      */
     @Column(name = "frontPic", length = 65535)
     @Size(max = 65535)
@@ -141,14 +142,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.backPic</code>.
+     * Setter for <code>gara.Car.backPic</code>.
      */
     public void setBackpic(String value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.backPic</code>.
+     * Getter for <code>gara.Car.backPic</code>.
      */
     @Column(name = "backPic", length = 65535)
     @Size(max = 65535)
@@ -157,14 +158,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.sidePic</code>.
+     * Setter for <code>gara.Car.sidePic</code>.
      */
     public void setSidepic(String value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.sidePic</code>.
+     * Getter for <code>gara.Car.sidePic</code>.
      */
     @Column(name = "sidePic", length = 65535)
     @Size(max = 65535)
@@ -173,14 +174,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.insidePic</code>.
+     * Setter for <code>gara.Car.insidePic</code>.
      */
     public void setInsidepic(String value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.insidePic</code>.
+     * Getter for <code>gara.Car.insidePic</code>.
      */
     @Column(name = "insidePic", length = 65535)
     @Size(max = 65535)
@@ -189,14 +190,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.licenseNumber</code>.
+     * Setter for <code>gara.Car.licenseNumber</code>.
      */
     public void setLicensenumber(String value) {
         set(9, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.licenseNumber</code>.
+     * Getter for <code>gara.Car.licenseNumber</code>.
      */
     @Column(name = "licenseNumber", nullable = false, length = 65535)
     @NotNull
@@ -206,14 +207,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.licensePic</code>.
+     * Setter for <code>gara.Car.licensePic</code>.
      */
     public void setLicensepic(String value) {
         set(10, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.licensePic</code>.
+     * Getter for <code>gara.Car.licensePic</code>.
      */
     @Column(name = "licensePic", length = 65535)
     @Size(max = 65535)
@@ -222,14 +223,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.licenseExpireDate</code>.
+     * Setter for <code>gara.Car.licenseExpireDate</code>.
      */
     public void setLicenseexpiredate(Date value) {
         set(11, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.licenseExpireDate</code>.
+     * Getter for <code>gara.Car.licenseExpireDate</code>.
      */
     @Column(name = "licenseExpireDate")
     public Date getLicenseexpiredate() {
@@ -237,14 +238,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.DistLongitude</code>.
+     * Setter for <code>gara.Car.DistLongitude</code>.
      */
     public void setDistlongitude(Double value) {
         set(12, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.DistLongitude</code>.
+     * Getter for <code>gara.Car.DistLongitude</code>.
      */
     @Column(name = "DistLongitude", precision = 22)
     public Double getDistlongitude() {
@@ -252,14 +253,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.DistLatitude</code>.
+     * Setter for <code>gara.Car.DistLatitude</code>.
      */
     public void setDistlatitude(Double value) {
         set(13, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.DistLatitude</code>.
+     * Getter for <code>gara.Car.DistLatitude</code>.
      */
     @Column(name = "DistLatitude", precision = 22)
     public Double getDistlatitude() {
@@ -267,14 +268,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.availableSeats</code>.
+     * Setter for <code>gara.Car.availableSeats</code>.
      */
     public void setAvailableseats(Integer value) {
         set(14, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.availableSeats</code>.
+     * Getter for <code>gara.Car.availableSeats</code>.
      */
     @Column(name = "availableSeats", precision = 10)
     public Integer getAvailableseats() {
@@ -282,18 +283,33 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     /**
-     * Setter for <code>Gara.Car.state</code>.
+     * Setter for <code>gara.Car.state</code>.
      */
     public void setState(Integer value) {
         set(15, value);
     }
 
     /**
-     * Getter for <code>Gara.Car.state</code>.
+     * Getter for <code>gara.Car.state</code>.
      */
     @Column(name = "state", precision = 10)
     public Integer getState() {
         return (Integer) get(15);
+    }
+
+    /**
+     * Setter for <code>gara.Car.TIMESTAMP</code>.
+     */
+    public void setTimestamp(Timestamp value) {
+        set(16, value);
+    }
+
+    /**
+     * Getter for <code>gara.Car.TIMESTAMP</code>.
+     */
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return (Timestamp) get(16);
     }
 
     // -------------------------------------------------------------------------
@@ -309,23 +325,23 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     }
 
     // -------------------------------------------------------------------------
-    // Record16 type implementation
+    // Record17 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer> fieldsRow() {
-        return (Row16) super.fieldsRow();
+    public Row17<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer, Timestamp> fieldsRow() {
+        return (Row17) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row16<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer> valuesRow() {
-        return (Row16) super.valuesRow();
+    public Row17<Integer, Integer, String, String, Integer, String, String, String, String, String, String, Date, Double, Double, Integer, Integer, Timestamp> valuesRow() {
+        return (Row17) super.valuesRow();
     }
 
     /**
@@ -460,6 +476,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
+    public Field<Timestamp> field17() {
+        return Car.CAR.TIMESTAMP;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -582,6 +606,14 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     @Override
     public Integer value16() {
         return getState();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value17() {
+        return getTimestamp();
     }
 
     /**
@@ -732,7 +764,16 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
      * {@inheritDoc}
      */
     @Override
-    public CarRecord values(Integer value1, Integer value2, String value3, String value4, Integer value5, String value6, String value7, String value8, String value9, String value10, String value11, Date value12, Double value13, Double value14, Integer value15, Integer value16) {
+    public CarRecord value17(Timestamp value) {
+        setTimestamp(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public CarRecord values(Integer value1, Integer value2, String value3, String value4, Integer value5, String value6, String value7, String value8, String value9, String value10, String value11, Date value12, Double value13, Double value14, Integer value15, Integer value16, Timestamp value17) {
         value1(value1);
         value2(value2);
         value3(value3);
@@ -749,6 +790,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
         value14(value14);
         value15(value15);
         value16(value16);
+        value17(value17);
         return this;
     }
 
@@ -766,7 +808,7 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
     /**
      * Create a detached, initialised CarRecord
      */
-    public CarRecord(Integer id, Integer driverid, String platenumber, String platepic, Integer carmodelid, String frontpic, String backpic, String sidepic, String insidepic, String licensenumber, String licensepic, Date licenseexpiredate, Double distlongitude, Double distlatitude, Integer availableseats, Integer state) {
+    public CarRecord(Integer id, Integer driverid, String platenumber, String platepic, Integer carmodelid, String frontpic, String backpic, String sidepic, String insidepic, String licensenumber, String licensepic, Date licenseexpiredate, Double distlongitude, Double distlatitude, Integer availableseats, Integer state, Timestamp timestamp) {
         super(Car.CAR);
 
         set(0, id);
@@ -785,5 +827,6 @@ public class CarRecord extends UpdatableRecordImpl<CarRecord> implements Record1
         set(13, distlatitude);
         set(14, availableseats);
         set(15, state);
+        set(16, timestamp);
     }
 }

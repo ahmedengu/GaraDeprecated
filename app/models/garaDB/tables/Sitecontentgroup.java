@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Sitecontentgroup extends TableImpl<SitecontentgroupRecord> {
 
-    private static final long serialVersionUID = 1277660868;
+    private static final long serialVersionUID = 1492728612;
 
     /**
-     * The reference instance of <code>Gara.SiteContentGroup</code>
+     * The reference instance of <code>gara.SiteContentGroup</code>
      */
     public static final Sitecontentgroup SITECONTENTGROUP = new Sitecontentgroup();
 
@@ -51,24 +51,24 @@ public class Sitecontentgroup extends TableImpl<SitecontentgroupRecord> {
     }
 
     /**
-     * The column <code>Gara.SiteContentGroup.ID</code>.
+     * The column <code>gara.SiteContentGroup.ID</code>.
      */
     public final TableField<SitecontentgroupRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.SiteContentGroup.name</code>.
+     * The column <code>gara.SiteContentGroup.name</code>.
      */
     public final TableField<SitecontentgroupRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * Create a <code>Gara.SiteContentGroup</code> table reference
+     * Create a <code>gara.SiteContentGroup</code> table reference
      */
     public Sitecontentgroup() {
         this("SiteContentGroup", null);
     }
 
     /**
-     * Create an aliased <code>Gara.SiteContentGroup</code> table reference
+     * Create an aliased <code>gara.SiteContentGroup</code> table reference
      */
     public Sitecontentgroup(String alias) {
         this(alias, SITECONTENTGROUP);

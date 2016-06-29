@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "College", schema = "Gara")
+@Table(name = "College", schema = "gara")
 public class CollegeRecord extends UpdatableRecordImpl<CollegeRecord> implements Record3<Integer, Integer, String> {
 
-    private static final long serialVersionUID = 1802092008;
+    private static final long serialVersionUID = -195282552;
 
     /**
-     * Setter for <code>Gara.College.ID</code>.
+     * Setter for <code>gara.College.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.College.ID</code>.
+     * Getter for <code>gara.College.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.College.universityID</code>.
+     * Setter for <code>gara.College.universityID</code>.
      */
     public void setUniversityid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.College.universityID</code>.
+     * Getter for <code>gara.College.universityID</code>.
      */
     @Column(name = "universityID", nullable = false, precision = 10)
     @NotNull
@@ -74,14 +74,14 @@ public class CollegeRecord extends UpdatableRecordImpl<CollegeRecord> implements
     }
 
     /**
-     * Setter for <code>Gara.College.name</code>.
+     * Setter for <code>gara.College.name</code>.
      */
     public void setName(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.College.name</code>.
+     * Getter for <code>gara.College.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull

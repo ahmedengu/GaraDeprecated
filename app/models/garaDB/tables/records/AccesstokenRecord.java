@@ -37,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "AccessToken", schema = "Gara")
+@Table(name = "AccessToken", schema = "gara")
 public class AccesstokenRecord extends UpdatableRecordImpl<AccesstokenRecord> implements Record7<Integer, Integer, Timestamp, String, Timestamp, String, String> {
 
-    private static final long serialVersionUID = -1605327088;
+    private static final long serialVersionUID = 623983152;
 
     /**
-     * Setter for <code>Gara.AccessToken.ID</code>.
+     * Setter for <code>gara.AccessToken.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.AccessToken.ID</code>.
+     * Getter for <code>gara.AccessToken.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.AccessToken.memberID</code>.
+     * Setter for <code>gara.AccessToken.memberID</code>.
      */
     public void setMemberid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.AccessToken.memberID</code>.
+     * Getter for <code>gara.AccessToken.memberID</code>.
      */
     @Column(name = "memberID", nullable = false, precision = 10)
     @NotNull
@@ -76,14 +76,14 @@ public class AccesstokenRecord extends UpdatableRecordImpl<AccesstokenRecord> im
     }
 
     /**
-     * Setter for <code>Gara.AccessToken.TIMESTAMP</code>.
+     * Setter for <code>gara.AccessToken.TIMESTAMP</code>.
      */
     public void setTimestamp(Timestamp value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.AccessToken.TIMESTAMP</code>.
+     * Getter for <code>gara.AccessToken.TIMESTAMP</code>.
      */
     @Column(name = "TIMESTAMP", nullable = false)
     public Timestamp getTimestamp() {
@@ -91,14 +91,14 @@ public class AccesstokenRecord extends UpdatableRecordImpl<AccesstokenRecord> im
     }
 
     /**
-     * Setter for <code>Gara.AccessToken.value</code>.
+     * Setter for <code>gara.AccessToken.value</code>.
      */
     public void setValue(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.AccessToken.value</code>.
+     * Getter for <code>gara.AccessToken.value</code>.
      */
     @Column(name = "value", nullable = false, length = 65535)
     @NotNull
@@ -108,14 +108,14 @@ public class AccesstokenRecord extends UpdatableRecordImpl<AccesstokenRecord> im
     }
 
     /**
-     * Setter for <code>Gara.AccessToken.lastUsed</code>.
+     * Setter for <code>gara.AccessToken.lastUsed</code>.
      */
     public void setLastused(Timestamp value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.AccessToken.lastUsed</code>.
+     * Getter for <code>gara.AccessToken.lastUsed</code>.
      */
     @Column(name = "lastUsed", nullable = false)
     public Timestamp getLastused() {
@@ -123,14 +123,14 @@ public class AccesstokenRecord extends UpdatableRecordImpl<AccesstokenRecord> im
     }
 
     /**
-     * Setter for <code>Gara.AccessToken.ip</code>.
+     * Setter for <code>gara.AccessToken.ip</code>.
      */
     public void setIp(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.AccessToken.ip</code>.
+     * Getter for <code>gara.AccessToken.ip</code>.
      */
     @Column(name = "ip", nullable = false, length = 65535)
     @NotNull
@@ -140,14 +140,14 @@ public class AccesstokenRecord extends UpdatableRecordImpl<AccesstokenRecord> im
     }
 
     /**
-     * Setter for <code>Gara.AccessToken.browser</code>.
+     * Setter for <code>gara.AccessToken.browser</code>.
      */
     public void setBrowser(String value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>Gara.AccessToken.browser</code>.
+     * Getter for <code>gara.AccessToken.browser</code>.
      */
     @Column(name = "browser", nullable = false, length = 65535)
     @NotNull

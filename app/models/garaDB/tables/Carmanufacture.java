@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Carmanufacture extends TableImpl<CarmanufactureRecord> {
 
-    private static final long serialVersionUID = -1008594047;
+    private static final long serialVersionUID = 1610667809;
 
     /**
-     * The reference instance of <code>Gara.CarManufacture</code>
+     * The reference instance of <code>gara.CarManufacture</code>
      */
     public static final Carmanufacture CARMANUFACTURE = new Carmanufacture();
 
@@ -52,34 +52,34 @@ public class Carmanufacture extends TableImpl<CarmanufactureRecord> {
     }
 
     /**
-     * The column <code>Gara.CarManufacture.ID</code>.
+     * The column <code>gara.CarManufacture.ID</code>.
      */
     public final TableField<CarmanufactureRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.CarManufacture.name</code>.
+     * The column <code>gara.CarManufacture.name</code>.
      */
     public final TableField<CarmanufactureRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.CarManufacture.countryID</code>.
+     * The column <code>gara.CarManufacture.countryID</code>.
      */
     public final TableField<CarmanufactureRecord, Integer> COUNTRYID = createField("countryID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>Gara.CarManufacture.pic</code>.
+     * The column <code>gara.CarManufacture.pic</code>.
      */
     public final TableField<CarmanufactureRecord, String> PIC = createField("pic", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * Create a <code>Gara.CarManufacture</code> table reference
+     * Create a <code>gara.CarManufacture</code> table reference
      */
     public Carmanufacture() {
         this("CarManufacture", null);
     }
 
     /**
-     * Create an aliased <code>Gara.CarManufacture</code> table reference
+     * Create an aliased <code>gara.CarManufacture</code> table reference
      */
     public Carmanufacture(String alias) {
         this(alias, CARMANUFACTURE);

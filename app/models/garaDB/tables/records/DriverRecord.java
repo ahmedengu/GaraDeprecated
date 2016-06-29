@@ -7,6 +7,7 @@ package models.garaDB.tables.records;
 import models.garaDB.tables.Driver;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -20,8 +21,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record6;
-import org.jooq.Row6;
+import org.jooq.Record7;
+import org.jooq.Row7;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -37,37 +38,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Driver", schema = "Gara")
-public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements Record6<Integer, Integer, String, String, String, Date> {
+@Table(name = "Driver", schema = "gara")
+public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements Record7<Integer, Integer, String, String, String, Date, Timestamp> {
 
-    private static final long serialVersionUID = 1114419839;
+    private static final long serialVersionUID = 730051603;
 
     /**
-     * Setter for <code>Gara.Driver.ID</code>.
+     * Setter for <code>gara.Driver.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.Driver.ID</code>.
+     * Getter for <code>gara.Driver.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.Driver.memberID</code>.
+     * Setter for <code>gara.Driver.memberID</code>.
      */
     public void setMemberid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.Driver.memberID</code>.
+     * Getter for <code>gara.Driver.memberID</code>.
      */
     @Column(name = "memberID", nullable = false, precision = 10)
     @NotNull
@@ -76,14 +77,14 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     }
 
     /**
-     * Setter for <code>Gara.Driver.licenseNumber</code>.
+     * Setter for <code>gara.Driver.licenseNumber</code>.
      */
     public void setLicensenumber(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.Driver.licenseNumber</code>.
+     * Getter for <code>gara.Driver.licenseNumber</code>.
      */
     @Column(name = "licenseNumber", nullable = false, length = 65535)
     @NotNull
@@ -93,14 +94,14 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     }
 
     /**
-     * Setter for <code>Gara.Driver.licensePic</code>.
+     * Setter for <code>gara.Driver.licensePic</code>.
      */
     public void setLicensepic(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.Driver.licensePic</code>.
+     * Getter for <code>gara.Driver.licensePic</code>.
      */
     @Column(name = "licensePic", nullable = false, length = 65535)
     @NotNull
@@ -110,14 +111,14 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     }
 
     /**
-     * Setter for <code>Gara.Driver.identyCardPic</code>.
+     * Setter for <code>gara.Driver.identyCardPic</code>.
      */
     public void setIdentycardpic(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.Driver.identyCardPic</code>.
+     * Getter for <code>gara.Driver.identyCardPic</code>.
      */
     @Column(name = "identyCardPic", nullable = false, length = 65535)
     @NotNull
@@ -127,18 +128,33 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     }
 
     /**
-     * Setter for <code>Gara.Driver.licenseExpireDate</code>.
+     * Setter for <code>gara.Driver.licenseExpireDate</code>.
      */
     public void setLicenseexpiredate(Date value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.Driver.licenseExpireDate</code>.
+     * Getter for <code>gara.Driver.licenseExpireDate</code>.
      */
     @Column(name = "licenseExpireDate")
     public Date getLicenseexpiredate() {
         return (Date) get(5);
+    }
+
+    /**
+     * Setter for <code>gara.Driver.TIMESTAMP</code>.
+     */
+    public void setTimestamp(Timestamp value) {
+        set(6, value);
+    }
+
+    /**
+     * Getter for <code>gara.Driver.TIMESTAMP</code>.
+     */
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return (Timestamp) get(6);
     }
 
     // -------------------------------------------------------------------------
@@ -154,23 +170,23 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     }
 
     // -------------------------------------------------------------------------
-    // Record6 type implementation
+    // Record7 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row6<Integer, Integer, String, String, String, Date> fieldsRow() {
-        return (Row6) super.fieldsRow();
+    public Row7<Integer, Integer, String, String, String, Date, Timestamp> fieldsRow() {
+        return (Row7) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row6<Integer, Integer, String, String, String, Date> valuesRow() {
-        return (Row6) super.valuesRow();
+    public Row7<Integer, Integer, String, String, String, Date, Timestamp> valuesRow() {
+        return (Row7) super.valuesRow();
     }
 
     /**
@@ -225,6 +241,14 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
      * {@inheritDoc}
      */
     @Override
+    public Field<Timestamp> field7() {
+        return Driver.DRIVER.TIMESTAMP;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -267,6 +291,14 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     @Override
     public Date value6() {
         return getLicenseexpiredate();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value7() {
+        return getTimestamp();
     }
 
     /**
@@ -327,13 +359,23 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
      * {@inheritDoc}
      */
     @Override
-    public DriverRecord values(Integer value1, Integer value2, String value3, String value4, String value5, Date value6) {
+    public DriverRecord value7(Timestamp value) {
+        setTimestamp(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public DriverRecord values(Integer value1, Integer value2, String value3, String value4, String value5, Date value6, Timestamp value7) {
         value1(value1);
         value2(value2);
         value3(value3);
         value4(value4);
         value5(value5);
         value6(value6);
+        value7(value7);
         return this;
     }
 
@@ -351,7 +393,7 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
     /**
      * Create a detached, initialised DriverRecord
      */
-    public DriverRecord(Integer id, Integer memberid, String licensenumber, String licensepic, String identycardpic, Date licenseexpiredate) {
+    public DriverRecord(Integer id, Integer memberid, String licensenumber, String licensepic, String identycardpic, Date licenseexpiredate, Timestamp timestamp) {
         super(Driver.DRIVER);
 
         set(0, id);
@@ -360,5 +402,6 @@ public class DriverRecord extends UpdatableRecordImpl<DriverRecord> implements R
         set(3, licensepic);
         set(4, identycardpic);
         set(5, licenseexpiredate);
+        set(6, timestamp);
     }
 }

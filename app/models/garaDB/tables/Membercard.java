@@ -8,6 +8,7 @@ import models.garaDB.Gara;
 import models.garaDB.Keys;
 import models.garaDB.tables.records.MembercardRecord;
 
+import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Membercard extends TableImpl<MembercardRecord> {
 
-    private static final long serialVersionUID = 1093707097;
+    private static final long serialVersionUID = -654648922;
 
     /**
-     * The reference instance of <code>Gara.MemberCard</code>
+     * The reference instance of <code>gara.MemberCard</code>
      */
     public static final Membercard MEMBERCARD = new Membercard();
 
@@ -52,44 +53,49 @@ public class Membercard extends TableImpl<MembercardRecord> {
     }
 
     /**
-     * The column <code>Gara.MemberCard.ID</code>.
+     * The column <code>gara.MemberCard.ID</code>.
      */
     public final TableField<MembercardRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberCard.memberID</code>.
+     * The column <code>gara.MemberCard.memberID</code>.
      */
     public final TableField<MembercardRecord, Integer> MEMBERID = createField("memberID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberCard.type</code>.
+     * The column <code>gara.MemberCard.type</code>.
      */
     public final TableField<MembercardRecord, String> TYPE = createField("type", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberCard.number</code>.
+     * The column <code>gara.MemberCard.number</code>.
      */
     public final TableField<MembercardRecord, String> NUMBER = createField("number", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberCard.expireDate</code>.
+     * The column <code>gara.MemberCard.expireDate</code>.
      */
     public final TableField<MembercardRecord, String> EXPIREDATE = createField("expireDate", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.MemberCard.secrit</code>.
+     * The column <code>gara.MemberCard.secrit</code>.
      */
     public final TableField<MembercardRecord, String> SECRIT = createField("secrit", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * Create a <code>Gara.MemberCard</code> table reference
+     * The column <code>gara.MemberCard.TIMESTAMP</code>.
+     */
+    public final TableField<MembercardRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
+    /**
+     * Create a <code>gara.MemberCard</code> table reference
      */
     public Membercard() {
         this("MemberCard", null);
     }
 
     /**
-     * Create an aliased <code>Gara.MemberCard</code> table reference
+     * Create an aliased <code>gara.MemberCard</code> table reference
      */
     public Membercard(String alias) {
         this(alias, MEMBERCARD);

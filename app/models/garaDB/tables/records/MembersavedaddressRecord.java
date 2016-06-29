@@ -6,6 +6,8 @@ package models.garaDB.tables.records;
 
 import models.garaDB.tables.Membersavedaddress;
 
+import java.sql.Timestamp;
+
 import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +20,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record6;
-import org.jooq.Row6;
+import org.jooq.Record7;
+import org.jooq.Row7;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -35,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "MemberSavedAddress", schema = "Gara")
-public class MembersavedaddressRecord extends UpdatableRecordImpl<MembersavedaddressRecord> implements Record6<Integer, Integer, String, String, Double, Double> {
+@Table(name = "MemberSavedAddress", schema = "gara")
+public class MembersavedaddressRecord extends UpdatableRecordImpl<MembersavedaddressRecord> implements Record7<Integer, Integer, String, String, Double, Double, Timestamp> {
 
-    private static final long serialVersionUID = 311413455;
+    private static final long serialVersionUID = -207451608;
 
     /**
-     * Setter for <code>Gara.MemberSavedAddress.ID</code>.
+     * Setter for <code>gara.MemberSavedAddress.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberSavedAddress.ID</code>.
+     * Getter for <code>gara.MemberSavedAddress.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.MemberSavedAddress.memberID</code>.
+     * Setter for <code>gara.MemberSavedAddress.memberID</code>.
      */
     public void setMemberid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberSavedAddress.memberID</code>.
+     * Getter for <code>gara.MemberSavedAddress.memberID</code>.
      */
     @Column(name = "memberID", nullable = false, precision = 10)
     @NotNull
@@ -74,14 +76,14 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
     }
 
     /**
-     * Setter for <code>Gara.MemberSavedAddress.name</code>.
+     * Setter for <code>gara.MemberSavedAddress.name</code>.
      */
     public void setName(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberSavedAddress.name</code>.
+     * Getter for <code>gara.MemberSavedAddress.name</code>.
      */
     @Column(name = "name", nullable = false, length = 65535)
     @NotNull
@@ -91,14 +93,14 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
     }
 
     /**
-     * Setter for <code>Gara.MemberSavedAddress.address</code>.
+     * Setter for <code>gara.MemberSavedAddress.address</code>.
      */
     public void setAddress(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberSavedAddress.address</code>.
+     * Getter for <code>gara.MemberSavedAddress.address</code>.
      */
     @Column(name = "address", length = 65535)
     @Size(max = 65535)
@@ -107,14 +109,14 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
     }
 
     /**
-     * Setter for <code>Gara.MemberSavedAddress.latitude</code>.
+     * Setter for <code>gara.MemberSavedAddress.latitude</code>.
      */
     public void setLatitude(Double value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberSavedAddress.latitude</code>.
+     * Getter for <code>gara.MemberSavedAddress.latitude</code>.
      */
     @Column(name = "latitude", precision = 22)
     public Double getLatitude() {
@@ -122,18 +124,33 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
     }
 
     /**
-     * Setter for <code>Gara.MemberSavedAddress.longitude</code>.
+     * Setter for <code>gara.MemberSavedAddress.longitude</code>.
      */
     public void setLongitude(Double value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberSavedAddress.longitude</code>.
+     * Getter for <code>gara.MemberSavedAddress.longitude</code>.
      */
     @Column(name = "longitude", precision = 22)
     public Double getLongitude() {
         return (Double) get(5);
+    }
+
+    /**
+     * Setter for <code>gara.MemberSavedAddress.TIMESTAMP</code>.
+     */
+    public void setTimestamp(Timestamp value) {
+        set(6, value);
+    }
+
+    /**
+     * Getter for <code>gara.MemberSavedAddress.TIMESTAMP</code>.
+     */
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return (Timestamp) get(6);
     }
 
     // -------------------------------------------------------------------------
@@ -149,23 +166,23 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
     }
 
     // -------------------------------------------------------------------------
-    // Record6 type implementation
+    // Record7 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row6<Integer, Integer, String, String, Double, Double> fieldsRow() {
-        return (Row6) super.fieldsRow();
+    public Row7<Integer, Integer, String, String, Double, Double, Timestamp> fieldsRow() {
+        return (Row7) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row6<Integer, Integer, String, String, Double, Double> valuesRow() {
-        return (Row6) super.valuesRow();
+    public Row7<Integer, Integer, String, String, Double, Double, Timestamp> valuesRow() {
+        return (Row7) super.valuesRow();
     }
 
     /**
@@ -220,6 +237,14 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
      * {@inheritDoc}
      */
     @Override
+    public Field<Timestamp> field7() {
+        return Membersavedaddress.MEMBERSAVEDADDRESS.TIMESTAMP;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -262,6 +287,14 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
     @Override
     public Double value6() {
         return getLongitude();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value7() {
+        return getTimestamp();
     }
 
     /**
@@ -322,13 +355,23 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
      * {@inheritDoc}
      */
     @Override
-    public MembersavedaddressRecord values(Integer value1, Integer value2, String value3, String value4, Double value5, Double value6) {
+    public MembersavedaddressRecord value7(Timestamp value) {
+        setTimestamp(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MembersavedaddressRecord values(Integer value1, Integer value2, String value3, String value4, Double value5, Double value6, Timestamp value7) {
         value1(value1);
         value2(value2);
         value3(value3);
         value4(value4);
         value5(value5);
         value6(value6);
+        value7(value7);
         return this;
     }
 
@@ -346,7 +389,7 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
     /**
      * Create a detached, initialised MembersavedaddressRecord
      */
-    public MembersavedaddressRecord(Integer id, Integer memberid, String name, String address, Double latitude, Double longitude) {
+    public MembersavedaddressRecord(Integer id, Integer memberid, String name, String address, Double latitude, Double longitude, Timestamp timestamp) {
         super(Membersavedaddress.MEMBERSAVEDADDRESS);
 
         set(0, id);
@@ -355,5 +398,6 @@ public class MembersavedaddressRecord extends UpdatableRecordImpl<Membersavedadd
         set(3, address);
         set(4, latitude);
         set(5, longitude);
+        set(6, timestamp);
     }
 }

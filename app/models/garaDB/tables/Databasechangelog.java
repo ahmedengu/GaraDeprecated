@@ -31,10 +31,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Databasechangelog extends TableImpl<DatabasechangelogRecord> {
 
-    private static final long serialVersionUID = -748256604;
+    private static final long serialVersionUID = 230229796;
 
     /**
-     * The reference instance of <code>Gara.DATABASECHANGELOG</code>
+     * The reference instance of <code>gara.DATABASECHANGELOG</code>
      */
     public static final Databasechangelog DATABASECHANGELOG = new Databasechangelog();
 
@@ -47,69 +47,69 @@ public class Databasechangelog extends TableImpl<DatabasechangelogRecord> {
     }
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.ID</code>.
+     * The column <code>gara.DATABASECHANGELOG.ID</code>.
      */
     public final TableField<DatabasechangelogRecord, String> ID = createField("ID", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.AUTHOR</code>.
+     * The column <code>gara.DATABASECHANGELOG.AUTHOR</code>.
      */
     public final TableField<DatabasechangelogRecord, String> AUTHOR = createField("AUTHOR", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.FILENAME</code>.
+     * The column <code>gara.DATABASECHANGELOG.FILENAME</code>.
      */
     public final TableField<DatabasechangelogRecord, String> FILENAME = createField("FILENAME", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.DATEEXECUTED</code>.
+     * The column <code>gara.DATABASECHANGELOG.DATEEXECUTED</code>.
      */
     public final TableField<DatabasechangelogRecord, Timestamp> DATEEXECUTED = createField("DATEEXECUTED", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.ORDEREXECUTED</code>.
+     * The column <code>gara.DATABASECHANGELOG.ORDEREXECUTED</code>.
      */
     public final TableField<DatabasechangelogRecord, Integer> ORDEREXECUTED = createField("ORDEREXECUTED", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.EXECTYPE</code>.
+     * The column <code>gara.DATABASECHANGELOG.EXECTYPE</code>.
      */
     public final TableField<DatabasechangelogRecord, String> EXECTYPE = createField("EXECTYPE", org.jooq.impl.SQLDataType.VARCHAR.length(10).nullable(false), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.MD5SUM</code>.
+     * The column <code>gara.DATABASECHANGELOG.MD5SUM</code>.
      */
     public final TableField<DatabasechangelogRecord, String> MD5SUM = createField("MD5SUM", org.jooq.impl.SQLDataType.VARCHAR.length(35), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.DESCRIPTION</code>.
+     * The column <code>gara.DATABASECHANGELOG.DESCRIPTION</code>.
      */
     public final TableField<DatabasechangelogRecord, String> DESCRIPTION = createField("DESCRIPTION", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.COMMENTS</code>.
+     * The column <code>gara.DATABASECHANGELOG.COMMENTS</code>.
      */
     public final TableField<DatabasechangelogRecord, String> COMMENTS = createField("COMMENTS", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.TAG</code>.
+     * The column <code>gara.DATABASECHANGELOG.TAG</code>.
      */
     public final TableField<DatabasechangelogRecord, String> TAG = createField("TAG", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
 
     /**
-     * The column <code>Gara.DATABASECHANGELOG.LIQUIBASE</code>.
+     * The column <code>gara.DATABASECHANGELOG.LIQUIBASE</code>.
      */
     public final TableField<DatabasechangelogRecord, String> LIQUIBASE = createField("LIQUIBASE", org.jooq.impl.SQLDataType.VARCHAR.length(20), this, "");
 
     /**
-     * Create a <code>Gara.DATABASECHANGELOG</code> table reference
+     * Create a <code>gara.DATABASECHANGELOG</code> table reference
      */
     public Databasechangelog() {
         this("DATABASECHANGELOG", null);
     }
 
     /**
-     * Create an aliased <code>Gara.DATABASECHANGELOG</code> table reference
+     * Create an aliased <code>gara.DATABASECHANGELOG</code> table reference
      */
     public Databasechangelog(String alias) {
         this(alias, DATABASECHANGELOG);

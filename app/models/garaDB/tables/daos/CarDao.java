@@ -8,6 +8,7 @@ import models.garaDB.tables.Car;
 import models.garaDB.tables.records.CarRecord;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.annotation.Generated;
@@ -168,5 +169,12 @@ public class CarDao extends DAOImpl<CarRecord, models.garaDB.tables.pojos.Car, I
      */
     public List<models.garaDB.tables.pojos.Car> fetchByState(Integer... values) {
         return fetch(Car.CAR.STATE, values);
+    }
+
+    /**
+     * Fetch records that have <code>TIMESTAMP IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Car> fetchByTimestamp(Timestamp... values) {
+        return fetch(Car.CAR.TIMESTAMP, values);
     }
 }

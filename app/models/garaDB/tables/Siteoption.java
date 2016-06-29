@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Siteoption extends TableImpl<SiteoptionRecord> {
 
-    private static final long serialVersionUID = 211841896;
+    private static final long serialVersionUID = -1002799384;
 
     /**
-     * The reference instance of <code>Gara.SiteOption</code>
+     * The reference instance of <code>gara.SiteOption</code>
      */
     public static final Siteoption SITEOPTION = new Siteoption();
 
@@ -51,29 +51,29 @@ public class Siteoption extends TableImpl<SiteoptionRecord> {
     }
 
     /**
-     * The column <code>Gara.SiteOption.ID</code>.
+     * The column <code>gara.SiteOption.ID</code>.
      */
     public final TableField<SiteoptionRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.SiteOption.name</code>.
+     * The column <code>gara.SiteOption.name</code>.
      */
     public final TableField<SiteoptionRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.SiteOption.value</code>.
+     * The column <code>gara.SiteOption.value</code>.
      */
     public final TableField<SiteoptionRecord, String> VALUE = createField("value", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * Create a <code>Gara.SiteOption</code> table reference
+     * Create a <code>gara.SiteOption</code> table reference
      */
     public Siteoption() {
         this("SiteOption", null);
     }
 
     /**
-     * Create an aliased <code>Gara.SiteOption</code> table reference
+     * Create an aliased <code>gara.SiteOption</code> table reference
      */
     public Siteoption(String alias) {
         this(alias, SITEOPTION);

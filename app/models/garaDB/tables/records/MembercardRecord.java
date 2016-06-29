@@ -6,6 +6,8 @@ package models.garaDB.tables.records;
 
 import models.garaDB.tables.Membercard;
 
+import java.sql.Timestamp;
+
 import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +20,8 @@ import javax.validation.constraints.Size;
 
 import org.jooq.Field;
 import org.jooq.Record1;
-import org.jooq.Record6;
-import org.jooq.Row6;
+import org.jooq.Record7;
+import org.jooq.Row7;
 import org.jooq.impl.UpdatableRecordImpl;
 
 
@@ -35,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "MemberCard", schema = "Gara")
-public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> implements Record6<Integer, Integer, String, String, String, String> {
+@Table(name = "MemberCard", schema = "gara")
+public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> implements Record7<Integer, Integer, String, String, String, String, Timestamp> {
 
-    private static final long serialVersionUID = -1977978275;
+    private static final long serialVersionUID = 1035782317;
 
     /**
-     * Setter for <code>Gara.MemberCard.ID</code>.
+     * Setter for <code>gara.MemberCard.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberCard.ID</code>.
+     * Getter for <code>gara.MemberCard.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.MemberCard.memberID</code>.
+     * Setter for <code>gara.MemberCard.memberID</code>.
      */
     public void setMemberid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberCard.memberID</code>.
+     * Getter for <code>gara.MemberCard.memberID</code>.
      */
     @Column(name = "memberID", nullable = false, precision = 10)
     @NotNull
@@ -74,14 +76,14 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.MemberCard.type</code>.
+     * Setter for <code>gara.MemberCard.type</code>.
      */
     public void setType(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberCard.type</code>.
+     * Getter for <code>gara.MemberCard.type</code>.
      */
     @Column(name = "type", nullable = false, length = 65535)
     @NotNull
@@ -91,14 +93,14 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.MemberCard.number</code>.
+     * Setter for <code>gara.MemberCard.number</code>.
      */
     public void setNumber(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberCard.number</code>.
+     * Getter for <code>gara.MemberCard.number</code>.
      */
     @Column(name = "number", nullable = false, length = 65535)
     @NotNull
@@ -108,14 +110,14 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.MemberCard.expireDate</code>.
+     * Setter for <code>gara.MemberCard.expireDate</code>.
      */
     public void setExpiredate(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberCard.expireDate</code>.
+     * Getter for <code>gara.MemberCard.expireDate</code>.
      */
     @Column(name = "expireDate", nullable = false, length = 65535)
     @NotNull
@@ -125,20 +127,35 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
     }
 
     /**
-     * Setter for <code>Gara.MemberCard.secrit</code>.
+     * Setter for <code>gara.MemberCard.secrit</code>.
      */
     public void setSecrit(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberCard.secrit</code>.
+     * Getter for <code>gara.MemberCard.secrit</code>.
      */
     @Column(name = "secrit", nullable = false, length = 65535)
     @NotNull
     @Size(max = 65535)
     public String getSecrit() {
         return (String) get(5);
+    }
+
+    /**
+     * Setter for <code>gara.MemberCard.TIMESTAMP</code>.
+     */
+    public void setTimestamp(Timestamp value) {
+        set(6, value);
+    }
+
+    /**
+     * Getter for <code>gara.MemberCard.TIMESTAMP</code>.
+     */
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return (Timestamp) get(6);
     }
 
     // -------------------------------------------------------------------------
@@ -154,23 +171,23 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
     }
 
     // -------------------------------------------------------------------------
-    // Record6 type implementation
+    // Record7 type implementation
     // -------------------------------------------------------------------------
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row6<Integer, Integer, String, String, String, String> fieldsRow() {
-        return (Row6) super.fieldsRow();
+    public Row7<Integer, Integer, String, String, String, String, Timestamp> fieldsRow() {
+        return (Row7) super.fieldsRow();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Row6<Integer, Integer, String, String, String, String> valuesRow() {
-        return (Row6) super.valuesRow();
+    public Row7<Integer, Integer, String, String, String, String, Timestamp> valuesRow() {
+        return (Row7) super.valuesRow();
     }
 
     /**
@@ -225,6 +242,14 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
      * {@inheritDoc}
      */
     @Override
+    public Field<Timestamp> field7() {
+        return Membercard.MEMBERCARD.TIMESTAMP;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Integer value1() {
         return getId();
     }
@@ -267,6 +292,14 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
     @Override
     public String value6() {
         return getSecrit();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Timestamp value7() {
+        return getTimestamp();
     }
 
     /**
@@ -327,13 +360,23 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
      * {@inheritDoc}
      */
     @Override
-    public MembercardRecord values(Integer value1, Integer value2, String value3, String value4, String value5, String value6) {
+    public MembercardRecord value7(Timestamp value) {
+        setTimestamp(value);
+        return this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public MembercardRecord values(Integer value1, Integer value2, String value3, String value4, String value5, String value6, Timestamp value7) {
         value1(value1);
         value2(value2);
         value3(value3);
         value4(value4);
         value5(value5);
         value6(value6);
+        value7(value7);
         return this;
     }
 
@@ -351,7 +394,7 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
     /**
      * Create a detached, initialised MembercardRecord
      */
-    public MembercardRecord(Integer id, Integer memberid, String type, String number, String expiredate, String secrit) {
+    public MembercardRecord(Integer id, Integer memberid, String type, String number, String expiredate, String secrit, Timestamp timestamp) {
         super(Membercard.MEMBERCARD);
 
         set(0, id);
@@ -360,5 +403,6 @@ public class MembercardRecord extends UpdatableRecordImpl<MembercardRecord> impl
         set(3, number);
         set(4, expiredate);
         set(5, secrit);
+        set(6, timestamp);
     }
 }

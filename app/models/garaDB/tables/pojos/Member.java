@@ -36,10 +36,10 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Member", schema = "Gara")
+@Table(name = "Member", schema = "gara")
 public class Member implements Serializable {
 
-    private static final long serialVersionUID = -2048819260;
+    private static final long serialVersionUID = 77658246;
 
     private Integer   id;
     private Timestamp timestamp;
@@ -57,12 +57,12 @@ public class Member implements Serializable {
     private String    emergencynumber;
     private Integer   balance;
     private String    studentemailactivationcode;
-    private Integer   rideid;
     private Integer   membergroupid;
     private Double    longitude;
     private Double    latitude;
     private String    pin;
     private Integer   universityid;
+    private String    preferences;
 
     public Member() {}
 
@@ -83,12 +83,12 @@ public class Member implements Serializable {
         this.emergencynumber = value.emergencynumber;
         this.balance = value.balance;
         this.studentemailactivationcode = value.studentemailactivationcode;
-        this.rideid = value.rideid;
         this.membergroupid = value.membergroupid;
         this.longitude = value.longitude;
         this.latitude = value.latitude;
         this.pin = value.pin;
         this.universityid = value.universityid;
+        this.preferences = value.preferences;
     }
 
     public Member(
@@ -108,12 +108,12 @@ public class Member implements Serializable {
         String    emergencynumber,
         Integer   balance,
         String    studentemailactivationcode,
-        Integer   rideid,
         Integer   membergroupid,
         Double    longitude,
         Double    latitude,
         String    pin,
-        Integer   universityid
+        Integer   universityid,
+        String    preferences
     ) {
         this.id = id;
         this.timestamp = timestamp;
@@ -131,12 +131,12 @@ public class Member implements Serializable {
         this.emergencynumber = emergencynumber;
         this.balance = balance;
         this.studentemailactivationcode = studentemailactivationcode;
-        this.rideid = rideid;
         this.membergroupid = membergroupid;
         this.longitude = longitude;
         this.latitude = latitude;
         this.pin = pin;
         this.universityid = universityid;
+        this.preferences = preferences;
     }
     public List<ValidationError> validate() throws SQLException {
         List<ValidationError> errors = new ArrayList<ValidationError>();
@@ -193,7 +193,7 @@ public class Member implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -351,15 +351,6 @@ public class Member implements Serializable {
         this.studentemailactivationcode = studentemailactivationcode;
     }
 
-    @Column(name = "rideID", precision = 10)
-    public Integer getRideid() {
-        return this.rideid;
-    }
-
-    public void setRideid(Integer rideid) {
-        this.rideid = rideid;
-    }
-
     @Column(name = "memberGroupID", precision = 10)
     public Integer getMembergroupid() {
         return this.membergroupid;
@@ -406,6 +397,16 @@ public class Member implements Serializable {
         this.universityid = universityid;
     }
 
+    @Column(name = "preferences", length = 65535)
+    @Size(max = 65535)
+    public String getPreferences() {
+        return this.preferences;
+    }
+
+    public void setPreferences(String preferences) {
+        this.preferences = preferences;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Member (");
@@ -426,12 +427,12 @@ public class Member implements Serializable {
         sb.append(", ").append(emergencynumber);
         sb.append(", ").append(balance);
         sb.append(", ").append(studentemailactivationcode);
-        sb.append(", ").append(rideid);
         sb.append(", ").append(membergroupid);
         sb.append(", ").append(longitude);
         sb.append(", ").append(latitude);
         sb.append(", ").append(pin);
         sb.append(", ").append(universityid);
+        sb.append(", ").append(preferences);
 
         sb.append(")");
         return sb.toString();

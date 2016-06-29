@@ -5,6 +5,7 @@ package models.garaDB.tables.pojos;
 
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -29,17 +30,18 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "MemberCard", schema = "Gara")
+@Table(name = "MemberCard", schema = "gara")
 public class Membercard implements Serializable {
 
-    private static final long serialVersionUID = 579188946;
+    private static final long serialVersionUID = 862255030;
 
-    private Integer id;
-    private Integer memberid;
-    private String  type;
-    private String  number;
-    private String  expiredate;
-    private String  secrit;
+    private Integer   id;
+    private Integer   memberid;
+    private String    type;
+    private String    number;
+    private String    expiredate;
+    private String    secrit;
+    private Timestamp timestamp;
 
     public Membercard() {}
 
@@ -50,15 +52,17 @@ public class Membercard implements Serializable {
         this.number = value.number;
         this.expiredate = value.expiredate;
         this.secrit = value.secrit;
+        this.timestamp = value.timestamp;
     }
 
     public Membercard(
-        Integer id,
-        Integer memberid,
-        String  type,
-        String  number,
-        String  expiredate,
-        String  secrit
+        Integer   id,
+        Integer   memberid,
+        String    type,
+        String    number,
+        String    expiredate,
+        String    secrit,
+        Timestamp timestamp
     ) {
         this.id = id;
         this.memberid = memberid;
@@ -66,11 +70,12 @@ public class Membercard implements Serializable {
         this.number = number;
         this.expiredate = expiredate;
         this.secrit = secrit;
+        this.timestamp = timestamp;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -133,6 +138,15 @@ public class Membercard implements Serializable {
         this.secrit = secrit;
     }
 
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return this.timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Membercard (");
@@ -143,6 +157,7 @@ public class Membercard implements Serializable {
         sb.append(", ").append(number);
         sb.append(", ").append(expiredate);
         sb.append(", ").append(secrit);
+        sb.append(", ").append(timestamp);
 
         sb.append(")");
         return sb.toString();

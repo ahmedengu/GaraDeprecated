@@ -7,6 +7,7 @@ package models.garaDB.tables.daos;
 import models.garaDB.tables.University;
 import models.garaDB.tables.records.UniversityRecord;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.annotation.Generated;
@@ -167,5 +168,12 @@ public class UniversityDao extends DAOImpl<UniversityRecord, models.garaDB.table
      */
     public List<models.garaDB.tables.pojos.University> fetchByParkingcost(Integer... values) {
         return fetch(University.UNIVERSITY.PARKINGCOST, values);
+    }
+
+    /**
+     * Fetch records that have <code>TIMESTAMP IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.University> fetchByTimestamp(Timestamp... values) {
+        return fetch(University.UNIVERSITY.TIMESTAMP, values);
     }
 }

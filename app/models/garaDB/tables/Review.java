@@ -8,6 +8,7 @@ import models.garaDB.Gara;
 import models.garaDB.Keys;
 import models.garaDB.tables.records.ReviewRecord;
 
+import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,10 +37,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Review extends TableImpl<ReviewRecord> {
 
-    private static final long serialVersionUID = -1474805297;
+    private static final long serialVersionUID = 1838978060;
 
     /**
-     * The reference instance of <code>Gara.Review</code>
+     * The reference instance of <code>gara.Review</code>
      */
     public static final Review REVIEW = new Review();
 
@@ -52,39 +53,44 @@ public class Review extends TableImpl<ReviewRecord> {
     }
 
     /**
-     * The column <code>Gara.Review.ID</code>.
+     * The column <code>gara.Review.ID</code>.
      */
     public final TableField<ReviewRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Review.reviewerMemberID</code>.
+     * The column <code>gara.Review.reviewerMemberID</code>.
      */
     public final TableField<ReviewRecord, Integer> REVIEWERMEMBERID = createField("reviewerMemberID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Review.reviewedMemberID</code>.
+     * The column <code>gara.Review.reviewedMemberID</code>.
      */
     public final TableField<ReviewRecord, Integer> REVIEWEDMEMBERID = createField("reviewedMemberID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Review.rating</code>.
+     * The column <code>gara.Review.rating</code>.
      */
     public final TableField<ReviewRecord, Integer> RATING = createField("rating", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Review.comment</code>.
+     * The column <code>gara.Review.comment</code>.
      */
     public final TableField<ReviewRecord, String> COMMENT = createField("comment", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * Create a <code>Gara.Review</code> table reference
+     * The column <code>gara.Review.TIMESTAMP</code>.
+     */
+    public final TableField<ReviewRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
+    /**
+     * Create a <code>gara.Review</code> table reference
      */
     public Review() {
         this("Review", null);
     }
 
     /**
-     * Create an aliased <code>Gara.Review</code> table reference
+     * Create an aliased <code>gara.Review</code> table reference
      */
     public Review(String alias) {
         this(alias, REVIEW);

@@ -37,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "UniversityPageContent", schema = "Gara")
+@Table(name = "UniversityPageContent", schema = "gara")
 public class UniversitypagecontentRecord extends UpdatableRecordImpl<UniversitypagecontentRecord> implements Record9<Integer, Timestamp, String, String, String, String, String, String, Integer> {
 
-    private static final long serialVersionUID = 1230586272;
+    private static final long serialVersionUID = -646867648;
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.ID</code>.
+     * Setter for <code>gara.UniversityPageContent.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.ID</code>.
+     * Getter for <code>gara.UniversityPageContent.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.TIMESTAMP</code>.
+     * Setter for <code>gara.UniversityPageContent.TIMESTAMP</code>.
      */
     public void setTimestamp(Timestamp value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.TIMESTAMP</code>.
+     * Getter for <code>gara.UniversityPageContent.TIMESTAMP</code>.
      */
     @Column(name = "TIMESTAMP", nullable = false)
     public Timestamp getTimestamp() {
@@ -75,14 +75,14 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.title</code>.
+     * Setter for <code>gara.UniversityPageContent.title</code>.
      */
     public void setTitle(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.title</code>.
+     * Getter for <code>gara.UniversityPageContent.title</code>.
      */
     @Column(name = "title", length = 65535)
     @Size(max = 65535)
@@ -91,14 +91,14 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.body</code>.
+     * Setter for <code>gara.UniversityPageContent.body</code>.
      */
     public void setBody(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.body</code>.
+     * Getter for <code>gara.UniversityPageContent.body</code>.
      */
     @Column(name = "body", length = 65535)
     @Size(max = 65535)
@@ -107,14 +107,14 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.link</code>.
+     * Setter for <code>gara.UniversityPageContent.link</code>.
      */
     public void setLink(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.link</code>.
+     * Getter for <code>gara.UniversityPageContent.link</code>.
      */
     @Column(name = "link", length = 65535)
     @Size(max = 65535)
@@ -123,14 +123,14 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.description</code>.
+     * Setter for <code>gara.UniversityPageContent.description</code>.
      */
     public void setDescription(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.description</code>.
+     * Getter for <code>gara.UniversityPageContent.description</code>.
      */
     @Column(name = "description", length = 65535)
     @Size(max = 65535)
@@ -139,14 +139,14 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.keywords</code>.
+     * Setter for <code>gara.UniversityPageContent.keywords</code>.
      */
     public void setKeywords(String value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.keywords</code>.
+     * Getter for <code>gara.UniversityPageContent.keywords</code>.
      */
     @Column(name = "keywords", length = 65535)
     @Size(max = 65535)
@@ -155,14 +155,14 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.pic</code>.
+     * Setter for <code>gara.UniversityPageContent.pic</code>.
      */
     public void setPic(String value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.pic</code>.
+     * Getter for <code>gara.UniversityPageContent.pic</code>.
      */
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)
@@ -171,14 +171,14 @@ public class UniversitypagecontentRecord extends UpdatableRecordImpl<Universityp
     }
 
     /**
-     * Setter for <code>Gara.UniversityPageContent.universityID</code>.
+     * Setter for <code>gara.UniversityPageContent.universityID</code>.
      */
     public void setUniversityid(Integer value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>Gara.UniversityPageContent.universityID</code>.
+     * Getter for <code>gara.UniversityPageContent.universityID</code>.
      */
     @Column(name = "universityID", nullable = false, precision = 10)
     @NotNull

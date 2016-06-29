@@ -6,6 +6,7 @@ package models.garaDB.tables.pojos;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 import javax.persistence.Column;
@@ -30,27 +31,28 @@ import javax.validation.constraints.Size;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "Car", schema = "Gara")
+@Table(name = "Car", schema = "gara")
 public class Car implements Serializable {
 
-    private static final long serialVersionUID = -1941096447;
+    private static final long serialVersionUID = -1979054955;
 
-    private Integer id;
-    private Integer driverid;
-    private String  platenumber;
-    private String  platepic;
-    private Integer carmodelid;
-    private String  frontpic;
-    private String  backpic;
-    private String  sidepic;
-    private String  insidepic;
-    private String  licensenumber;
-    private String  licensepic;
-    private Date    licenseexpiredate;
-    private Double  distlongitude;
-    private Double  distlatitude;
-    private Integer availableseats;
-    private Integer state;
+    private Integer   id;
+    private Integer   driverid;
+    private String    platenumber;
+    private String    platepic;
+    private Integer   carmodelid;
+    private String    frontpic;
+    private String    backpic;
+    private String    sidepic;
+    private String    insidepic;
+    private String    licensenumber;
+    private String    licensepic;
+    private Date      licenseexpiredate;
+    private Double    distlongitude;
+    private Double    distlatitude;
+    private Integer   availableseats;
+    private Integer   state;
+    private Timestamp timestamp;
 
     public Car() {}
 
@@ -71,25 +73,27 @@ public class Car implements Serializable {
         this.distlatitude = value.distlatitude;
         this.availableseats = value.availableseats;
         this.state = value.state;
+        this.timestamp = value.timestamp;
     }
 
     public Car(
-        Integer id,
-        Integer driverid,
-        String  platenumber,
-        String  platepic,
-        Integer carmodelid,
-        String  frontpic,
-        String  backpic,
-        String  sidepic,
-        String  insidepic,
-        String  licensenumber,
-        String  licensepic,
-        Date    licenseexpiredate,
-        Double  distlongitude,
-        Double  distlatitude,
-        Integer availableseats,
-        Integer state
+        Integer   id,
+        Integer   driverid,
+        String    platenumber,
+        String    platepic,
+        Integer   carmodelid,
+        String    frontpic,
+        String    backpic,
+        String    sidepic,
+        String    insidepic,
+        String    licensenumber,
+        String    licensepic,
+        Date      licenseexpiredate,
+        Double    distlongitude,
+        Double    distlatitude,
+        Integer   availableseats,
+        Integer   state,
+        Timestamp timestamp
     ) {
         this.id = id;
         this.driverid = driverid;
@@ -107,11 +111,12 @@ public class Car implements Serializable {
         this.distlatitude = distlatitude;
         this.availableseats = availableseats;
         this.state = state;
+        this.timestamp = timestamp;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return this.id;
     }
@@ -267,6 +272,15 @@ public class Car implements Serializable {
         this.state = state;
     }
 
+    @Column(name = "TIMESTAMP", nullable = false)
+    public Timestamp getTimestamp() {
+        return this.timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Car (");
@@ -287,6 +301,7 @@ public class Car implements Serializable {
         sb.append(", ").append(distlatitude);
         sb.append(", ").append(availableseats);
         sb.append(", ").append(state);
+        sb.append(", ").append(timestamp);
 
         sb.append(")");
         return sb.toString();

@@ -35,37 +35,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "City", schema = "Gara")
+@Table(name = "City", schema = "gara")
 public class CityRecord extends UpdatableRecordImpl<CityRecord> implements Record6<Integer, String, Integer, String, Double, Double> {
 
-    private static final long serialVersionUID = -1969032929;
+    private static final long serialVersionUID = -1851360961;
 
     /**
-     * Setter for <code>Gara.City.ID</code>.
+     * Setter for <code>gara.City.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.City.ID</code>.
+     * Getter for <code>gara.City.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.City.name</code>.
+     * Setter for <code>gara.City.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.City.name</code>.
+     * Getter for <code>gara.City.name</code>.
      */
     @Column(name = "name", nullable = false, length = 80)
     @NotNull
@@ -75,14 +75,14 @@ public class CityRecord extends UpdatableRecordImpl<CityRecord> implements Recor
     }
 
     /**
-     * Setter for <code>Gara.City.countryID</code>.
+     * Setter for <code>gara.City.countryID</code>.
      */
     public void setCountryid(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.City.countryID</code>.
+     * Getter for <code>gara.City.countryID</code>.
      */
     @Column(name = "countryID", nullable = false, precision = 10)
     @NotNull
@@ -91,14 +91,14 @@ public class CityRecord extends UpdatableRecordImpl<CityRecord> implements Recor
     }
 
     /**
-     * Setter for <code>Gara.City.pic</code>.
+     * Setter for <code>gara.City.pic</code>.
      */
     public void setPic(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.City.pic</code>.
+     * Getter for <code>gara.City.pic</code>.
      */
     @Column(name = "pic", length = 65535)
     @Size(max = 65535)
@@ -107,14 +107,14 @@ public class CityRecord extends UpdatableRecordImpl<CityRecord> implements Recor
     }
 
     /**
-     * Setter for <code>Gara.City.longitude</code>.
+     * Setter for <code>gara.City.longitude</code>.
      */
     public void setLongitude(Double value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.City.longitude</code>.
+     * Getter for <code>gara.City.longitude</code>.
      */
     @Column(name = "longitude", precision = 22)
     public Double getLongitude() {
@@ -122,14 +122,14 @@ public class CityRecord extends UpdatableRecordImpl<CityRecord> implements Recor
     }
 
     /**
-     * Setter for <code>Gara.City.latitude</code>.
+     * Setter for <code>gara.City.latitude</code>.
      */
     public void setLatitude(Double value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.City.latitude</code>.
+     * Getter for <code>gara.City.latitude</code>.
      */
     @Column(name = "latitude", precision = 22)
     public Double getLatitude() {

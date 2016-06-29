@@ -33,20 +33,20 @@ import org.jooq.impl.TableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "DATABASECHANGELOG", schema = "Gara")
+@Table(name = "DATABASECHANGELOG", schema = "gara")
 public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRecord> implements Record11<String, String, String, Timestamp, Integer, String, String, String, String, String, String> {
 
-    private static final long serialVersionUID = -1529887719;
+    private static final long serialVersionUID = 1490235577;
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.ID</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.ID</code>.
      */
     public void setId(String value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.ID</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.ID</code>.
      */
     @Column(name = "ID", nullable = false, length = 255)
     @NotNull
@@ -56,14 +56,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.AUTHOR</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.AUTHOR</code>.
      */
     public void setAuthor(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.AUTHOR</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.AUTHOR</code>.
      */
     @Column(name = "AUTHOR", nullable = false, length = 255)
     @NotNull
@@ -73,14 +73,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.FILENAME</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.FILENAME</code>.
      */
     public void setFilename(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.FILENAME</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.FILENAME</code>.
      */
     @Column(name = "FILENAME", nullable = false, length = 255)
     @NotNull
@@ -90,14 +90,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.DATEEXECUTED</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.DATEEXECUTED</code>.
      */
     public void setDateexecuted(Timestamp value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.DATEEXECUTED</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.DATEEXECUTED</code>.
      */
     @Column(name = "DATEEXECUTED", nullable = false)
     @NotNull
@@ -106,14 +106,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.ORDEREXECUTED</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.ORDEREXECUTED</code>.
      */
     public void setOrderexecuted(Integer value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.ORDEREXECUTED</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.ORDEREXECUTED</code>.
      */
     @Column(name = "ORDEREXECUTED", nullable = false, precision = 10)
     @NotNull
@@ -122,14 +122,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.EXECTYPE</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.EXECTYPE</code>.
      */
     public void setExectype(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.EXECTYPE</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.EXECTYPE</code>.
      */
     @Column(name = "EXECTYPE", nullable = false, length = 10)
     @NotNull
@@ -139,14 +139,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.MD5SUM</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.MD5SUM</code>.
      */
     public void setMd5sum(String value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.MD5SUM</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.MD5SUM</code>.
      */
     @Column(name = "MD5SUM", length = 35)
     @Size(max = 35)
@@ -155,14 +155,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.DESCRIPTION</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.DESCRIPTION</code>.
      */
     public void setDescription(String value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.DESCRIPTION</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.DESCRIPTION</code>.
      */
     @Column(name = "DESCRIPTION", length = 255)
     @Size(max = 255)
@@ -171,14 +171,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.COMMENTS</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.COMMENTS</code>.
      */
     public void setComments(String value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.COMMENTS</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.COMMENTS</code>.
      */
     @Column(name = "COMMENTS", length = 255)
     @Size(max = 255)
@@ -187,14 +187,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.TAG</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.TAG</code>.
      */
     public void setTag(String value) {
         set(9, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.TAG</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.TAG</code>.
      */
     @Column(name = "TAG", length = 255)
     @Size(max = 255)
@@ -203,14 +203,14 @@ public class DatabasechangelogRecord extends TableRecordImpl<DatabasechangelogRe
     }
 
     /**
-     * Setter for <code>Gara.DATABASECHANGELOG.LIQUIBASE</code>.
+     * Setter for <code>gara.DATABASECHANGELOG.LIQUIBASE</code>.
      */
     public void setLiquibase(String value) {
         set(10, value);
     }
 
     /**
-     * Getter for <code>Gara.DATABASECHANGELOG.LIQUIBASE</code>.
+     * Getter for <code>gara.DATABASECHANGELOG.LIQUIBASE</code>.
      */
     @Column(name = "LIQUIBASE", length = 20)
     @Size(max = 20)

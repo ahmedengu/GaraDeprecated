@@ -148,4 +148,11 @@ public class RideDao extends DAOImpl<RideRecord, models.garaDB.tables.pojos.Ride
     public List<models.garaDB.tables.pojos.Ride> fetchByPassangercheck(Integer... values) {
         return fetch(Ride.RIDE.PASSANGERCHECK, values);
     }
+
+    /**
+     * Fetch records that have <code>memberID IN (values)</code>
+     */
+    public List<models.garaDB.tables.pojos.Ride> fetchByMemberid(Integer... values) {
+        return fetch(Ride.RIDE.MEMBERID, values);
+    }
 }

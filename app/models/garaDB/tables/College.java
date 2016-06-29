@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class College extends TableImpl<CollegeRecord> {
 
-    private static final long serialVersionUID = -1917132685;
+    private static final long serialVersionUID = 1194563507;
 
     /**
-     * The reference instance of <code>Gara.College</code>
+     * The reference instance of <code>gara.College</code>
      */
     public static final College COLLEGE = new College();
 
@@ -52,29 +52,29 @@ public class College extends TableImpl<CollegeRecord> {
     }
 
     /**
-     * The column <code>Gara.College.ID</code>.
+     * The column <code>gara.College.ID</code>.
      */
     public final TableField<CollegeRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.College.universityID</code>.
+     * The column <code>gara.College.universityID</code>.
      */
     public final TableField<CollegeRecord, Integer> UNIVERSITYID = createField("universityID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.College.name</code>.
+     * The column <code>gara.College.name</code>.
      */
     public final TableField<CollegeRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * Create a <code>Gara.College</code> table reference
+     * Create a <code>gara.College</code> table reference
      */
     public College() {
         this("College", null);
     }
 
     /**
-     * Create an aliased <code>Gara.College</code> table reference
+     * Create an aliased <code>gara.College</code> table reference
      */
     public College(String alias) {
         this(alias, COLLEGE);

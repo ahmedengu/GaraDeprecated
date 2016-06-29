@@ -9,6 +9,7 @@ import models.garaDB.Keys;
 import models.garaDB.tables.records.DriverRecord;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.List;
 
@@ -37,10 +38,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Driver extends TableImpl<DriverRecord> {
 
-    private static final long serialVersionUID = -1532658973;
+    private static final long serialVersionUID = -1067970506;
 
     /**
-     * The reference instance of <code>Gara.Driver</code>
+     * The reference instance of <code>gara.Driver</code>
      */
     public static final Driver DRIVER = new Driver();
 
@@ -53,44 +54,49 @@ public class Driver extends TableImpl<DriverRecord> {
     }
 
     /**
-     * The column <code>Gara.Driver.ID</code>.
+     * The column <code>gara.Driver.ID</code>.
      */
     public final TableField<DriverRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Driver.memberID</code>.
+     * The column <code>gara.Driver.memberID</code>.
      */
     public final TableField<DriverRecord, Integer> MEMBERID = createField("memberID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Driver.licenseNumber</code>.
+     * The column <code>gara.Driver.licenseNumber</code>.
      */
     public final TableField<DriverRecord, String> LICENSENUMBER = createField("licenseNumber", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Driver.licensePic</code>.
+     * The column <code>gara.Driver.licensePic</code>.
      */
     public final TableField<DriverRecord, String> LICENSEPIC = createField("licensePic", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Driver.identyCardPic</code>.
+     * The column <code>gara.Driver.identyCardPic</code>.
      */
     public final TableField<DriverRecord, String> IDENTYCARDPIC = createField("identyCardPic", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>Gara.Driver.licenseExpireDate</code>.
+     * The column <code>gara.Driver.licenseExpireDate</code>.
      */
     public final TableField<DriverRecord, Date> LICENSEEXPIREDATE = createField("licenseExpireDate", org.jooq.impl.SQLDataType.DATE, this, "");
 
     /**
-     * Create a <code>Gara.Driver</code> table reference
+     * The column <code>gara.Driver.TIMESTAMP</code>.
+     */
+    public final TableField<DriverRecord, Timestamp> TIMESTAMP = createField("TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.field("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "");
+
+    /**
+     * Create a <code>gara.Driver</code> table reference
      */
     public Driver() {
         this("Driver", null);
     }
 
     /**
-     * Create an aliased <code>Gara.Driver</code> table reference
+     * Create an aliased <code>gara.Driver</code> table reference
      */
     public Driver(String alias) {
         this(alias, DRIVER);

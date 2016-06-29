@@ -37,37 +37,37 @@ import org.jooq.impl.UpdatableRecordImpl;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Entity
-@Table(name = "MemberMessage", schema = "Gara")
+@Table(name = "MemberMessage", schema = "gara")
 public class MembermessageRecord extends UpdatableRecordImpl<MembermessageRecord> implements Record5<Integer, Timestamp, Integer, Integer, String> {
 
-    private static final long serialVersionUID = -1973423826;
+    private static final long serialVersionUID = -347220786;
 
     /**
-     * Setter for <code>Gara.MemberMessage.ID</code>.
+     * Setter for <code>gara.MemberMessage.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberMessage.ID</code>.
+     * Getter for <code>gara.MemberMessage.ID</code>.
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, precision = 10)
+    @Column(name = "ID", unique = true, nullable = false, precision = 10)
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>Gara.MemberMessage.TIMESTAMP</code>.
+     * Setter for <code>gara.MemberMessage.TIMESTAMP</code>.
      */
     public void setTimestamp(Timestamp value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberMessage.TIMESTAMP</code>.
+     * Getter for <code>gara.MemberMessage.TIMESTAMP</code>.
      */
     @Column(name = "TIMESTAMP", nullable = false)
     public Timestamp getTimestamp() {
@@ -75,14 +75,14 @@ public class MembermessageRecord extends UpdatableRecordImpl<MembermessageRecord
     }
 
     /**
-     * Setter for <code>Gara.MemberMessage.from</code>.
+     * Setter for <code>gara.MemberMessage.from</code>.
      */
     public void setFrom(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberMessage.from</code>.
+     * Getter for <code>gara.MemberMessage.from</code>.
      */
     @Column(name = "from", nullable = false, precision = 10)
     @NotNull
@@ -91,14 +91,14 @@ public class MembermessageRecord extends UpdatableRecordImpl<MembermessageRecord
     }
 
     /**
-     * Setter for <code>Gara.MemberMessage.to</code>.
+     * Setter for <code>gara.MemberMessage.to</code>.
      */
     public void setTo(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberMessage.to</code>.
+     * Getter for <code>gara.MemberMessage.to</code>.
      */
     @Column(name = "to", nullable = false, precision = 10)
     @NotNull
@@ -107,14 +107,14 @@ public class MembermessageRecord extends UpdatableRecordImpl<MembermessageRecord
     }
 
     /**
-     * Setter for <code>Gara.MemberMessage.message</code>.
+     * Setter for <code>gara.MemberMessage.message</code>.
      */
     public void setMessage(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>Gara.MemberMessage.message</code>.
+     * Getter for <code>gara.MemberMessage.message</code>.
      */
     @Column(name = "message", length = 65535)
     @Size(max = 65535)
