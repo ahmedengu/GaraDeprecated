@@ -4,9 +4,7 @@ import org.jooq.ConnectionProvider;
 import org.jooq.exception.DataAccessException;
 import play.Logger;
 import play.Play;
-import play.db.Database;
 
-import javax.inject.Inject;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,7 +12,6 @@ import java.sql.SQLException;
 public class PlayConnectionProvider implements ConnectionProvider {
     Connection conn;
 
-    @Inject Database db;
     public Connection acquire() throws DataAccessException {
         try {
 
@@ -23,7 +20,7 @@ public class PlayConnectionProvider implements ConnectionProvider {
             String password = Play.application().configuration().getString("db.default.password");
             conn = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
-            Logger.error("Error closing connection " + conn, e);
+            Logger.error("Error acquiring connection " + conn, e);
         }
         return conn;
     }
